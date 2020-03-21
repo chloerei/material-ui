@@ -17,8 +17,15 @@
     "url": "https://github.com/getcampo/campo-ui/issues"
   },
   "homepage": "https://github.com/getcampo/campo-ui#readme",
+  "hexo": {
+    "version": "4.2.0"
+  },
   "devDependencies": {
     "css-loader": "^3.4.2",
+    "hexo": "^4.2.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^2.0.0",
+    "hexo-server": "^1.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
