@@ -2,7 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  mode: 'production',
+  mode: process.env.NODE_ENV,
   entry: {
     'campo-ui': ['./src/js/campo-ui.js', './src/css/campo-ui.scss']
   },
@@ -26,5 +26,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'public')
+  }
 }
