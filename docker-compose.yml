@@ -6,8 +6,6 @@ services:
     volumes:
       - .:/campo-ui
     command: npx webpack-dev-server --host 0.0.0.0
-    environment:
-      NODE_ENV: development
     ports:
       - 8080:8080
   hexo:

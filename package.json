@@ -30,12 +30,10 @@
     "hexo-renderer-marked": "^2.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.2",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
-  },
-  "dependencies": {
-    "stimulus": "^1.1.1"
   }
 }

@@ -1,14 +1,33 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
-  mode: process.env.NODE_ENV,
+  mode: 'none',
   entry: {
     'campo-ui': ['./src/js/campo-ui.js', './src/css/campo-ui.scss']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: process.env.MINIMIZE == 'true' ? '[name].min.js' : '[name].js'
+  },
+  devtool: 'source-map',
+  optimization: {
+    minimize: process.env.MINIMIZE == 'true',
+    minimizer: [
+      new TerserPlugin({
+        sourceMap: true
+      }),
+      new OptimizeCSSAssetsPlugin({
+        cssProcessorOptions: {
+          map: {
+            inline: false,
+            annotation: true
+          }
+        }
+      })
+    ]
   },
   module: {
     rules: [
@@ -16,8 +35,18 @@ module.exports = {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          }
         ],
       },
       {
@@ -35,7 +64,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: process.env.MINIMIZE == 'true' ? '[name].min.css' : '[name].css'
     }),
   ],
   devServer: {
