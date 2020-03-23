@@ -1,0 +1,24 @@
+.toolbar {
+  display: flex;
+  align-items: start;
+}
+
+.toolbar-action {
+  flex-grow: 0;
+  padding: 6px;
+}
+
+.toolbar-title {
+  padding: 12px;
+  line-height: 24px;
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.toolbar-text {
+  padding: 12px;
+}
+
+.toolbar-space {
+  flex-grow: 1;
+}

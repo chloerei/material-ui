@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  color: var(--text-primary-color);
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 8px;
+  }
+}
+
+.container-small {
+  max-width: 540px;
+}
+
+.container-micro {
+  max-width: 480px;
+}
+
+.divider {
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  margin: 0 8px;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    margin: 0 8px;
+    flex-grow: #{$i};
+    flex-shrink: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0;
+  margin: 16px;;
+  color: var(--text-secondary-color);
+}
+
+.break {
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  margin: 8px 0;
+
+  &::before {
+    content: ' ';
+    border-bottom: 1px solid var(--border-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.break-content {
+  background: white;
+  padding: 8px;
+  display: inline-block;
+  font-size: 14px;
+  color: var(--text-secondary-color);
+}
+
+.loading-message {
+  display: none;
+
+  .material-icons {
+    font-size: 2em;
+  }
+}
+
+.loading + .loading-message {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary-color);
+}
+
+.hide {
+  display: none;
+}
+
+.preview-dialog .dialog-content {
+  width: 960px;
+}
+
+.float-right {
+  float: right;
+}
+
+.reply-to-message {
+  line-height: 1.5;
+  display: none;
+  margin-bottom: 8px;
+
+  &.show {
+    display: block;
+  }
+}
+
+.reply-to-quote {
+  margin: 8px 0;
+  padding: 8px;
+  border-left: 2px solid #ccc;
+  background: #fafafa;
+  border-radius: 2px;
+  max-height: 80px;
+  overflow: hidden;
+
+  .expand-less {
+    display: none;
+  }
+
+  &.expanded {
+    max-height: none;
+
+    .expand-more {
+      display: none;
+    }
+
+    .expand-less {
+      display: inline-block;
+    }
+  }
+}
