@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="campo-ui.min.css">
-    <script src="campo-ui.min.js"></script>
+    <link rel="stylesheet" href="/campo-ui.css">
+    <script src="/campo-ui.js"></script>
   </head>
   <body>
     <div class="appbar appbar-fixed appbar-white">
       <div class="toolbar toolbar-fixed toolbar-white">
         <div class="toolbar-action">
-          <button type="button" class="button button-icon" data-toggle="#drawer">
+          <button type="button" class="button button-icon" data-toggle="drawer" data-target="#drawer">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
           </button>
         </div>
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <nav id="drawer" class="drawer" data-controller="drawer">
+    <nav id="drawer" class="drawer">
       <div class="drawer-content">
         <div class="drawer-header">
           <div class="toolbar">
@@ -31,6 +31,13 @@
         </div>
         <div class="drawer-body">
           <div class="list">
+            <% ['button'].forEach(function(name) { %>
+              <a href="/components/<%= name %>.html" class="list-item">
+                <div class="list-item-content">
+                  <%= name[0].toUpperCase() + name.slice(1) %>
+                </div>
+              </a>
+            <% }); %>
           </div>
         </div>
         <div class="drawer-footer">
@@ -39,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="drawer-background" data-action="click->drawer#close">
+      <div class="drawer-background">
       </div>
     </nav>
 

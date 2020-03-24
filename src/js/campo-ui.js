@@ -1,1 +1,2 @@
-console.log('hit')
+let context = require.context('./components', true, /\.js$/)
+context.keys().forEach(context)
