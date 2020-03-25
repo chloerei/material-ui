@@ -4,7 +4,7 @@
   }
 
   .tab-item:first-child {
-    margin-left: 56px;
+    margin-left: 48px;
   }
 
   .button-icon {
@@ -40,6 +40,10 @@
     &:hover {
       color: white;
     }
+
+    svg {
+      fill: white;
+    }
   }
 
   .tab-item {
@@ -60,6 +64,10 @@
 
     &:hover {
       color: white;
+    }
+
+    svg {
+      fill: white;
     }
   }
 
