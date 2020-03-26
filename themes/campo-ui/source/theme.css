@@ -14,7 +14,9 @@
 
 .example.sandbox .drawer-content,
 .example.sandbox .drawer-background,
-.example.sandbox .dialog-container {
+.example.sandbox .dialog-container,
+.example.sandbox .snackbar,
+.example.sandbox .floating-action {
   position: absolute;
 }
 
