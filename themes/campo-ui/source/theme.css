@@ -4,6 +4,18 @@
   border-bottom: none;
 }
 
+.example.sandbox {
+  padding: 0;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.example.sandbox .drawer-content,
+.example.sandbox .drawer-background {
+  position: absolute;
+}
+
 .example + pre {
   margin-top: 0;
 }

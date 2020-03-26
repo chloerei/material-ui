@@ -1,0 +1,52 @@
+<h1>Drawer</h1>
+
+{% example sandbox %}
+<div class="appbar appbar-primary">
+  <div class="toolbar">
+    <div class="toolbar-action">
+      <button type="button" class="button button-icon" data-toggle="drawer" data-target="#demo-drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+    </div>
+    <div class="toolbar-title">
+      Title
+    </div>
+  </div>
+</div>
+
+<nav id="demo-drawer" class="drawer">
+  <div class="drawer-content">
+    <div class="drawer-header">
+      <div class="toolbar">
+        <div class="toolbar-title">
+          Header
+        </div>
+      </div>
+    </div>
+    <div class="drawer-body">
+      <div class="list">
+        <a href="#" class="list-item">
+          <div class="list-item-content">
+            Drawer Item
+          </div>
+        </a>
+        <a href="#" class="list-item">
+          <div class="list-item-content">
+            Drawer Item
+          </div>
+        </a>
+        <a href="#" class="list-item">
+          <div class="list-item-content">
+            Drawer Item
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <div class="toolbar-title">
+        Footer
+      </div>
+    </div>
+  </div>
+</nav>
+{% endexample %}
