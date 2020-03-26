@@ -6,6 +6,15 @@
 }
 
 .card-header {
+  display: flex;
+  padding: 4px;
+  align-items: center;
+}
+
+.card-title {
+  margin: 0;
+  padding: 8px 12px;
+  flex-grow: 1;
 }
 
 .card-body {
@@ -13,4 +22,6 @@
 }
 
 .card-footer {
+  display: flex;
+  padding: 4px;
 }
