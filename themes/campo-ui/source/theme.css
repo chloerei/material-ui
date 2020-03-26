@@ -9,10 +9,12 @@
   height: 400px;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .example.sandbox .drawer-content,
-.example.sandbox .drawer-background {
+.example.sandbox .drawer-background,
+.example.sandbox .dialog-container {
   position: absolute;
 }
 
