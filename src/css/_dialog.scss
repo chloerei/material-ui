@@ -1,9 +1,11 @@
 .dialog {
-  display: inline-block;
+  display: none;
 }
 
 .dialog-container {
-  display: none;
+}
+
+.dialog.open {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,9 +13,6 @@
   bottom: 0;
   z-index: 16;
   padding: 64px;
-}
-
-.dialog.open .dialog-container {
   display: flex;
   align-items: center;
   justify-content: center;
