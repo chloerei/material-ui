@@ -5,10 +5,12 @@ class Dialog {
     this.element = element
     this.background = document.createElement('div')
     this.background.classList.add('dialog-background')
-    this.background.addEventListener('click', () => {
+    this.background.dataset.close = 'dialog'
+    this.element.appendChild(this.background)
+
+    delegateEvent(this.element, '[data-close="dialog"]', 'click', () => {
       this.close()
     })
-    this.element.appendChild(this.background)
   }
 
   static init(element) {
