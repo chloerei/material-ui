@@ -1,15 +1,15 @@
 version: '3.0'
 
 services:
-  webpack:
+  rollup:
     build: .
     volumes:
       - .:/campo-ui
-    command: npx webpack-dev-server --host 0.0.0.0
-    ports:
-      - 8080:8080
+    command: npx rollup --config --watch
   hexo:
     build: .
     volumes:
       - .:/campo-ui
-    command: npx hexo generate --watch
+    command: npx hexo server
+    ports:
+      - 4000:4000

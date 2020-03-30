@@ -23,17 +23,19 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.4.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "hexo": "^4.2.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "sass-loader": "^8.0.2",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
-  }
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "autoprefixer": "^9.7.5",
+    "hexo-server": "^1.0.0",
+    "rollup": "^2.2.0",
+    "rollup-plugin-postcss": "^2.5.0",
+    "stimulus": "^1.1.1"
+  },
+  "dependencies": {}
 }

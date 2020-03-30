@@ -19,7 +19,7 @@ pretty_urls:
 
 # Directory
 source_dir: site
-public_dir: public
+public_dir: dist
 skip_render:
 
 # Metadata elements
@@ -47,4 +47,3 @@ exclude:
 ignore:
 
 theme: campo-ui
-
