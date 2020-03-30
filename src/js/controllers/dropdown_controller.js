@@ -1,21 +1,12 @@
-import { delegateEvent } from './utils.js'
+import { Controller } from "stimulus"
 
-class Dropdown {
-  constructor(element) {
-    this.element = element
-
+export default class extends Controller {
+  connect() {
     this.closeMenuOutside = (event) => {
       if (!this.element.contains(event.target)) {
         this.close();
       }
     }
-  }
-
-  static init(element) {
-    if (!element.dropdown) {
-      element.dropdown = new Dropdown(element)
-    }
-    return element.dropdown
   }
 
   toggle() {
@@ -36,8 +27,3 @@ class Dropdown {
     document.removeEventListener('click', this.closeMenuOutside)
   }
 }
-
-delegateEvent(document, '[data-toggle="dropdown"]', 'click', function(event){
-  let element = this.closest('.dropdown')
-  Dropdown.init(element).toggle()
-})
