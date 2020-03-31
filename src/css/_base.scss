@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  color: var(--text-primary-color);
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 8px;
+  }
+}
+
+a {
+  color: var(--primary-color);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+img {
+  max-width: 100%;
+}
