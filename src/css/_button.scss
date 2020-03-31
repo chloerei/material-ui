@@ -7,6 +7,7 @@
   text-decoration: none;
   box-sizing: border-box;
   white-space: nowrap;
+  font-size: 16px;
 }
 
 .button-contained,
@@ -142,6 +143,7 @@
 
   &.button-primary {
     background-color: var(--primary-color);
+    color: white;
 
     svg {
       fill: white;
@@ -150,6 +152,7 @@
 
   &.button-secondary {
     background-color: var(--secondary-color);
+    color: white;
 
     svg {
       fill: white;

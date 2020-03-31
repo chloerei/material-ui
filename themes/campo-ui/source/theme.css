@@ -17,7 +17,8 @@
 .example.sandbox .dialog,
 .example.sandbox .dialog-background,
 .example.sandbox .snackbar,
-.example.sandbox .floating-action {
+.example.sandbox .floating-action,
+.example.sandbox .floating-action-menu {
   position: absolute;
 }
 

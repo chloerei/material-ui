@@ -18,9 +18,9 @@
 
 .floating-action-menu {
   display: none;
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
@@ -44,18 +44,7 @@
     background: #f5f5f5;
   }
 
-  .material-icons {
+  svg {
     margin-right: 16px;
   }
-}
-
-.floating-action-backdrop {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.5);
 }
