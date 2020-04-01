@@ -3,17 +3,17 @@
   flex-direction: column;
 }
 
-.list-bordered {
+.list--bordered {
   .list-item:not(:last-child) {
     border-bottom:  1px solid var(--border-color);
   }
 }
 
-.list-item {
+.list__item {
   display: flex;
 }
 
-.list-item-avatar {
+.list__avatar {
   padding: 16px;
   flex: 0 0 72px;
   line-height: 1;
@@ -26,7 +26,7 @@
   }
 }
 
-.list-item-content {
+.list__content {
   padding: 16px 0;
   flex-grow: 1;
   min-width: 0;
@@ -56,21 +56,21 @@
   }
 }
 
-.list-item-content-primary {
+.list__primary-text {
   font-size: 16px;
   margin: 0;
   font-weight: normal;
   line-height: 22px;
 }
 
-.list-item-content-secondary {
+.list__secondary-text {
   font-size: 14px;
   margin: 0;
   line-height: 18px;
   color: var(--text-secondary-color);
 }
 
-.list-item-icon {
+.list__icon {
   padding: 16px;
   flex: 0 0 24px;
   line-height: 0;
@@ -85,20 +85,14 @@
   }
 }
 
-.list-item-meta {
-  padding: 16px;
-  flex: 0 0 auto;
-  line-height: 20px;
-}
-
-a.list-item,
-a.list-item-avatar,
-a.list-item-content,
-a.list-item-icon {
+a.list__item,
+a.list__avatar,
+a.list__content,
+a.list__icon {
   text-decoration: none;
 }
 
-a.list-item {
+a.list__item {
   &:hover {
     background: rgba(0, 0, 0, 0.05);
   }

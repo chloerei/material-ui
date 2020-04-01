@@ -5,23 +5,23 @@
   margin-bottom: 16px;
 }
 
-.card-header {
+.card__header {
   display: flex;
   padding: 4px;
   align-items: center;
 }
 
-.card-title {
+.card__title {
   margin: 0;
   padding: 8px 12px;
   flex-grow: 1;
 }
 
-.card-body {
+.card__body {
   padding: 16px;
 }
 
-.card-footer {
+.card__footer {
   display: flex;
   padding: 4px;
 }

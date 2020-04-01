@@ -3,7 +3,7 @@
   overflow: auto;
 }
 
-.tab-item {
+.tab__item {
   font-size: 16px;
   line-height: 16px;
   padding: 16px;
@@ -24,11 +24,11 @@
     background: rgba(0, 0, 0, 0.075);
     opacity: 1;
   }
+}
 
-  &.active {
-    opacity: 1;
-    padding-bottom: 14px;
-    border-bottom: 2px solid var(--primary-color);
-    color: var(--primary-color);
-  }
+.tab__item--active {
+  opacity: 1;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }

@@ -12,13 +12,13 @@
   z-index: 0;
 }
 
-.example.sandbox .drawer-content,
-.example.sandbox .drawer-background,
+.example.sandbox .drawer__content,
+.example.sandbox .drawer__background,
 .example.sandbox .dialog,
-.example.sandbox .dialog-background,
+.example.sandbox .dialog__background,
 .example.sandbox .snackbar,
 .example.sandbox .floating-action,
-.example.sandbox .floating-action-menu {
+.example.sandbox .floating-action__menu {
   position: absolute;
 }
 

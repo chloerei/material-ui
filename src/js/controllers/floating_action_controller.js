@@ -10,7 +10,7 @@ export default class extends Controller {
   }
 
   toggle() {
-    if (this.element.classList.contains('open')) {
+    if (this.element.classList.contains('floating-action--open')) {
       this.close()
     } else {
       this.open()
@@ -18,12 +18,12 @@ export default class extends Controller {
   }
 
   open() {
-    this.element.classList.add('open')
+    this.element.classList.add('floating-action--open')
     document.addEventListener('click', this.closeMenuOutside)
   }
 
   close() {
-    this.element.classList.remove('open')
+    this.element.classList.remove('floating-action--open')
     document.removeEventListener('click', this.closeMenuOutside)
   }
 }

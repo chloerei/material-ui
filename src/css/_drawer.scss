@@ -1,12 +1,12 @@
 .drawer {
   display: none;
-
-  &.open {
-    display: block;
-  }
 }
 
-.drawer-content {
+.drawer--open {
+  display: block;
+}
+
+.drawer__content {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,8 +20,8 @@
   flex-direction: column;
 }
 
-.drawer-header,
-.drawer-footer {
+.drawer__header,
+.drawer__footer {
   flex-grow: 0;
 
   .toolbar {
@@ -29,12 +29,12 @@
   }
 }
 
-.drawer-body {
+.drawer__body {
   flex-grow: 1;
   overflow: auto;
 }
 
-.drawer-background {
+.drawer__background {
   position: fixed;
   top: 0;
   left: 0;
@@ -46,7 +46,7 @@
 
 @media (min-width: 1200px) {
   .drawer {
-    .drawer-content {
+    .drawer__content {
       top: 56px;
       box-shadow: none;
       border-right: 1px solid #ccc;
@@ -67,10 +67,10 @@
   }
 }
 
-.drawer-menu {
+.drawer__menu {
 }
 
-.drawer-item {
+.drawer__item {
   padding: 8px;
   margin: 8px;
   display: flex;
@@ -96,10 +96,5 @@
     .material-icons {
       color: var(--primary-color);
     }
-  }
-
-  .material-icons {
-    margin-right: 16px;
-    color: var(--text-secondary-color);
   }
 }

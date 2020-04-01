@@ -3,13 +3,13 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   connect() {
     let background = document.createElement('div')
-    background.classList.add('drawer-background')
+    background.classList.add('drawer__background')
     background.dataset.action = 'click->drawer#close'
     this.element.appendChild(background)
   }
 
   toggle() {
-    if (this.element.classList.contains('open')) {
+    if (this.element.classList.contains('drawer--open')) {
       this.close()
     } else {
       this.open()
@@ -17,10 +17,10 @@ export default class extends Controller {
   }
 
   open() {
-    this.element.classList.add('open')
+    this.element.classList.add('drawer--open')
   }
 
   close() {
-    this.element.classList.remove('open')
+    this.element.classList.remove('drawer--open')
   }
 }

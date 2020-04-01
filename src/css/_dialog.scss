@@ -2,10 +2,7 @@
   display: none;
 }
 
-.dialog-container {
-}
-
-.dialog.open {
+.dialog--open {
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +15,7 @@
   justify-content: center;
 }
 
-.dialog-content {
+.dialog__content {
   background: white;
   border-radius: 2px;
   width: 640px;
@@ -29,36 +26,36 @@
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-.dialog-header {
+.dialog__header {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   padding: 4px;
 }
 
-.dialog-title {
+.dialog__title {
   padding: 4px 12px;
   margin: 0;
   flex-grow: 1;
 }
 
-.dialog-body {
+.dialog__body {
   padding: 16px;
   overflow: auto;
   flex-grow: 1;
 }
 
-.dialog-footer {
+.dialog__footer {
   display: flex;
   justify-content: flex-end;
   flex-shrink: 0;
 
-  .button-text {
+  .button--text {
     margin: 4px;
   }
 }
 
-.dialog-background {
+.dialog__background {
   position: absolute;
   top: 0;
   left: 0;

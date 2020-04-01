@@ -3,20 +3,19 @@
   right: 16px;
   bottom: 16px;
   z-index: 8;
+}
 
-  &.open {
-    .floating-action-menu,
-    .floating-action-backdrop {
-      display: block;
-    }
+.floating-action--open {
+  .floating-action__menu {
+    display: block;
+  }
 
-    .button-floating {
-      display: none;
-    }
+  .button--floating {
+    display: none;
   }
 }
 
-.floating-action-menu {
+.floating-action__menu {
   display: none;
   position: absolute;
   right: 0;
@@ -28,7 +27,7 @@
   z-index: 1;
 }
 
-.floating-action-item {
+.floating-action__item {
   display: flex;
   border: none;
   background: transparent;

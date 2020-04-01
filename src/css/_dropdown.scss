@@ -3,14 +3,7 @@
   display: inline-block;
 }
 
-.dropdown-toggle {
-  cursor: pointer;
-  outline: 0;
-  box-shadow: none;
-  border: none;
-}
-
-.dropdown-menu {
+.dropdown__menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -21,27 +14,23 @@
   border-radius: 2px;
   min-width: 240px;
   z-index: 1;
-
-  &.dropdown-menu-large {
-    min-width: 480px;
-  }
 }
 
-.dropdown.open .dropdown-menu {
+.dropdown--open .dropdown__menu {
   display: block;
 }
 
-.dropdown-menu-right {
+.dropdown__menu--right {
   left: auto;
   right: 0;
 }
 
-.dropdown-menu-top {
+.dropdown__menu--top {
   top: auto;
   bottom: 100%;
 }
 
-.dropdown-menu-item {
+.dropdown__item {
   display: flex;
   padding: 8px 16px;
   line-height: 24px;
@@ -51,11 +40,5 @@
 
   &:hover {
     background: #f5f5f5;
-  }
-
-  .material-icons {
-    vertical-align: top;
-    margin-right: 8px;
-    color: var(--text-secondary-color);
   }
 }

@@ -3,13 +3,13 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   connect() {
     let background = document.createElement('div')
-    background.classList.add('dialog-background')
+    background.classList.add('dialog__background')
     background.dataset.action = 'click->dialog#close'
     this.element.appendChild(background)
   }
 
   toggle() {
-    if (this.element.classList.contains('open')) {
+    if (this.element.classList.contains('dialog--open')) {
       this.close()
     } else {
       this.open()
@@ -17,10 +17,10 @@ export default class extends Controller {
   }
 
   open() {
-    this.element.classList.add('open')
+    this.element.classList.add('dialog--open')
   }
 
   close() {
-    this.element.classList.remove('open')
+    this.element.classList.remove('dialog--open')
   }
 }
