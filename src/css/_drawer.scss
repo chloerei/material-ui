@@ -44,29 +44,6 @@
   z-index: 31;
 }
 
-@media (min-width: 1200px) {
-  .drawer {
-    .drawer__content {
-      top: 56px;
-      box-shadow: none;
-      border-right: 1px solid #ccc;
-      z-index: 0;
-    }
-
-    &.open + .main {
-      margin-left: 240px;
-
-      & > .appbar {
-        margin-left: 240px;
-      }
-    }
-
-    .drawer-background {
-      display: none;
-    }
-  }
-}
-
 .drawer__menu {
 }
 
