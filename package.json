@@ -1,6 +1,6 @@
 {
   "name": "campo-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/js/campo-ui.js",
   "style": "dist/css/campo-ui.css",
