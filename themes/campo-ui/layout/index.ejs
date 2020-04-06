@@ -2,45 +2,46 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title></title>
     <link rel="stylesheet" href="/css/campo-ui.css">
     <link rel="stylesheet" href="/theme.css">
     <script src="/js/campo-ui.bundle.js"></script>
   </head>
-  <body>
-    <div class="appbar appbar-fixed appbar-white">
-      <div class="toolbar toolbar-fixed toolbar-white">
-        <div class="toolbar__action">
-          <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-          </button>
-        </div>
-        <div class="toolbar__title">
-          Campo UI
-        </div>
-      </div>
-    </div>
-
-    <nav id="drawer" class="drawer" data-controller="drawer">
-      <div class="drawer__content">
-        <div class="drawer__body">
-          <div class="list">
-            <% ['button', 'card', 'dialog', 'drawer', 'dropdown', 'floating-action', 'list', 'snackbar', 'table', 'toolbar'].forEach(function(name) { %>
-              <a href="/components/<%= name %>.html" class="list__item">
-                <div class="list__content">
-                  <%= name[0].toUpperCase() + name.slice(1) %>
-                </div>
-              </a>
-            <% }); %>
+  <body class="app">
+    <div class="appbar-wrapper">
+      <div class="appbar appbar-white">
+        <div class="toolbar toolbar-fixed toolbar-white">
+          <div class="toolbar__action">
+            <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+          </div>
+          <div class="toolbar__title">
+            Campo UI
           </div>
         </div>
       </div>
-    </nav>
-
-    <main class="main with-appbar">
-      <div class="container">
-        <%- page.content %>
+      <div class="drawer-wrapper">
+        <nav id="drawer" class="drawer" data-controller="drawer">
+          <div class="drawer__body">
+            <div class="list">
+              <% ['button', 'card', 'dialog', 'drawer', 'dropdown', 'floating-action', 'list', 'snackbar', 'table', 'toolbar'].forEach(function(name) { %>
+                <a href="/components/<%= name %>.html" class="list__item">
+                  <div class="list__content">
+                    <%= name[0].toUpperCase() + name.slice(1) %>
+                  </div>
+                </a>
+              <% }); %>
+            </div>
+          </div>
+        </nav>
+        <div class="app-content">
+          <div class="container">
+            <%- page.content %>
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>
