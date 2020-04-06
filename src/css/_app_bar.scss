@@ -1,4 +1,4 @@
-.appbar-wrapper {
+.app-bar-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -6,7 +6,7 @@
   flex-grow: 1;
 }
 
-.appbar {
+.app-bar {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   z-index: 1;
 
@@ -14,7 +14,7 @@
     padding: 4px;
   }
 
-  .tab-item:first-child {
+  .tab__item:first-child {
     margin-left: 48px;
   }
 
@@ -23,20 +23,11 @@
   }
 }
 
-.appbar-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.appbar-white {
+.app-bar-white {
   background: white;
 }
 
-.appbar-primary {
+.app-bar-primary {
   background: var(--primary-color);
   color: white;
 
@@ -62,7 +53,7 @@
   }
 }
 
-.appbar-secondary {
+.app-bar-secondary {
   background: var(--secondary-color);
   color: white;
 
@@ -85,12 +76,4 @@
   .tab__item--active {
     border-color: white;
   }
-}
-
-.main.with-appbar {
-  padding-top: 56px;
-}
-
-.main.with-appbar-tab {
-  padding-top: 104px;
 }

@@ -9,8 +9,8 @@
     <script src="/js/campo-ui.bundle.js"></script>
   </head>
   <body class="app">
-    <div class="appbar-wrapper">
-      <div class="appbar appbar-white">
+    <div class="app-bar-wrapper">
+      <div class="app-bar app-bar-white">
         <div class="toolbar toolbar-fixed toolbar-white">
           <div class="toolbar__action">
             <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
@@ -26,7 +26,7 @@
         <nav id="drawer" class="drawer" data-controller="drawer">
           <div class="drawer__body">
             <div class="list">
-              <% ['button', 'card', 'dialog', 'drawer', 'dropdown', 'floating-action', 'list', 'snackbar', 'table', 'toolbar'].forEach(function(name) { %>
+              <% ['button', 'card', 'dialog', 'drawer', 'dropdown', 'floating-action', 'list', 'snackbar', 'table', 'app-bar'].forEach(function(name) { %>
                 <a href="/components/<%= name %>.html" class="list__item">
                   <div class="list__content">
                     <%= name[0].toUpperCase() + name.slice(1) %>
