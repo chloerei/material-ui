@@ -41,12 +41,12 @@
 
   &.button--primary {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--text-on-primary-color);
   }
 
   &.button--secondary {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--text-on-secondary-color);
   }
 
   &[disabled] {

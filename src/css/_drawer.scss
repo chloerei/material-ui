@@ -64,7 +64,7 @@
 
 .drawer__item--active {
   color: var(--primary-color);
-  background: rgba(33, 150, 243, 0.3);
+  background: var(--primary-opacity-color);
 }
 
 @media (max-width: $mobile-break-point) {

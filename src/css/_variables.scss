@@ -1,16 +1,16 @@
 :root {
   --primary-color: #2196F3;
   --secondary-color: #F44336;
+  --primary-opacity-color: rgba(33, 150, 243, 0.3);
+  --secondary-opacity-color: rgba(244, 67, 54, 0.3);
   --error-color: #F44336;
   --success-color: #4CAF50;
-  --background-color: white;
   --text-primary-color: rgba(0, 0, 0, 0.87);
   --text-secondary-color: rgba(0, 0, 0, 0.6);
-  --text-primary-on-primary-color: white;
-  --text-secondary-on-primary-color: rgba(255, 255, 255, 0.7);
+  --text-on-primary-color: white;
+  --text-on-secondary-color: white;
   --border-color: rgba(0, 0, 0, 0.12);
 }
-
 
 $mobile-break-point: 480px;
 $tablet-break-pint: 960px;
