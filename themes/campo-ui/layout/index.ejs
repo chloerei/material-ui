@@ -25,12 +25,11 @@
       <div class="drawer-wrapper">
         <nav id="drawer" class="drawer" data-controller="drawer" data-drawer-persistence="true">
           <div class="drawer__body">
-            <div class="list">
+            <div class="drawer__menu">
               <% ['button', 'card', 'dialog', 'drawer', 'dropdown', 'floating-action', 'list', 'snackbar', 'table', 'app-bar'].forEach(function(name) { %>
-                <a href="/components/<%= name %>.html" class="list__item">
-                  <div class="list__content">
-                    <%= name[0].toUpperCase() + name.slice(1) %>
-                  </div>
+                <% itemPath = 'components/' + name + '.html'  %>
+                <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
+                  <%= name[0].toUpperCase() + name.slice(1) %>
                 </a>
               <% }); %>
             </div>

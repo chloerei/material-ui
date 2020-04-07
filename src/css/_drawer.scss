@@ -44,7 +44,7 @@
 }
 
 .drawer__item {
-  padding: 8px;
+  padding: 12px;
   margin: 8px;
   display: flex;
   color: var(--text-primary-color);
@@ -60,16 +60,11 @@
   &:active {
     background: rgba(0, 0, 0, 0.075);
   }
+}
 
-
-  &.active {
-    color: var(--primary-color);
-    background: rgba(33, 150, 243, 0.3);
-
-    .material-icons {
-      color: var(--primary-color);
-    }
-  }
+.drawer__item--active {
+  color: var(--primary-color);
+  background: rgba(33, 150, 243, 0.3);
 }
 
 @media (max-width: $mobile-break-point) {

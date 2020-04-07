@@ -12,7 +12,11 @@
   z-index: 0;
 }
 
-.example.sandbox .drawer__content,
+.example.sandbox .app {
+  height: 100%;
+  width: 100%;
+}
+
 .example.sandbox .drawer__background,
 .example.sandbox .dialog,
 .example.sandbox .dialog__background,

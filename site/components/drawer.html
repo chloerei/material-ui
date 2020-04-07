@@ -1,52 +1,111 @@
 <h1>Drawer</h1>
 
-{% example sandbox %}
-<div class="appbar appbar-primary">
-  <div class="toolbar">
-    <div class="toolbar-action">
-      <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#demo-drawer" data-toggle-action="drawer#toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-      </button>
-    </div>
-    <div class="toolbar-title">
-      Title
-    </div>
-  </div>
-</div>
+<h2>Drawer Below App Bar</h2>
 
-<nav id="demo-drawer" class="drawer" data-controller="drawer">
-  <div class="drawer__content">
-    <div class="drawer__header">
+{% example sandbox %}
+<div class="app">
+  <div class="app-bar-wrapper">
+    <div class="app-bar app-bar--primary">
       <div class="toolbar">
-        <div class="toolbar-title">
-          Header
+        <div class="toolbar__action">
+          <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#demo-drawer-below" data-toggle-action="drawer#toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+        </div>
+        <div class="toolbar__title">
+          Title
         </div>
       </div>
     </div>
-    <div class="drawer__body">
-      <div class="list">
-        <a href="#" class="list-item">
-          <div class="list-item-content">
-            Drawer Item
+    <div class="drawer-wrapper">
+      <nav id="demo-drawer-below" class="drawer" data-controller="drawer">
+        <div class="drawer__header">
+          <div class="toolbar">
+            <div class="toolbar__title">
+              Header
+            </div>
           </div>
-        </a>
-        <a href="#" class="list-item">
-          <div class="list-item-content">
-            Drawer Item
+        </div>
+        <div class="drawer__body">
+          <div class="drawer__menu">
+            <a href="#" class="drawer__item">
+              Drawer Item
+            </a>
+            <a href="#" class="drawer__item">
+              Drawer Item
+            </a>
+            <a href="#" class="drawer__item">
+              Drawer Item
+            </a>
           </div>
-        </a>
-        <a href="#" class="list-item">
-          <div class="list-item-content">
-            Drawer Item
+        </div>
+        <div class="drawer__footer">
+          <div class="toolbar">
+            <div class="toolbar__title">
+              Footer
+            </div>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="drawer__footer">
-      <div class="toolbar-title">
-        Footer
+        </div>
+      </nav>
+      <div class="app-content">
+        App Content
       </div>
     </div>
   </div>
-</nav>
+</div>
+{% endexample %}
+
+<h2>Drawer beside App Bar</h2>
+
+{% example sandbox %}
+<div class="app">
+  <div class="drawer-wrapper">
+    <nav id="demo-drawer-beside" class="drawer" data-controller="drawer">
+      <div class="drawer__header">
+        <div class="toolbar">
+          <div class="toolbar__title">
+            Header
+          </div>
+        </div>
+      </div>
+      <div class="drawer__body">
+        <div class="drawer__menu">
+          <a href="#" class="drawer__item">
+            Drawer Item
+          </a>
+          <a href="#" class="drawer__item">
+            Drawer Item
+          </a>
+          <a href="#" class="drawer__item">
+            Drawer Item
+          </a>
+        </div>
+      </div>
+      <div class="drawer__footer">
+        <div class="toolbar">
+          <div class="toolbar__title">
+            Footer
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="app-bar-wrapper">
+      <div class="app-bar app-bar--primary">
+        <div class="toolbar">
+          <div class="toolbar__action">
+            <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#demo-drawer-beside" data-toggle-action="drawer#toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+          </div>
+          <div class="toolbar__title">
+            Title
+          </div>
+        </div>
+      </div>
+      <div class="app-content">
+        App Content
+      </div>
+    </div>
+  </div>
+</div>
 {% endexample %}
