@@ -45,11 +45,12 @@
 }
 
 .drawer__menu {
+  margin: 8px 0;
 }
 
 .drawer__item {
-  padding: 12px;
-  margin: 8px;
+  padding: 10px;
+  margin: 6px;
   display: flex;
   color: var(--text-primary-color);
   text-decoration: none;
