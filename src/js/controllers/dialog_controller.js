@@ -2,10 +2,9 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   connect() {
-    let background = document.createElement('div')
-    background.classList.add('dialog__background')
-    background.dataset.action = 'click->dialog#close'
-    this.element.appendChild(background)
+    this.element.insertAdjacentHTML('beforeend', `
+      <div class="dialog__background" data-action="click->dialog#close"></div>
+    `)
   }
 
   toggle() {

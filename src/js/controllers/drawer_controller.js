@@ -2,10 +2,9 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   connect() {
-    let background = document.createElement('div')
-    background.classList.add('drawer-background')
-    background.addEventListener('click', () => this.close())
-    this.element.insertAdjacentElement('afterend', background)
+    this.element.insertAdjacentHTML('beforeend', `
+      <div class="drawer__background" data-action="click->drawer#close"></div>
+    `)
 
     if (this.persistenceEnabled()) {
       this.restore()

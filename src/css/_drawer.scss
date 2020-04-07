@@ -5,6 +5,10 @@
 }
 
 .drawer {
+  display: flex;
+}
+
+.drawer__content {
   margin-left: -240px;
   width: 240px;
   box-sizing: border-box;
@@ -18,7 +22,7 @@
   transition: 0.15s margin;
 }
 
-.drawer--open {
+.drawer--open .drawer__content {
   margin-left: 0;
 }
 
@@ -36,7 +40,7 @@
   overflow: auto;
 }
 
-.drawer-background {
+.drawer__background {
   display: none;
 }
 
@@ -68,7 +72,7 @@
 }
 
 @media (max-width: $mobile-break-point) {
-  .drawer {
+  .drawer__content {
     position: fixed;
     left: 0;
     top: 0;
@@ -76,7 +80,7 @@
     z-index: 32;
   }
 
-  .drawer--open + .drawer-background {
+  .drawer--open .drawer__background {
     display: block;
     position: fixed;
     top: 0;
