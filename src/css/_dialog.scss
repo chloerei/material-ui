@@ -15,7 +15,7 @@
   justify-content: center;
 }
 
-.dialog__content {
+.dialog__container {
   background: white;
   border-radius: 2px;
   width: 640px;
@@ -47,12 +47,7 @@
 
 .dialog__footer {
   display: flex;
-  justify-content: flex-end;
-  flex-shrink: 0;
-
-  .button--text {
-    margin: 4px;
-  }
+  padding: 8px;
 }
 
 .dialog__background {

@@ -4,7 +4,7 @@
 
 {% example sandbox %}
 <div class="dialog dialog--open">
-  <div class="dialog__content">
+  <div class="dialog__container">
     <div class="dialog__header">
       <h4 class="dialog__title">Dialog Title</h4>
       <button type="button" class="button button--icon">
@@ -15,6 +15,7 @@
       Dialog Content
     </div>
     <div class="dialog__footer">
+      <div class="flex-grow"></div>
       <button type="button" class="button button--text button--primary">Action 1</button>
       <button type="button" class="button button--text button--primary">Action 2</button>
     </div>
@@ -31,7 +32,7 @@
 </button>
 
 <div id="demo-dialog" class="dialog" data-controller="dialog">
-  <div class="dialog__content">
+  <div class="dialog__container">
     <div class="dialog__header">
       <h4 class="dialog__title">Dialog Title</h4>
       <button type="button" class="button button--icon" data-action="dialog#close">
@@ -42,6 +43,7 @@
       Dialog Content
     </div>
     <div class="dialog__footer">
+      <div class="flex-grow"></div>
       <button type="button" class="button button--text button--primary" data-action="dialog#close">Close</button>
       <button type="button" class="button button--text button--primary">Submit</button>
     </div>
