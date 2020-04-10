@@ -162,8 +162,11 @@
   padding: 6px;
   border: 0;
   border-radius: 50%;
-  color: var(--text-secondary-color);
   background: transparent;
+
+  svg {
+    fill: var(--text-secondary-color);
+  }
 
   &:hover {
     color: var(--text-primary-color);

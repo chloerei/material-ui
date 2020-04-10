@@ -46,6 +46,10 @@ body {
   color: var(--text-secondary-color);
 }
 
+.flex {
+  display: flex;
+}
+
 .flex-grow {
   flex-grow: 1;
 }

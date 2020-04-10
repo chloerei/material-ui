@@ -15,7 +15,7 @@
 }
 
 .card__header__avatar {
-  padding: 16px 0 16px 16px;
+  padding: 16px;
 
   img {
     width: 40px;
@@ -26,8 +26,16 @@
 }
 
 .card__header__content {
-  padding: 16px;
+  padding: 16px 0;
   flex-grow: 1;
+
+  &:first-child {
+    padding-left: 16px;
+  }
+
+  &:last-child {
+    padding-right: 16px;
+  }
 }
 
 .card__title {
