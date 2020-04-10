@@ -8,7 +8,7 @@
   display: flex;
 }
 
-.drawer__content {
+.drawer__container {
   margin-left: -240px;
   width: 240px;
   box-sizing: border-box;
@@ -22,7 +22,7 @@
   transition: 0.15s margin;
 }
 
-.drawer--open .drawer__content {
+.drawer--open .drawer__container {
   margin-left: 0;
 }
 
@@ -73,7 +73,7 @@
 }
 
 @media (max-width: $mobile-break-point) {
-  .drawer__content {
+  .drawer__container {
     position: fixed;
     left: 0;
     top: 0;
