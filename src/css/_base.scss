@@ -36,6 +36,20 @@ body {
   padding: 16px;
 }
 
+.text-primary {
+  font-size: 16px;
+  color: var(--text-primary-color);
+}
+
+.text-secondary {
+  font-size: 14px;
+  color: var(--text-secondary-color);
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
 @media (max-width: 640px) {
   .container {
     padding: 8px;

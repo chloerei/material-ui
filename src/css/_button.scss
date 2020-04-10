@@ -15,7 +15,7 @@
 .button--outlined {
   min-width: 64px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 16px;
   justify-content: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .button--contained {
-  padding: 9px 12px;
+  padding: 10px 16px;
   border: 0;
   border-radius: 2px;
   color: var(--text-primary-color);
@@ -55,7 +55,7 @@
 }
 
 .button--text {
-  padding: 9px 12px;
+  padding: 10px 8px;
   border: 0;
   border-radius: 2px;
   color: var(--text-primary-color);
@@ -83,9 +83,10 @@
 }
 
 .button--outlined {
-  padding: 8px 11px;
-  border: 1px solid var(--border-color);
+  padding: 10px 16px;
   border-radius: 2px;
+  border: 0;
+  box-shadow: 0 0 0 1px var(--border-color);
   color: var(--text-primary-color);
   background: transparent;
 
