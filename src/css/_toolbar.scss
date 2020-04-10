@@ -13,4 +13,9 @@
   line-height: 24px;
   flex-grow: 1;
   font-weight: bold;
+
+  a {
+    color: var(--text-primary-color);
+    text-decoration: none;
+  }
 }
