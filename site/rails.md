@@ -31,7 +31,7 @@ import 'campo-ui/dist/css/campo-ui.css'
 
 ## Import JavaScript
 
-Then add this content to entry file:
+Then add this content to `app/javascript/pack/application.js`:
 
 ```javascript
 import 'campo-ui/dist/js/campo-ui.bundle.js'
