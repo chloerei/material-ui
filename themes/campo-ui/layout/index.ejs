@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title></title>
+    <title><%= page.title %> - Campo UI</title>
     <link rel="stylesheet" href="/css/campo-ui.css">
     <link rel="stylesheet" href="/theme.css">
     <script src="/js/campo-ui.bundle.js"></script>
@@ -27,8 +27,8 @@
           <div class="drawer__container">
             <div class="drawer__body">
               <div class="drawer__menu">
-                <% ['webpack', 'rails'].forEach(function(name) { %>
-                  <% itemPath = 'components/' + name + '.html'  %>
+                <% ['introduction', 'webpack', 'rails'].forEach(function(name) { %>
+                  <% itemPath = name + '.html'  %>
                   <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
                     <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
                   </a>
