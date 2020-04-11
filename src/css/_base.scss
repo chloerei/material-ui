@@ -25,12 +25,12 @@ body {
   flex-direction: column;
 }
 
-.app-content {
+.main {
   overflow: auto;
   flex-grow: 1;
 }
 
-.container {
+.main__container {
   max-width: 960px;
   margin: 0 auto;
   padding: 16px;

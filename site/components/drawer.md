@@ -53,8 +53,10 @@ title: Drawer
           </div>
         </div>
       </nav>
-      <div class="app-content">
-        App Content
+      <div class="main">
+        <div class="main__container">
+          Main Content
+        </div>
       </div>
     </div>
   </div>
@@ -110,8 +112,10 @@ title: Drawer
           </div>
         </div>
       </div>
-      <div class="app-content">
-        App Content
+      <div class="main">
+        <div class="main__container">
+          Main Content
+        </div>
       </div>
     </div>
   </div>
