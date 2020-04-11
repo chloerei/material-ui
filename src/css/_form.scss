@@ -37,39 +37,28 @@
     margin-right: 8px;
     height: 16px;
   }
-
-  .form__helper,
-  .form__message {
-    font-size: 14px;
-    margin-top: 8px;
-  }
-
-  .form__helper {
-    color: var(--text-secondary-color);
-  }
-
-  .form__field.invalid {
-    label,
-    .form__helper,
-    .form__message {
-      color: var(--error-color);
-    }
-
-    input[type="text"],
-    input[type="password"],
-    textarea,
-    select {
-      border-color: var(--error-color);
-
-      &:focus {
-        box-shadow: 0 0 1px var(--error-color);
-      }
-    }
-  }
 }
 
 .form__field {
   margin-bottom: 12px;
+}
+
+.form__field--invalid {
+  label,
+  .form__message {
+    color: var(--error-color);
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  select {
+    border-color: var(--error-color);
+
+    &:focus {
+      box-shadow: 0 0 1px var(--error-color);
+    }
+  }
 }
 
 .form__row {
@@ -89,4 +78,10 @@
       margin-right: 0;
     }
   }
+}
+
+.form__message {
+  font-size: 14px;
+  margin-top: 8px;
+  color: var(--text-secondary-color);
 }
