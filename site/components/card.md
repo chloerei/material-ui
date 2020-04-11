@@ -2,9 +2,7 @@
 title: Card
 ---
 
-<h1>Card</h1>
-
-<h2>Elevated Card</h2>
+# Card
 
 {% example %}
 <div class="card" style="width: 20rem;">

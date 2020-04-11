@@ -2,9 +2,9 @@
 title: Floating Action
 ---
 
-<h1>Floating Action</h1>
+# Floating Action
 
-<h2>Floating Action base</h2>
+## Floating Action base
 
 {% example sandbox %}
 <div class="floating-action">
@@ -25,7 +25,7 @@ title: Floating Action
 </div>
 {% endexample %}
 
-<h2>Floating Action with Menu</h2>
+## Floating Action with Menu
 
 {% example sandbox %}
 <div class="floating-action" data-controller="floating-action">

@@ -2,9 +2,7 @@
 title: Dialog
 ---
 
-<h1>Dialog</h1>
-
-<h2>Dialog</h2>
+# Dialog
 
 {% example sandbox %}
 <div class="dialog dialog--open">
@@ -28,7 +26,7 @@ title: Dialog
 </div>
 {% endexample %}
 
-<h2>Dialog Toggle</h2>
+## Dialog Toggle
 
 {% example sandbox %}
 <button type="button" class="button button--contained button--primary" data-controller="toggle" data-toggle-target="#demo-dialog" data-toggle-action="dialog#toggle">

@@ -2,7 +2,7 @@
 title: Dropdown
 ---
 
-<h1>Dropdown</h1>
+# Dropdown
 
 {% example %}
 <div class="dropdown" data-controller="dropdown">

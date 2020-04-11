@@ -2,7 +2,7 @@
 title: Lists
 ---
 
-<h1>Lists</h1>
+# Lists
 
 {% example %}
 <div class="list">

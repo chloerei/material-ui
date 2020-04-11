@@ -2,9 +2,9 @@
 title: App Bar
 ---
 
-<h1>App Bar</h1>
+# App Bar
 
-<h2>Base</h2>
+## Base
 
 {% example %}
 <div class="app-bar">
@@ -41,7 +41,7 @@ title: App Bar
 </div>
 {% endexample %}
 
-<h2>Theme</h2>
+## Theme
 
 {% example %}
 <div class="app-bar">
@@ -84,7 +84,7 @@ title: App Bar
 </div>
 {% endexample %}
 
-<h2>Tabs</h2>
+## Tabs
 
 {% example %}
 <div class="app-bar app-bar-primary">

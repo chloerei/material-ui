@@ -2,7 +2,7 @@
 title: Snackbar
 ---
 
-<h1>Snackbar</h1>
+# Snackbar
 
 {% example sandbox %}
 <div class="snackbar">
@@ -11,7 +11,7 @@ title: Snackbar
 </div>
 {% endexample %}
 
-<h2>Disappear Automatically</h2>
+## Disappear Automatically
 
 {% example sandbox %}
 <button type="button" id="toggle-snackbar" class="button button--contained button--primary">

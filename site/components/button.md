@@ -2,9 +2,9 @@
 title: Button
 ---
 
-<h1>Button</h1>
+# Button
 
-<h2>Contained Button</h2>
+## Contained Button
 
 {% example %}
 <button type="button" class="button button--contained">Default</button>
@@ -12,7 +12,7 @@ title: Button
 <button type="button" class="button button--contained button--secondary">Secondary</button>
 {% endexample %}
 
-<h2>Text Button</h2>
+## Text Button
 
 {% example %}
 <button type="button" class="button button--text">Default</button>
@@ -20,7 +20,7 @@ title: Button
 <button type="button" class="button button--text button--secondary">Secondary</button>
 {% endexample %}
 
-<h2>Outlined Button</h2>
+## Outlined Button
 
 {% example %}
 <button type="button" class="button button--outlined">Default</button>
@@ -28,7 +28,7 @@ title: Button
 <button type="button" class="button button--outlined button--secondary">Secondary</button>
 {% endexample %}
 
-<h2>Icon Button</h2>
+## Icon Button
 
 {% example %}
 <button type="button" class="button button--icon">
@@ -42,7 +42,7 @@ title: Button
 </button>
 {% endexample %}
 
-<h2>Floating Button</h2>
+## Floating Button
 
 {% example %}
 <button type="button" class="button button--floating">
@@ -56,7 +56,7 @@ title: Button
 </button>
 {% endexample %}
 
-<h2>Toggle Button</h2>
+## Toggle Button
 
 {% example %}
 <button type="button" class="button button--toggle">

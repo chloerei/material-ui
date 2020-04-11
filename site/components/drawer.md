@@ -2,9 +2,9 @@
 title: Drawer
 ---
 
-<h1>Drawer</h1>
+# Drawer
 
-<h2>Drawer Below App Bar</h2>
+## Drawer Below App Bar
 
 {% example sandbox %}
 <div class="app">
