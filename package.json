@@ -1,7 +1,7 @@
 {
   "name": "campo-ui",
-  "version": "0.0.1-beta.0",
-  "description": "",
+  "version": "0.0.2-beta.0",
+  "description": "A Material Design front-end component library.",
   "main": "dist/js/campo-ui.js",
   "style": "dist/css/campo-ui.css",
   "scripts": {

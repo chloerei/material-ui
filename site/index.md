@@ -4,7 +4,7 @@ title: Home
 
 # Campo UI
 
-Campo UI is a Material Design front-end component library. It provides ui components like button, dropdown, dialog and so on, which are used to quickly build web applications.
+Campo UI is a Material Design front-end component library. It provides UI components like button, dropdown, dialog and so on, which are used to quickly build web UI.
 
 ## Usage
 
