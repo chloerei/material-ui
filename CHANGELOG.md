@@ -1,5 +1,11 @@
 ## master
 
+## v0.0.4
+
+Bug fix:
+
+- Fix dialog scrim display
+
 ## v0.0.3
 
 New features:
