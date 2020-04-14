@@ -14,20 +14,31 @@
   border-radius: 2px;
   min-width: 240px;
   z-index: 1;
+  transform-origin: top left;
 }
 
 .dropdown--open .dropdown__menu {
   display: block;
 }
 
-.dropdown__menu--right {
+.dropdown__menu--top-right {
   left: auto;
   right: 0;
+  transform-origin: top right;
 }
 
-.dropdown__menu--top {
+.dropdown__menu--bottom-left {
   top: auto;
   bottom: 100%;
+  transform-origin: bottom left;
+}
+
+.dropdown__menu--bottom-right {
+  top: auto;
+  bottom: 100%;
+  left: auto;
+  right: 0;
+  transform-origin: bottom right;
 }
 
 .dropdown__item {

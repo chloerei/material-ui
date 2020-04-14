@@ -1,5 +1,5 @@
 .animate {
-  animation-duration: 0.3s;
+  animation-duration: 0.15s;
   animation-fill-mode: both;
 }
 
@@ -91,4 +91,32 @@
 
 .animate--drawer-out {
   animation-name: drawerOut;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+
+   to {
+     transform: scale(1);
+   }
+}
+
+.animate--scale-in {
+  animation-name: scaleIn;
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+.animate--scale-out {
+  animation-name: scaleOut;
 }
