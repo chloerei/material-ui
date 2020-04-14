@@ -64,3 +64,31 @@
 .animate--fade-out {
   animation-name: fadeOut;
 }
+
+@keyframes drawerIn {
+  from {
+    margin-left: -240px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+.animate--drawer-in {
+  animation-name: drawerIn;
+}
+
+@keyframes drawerOut {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: -240px;
+  }
+}
+
+.animate--drawer-out {
+  animation-name: drawerOut;
+}

@@ -1,4 +1,5 @@
 import { Controller } from "stimulus"
+import animate from "../animate"
 
 export default class extends Controller {
   connect() {
@@ -24,7 +25,7 @@ export default class extends Controller {
   restore() {
     if (this.persistenceEnabled()) {
       if (localStorage.getItem('drawerOpened') == 'true') {
-        this.open()
+        this.element.classList.add('drawer--open')
       }
     }
   }
@@ -40,11 +41,16 @@ export default class extends Controller {
 
   open() {
     this.element.classList.add('drawer--open')
+    animate(this.element.querySelector('.drawer__background'), 'animate--fade-in')
+    animate(this.element.querySelector('.drawer__container'), 'animate--drawer-in')
     this.store()
   }
 
   close() {
-    this.element.classList.remove('drawer--open')
-    this.store()
+    animate(this.element.querySelector('.drawer__background'), 'animate--fade-out')
+    animate(this.element.querySelector('.drawer__container'), 'animate--drawer-out', () => {
+      this.element.classList.remove('drawer--open')
+      this.store()
+    })
   }
 }
