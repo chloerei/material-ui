@@ -1,17 +1,20 @@
 import { Controller } from "stimulus"
+import animate from '../animate'
 
 export default class extends Controller {
   connect() {
-    let delay = parseInt(this.data.get('delay')) || 5000
-    setTimeout(() => {
-      this.remove()
-    }, delay)
+    const delay = parseInt(this.data.get('period')) || 5000
+
+    animate(this.element, 'animate--zoom-in', () => {
+      setTimeout(() => {
+        this.remove()
+      }, delay)
+    })
   }
 
   remove() {
-    this.element.addEventListener('animationend', () => {
+    animate(this.element, 'animate--zoom-out', () => {
       this.element.remove()
     })
-    this.element.classList.add('snackbar--remove')
   }
 }

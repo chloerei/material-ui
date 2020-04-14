@@ -23,3 +23,16 @@
     opacity: 0;
   }
 }
+
+.animate {
+  animation-duration: 0.15s;
+  animation-fill-mode: both;
+}
+
+.animate--zoom-in {
+  animation-name: zoomIn;
+}
+
+.animate--zoom-out {
+  animation-name: zoomOut;
+}
