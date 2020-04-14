@@ -4,7 +4,7 @@ import animate from "../animate"
 export default class extends Controller {
   connect() {
     this.element.insertAdjacentHTML('beforeend', `
-      <div class="dialog__background" data-action="click->dialog#close"></div>
+      <div class="dialog__scrim" data-action="click->dialog#close"></div>
     `)
   }
 
@@ -18,12 +18,12 @@ export default class extends Controller {
 
   open() {
     this.element.classList.add('dialog--open')
-    animate(this.element.querySelector('.dialog__background'), 'animate--fade-in')
+    animate(this.element.querySelector('.dialog__scrim'), 'animate--fade-in')
     animate(this.element.querySelector('.dialog__container'), 'animate--zoom-in')
   }
 
   close() {
-    animate(this.element.querySelector('.dialog__background'), 'animate--fade-out')
+    animate(this.element.querySelector('.dialog__scrim'), 'animate--fade-out')
     animate(this.element.querySelector('.dialog__container'), 'animate--zoom-out', () => {
       this.element.classList.remove('dialog--open')
     })

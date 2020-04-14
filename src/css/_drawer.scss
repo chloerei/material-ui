@@ -39,7 +39,7 @@
   overflow: auto;
 }
 
-.drawer__background {
+.drawer__scrim {
   display: none;
 }
 
@@ -80,7 +80,7 @@
     z-index: 32;
   }
 
-  .drawer--open .drawer__background {
+  .drawer--open .drawer__scrim {
     display: block;
     position: fixed;
     top: 0;

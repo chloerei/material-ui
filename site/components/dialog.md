@@ -22,7 +22,7 @@ title: Dialog
       <button type="button" class="button button--text button--primary">Action 2</button>
     </div>
   </div>
-  <div class="dialog__background"></div>
+  <div class="dialog__scrim"></div>
 </div>
 {% endexample %}
 
