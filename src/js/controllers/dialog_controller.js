@@ -1,4 +1,5 @@
 import { Controller } from "stimulus"
+import animate from "../animate"
 
 export default class extends Controller {
   connect() {
@@ -17,9 +18,14 @@ export default class extends Controller {
 
   open() {
     this.element.classList.add('dialog--open')
+    animate(this.element.querySelector('.dialog__background'), 'animate--fade-in')
+    animate(this.element.querySelector('.dialog__container'), 'animate--zoom-in')
   }
 
   close() {
-    this.element.classList.remove('dialog--open')
+    animate(this.element.querySelector('.dialog__background'), 'animate--fade-out')
+    animate(this.element.querySelector('.dialog__container'), 'animate--zoom-out', () => {
+      this.element.classList.remove('dialog--open')
+    })
   }
 }

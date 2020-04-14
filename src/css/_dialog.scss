@@ -1,8 +1,12 @@
 .dialog {
-  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .dialog--open {
+  width: auto;
+  height: auto;
   position: fixed;
   top: 0;
   left: 0;
