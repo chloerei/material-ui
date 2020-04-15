@@ -48,6 +48,8 @@
   text-decoration: none;
   color: var(--text-primary-color);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 
   &:hover {
     background: #f5f5f5;

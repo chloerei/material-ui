@@ -1,4 +1,15 @@
-export default function animateCSS(element, animationName, callback) {
+export default function animate(element, animationName, callback) {
+  if (element.classList.contains('animate')) {
+    // wait another animate end
+    element.addEventListener('animationend', () => {
+      animateRun(element, animationName, callback)
+    })
+  } else {
+    animateRun(element, animationName, callback)
+  }
+}
+
+function animateRun(element, animationName, callback) {
   element.classList.add('animate', animationName)
 
   function handleAnimationEnd() {

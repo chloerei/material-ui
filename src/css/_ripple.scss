@@ -1,0 +1,9 @@
+.ripple {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+}
+
+.ripple.animate {
+  animation-duration: 0.3s;
+}
