@@ -1,3 +1,8 @@
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
 .ripple {
   position: absolute;
   background: rgba(0, 0, 0, 0.1);

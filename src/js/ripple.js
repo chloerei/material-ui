@@ -11,8 +11,8 @@ function delegateEvent(element, eventName, elementSelector, handler) {
   }, false);
 }
 
-delegateEvent(document, 'mousedown', '.button--contained, .button--text, .button--outlined, .dropdown__item, .drawer__item', function(event) {
-  if (this.querySelector('.ripple')) {
+function rippleStart(element, event) {
+  if (element.querySelector('.ripple')) {
     return
   }
 
@@ -20,22 +20,40 @@ delegateEvent(document, 'mousedown', '.button--contained, .button--text, .button
   ripple.classList.add('ripple')
 
   // Click point
-  let rect = this.getBoundingClientRect()
+  let rect = element.getBoundingClientRect()
   let left = event.pageX - (rect.left + document.body.scrollLeft)
   let top = event.pageY - (rect.top + document.body.scrollTop)
 
   // ripple size
-  let width = parseFloat(getComputedStyle(this, null).width.replace("px", ""))
-  let height = parseFloat(getComputedStyle(this, null).height.replace("px", ""))
+  let width = parseFloat(getComputedStyle(element, null).width.replace("px", ""))
+  let height = parseFloat(getComputedStyle(element, null).height.replace("px", ""))
   let radius = Math.sqrt(width ** 2 + height ** 2)
 
   ripple.setAttribute('style', `top: ${top - radius}px; left: ${left - radius}px; width: ${radius * 2}px; height: ${radius * 2}px;`)
 
-  this.insertAdjacentElement('beforeend', ripple)
+  element.insertAdjacentElement('beforeend', ripple)
 
   animate(ripple, 'animate--scale-in')
 
+  return ripple
+}
+
+const selector = ".button:not(.ripple-none), .dropdown__item:not(.ripple-none), .drawer__item:not(.ripple-none), .tab__item:not(.ripple-none), .ripple-effect"
+
+delegateEvent(document, 'mousedown', selector, function(event) {
+  let ripple = rippleStart(this, event)
+
   document.addEventListener('mouseup', () => {
+    animate(ripple, 'animate--fade-out', () => {
+      ripple.remove()
+    })
+  }, { once: true })
+})
+
+delegateEvent(document, 'touchstart', selector, function(event) {
+  let ripple = rippleStart(this, event)
+
+  document.addEventListener('touchend', () => {
     animate(ripple, 'animate--fade-out', () => {
       ripple.remove()
     })
