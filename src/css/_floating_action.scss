@@ -39,6 +39,8 @@
   color: var(--text-primary-color);
   cursor: pointer;
   outline: 0;
+  position: relative;
+  overflow: hidden;
 
   &:hover {
     background: #f5f5f5;

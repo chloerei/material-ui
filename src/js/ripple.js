@@ -38,7 +38,7 @@ function rippleStart(element, event) {
   return ripple
 }
 
-const selector = ".button:not(.ripple-none), .dropdown__item:not(.ripple-none), .drawer__item:not(.ripple-none), .tab__item:not(.ripple-none), .ripple-effect"
+const selector = ".button:not(.ripple-none), .dropdown__item:not(.ripple-none), .drawer__item:not(.ripple-none), .tab__item:not(.ripple-none), .floating-action__item:not(.ripple-none), .ripple-effect"
 
 delegateEvent(document, 'mousedown', selector, function(event) {
   let ripple = rippleStart(this, event)
