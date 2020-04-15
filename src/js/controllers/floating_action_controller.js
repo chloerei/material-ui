@@ -1,4 +1,5 @@
 import { Controller } from "stimulus"
+import animate from "../animate"
 
 export default class extends Controller {
   connect() {
@@ -19,11 +20,14 @@ export default class extends Controller {
 
   open() {
     this.element.classList.add('floating-action--open')
+    animate(this.element.querySelector('.floating-action__menu'), 'animate--scale-in')
     document.addEventListener('click', this.closeMenuOutside)
   }
 
   close() {
-    this.element.classList.remove('floating-action--open')
+    animate(this.element.querySelector('.floating-action__menu'), 'animate--scale-out', () => {
+      this.element.classList.remove('floating-action--open')
+    })
     document.removeEventListener('click', this.closeMenuOutside)
   }
 }
