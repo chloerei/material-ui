@@ -15,9 +15,9 @@ New features:
 Break changes:
 
 - rename `data-snackbar-delay` to `data-snackbar-period`
-- rename `dropdown__menu--right` to `dropdown__menu--top-right`
+- rename `dropdown__menu--top-right` to `dropdown__menu--top-right`
 - rename `dropdown__menu--top` to `dropdown__menu--bottom-left`
-- rename `dropdown__menu--top.dropdown__menu--right` to `dropdown__menu--bottom-right`
+- rename `dropdown__menu--top.dropdown__menu--top-right` to `dropdown__menu--bottom-right`
 - rename `drawer__background` to `drawer__scrim` (inner change)
 - rename `dialog__background` to `dialog__scrim` (inner change)
 
