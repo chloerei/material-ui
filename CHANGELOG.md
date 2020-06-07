@@ -1,5 +1,11 @@
 ## master
 
+## v0.0.6
+
+- Add Sheet component
+- Add Chip component
+- Fix ripple animate
+
 ## v0.0.5
 
 - Add ripple effect
