@@ -1,0 +1,43 @@
+.chip {
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.chip__icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px 0 -8px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+  }
+
+  svg {
+    fill: var(--text-secondary-color);
+  }
+}
+
+.chip__action {
+  width: 18px;
+  height: 18px;
+  margin: 0 -4px 0 8px;
+
+  .button--icon {
+    padding: 0;
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
