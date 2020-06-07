@@ -18,12 +18,20 @@
 }
 
 .example.sandbox .drawer__scrim,
+.example.sandbox .sheet__scrim,
 .example.sandbox .dialog,
 .example.sandbox .dialog__scrim,
 .example.sandbox .snackbar,
 .example.sandbox .floating-action,
 .example.sandbox .floating-action__menu {
   position: absolute;
+}
+
+@media (max-width: 480px) {
+  .example.sandbox .drawer__container,
+  .example.sandbox .sheet__container {
+    position: absolute;
+  }
 }
 
 .example + pre {

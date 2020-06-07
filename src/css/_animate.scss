@@ -93,6 +93,34 @@
   animation-name: drawerOut;
 }
 
+@keyframes sheetIn {
+  from {
+    margin-right: -240px;
+  }
+
+  to {
+    margin-right: 0;
+  }
+}
+
+.animate--sheet-in {
+  animation-name: sheetIn;
+}
+
+@keyframes sheetOut {
+  from {
+    margin-right: 0;
+  }
+
+  to {
+    margin-right: -240px;
+  }
+}
+
+.animate--sheet-out {
+  animation-name: sheetOut;
+}
+
 @keyframes scaleIn {
   from {
     transform: scale(0);
