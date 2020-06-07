@@ -43,19 +43,23 @@ const selector = ".button:not(.ripple-none), .dropdown__item:not(.ripple-none), 
 delegateEvent(document, 'mousedown', selector, function(event) {
   let ripple = rippleStart(this, event)
 
-  document.addEventListener('mouseup', () => {
-    animate(ripple, 'animate--fade-out', () => {
-      ripple.remove()
-    })
-  }, { once: true })
+  if (ripple) {
+    document.addEventListener('mouseup', () => {
+      animate(ripple, 'animate--fade-out', () => {
+        ripple.remove()
+      })
+    }, { once: true })
+  }
 })
 
 delegateEvent(document, 'touchstart', selector, function(event) {
   let ripple = rippleStart(this, event)
 
-  document.addEventListener('touchend', () => {
-    animate(ripple, 'animate--fade-out', () => {
-      ripple.remove()
-    })
-  }, { once: true })
+  if (ripple) {
+    document.addEventListener('touchend', () => {
+      animate(ripple, 'animate--fade-out', () => {
+        ripple.remove()
+      })
+    }, { once: true })
+  }
 })
