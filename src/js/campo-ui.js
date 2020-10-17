@@ -1,5 +1,3 @@
-import './ripple'
-
 import { Application } from 'stimulus'
 import DialogController from './controllers/dialog_controller'
 import DrawerController from './controllers/drawer_controller'
