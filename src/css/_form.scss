@@ -19,8 +19,8 @@
     background: white;
 
     &:focus {
-      border-color: var(--primary-color);
-      box-shadow: 0 0 1px var(--primary-color);
+      border-color: $primary-color;
+      box-shadow: 0 0 1px $primary-color;
     }
   }
 
@@ -46,17 +46,17 @@
 .form__field--invalid {
   label,
   .form__message {
-    color: var(--error-color);
+    color: $error-color;
   }
 
   input[type="text"],
   input[type="password"],
   textarea,
   select {
-    border-color: var(--error-color);
+    border-color: $error-color;
 
     &:focus {
-      box-shadow: 0 0 1px var(--error-color);
+      box-shadow: 0 0 1px $error-color;
     }
   }
 }
@@ -83,5 +83,5 @@
 .form__message {
   font-size: 14px;
   margin-top: 8px;
-  color: var(--text-secondary-color);
+  color: $text-secondary-color;
 }

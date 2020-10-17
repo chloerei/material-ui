@@ -13,7 +13,7 @@
   flex-direction: column;
   width: 240px;
   box-sizing: border-box;
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid $border-color;
   background: white;
   overflow: auto;
   height: 100%;

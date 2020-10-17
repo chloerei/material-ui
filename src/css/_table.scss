@@ -16,7 +16,7 @@
   }
 
   th {
-    color: var(--text-secondary-color);
+    color: $text-secondary-color;
     font-weight: bold;
   }
 
@@ -24,7 +24,7 @@
   }
 
   tr {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid $border-color;
 
     &:last-child {
       border-bottom: none;
@@ -32,6 +32,6 @@
   }
 
   thead {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid $border-color;
   }
 }

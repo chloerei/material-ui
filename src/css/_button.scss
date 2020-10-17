@@ -28,7 +28,7 @@
   padding: 10px 16px;
   border: 0;
   border-radius: 2px;
-  color: var(--text-primary-color);
+  color: $text-primary-color;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   background: white;
 
@@ -37,13 +37,13 @@
   }
 
   &.button--primary {
-    background-color: var(--primary-color);
-    color: var(--text-on-primary-color);
+    background-color: $primary-color;
+    color: $text-on-primary-color;
   }
 
   &.button--secondary {
-    background-color: var(--secondary-color);
-    color: var(--text-on-secondary-color);
+    background-color: $secondary-color;
+    color: $text-on-secondary-color;
   }
 
   &[disabled] {
@@ -55,7 +55,7 @@
   padding: 10px 8px;
   border: 0;
   border-radius: 2px;
-  color: var(--text-primary-color);
+  color: $text-primary-color;
   background: transparent;
 
   &:hover {
@@ -63,11 +63,11 @@
   }
 
   &.button--primary {
-    color: var(--primary-color);
+    color: $primary-color;
   }
 
   &.button--secondary {
-    color: var(--secondary-color);
+    color: $secondary-color;
   }
 
   &[disabled] {
@@ -79,8 +79,8 @@
   padding: 10px 16px;
   border-radius: 2px;
   border: 0;
-  box-shadow: 0 0 0 1px var(--border-color);
-  color: var(--text-primary-color);
+  box-shadow: 0 0 0 1px $border-color;
+  color: $text-primary-color;
   background: transparent;
 
   &:hover {
@@ -88,11 +88,11 @@
   }
 
   &.button--primary {
-    color: var(--primary-color);
+    color: $primary-color;
   }
 
   &.button--secondary {
-    color: var(--secondary-color);
+    color: $secondary-color;
   }
 
   &[disabled] {
@@ -106,7 +106,7 @@
   border: 0;
   border-radius: 28px;
   vertical-align: middle;
-  color: var(--text-primary-color);
+  color: $text-primary-color;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background: white;
 
@@ -120,7 +120,7 @@
   }
 
   &.button--primary {
-    background-color: var(--primary-color);
+    background-color: $primary-color;
     color: white;
 
     svg {
@@ -129,7 +129,7 @@
   }
 
   &.button--secondary {
-    background-color: var(--secondary-color);
+    background-color: $secondary-color;
     color: white;
 
     svg {
@@ -150,20 +150,20 @@
   background: transparent;
 
   svg {
-    fill: var(--text-secondary-color);
+    fill: $text-secondary-color;
   }
 
   &:hover {
-    color: var(--text-primary-color);
+    color: $text-primary-color;
     background: rgba(0, 0, 0, 0.05);
   }
 
   &.button--primary svg {
-    fill: var(--primary-color);
+    fill: $primary-color;
   }
 
   &.button--secondary svg {
-    fill: var(--secondary-color);
+    fill: $secondary-color;
   }
 
   &[disabled] {
