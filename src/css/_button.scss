@@ -31,19 +31,40 @@
   color: $text-primary-color;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   background: white;
+  transition: background-color 0.3s;
 
   &:hover {
-    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
   }
 
   &.button--primary {
     background-color: $primary-color;
     color: $text-on-primary-color;
+
+    &:hover {
+      background: rgba($primary-color, 0.9)
+    }
+
+    &:active {
+      background: rgba($primary-color, 0.7)
+    }
   }
 
   &.button--secondary {
     background-color: $secondary-color;
     color: $text-on-secondary-color;
+
+    &:hover {
+      background: rgba($secondary-color, 0.9)
+    }
+
+    &:active {
+      background: rgba($secondary-color, 0.7)
+    }
   }
 
   &[disabled] {
@@ -57,17 +78,38 @@
   border-radius: 2px;
   color: $text-primary-color;
   background: transparent;
+  transition: background-color 0.3s;
 
   &:hover {
     background: rgba(0, 0, 0, 0.05);
   }
 
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
   &.button--primary {
     color: $primary-color;
+
+    &:hover {
+      background: rgba($primary-color, 0.1)
+    }
+
+    &:active {
+      background: rgba($primary-color, 0.3)
+    }
   }
 
   &.button--secondary {
     color: $secondary-color;
+
+    &:hover {
+      background: rgba($secondary-color, 0.1)
+    }
+
+    &:active {
+      background: rgba($secondary-color, 0.3)
+    }
   }
 
   &[disabled] {
@@ -82,17 +124,38 @@
   box-shadow: 0 0 0 1px $border-color;
   color: $text-primary-color;
   background: transparent;
+  transition: background-color 0.3s;
 
   &:hover {
     background: rgba(0, 0, 0, 0.05);
   }
 
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
   &.button--primary {
     color: $primary-color;
+
+    &:hover {
+      background: rgba($primary-color, 0.1)
+    }
+
+    &:active {
+      background: rgba($primary-color, 0.3)
+    }
   }
 
   &.button--secondary {
     color: $secondary-color;
+
+    &:hover {
+      background: rgba($secondary-color, 0.1)
+    }
+
+    &:active {
+      background: rgba($secondary-color, 0.3)
+    }
   }
 
   &[disabled] {
@@ -109,14 +172,14 @@
   color: $text-primary-color;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background: white;
-
-  &.button--extended {
-    padding: 12px 20px 12px 12px;
-    border-radius: 24px;
-  }
+  transition: background-color 0.3s;
 
   &:hover {
-    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
   }
 
   &.button--primary {
@@ -125,6 +188,14 @@
 
     svg {
       fill: white;
+    }
+
+    &:hover {
+      background: rgba($primary-color, 0.9)
+    }
+
+    &:active {
+      background: rgba($primary-color, 0.7)
     }
   }
 
@@ -135,6 +206,19 @@
     svg {
       fill: white;
     }
+
+    &:hover {
+      background: rgba($secondary-color, 0.9)
+    }
+
+    &:active {
+      background: rgba($secondary-color, 0.7)
+    }
+  }
+
+  &.button--extended {
+    padding: 12px 20px 12px 12px;
+    border-radius: 24px;
   }
 
   &[disabled] {
@@ -148,22 +232,46 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
+  transition: background-color 0.3s;
 
   svg {
     fill: $text-secondary-color;
   }
 
   &:hover {
-    color: $text-primary-color;
     background: rgba(0, 0, 0, 0.05);
   }
 
-  &.button--primary svg {
-    fill: $primary-color;
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
   }
 
-  &.button--secondary svg {
-    fill: $secondary-color;
+  &.button--primary {
+    svg {
+      fill: $primary-color;
+    }
+
+    &:hover {
+      background: rgba($primary-color, 0.1)
+    }
+
+    &:active {
+      background: rgba($primary-color, 0.3)
+    }
+  }
+
+  &.button--secondary {
+    svg {
+      fill: $secondary-color;
+    }
+
+    &:hover {
+      background: rgba($secondary-color, 0.1)
+    }
+
+    &:active {
+      background: rgba($secondary-color, 0.3)
+    }
   }
 
   &[disabled] {
@@ -175,8 +283,13 @@
   padding: 6px;
   background: white;
   border: none;
+  transition: background-color 0.3s;
 
   &:hover {
     background: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
   }
 }
