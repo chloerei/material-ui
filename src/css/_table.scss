@@ -1,6 +1,6 @@
 .table {
   width: 100%;
-  border-collapse: collapse;
+  border-spacing: 0;
   overflow: auto;
 
   th,
@@ -9,29 +9,21 @@
     font-size: 14px;
     line-height: 24px;
     text-align: left;
-
-    &.text-align-right {
-      text-align: right;
-    }
+    border-bottom: 1px solid var(--border-color);
+    background: white;
   }
 
   th {
     color: var(--text-secondary-color);
     font-weight: bold;
   }
+}
 
-  td {
-  }
+.table--sticky-header {
+  position: relative;
 
-  tr {
-    border-bottom: 1px solid var(--border-color);
-
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-
-  thead {
-    border-bottom: 1px solid var(--border-color);
+  thead th {
+    position: sticky;
+    top: 0;
   }
 }

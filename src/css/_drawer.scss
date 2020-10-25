@@ -9,7 +9,6 @@
 }
 
 .drawer__container {
-  margin-left: -240px;
   width: 240px;
   box-sizing: border-box;
   border-right: 1px solid var(--border-color);
@@ -67,11 +66,10 @@
 
   &.drawer__item--active {
     color: var(--primary-color);
-    background: rgba(var(--primary-color), 0.3);
   }
 }
 
-@media (max-width: var(--mobile-break-point)) {
+@media (max-width: $mobile-break-point) {
   .drawer__container {
     position: fixed;
     left: 0;
