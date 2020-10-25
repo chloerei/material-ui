@@ -1,12 +1,14 @@
 $mobile-break-point: 480px !default;
 $tablet-break-pint: 960px !default;
 
-$primary-color: #2196F3 !default;
-$secondary-color: #F44336 !default;
-$error-color: #F44336 !default;
-$success-color: #4CAF50 !default;
-$text-primary-color: rgba(0, 0, 0, 0.87) !default;
-$text-secondary-color: rgba(0, 0, 0, 0.6) !default;
-$text-on-primary-color: white !default;
-$text-on-secondary-color: white !default;
-$border-color: rgba(0, 0, 0, 0.12) !default;
+:root {
+  --primary-color: #2196F3;
+  --secondary-color: #F44336;
+  --error-color: #F44336;
+  --success-color: #4CAF50;
+  --text-primary-color: rgba(0, 0, 0, 0.87);
+  --text-secondary-color: rgba(0, 0, 0, 0.6);
+  --text-on-primary-color: white;
+  --text-on-secondary-color: white;
+  --border-color: rgba(0, 0, 0, 0.12);
+}

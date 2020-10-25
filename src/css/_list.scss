@@ -5,7 +5,7 @@
 
 .list--bordered {
   .list-item:not(:last-child) {
-    border-bottom:  1px solid $border-color;
+    border-bottom:  1px solid var(--border-color);
   }
 }
 
@@ -34,7 +34,7 @@
   padding: 16px 0;
   flex-grow: 1;
   min-width: 0;
-  color: $text-primary-color;
+  color: var(--text-primary-color);
 
   &:first-child {
     padding-left: 16px;
@@ -67,21 +67,21 @@
   font-size: 14px;
   margin: 10px 0 0;
   line-height: 1;
-  color: $text-secondary-color;
+  color: var(--text-secondary-color);
 }
 
 .list__icon {
   padding: 16px;
   flex: 0 0 24px;
   line-height: 0;
-  color: $text-secondary-color;
+  color: var(--text-secondary-color);
 
   &:first-child {
     flex: 0 0 40px;
   }
 
   svg {
-    fill: $text-secondary-color;
+    fill: var(--text-secondary-color);
   }
 }
 

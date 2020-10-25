@@ -9,6 +9,8 @@
   box-sizing: border-box;
   white-space: nowrap;
   font-size: 16px;
+  position: relative;
+  overflow: hidden;
 }
 
 .button--contained,
@@ -28,42 +30,53 @@
   padding: 10px 16px;
   border: 0;
   border-radius: 2px;
-  color: $text-primary-color;
+  color: var(--text-primary-color);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   background: white;
-  transition: background-color 0.3s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--text-primary-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
 
   &:hover {
-    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    &::after {
+      opacity: 0.1;
+    }
   }
 
   &:active {
-    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &.button--primary {
-    background-color: $primary-color;
-    color: $text-on-primary-color;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary-color);
 
-    &:hover {
-      background: rgba($primary-color, 0.9)
-    }
-
-    &:active {
-      background: rgba($primary-color, 0.7)
+    &::after {
+      background: var(--text-on-primary-color);
     }
   }
 
   &.button--secondary {
-    background-color: $secondary-color;
-    color: $text-on-secondary-color;
+    background-color: var(--secondary-color);
+    color: var(--text-on-secondary-color);
 
-    &:hover {
-      background: rgba($secondary-color, 0.9)
-    }
-
-    &:active {
-      background: rgba($secondary-color, 0.7)
+    &::after {
+      background: var(--text-on-primary-color);
     }
   }
 
@@ -76,39 +89,47 @@
   padding: 10px 8px;
   border: 0;
   border-radius: 2px;
-  color: $text-primary-color;
+  color: var(--text-primary-color);
   background: transparent;
   transition: background-color 0.3s;
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--text-primary-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
   &:hover {
-    background: rgba(0, 0, 0, 0.05);
+    &::after {
+      opacity: 0.1;
+    }
   }
 
   &:active {
-    background: rgba(0, 0, 0, 0.1);
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &.button--primary {
-    color: $primary-color;
+    color: var(--primary-color);
 
-    &:hover {
-      background: rgba($primary-color, 0.1)
-    }
-
-    &:active {
-      background: rgba($primary-color, 0.3)
+    &::after {
+      background: var(--primary-color);
     }
   }
 
   &.button--secondary {
-    color: $secondary-color;
+    color: var(--secondary-color);
 
-    &:hover {
-      background: rgba($secondary-color, 0.1)
-    }
-
-    &:active {
-      background: rgba($secondary-color, 0.3)
+    &::after {
+      background: var(--secondary-color);
     }
   }
 
@@ -121,40 +142,48 @@
   padding: 10px 16px;
   border-radius: 2px;
   border: 0;
-  box-shadow: 0 0 0 1px $border-color;
-  color: $text-primary-color;
+  box-shadow: 0 0 0 1px var(--border-color);
+  color: var(--text-primary-color);
   background: transparent;
   transition: background-color 0.3s;
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--text-primary-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
   &:hover {
-    background: rgba(0, 0, 0, 0.05);
+    &::after {
+      opacity: 0.1;
+    }
   }
 
   &:active {
-    background: rgba(0, 0, 0, 0.1);
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &.button--primary {
-    color: $primary-color;
+    color: var(--primary-color);
 
-    &:hover {
-      background: rgba($primary-color, 0.1)
-    }
-
-    &:active {
-      background: rgba($primary-color, 0.3)
+    &::after {
+      background: var(--primary-color);
     }
   }
 
   &.button--secondary {
-    color: $secondary-color;
+    color: var(--secondary-color);
 
-    &:hover {
-      background: rgba($secondary-color, 0.1)
-    }
-
-    &:active {
-      background: rgba($secondary-color, 0.3)
+    &::after {
+      background: var(--secondary-color);
     }
   }
 
@@ -169,50 +198,62 @@
   border: 0;
   border-radius: 28px;
   vertical-align: middle;
-  color: $text-primary-color;
+  color: var(--text-primary-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background: white;
   transition: background-color 0.3s;
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--text-primary-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
   &:hover {
-    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    &::after {
+      opacity: 0.1;
+    }
   }
 
   &:active {
-    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &.button--primary {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     color: white;
 
     svg {
-      fill: white;
+      fill: var(--text-on-primary-color);
     }
 
-    &:hover {
-      background: rgba($primary-color, 0.9)
-    }
-
-    &:active {
-      background: rgba($primary-color, 0.7)
+    &::after {
+      background: var(--text-on-primary-color);
     }
   }
 
   &.button--secondary {
-    background-color: $secondary-color;
+    background-color: var(--secondary-color);
     color: white;
 
     svg {
-      fill: white;
+      fill: var(--text-on-secondary-color);
     }
 
-    &:hover {
-      background: rgba($secondary-color, 0.9)
-    }
-
-    &:active {
-      background: rgba($secondary-color, 0.7)
+    &::after {
+      background: var(--text-on-secondary-color);
     }
   }
 
@@ -232,45 +273,52 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
-  transition: background-color 0.3s;
 
   svg {
-    fill: $text-secondary-color;
+    fill: var(--text-secondary-color);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.2s;
+    opacity: 0;
+    background: var(--text-secondary-color);
   }
 
   &:hover {
-    background: rgba(0, 0, 0, 0.05);
+    &::after {
+      opacity: 0.1;
+    }
   }
 
   &:active {
-    background: rgba(0, 0, 0, 0.1);
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &.button--primary {
     svg {
-      fill: $primary-color;
+      fill: var(--primary-color);
     }
 
-    &:hover {
-      background: rgba($primary-color, 0.1)
-    }
-
-    &:active {
-      background: rgba($primary-color, 0.3)
+    &::after {
+      background: var(--primary-color);
     }
   }
 
   &.button--secondary {
     svg {
-      fill: $secondary-color;
+      fill: var(--secondary-color);
     }
 
-    &:hover {
-      background: rgba($secondary-color, 0.1)
-    }
-
-    &:active {
-      background: rgba($secondary-color, 0.3)
+    &::after {
+      background: var(--secondary-color);
     }
   }
 

@@ -12,7 +12,7 @@
   margin-left: -240px;
   width: 240px;
   box-sizing: border-box;
-  border-right: 1px solid $border-color;
+  border-right: 1px solid var(--border-color);
   background: white;
   overflow: auto;
   display: flex;
@@ -51,7 +51,7 @@
   padding: 10px;
   margin: 6px;
   display: flex;
-  color: $text-primary-color;
+  color: var(--text-primary-color);
   text-decoration: none;
   line-height: 1;
   align-items: center;
@@ -66,12 +66,12 @@
   }
 
   &.drawer__item--active {
-    color: $primary-color;
-    background: rgba($primary-color, 0.3);
+    color: var(--primary-color);
+    background: rgba(var(--primary-color), 0.3);
   }
 }
 
-@media (max-width: $mobile-break-point) {
+@media (max-width: var(--mobile-break-point)) {
   .drawer__container {
     position: fixed;
     left: 0;

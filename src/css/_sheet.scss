@@ -13,7 +13,7 @@
   flex-direction: column;
   width: 240px;
   box-sizing: border-box;
-  border-left: 1px solid $border-color;
+  border-left: 1px solid var(--border-color);
   background: white;
   overflow: auto;
   height: 100%;
@@ -39,7 +39,7 @@
   display: none;
 }
 
-@media (max-width: $mobile-break-point) {
+@media (max-width: var(--mobile-break-point)) {
   .sheet__container {
     position: fixed;
     right: 0;

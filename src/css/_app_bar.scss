@@ -24,7 +24,7 @@
 }
 
 .app-bar-primary {
-  background: $primary-color;
+  background: var(--primary-color);
   color: white;
 
   a,
@@ -51,7 +51,7 @@
 }
 
 .app-bar-secondary {
-  background: $secondary-color;
+  background: var(--secondary-color);
   color: white;
 
   a,

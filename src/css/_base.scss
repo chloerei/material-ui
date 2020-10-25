@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: $text-primary-color;
+  color: var(--text-primary-color);
   box-sizing: border-box;
   font-family: sans-serif;
   line-height: 1.5;
@@ -41,23 +41,23 @@ body {
   font-size: 14px;
   line-height: 1;
   font-weight: bold;
-  color: $text-secondary-color;
+  color: var(--text-secondary-color);
 }
 
 .divider {
   margin: 8px 0;
   border: 0;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .text-primary {
   font-size: 16px;
-  color: $text-primary-color;
+  color: var(--text-primary-color);
 }
 
 .text-secondary {
   font-size: 14px;
-  color: $text-secondary-color;
+  color: var(--text-secondary-color);
 }
 
 .flex {
@@ -79,7 +79,7 @@ body {
 }
 
 a {
-  color: $primary-color;
+  color: var(--primary-color);
 
   &:hover {
     opacity: 0.9;
