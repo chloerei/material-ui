@@ -1,17 +1,20 @@
 .drawer-wrapper {
   display: flex;
   flex-grow: 1;
+  position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .drawer {
   display: flex;
+  z-index: 100;
 }
 
 .drawer__container {
   width: 240px;
   box-sizing: border-box;
-  border-right: 1px solid var(--border-color);
+  box-shadow: 1px 0 0 var(--border-color);
   background: white;
   overflow: auto;
   display: flex;
@@ -107,6 +110,7 @@
 
 @media (max-width: $mobile-break-point) {
   .drawer__container {
+    margin-left: -240px;
     position: fixed;
     left: 0;
     top: 0;

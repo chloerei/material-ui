@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .app-bar {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  box-shadow: 0 1px 0 var(--border-color);
+  z-index: 100;
   background: white;
 
   .toolbar {

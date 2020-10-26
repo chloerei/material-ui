@@ -1,12 +1,17 @@
 .navigation-wrapper {
   display: flex;
   flex-grow: 1;
+  position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .navigation {
-  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
   padding: 8px 0;
+  z-index: 100;
+  box-shadow: 1px 0 0 var(--border-color);
 }
 
 .navigation__action {
@@ -65,4 +70,22 @@
 
 .navigation__label {
   line-height: 20px;
+}
+
+@media (max-width: $mobile-break-point) {
+  .navigation-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .navigation {
+    flex-direction: row;
+    border-right: 0;
+    padding: 0;
+    box-shadow: 0 -1px 0 var(--border-color);
+  }
+
+  .navigation__action {
+    width: auto;
+    flex-grow: 1;
+  }
 }
