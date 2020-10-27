@@ -1,0 +1,18 @@
+.pagination {
+  display: flex;
+
+  .button--active {
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
+
+.pagination__item {
+  padding: 0 2px;
+}
+
+.pagination__ellipsis {
+  color: var(--text-secondary-color);
+  padding: 6px;
+}

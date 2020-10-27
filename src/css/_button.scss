@@ -273,6 +273,9 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
+  height: 36px;
+  width: 36px;
+  justify-content: center;
 
   svg {
     fill: var(--text-secondary-color);
