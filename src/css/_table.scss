@@ -30,6 +30,12 @@
     }
   }
 
+  tbody tr:last-child {
+    th, td{
+      border-bottom: none;
+    }
+  }
+
   th {
     color: var(--text-secondary-color);
     font-weight: bold;
