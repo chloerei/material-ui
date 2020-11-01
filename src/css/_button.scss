@@ -11,6 +11,7 @@
   font-size: 16px;
   position: relative;
   overflow: hidden;
+  color: var(--text-primary-color);
 }
 
 .button--contained,
@@ -22,8 +23,10 @@
   justify-content: center;
 }
 
-.button--disabled {
+.button--disabled,
+button[disabled] {
   pointer-events: none;
+  opacity: 0.3;
 }
 
 .button--contained {
@@ -79,10 +82,6 @@
       background: var(--text-on-primary-color);
     }
   }
-
-  &[disabled] {
-    opacity: 0.3;
-  }
 }
 
 .button--text {
@@ -131,10 +130,6 @@
     &::after {
       background: var(--secondary-color);
     }
-  }
-
-  &[disabled] {
-    opacity: 0.3;
   }
 }
 
@@ -185,10 +180,6 @@
     &::after {
       background: var(--secondary-color);
     }
-  }
-
-  &[disabled] {
-    opacity: 0.3;
   }
 }
 
@@ -261,10 +252,6 @@
     padding: 12px 20px 12px 12px;
     border-radius: 24px;
   }
-
-  &[disabled] {
-    opacity: 0.3;
-  }
 }
 
 .button--icon {
@@ -276,6 +263,7 @@
   height: 36px;
   width: 36px;
   justify-content: center;
+  color: var(--text-secondary-color);
 
   svg {
     fill: var(--text-secondary-color);
@@ -323,10 +311,6 @@
     &::after {
       background: var(--secondary-color);
     }
-  }
-
-  &[disabled] {
-    opacity: 0.3;
   }
 }
 
