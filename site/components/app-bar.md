@@ -57,7 +57,7 @@ title: App Bar
   </div>
 </div>
 
-<div class="app-bar app-bar-primary">
+<div class="app-bar app-bar--primary">
   <div class="toolbar">
     <div class="toolbar__action">
       <button type="button" class="button button--icon">
@@ -70,7 +70,7 @@ title: App Bar
   </div>
 </div>
 
-<div class="app-bar app-bar-secondary">
+<div class="app-bar app-bar--secondary">
   <div class="toolbar">
     <div class="toolbar__action">
       <button type="button" class="button button--icon">
@@ -87,7 +87,7 @@ title: App Bar
 ## Tabs
 
 {% example %}
-<div class="app-bar app-bar-primary">
+<div class="app-bar app-bar--primary">
   <div class="toolbar">
     <div class="toolbar__action">
       <button type="button" class="button button--icon">
