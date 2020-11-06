@@ -21,7 +21,18 @@
   .text-field__container {
     background: rgba(0, 0, 0, 0.05);
     border-radius: 4px 4px 0 0;
-    border-bottom: 1px solid var(--text-secondary-color);
+
+    // border element
+    &::after {
+      content: "";
+      border-bottom: 1px solid var(--text-secondary-color);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
 
     &:hover {
       background: rgba(0, 0, 0, 0.075);
@@ -29,11 +40,15 @@
 
     &:focus-within {
       background: rgba(0, 0, 0, 0.1);
-      border-bottom: 2px solid var(--primary-color);
 
-      .text-field__prefix-text,
-      .text-field__suffix-text {
-        padding-bottom: 6px;
+      &::after {
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      .text-field__label {
+        font-size: 12px;
+        top: 8px;
+        color: var(--primary-color);
       }
     }
   }
@@ -49,38 +64,32 @@
   }
 
   input {
-    padding: 20px 16px 7px;
+    padding: 20px 16px 8px;
     font-size: 16px;
     line-height: 20px;
     background: transparent;
-
-    &:focus {
-      padding-bottom: 6px;
-    }
 
     &::placeholder {
       opacity: 0;
     }
   }
 
-  input:focus ~ .text-field__label,
   input:not(:placeholder-shown) ~ .text-field__label {
     font-size: 12px;
     top: 8px;
-    color: var(--primary-color);
   }
 
   .text-field__prefix-text {
     font-size: 16px;
     line-height: 20px;
-    padding: 20px 0 7px 16px ;
+    padding: 20px 0 8px 16px ;
     color: var(--text-secondary-color);
   }
 
   .text-field__suffix-text {
     font-size: 16px;
     line-height: 20px;
-    padding: 20px 16px 7px 0;
+    padding: 20px 16px 8px 0;
     color: var(--text-secondary-color);
   }
 
@@ -139,18 +148,29 @@
 
 .text-field--outlined {
   .text-field__container {
-    border-radius: 4px;
-    border: 1px solid var(--text-secondary-color);
+    // border element
+    &::after {
+      content: "";
+      border: 1px solid var(--text-secondary-color);
+      border-radius: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
 
     &:focus-within {
-      border: 2px solid var(--primary-color);
-
-      .text-field__prefix-text {
-        padding: 12px 0 12px 14px;
+      &::after {
+        border: 2px solid var(--primary-color);
       }
 
-      .text-field__suffix-text {
-        padding: 12px 14px 12px 0;
+      .text-field__label {
+        font-size: 12px;
+        top: -6px;
+        left: 12px;
+        color: var(--primary-color);
       }
     }
   }
@@ -158,49 +178,45 @@
   .text-field__label {
     position: absolute;
     top: 16px;
-    left: 11px;
+    left: 12px;
     padding: 0 4px;
     font-size: 16px;
     line-height: 1;
-    transition: top 0.15s, color 0.15s;
+    transition: top 0.15s, left 0.15s, color 0.15s;
     color: var(--text-secondary-color);
     background: white;
+    z-index: 1;
   }
 
   input {
-    padding: 13px 15px;
+    padding: 14px 16px;
     font-size: 16px;
     line-height: 20px;
     outline: 0;
     background: transparent;
-
-    &:focus {
-      padding: 12px 14px;
-    }
 
     &::placeholder {
       opacity: 0;
     }
   }
 
-  input:focus ~ .text-field__label,
   input:not(:placeholder-shown) ~ .text-field__label {
     font-size: 12px;
     top: -6px;
-    color: var(--primary-color);
+    left: 12px;
   }
 
   .text-field__prefix-text {
     font-size: 16px;
     line-height: 20px;
-    padding: 13px 0 13px 15px ;
+    padding: 14px 0 14px 16px ;
     color: var(--text-secondary-color);
   }
 
   .text-field__suffix-text {
     font-size: 16px;
     line-height: 20px;
-    padding: 13px 15px 13px 0;
+    padding: 14px 16px 14px 0;
     color: var(--text-secondary-color);
   }
 
@@ -234,45 +250,27 @@
     }
 
     input {
-      padding-left: 47px;
-
-      &:focus {
-        padding-left: 46px;
-      }
+      padding-left: 48px;
     }
 
     .text-field__leading-icon {
       position: absolute;
-      top: 11px;
-      left: 11px;
+      top: 12px;
+      left: 12px;
       fill: var(--text-secondary-color);
-    }
-
-    .text-field__container:focus-within .text-field__leading-icon {
-      top: 10px;
-      left: 10px;
     }
   }
 
   &.text-field--with-trailing-icon {
     input {
-      padding-right: 47px;
-
-      &:focus {
-        padding-right: 46px;
-      }
+      padding-right: 48px;
     }
 
     .text-field__trailing-icon {
       position: absolute;
-      top: 11px;
-      right: 11px;
+      top: 12px;
+      right: 12px;
       fill: var(--text-secondary-color);
-    }
-
-    .text-field__container:focus-within .text-field__trailing-icon {
-      top: 10px;
-      right: 10px;
     }
   }
 }
@@ -287,7 +285,7 @@
 
 .text-field--invalid {
   .text-field__label,
-  input:focus ~ .text-field__label,
+  .text-field__container:focus-within .text-field__label,
   input:not(:placeholder-shown) ~ .text-field__label,
   .text-field__helper-text,
   .text-field__error-text {
@@ -302,6 +300,8 @@
 
   .text-field__container,
   .text-field__container:focus-within {
-    border-color: var(--error-color);
+    &::after {
+      border-color: var(--error-color);
+    }
   }
 }
