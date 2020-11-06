@@ -1,0 +1,121 @@
+.text-field {
+  position: relative;
+
+  input {
+    border: none;
+    outline: 0;
+  }
+}
+
+.text-field--filled {
+  label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 16px;
+    line-height: 1;
+    transition: top 0.15s, color 0.15s;
+    color: var(--text-secondary-color);
+  }
+
+  input {
+    padding: 20px 16px 7px;
+    font-size: 16px;
+    line-height: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid var(--text-secondary-color);
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  input:hover {
+    background: rgba(0, 0, 0, 0.075);
+  }
+
+  input:focus {
+    background: rgba(0, 0, 0, 0.1);
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+    top: 8px;
+    color: var(--primary-color);
+  }
+}
+
+.text-field--outlined {
+  label {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1;
+    transition: top 0.15s, color 0.15s;
+    color: var(--text-secondary-color);
+    background: white;
+  }
+
+  input {
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    outline: 0;
+    border-radius: 4px;
+    border: 1px solid var(--text-secondary-color);
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  input:hover {
+  }
+
+  input:focus {
+    padding: 12px 14px;
+    border: 2px solid var(--primary-color);
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+    top: -6px;
+    color: var(--primary-color);
+  }
+}
+
+.text-field__helper-text,
+.text-field__error-text {
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 16px 0;
+  color: var(--text-secondary-color);
+}
+
+.text-field--invalid {
+  label,
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label,
+  .text-field__helper-text,
+  .text-field__error-text {
+    color: var(--error-color);
+  }
+
+  label {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-name: headShake;
+  }
+
+  input,
+  input:focus {
+    border-color: var(--error-color);
+  }
+}
