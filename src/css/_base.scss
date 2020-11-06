@@ -18,6 +18,14 @@ body {
   line-height: 1.5;
 }
 
+a {
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+}
+
 .app {
   height: 100vh;
   width: 100vw;
@@ -58,26 +66,4 @@ body {
 .text-secondary {
   font-size: 14px;
   color: var(--text-secondary-color);
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-align-center {
-  align-items: center;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-@media (max-width: 640px) {
-  .container {
-    padding: 8px;
-  }
-}
-
-a {
-  color: var(--primary-color);
 }
