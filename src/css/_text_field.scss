@@ -93,7 +93,7 @@
     color: var(--text-secondary-color);
   }
 
-  &.text-field--with-prefix {
+  &.text-field--with-prefix-text {
     input {
       padding-left: 0;
     }
@@ -104,7 +104,7 @@
     }
   }
 
-  &.text-field--with-suffix {
+  &.text-field--with-suffix-text {
     input {
       padding-right: 0;
     }
@@ -220,7 +220,7 @@
     color: var(--text-secondary-color);
   }
 
-  &.text-field--with-prefix {
+  &.text-field--with-prefix-text {
     input,
     input:focus {
       padding-left: 0;
@@ -232,7 +232,7 @@
     }
   }
 
-  &.text-field--with-suffix {
+  &.text-field--with-suffix-text {
     input,
     input:focus {
       padding-right: 0;

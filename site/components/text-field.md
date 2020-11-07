@@ -55,7 +55,7 @@ title: Text Field
 
 <br>
 
-<div class="text-field text-field--filled text-field--with-prefix">
+<div class="text-field text-field--filled text-field--with-prefix-text">
   <div class="text-field__container">
     <label class="text-field__prefix-text">
       $
@@ -67,7 +67,7 @@ title: Text Field
 
 <br>
 
-<div class="text-field text-field--filled text-field--with-suffix">
+<div class="text-field text-field--filled text-field--with-suffix-text">
   <div class="text-field__container">
     <input type="text" name="" value="" placeholder=" " class="text-align-right">
     <label class="text-field__suffix-text">
@@ -129,7 +129,7 @@ title: Text Field
 
 <br>
 
-<div class="text-field text-field--outlined text-field--with-prefix">
+<div class="text-field text-field--outlined text-field--with-prefix-text">
   <div class="text-field__container">
     <label class="text-field__prefix-text">
       $
@@ -144,7 +144,7 @@ title: Text Field
 
 <br>
 
-<div class="text-field text-field--outlined text-field--with-suffix">
+<div class="text-field text-field--outlined text-field--with-suffix-text">
   <div class="text-field__container">
     <input type="text" name="" value="" placeholder=" " class="text-align-right">
     <label class="text-field__suffix-text">
