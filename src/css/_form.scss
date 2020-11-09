@@ -2,21 +2,29 @@
 }
 
 .form__field {
-  margin-bottom: 12px;
+  display: flex;
 }
 
 .form__row {
   display: flex;
-  margin: 0 -8px;
+  margin-bottom: 12px;
+}
 
-  .form__field {
-    flex-grow: 1;
-    padding: 0 8px;
+.form__column {
+  flex-grow: 1;
+  margin: 0 8px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 
 .form__label {
   display: block;
-  margin-bottom: 8px;
+  padding: 8px;
   color: var(--text-secondary-color);
 }
