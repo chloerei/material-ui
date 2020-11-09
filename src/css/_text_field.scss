@@ -1,4 +1,6 @@
 .text-field {
+  width: 100%;
+
   .text-field__container {
     display: flex;
     position: relative;
@@ -8,6 +10,7 @@
     pointer-events: none;
   }
 
+  textarea,
   input {
     display: block;
     border: none;
@@ -63,6 +66,7 @@
     color: var(--text-secondary-color);
   }
 
+  textarea,
   input {
     padding: 20px 16px 8px;
     font-size: 16px;
@@ -283,6 +287,10 @@
   color: var(--text-secondary-color);
 }
 
+.text-field__error-text {
+  display: none;
+}
+
 .text-field--invalid {
   .text-field__label,
   .text-field__container:focus-within .text-field__label,
@@ -290,6 +298,14 @@
   .text-field__helper-text,
   .text-field__error-text {
     color: var(--error-color);
+  }
+
+  .text-field__helper-text {
+    display: none;
+  }
+
+  .text-field__error-text {
+    display: block;
   }
 
   .text-field__label {
