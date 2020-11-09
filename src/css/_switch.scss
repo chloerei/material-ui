@@ -30,7 +30,7 @@
   top: 10px;
   left: 10px;
   border-radius: 8px;
-  transition: background-color 0.3s;
+  transition: background-color 0.15s;
   opacity: 0.5;
 }
 
@@ -40,7 +40,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: left 0.3s;
+  transition: left 0.15s;
 
   &::before {
     display: block;
@@ -54,7 +54,7 @@
     background: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     z-index: 1;
-    transition: background-color 0.3s;
+    transition: background-color 0.15s;
   }
 
   &::after {
