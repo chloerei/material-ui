@@ -61,3 +61,15 @@ title: Form
   <label for="radio_2" class="radio-label">item 2</label>
 </div>
 {% endexample %}
+
+## Switch
+
+{% example %}
+<label class="switch">
+  <input type="checkbox" name="" value="">
+  <div class="switch__track">
+  </div>
+  <div class="switch__thumb">
+  </div>
+</label>
+{% endexample %}

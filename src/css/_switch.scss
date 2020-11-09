@@ -1,0 +1,84 @@
+.switch {
+  display: inline-block;
+  height: 36px;
+  width: 56px;
+  position: relative;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked ~ .switch__track {
+      background: var(--primary-color);
+    }
+
+    &:checked ~ .switch__thumb {
+      left: 20px;
+
+      &::before {
+        background: var(--primary-color);
+      }
+    }
+  }
+}
+
+.switch__track {
+  height: 16px;
+  width: 36px;
+  background: var(--text-secondary-color);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  opacity: 0.5;
+}
+
+.switch__thumb {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.3s;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.2s;
+    opacity: 0;
+    background: var(--primary-color);
+    border-radius: 50%;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
