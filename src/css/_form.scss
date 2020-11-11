@@ -2,24 +2,16 @@
 }
 
 .form__field {
-  display: flex;
+  margin-bottom: 12px;
+  flex-grow: 1;
 }
 
 .form__row {
   display: flex;
-  margin-bottom: 12px;
-}
+  margin: 0 -8px;
 
-.form__column {
-  flex-grow: 1;
-  margin: 0 8px;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
+  .form__field {
+    padding: 0 8px;
   }
 }
 
@@ -27,4 +19,20 @@
   display: block;
   padding: 8px;
   color: var(--text-secondary-color);
+}
+
+.form__control {
+  display: flex;
+  cursor: pointer;
+}
+
+.form__control--inline {
+  display: inline-flex;
+}
+
+.form__control__label {
+  padding: 6px;
+  line-height: 24px;
+  cursor: pointer;
+  flex-grow: 1;
 }
