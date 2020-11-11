@@ -37,6 +37,7 @@ button[disabled] {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   background: white;
 
+  // shadow
   &::after {
     content: '';
     position: absolute;
@@ -87,11 +88,11 @@ button[disabled] {
 .button--text {
   padding: 10px 8px;
   border: 0;
-  border-radius: 2px;
   color: var(--text-primary-color);
   background: transparent;
   transition: background-color 0.3s;
 
+  // shadow
   &::after {
     content: '';
     position: absolute;
@@ -136,13 +137,25 @@ button[disabled] {
 
 .button--outlined {
   padding: 10px 16px;
-  border-radius: 2px;
   border: 0;
-  box-shadow: 0 0 0 1px var(--border-color);
   color: var(--text-primary-color);
   background: transparent;
   transition: background-color 0.3s;
 
+  // outline
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    z-index: 1;
+  }
+
+  // shadow
   &::after {
     content: '';
     position: absolute;
@@ -153,6 +166,7 @@ button[disabled] {
     background: var(--text-primary-color);
     opacity: 0;
     transition: opacity 0.2s;
+    border-radius: 2px;
   }
 
   &:hover {
@@ -193,8 +207,8 @@ button[disabled] {
   color: var(--text-primary-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background: white;
-  transition: background-color 0.3s;
 
+  // shadow
   &::after {
     content: '';
     position: absolute;
