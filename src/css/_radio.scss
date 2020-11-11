@@ -1,9 +1,8 @@
 .radio {
   display: inline-block;
   position: relative;
-  height: 36px;
-  width: 36px;
-  padding: 6px;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   vertical-align: middle;
 
@@ -50,8 +49,8 @@
   position: absolute;
   width: 18px;
   height: 18px;
-  top: 9px;
-  left: 9px;
+  top: 11px;
+  left: 11px;
   border: 2px solid var(--text-secondary-color);
   border-radius: 50%;
   transition: border-color 0.15s;

@@ -1,6 +1,6 @@
 .switch {
   display: inline-block;
-  height: 36px;
+  height: 40px;
   width: 56px;
   position: relative;
   cursor: pointer;
@@ -27,16 +27,16 @@
   width: 36px;
   background: var(--text-secondary-color);
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
   border-radius: 8px;
   transition: background-color 0.15s;
   opacity: 0.5;
 }
 
 .switch__thumb {
-  height: 36px;
-  width: 36px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   top: 0;
   left: 0;
@@ -48,8 +48,8 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: 10px;
+    left: 10px;
     border-radius: 50%;
     background: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
