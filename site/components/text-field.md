@@ -76,6 +76,15 @@ title: Text Field
     <label class="text-field__label">Label</label>
   </div>
 </div>
+
+<br>
+
+<div class="text-field text-field--filled">
+  <div class="text-field__container">
+    <textarea placeholder=" " rows="4"></textarea>
+    <label class="text-field__label">Textarea</label>
+  </div>
+</div>
 {% endexample %}
 
 ## Outlined
@@ -154,6 +163,15 @@ title: Text Field
   </div>
   <div class="text-field__helper-text">
     helper text
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined">
+  <div class="text-field__container">
+    <textarea placeholder=" " rows="4"></textarea>
+    <label class="text-field__label">Textarea</label>
   </div>
 </div>
 {% endexample %}

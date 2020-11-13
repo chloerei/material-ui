@@ -67,8 +67,8 @@
     color: var(--text-secondary-color);
   }
 
-  textarea,
-  input {
+  input,
+  textarea {
     padding: 20px 16px 8px;
     font-size: 16px;
     line-height: 20px;
@@ -79,7 +79,8 @@
     }
   }
 
-  input:not(:placeholder-shown) ~ .text-field__label {
+  input:not(:placeholder-shown) ~ .text-field__label,
+  textarea:not(:placeholder-shown) ~ .text-field__label {
     font-size: 12px;
     top: 8px;
   }
@@ -193,7 +194,8 @@
     z-index: 1;
   }
 
-  input {
+  input,
+  textarea {
     padding: 14px 16px;
     font-size: 16px;
     line-height: 20px;
@@ -205,7 +207,8 @@
     }
   }
 
-  input:not(:placeholder-shown) ~ .text-field__label {
+  input:not(:placeholder-shown) ~ .text-field__label,
+  textarea:not(:placeholder-shown) ~ .text-field__label {
     font-size: 12px;
     top: -6px;
     left: 12px;
