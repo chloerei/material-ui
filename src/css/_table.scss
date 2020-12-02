@@ -26,7 +26,6 @@
 
     &.table__cell--action {
       padding: 6px 10px;
-      width: 1px;
     }
   }
 
@@ -40,15 +39,6 @@
     color: var(--text-secondary-color);
     font-weight: bold;
   }
-
-  a {
-    color: var(--text-primary-color);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
 }
 
 .table--sticky-header {
@@ -60,4 +50,19 @@
     z-index: 10;
     background: white;
   }
+}
+
+.table--flex {
+  tr {
+    display: flex;
+    position: relative;
+  }
+}
+
+.table__row-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

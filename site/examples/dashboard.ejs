@@ -94,7 +94,7 @@ title: Dashboard
       </div>
 
       <div class="flex-grow-1 overflow-auto">
-        <table class="table table--sticky-header">
+        <table class="table table--sticky-header table--flex">
           <thead>
             <tr>
               <th class="table__cell--action">
@@ -103,7 +103,7 @@ title: Dashboard
                 </label>
               </th>
               <th>ID</th>
-              <th>Title</th>
+              <th class="flex-grow-1">Title</th>
               <th class="text-align-right">Comments</th>
               <th class="text-align-right">Created At</th>
             </tr>
@@ -112,15 +112,14 @@ title: Dashboard
             <% for(var i = 0; i < 20; i++) { %>
               <tr>
                 <td class="table__cell--action">
+                  <a href="./dashboard/detail.html" class="table__row-link"></a>
                   <label class="button button--icon">
                     <input type="checkbox">
                   </label>
                 </td>
                 <td><%= i %></td>
-                <td>
-                  <a href="./dashboard/detail.html">
-                    <%= lorem_words(10) %>
-                  </a>
+                <td class="flex-grow-1">
+                  <%= lorem_words(10) %>
                 </td>
                 <td class="text-align-right"><%= lorem_number() %></td>
                 <td class="text-align-right">2020-01-01</td>
