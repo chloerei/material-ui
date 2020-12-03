@@ -94,9 +94,9 @@ title: Dashboard
       </div>
 
       <div class="flex-grow-1 overflow-auto">
-        <table class="table table--sticky-header table--flex">
+        <table class="table table--sticky-header">
           <thead>
-            <tr>
+            <tr class="flex position-relative">
               <th class="table__cell--action">
                 <label class="button button--icon">
                   <input type="checkbox">
@@ -110,7 +110,7 @@ title: Dashboard
           </thead>
           <tbody>
             <% for(var i = 0; i < 20; i++) { %>
-              <tr>
+              <tr class="flex position-relative">
                 <td class="table__cell--action">
                   <a href="./dashboard/detail.html" class="table__row-link"></a>
                   <label class="button button--icon">

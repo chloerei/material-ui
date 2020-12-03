@@ -34,14 +34,14 @@ title: Table
 
 {% endexample %}
 
-## Flex table with row link
+## Flex row with row link
 
 For alignment, the column width needs to be specified individually.
 
 {% example %}
-<table class="table table--flex">
+<table class="table">
   <thead>
-    <tr>
+    <tr class="flex position-relative">
       <th class="table__cell--action">
         <label class="button button--icon">
           <input type="checkbox">
@@ -53,9 +53,9 @@ For alignment, the column width needs to be specified individually.
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="flex position-relative">
       <td class="table__cell--action">
-        <a href="#" class="table__row-link"></a>
+        <a href="#" class="stretched-link"></a>
         <label class="button button--icon">
           <input type="checkbox">
         </label>
@@ -64,9 +64,9 @@ For alignment, the column width needs to be specified individually.
       <td class="flex-grow-1">column</td>
       <td>column</td>
     </tr>
-    <tr>
+    <tr class="flex position-relative">
       <td class="table__cell--action">
-        <a href="#" class="table__row-link"></a>
+        <a href="#" class="stretched-link"></a>
         <label class="button button--icon">
           <input type="checkbox">
         </label>
@@ -75,9 +75,9 @@ For alignment, the column width needs to be specified individually.
       <td class="flex-grow-1">column</td>
       <td>column</td>
     </tr>
-    <tr>
+    <tr class="flex position-relative">
       <td class="table__cell--action">
-        <a href="#" class="table__row-link"></a>
+        <a href="#" class="stretched-link"></a>
         <label class="button button--icon">
           <input type="checkbox">
         </label>
