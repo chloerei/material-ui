@@ -6,6 +6,11 @@
 .toolbar__action {
   flex-grow: 0;
   padding: 4px;
+
+  .button--contained,
+  .button--text {
+    margin: 2px;
+  }
 }
 
 .toolbar__title {

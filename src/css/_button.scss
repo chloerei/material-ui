@@ -12,6 +12,7 @@
   position: relative;
   overflow: hidden;
   color: var(--text-primary-color);
+  vertical-align: middle;
 }
 
 .button--contained,
@@ -27,6 +28,17 @@
 button[disabled] {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.button__icon {
+  width: 18px;
+  height: 18px;
+
+  svg {
+    height: 18px;
+    width: 18px;
+    fill: currentColor;
+  }
 }
 
 .button--contained {
@@ -83,6 +95,10 @@ button[disabled] {
       background: var(--text-on-primary-color);
     }
   }
+
+  .button__icon {
+    margin: -1px 8px -1px -4px;
+  }
 }
 
 .button--text {
@@ -132,6 +148,10 @@ button[disabled] {
     &::after {
       background: var(--secondary-color);
     }
+  }
+
+  .button__icon {
+    margin: -1px 8px -1px 0;
   }
 }
 
@@ -195,6 +215,10 @@ button[disabled] {
     &::after {
       background: var(--secondary-color);
     }
+  }
+
+  .button__icon {
+    margin: -1px 8px -1px -4px;
   }
 }
 

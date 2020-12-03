@@ -2,6 +2,8 @@
   display: flex;
 
   .button--active {
+    color: var(--primary-color);
+
     &::after {
       opacity: 0.1;
     }

@@ -7,7 +7,7 @@ title: App Bar
 ## Base
 
 {% example %}
-<div class="app-bar">
+<div class="app-bar app-bar--primary">
   <div class="toolbar">
     <div class="toolbar__action">
       <button type="button" class="button button--icon">

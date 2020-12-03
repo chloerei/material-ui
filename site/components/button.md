@@ -10,6 +10,28 @@ title: Button
 <button type="button" class="button button--contained">Default</button>
 <button type="button" class="button button--contained button--primary">Primary</button>
 <button type="button" class="button button--contained button--secondary">Secondary</button>
+<button type="button" class="button button--contained">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  Button
+</button>
+<button type="button" class="button button--contained button--primary">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  <div class="button__text">
+    Button
+  </div>
+</button>
+<button type="button" class="button button--contained button--secondary">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  <div class="button__text">
+    Button
+  </div>
+</button>
 {% endexample %}
 
 ## Text Button
@@ -18,6 +40,30 @@ title: Button
 <button type="button" class="button button--text">Default</button>
 <button type="button" class="button button--text button--primary">Primary</button>
 <button type="button" class="button button--text button--secondary">Secondary</button>
+<button type="button" class="button button--text">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  <div class="button__text">
+    Button
+  </div>
+</button>
+<button type="button" class="button button--text button--primary">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  <div class="button__text">
+    Button
+  </div>
+</button>
+<button type="button" class="button button--text button--secondary">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  <div class="button__text">
+    Button
+  </div>
+</button>
 {% endexample %}
 
 ## Outlined Button
@@ -26,6 +72,28 @@ title: Button
 <button type="button" class="button button--outlined">Default</button>
 <button type="button" class="button button--outlined button--primary">Primary</button>
 <button type="button" class="button button--outlined button--secondary">Secondary</button>
+<button type="button" class="button button--outlined">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  Button
+</button>
+<button type="button" class="button button--outlined button--primary">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  <div class="button__text">
+    Button
+  </div>
+</button>
+<button type="button" class="button button--outlined button--secondary">
+  <div class="button__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+  </div>
+  <div class="button__text">
+    Button
+  </div>
+</button>
 {% endexample %}
 
 ## Icon Button

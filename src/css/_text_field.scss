@@ -148,6 +148,10 @@
       right: 12px;
       position: absolute;
       fill: var(--text-secondary-color);
+
+      .button--icon {
+        margin: -8px -8px 0 0;
+      }
     }
   }
 }
