@@ -25,7 +25,7 @@
     "version": "4.2.0"
   },
   "peerDependencies": {
-    "stimulus": "1.x"
+    "stimulus": "2.x"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -43,7 +43,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-postcss": "^2.5.0",
     "rollup-plugin-terser": "^5.3.0",
-    "stimulus": "^1.1.1"
+    "stimulus": "^2.0.0"
   },
   "dependencies": {}
 }
