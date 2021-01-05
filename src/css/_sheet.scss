@@ -8,7 +8,6 @@
 }
 
 .sheet__container {
-  margin-right: -320px;
   display: flex;
   flex-direction: column;
   width: 320px;
@@ -19,21 +18,32 @@
   height: 100%;
 }
 
-.sheet--open .sheet__container {
-  margin-right: 0;
-}
-
 .sheet__scrim {
   display: none;
 }
 
+.sheet--dismissible {
+  .sheet__container {
+    margin-right: -320px;
+  }
+
+  &.sheet--open .sheet__container {
+    margin-right: 0;
+  }
+}
+
 .sheet--modal {
   .sheet__container {
+    margin-right: -320px;
     position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
     z-index: 32;
+  }
+
+  &.sheet--open .sheet__container {
+    margin-right: 0;
   }
 
   &.sheet--open .sheet__scrim {
