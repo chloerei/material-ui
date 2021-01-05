@@ -4,12 +4,12 @@
   flex-grow: 1;
   position: relative;
   overflow: hidden;
-  z-index: 0;
 }
 
 .app-bar {
   box-shadow: 0 1px 0 var(--border-color);
   background: white;
+  z-index: 1;
 
   .toolbar {
     padding: 4px;

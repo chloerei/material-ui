@@ -1,3 +1,13 @@
+.display-on-mobile {
+  display: none;
+}
+
+@media (max-width: $mobile-break-point) {
+  .display-on-mobile {
+    display: inherit;
+  }
+}
+
 .text-align-left {
   text-align: left;
 }
