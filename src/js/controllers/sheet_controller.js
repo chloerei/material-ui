@@ -3,7 +3,6 @@ import animate from "../animate"
 
 export default class extends Controller {
   connect() {
-    console.log('hit')
     this.element.insertAdjacentHTML('beforeend', `
       <div class="sheet__scrim" data-action="click->sheet#close"></div>
     `)

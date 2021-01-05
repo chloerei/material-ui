@@ -19,6 +19,7 @@
 
 .example.sandbox .drawer__scrim,
 .example.sandbox .sheet__scrim,
+.example.sandbox .sheet--modal .sheet__container,
 .example.sandbox .dialog,
 .example.sandbox .dialog__scrim,
 .example.sandbox .snackbar,
