@@ -1,3 +1,9 @@
+.snackbar-container {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+
 .snackbar {
   display: flex;
   justify-content: space-between;
@@ -7,10 +13,6 @@
   padding: 16px;
   font-size: 14px;
   line-height: 16px;
-  position: fixed;
-  z-index: 32;
-  bottom: 16px;
-  left: 16px;
   border-radius: 2px;
   min-width: 288px;
   max-width: 568px;
@@ -18,4 +20,8 @@
   .button--text {
     margin: -10px -12px;
   }
+}
+
+.snackbar + .snackbar {
+  margin-top: 16px;
 }
