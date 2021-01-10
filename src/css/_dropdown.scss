@@ -43,6 +43,12 @@
 
 .dropdown__item {
   display: flex;
+  width: 100%;
+  border: none;
+  outline: 0;
+  background: transparent;
+  font-size: 1em;
+  font-family: sans-serif;
   padding: 8px 16px;
   line-height: 24px;
   text-decoration: none;
