@@ -28,4 +28,11 @@ export default class extends Controller {
       this.element.classList.remove('dialog--open')
     })
   }
+
+  remove() {
+    animate(this.element.querySelector('.dialog__scrim'), 'animate--fade-out')
+    animate(this.element.querySelector('.dialog__container'), 'animate--zoom-out', () => {
+      this.element.remove()
+    })
+  }
 }
