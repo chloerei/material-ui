@@ -1,0 +1,20 @@
+.selector {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+
+  .chip {
+    margin-right: 8px;
+  }
+}
+
+.selector__select {
+  display: none;
+}
+
+.selector__input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 4px 0;
+  line-height: 1.5;
+}
