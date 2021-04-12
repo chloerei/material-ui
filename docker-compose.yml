@@ -4,12 +4,12 @@ services:
   rollup:
     build: .
     volumes:
-      - .:/campo-ui
+      - .:/app
     command: npx rollup --config --watch
   hexo:
     build: .
     volumes:
-      - .:/campo-ui
+      - .:/app
     command: npx hexo server
     ports:
       - 4000:4000

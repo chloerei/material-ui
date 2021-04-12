@@ -6,7 +6,11 @@
     <title><%= page.title %> - Campo UI</title>
     <link rel="stylesheet" href="/css/campo-ui.css">
     <link rel="stylesheet" href="/theme.css">
-    <script src="/js/campo-ui.bundle.js"></script>
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+    <script src="/js/campo-ui.js"></script>
+    <script>
+      CampoUI.init()
+    </script>
   </head>
   <body class="app">
     <div class="drawer-wrapper">

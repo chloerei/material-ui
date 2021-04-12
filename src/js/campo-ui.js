@@ -9,15 +9,19 @@ import SheetController from './controllers/sheet_controller'
 import SelectorController from './controllers/selector_controller'
 import ChipController from './controllers/chip_controller'
 
-const application = Application.start()
-application.register("dialog", DialogController)
-application.register("drawer", DrawerController)
-application.register("dropdown", DropdownController)
-application.register("floating-action", FloatingActionController)
-application.register("snackbar", SnackbarController)
-application.register("toggle", ToggleController)
-application.register("sheet", SheetController)
-application.register("selector", SelectorController)
-application.register("chip", ChipController)
+function init(application) {
+  if (!application) {
+    application = Application.start()
+  }
+  application.register("dialog", DialogController)
+  application.register("drawer", DrawerController)
+  application.register("dropdown", DropdownController)
+  application.register("floating-action", FloatingActionController)
+  application.register("snackbar", SnackbarController)
+  application.register("toggle", ToggleController)
+  application.register("sheet", SheetController)
+  application.register("selector", SelectorController)
+  application.register("chip", ChipController)
+}
 
-export { application }
+export { init }
