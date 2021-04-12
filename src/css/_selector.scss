@@ -1,10 +1,15 @@
 .selector {
-  border: 1px solid var(--border-color);
-  padding: 8px;
+  padding: 4px;
+  position: relative;
 
   .chip {
-    margin-right: 8px;
+    margin: 4px;
   }
+}
+
+.selector__content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .selector__select {
@@ -16,5 +21,37 @@
   outline: none;
   font-size: 16px;
   padding: 4px 0;
+  margin: 4px;
   line-height: 1.5;
+  flex-grow: 1;
+}
+
+.selector__menu {
+  display: none;
+}
+
+.selector__menu--open {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.selector__item {
+  border: none;
+  padding: 8px 12px;
+  line-height: 24px;
+  font-size: 16px;
+  background: white;
+  text-align: left;
+  outline: none;
+}
+
+.selector__item:hover,
+.selector__item--focus {
+  background: rgba(0, 0, 0, 0.05);
 }
