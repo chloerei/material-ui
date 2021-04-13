@@ -5,7 +5,7 @@ title: Selector
 # Selector
 
 {% example %}
-<div class="selector" data-controller="selector" data-selector-placeholder-value="input...">
+<div class="selector" data-controller="selector" data-selector-placeholder-value="input..." data-selector-creatable-value="true">
   <select class="selector__select" multiple data-selector-target="select">
     <option value="one" selected>One</option>
     <option value="two" selected>Two</option>

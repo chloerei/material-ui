@@ -2,7 +2,8 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   static values = {
-    placeholder: String
+    placeholder: String,
+    creatable: Boolean
   }
 
   static targets = ["select"]
@@ -60,6 +61,14 @@ export default class extends Controller {
   renderMenu() {
     this.menu.innerHTML = ''
     let filteredOptions = this.filterOptions(this.input.value)
+
+    if (this.creatableValue) {
+      let createOption = this.createOption(this.input.value)
+      if (createOption) {
+        filteredOptions.unshift(createOption)
+      }
+    }
+
     filteredOptions.forEach((option) => {
       if (!option.selected) {
         let dom = this.htmlToElement(this.renderItem(option))
@@ -68,12 +77,20 @@ export default class extends Controller {
     })
   }
 
+  createOption(input) {
+    if (input && input.length > 0) {
+      return { text: `add ${input}`, value: input }
+    } else {
+      return false
+    }
+  }
+
   onInput() {
     this.renderMenu()
   }
 
-  filterOptions(query) {
-    return this.options.filter(option => option.text.toLowerCase().includes(query.toLowerCase()))
+  filterOptions(input) {
+    return this.options.filter(option => option.text.toLowerCase().includes(input.toLowerCase()))
   }
 
   htmlToElement(html) {
