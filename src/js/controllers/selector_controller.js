@@ -76,13 +76,10 @@ export default class extends Controller {
       this.menu.appendChild(dom)
     })
 
-    console.log(this.computedOptions)
     if (this.computedOptions.length > 0) {
       if (createOption && this.computedOptions.length > 1) {
-        console.log('1')
         this.focusItem(1)
       } else {
-        console.log('0')
         this.focusItem(0)
       }
     }
@@ -230,7 +227,10 @@ export default class extends Controller {
     event.stopPropagation()
     let chip = event.currentTarget.closest('.chip')
     let option = this.getOption(chip.dataset.value)
-    option.selected = false
+    if (option) {
+      // createOption is not in list
+      option.selected = false
+    }
     chip.remove()
     this.renderMenu()
   }
