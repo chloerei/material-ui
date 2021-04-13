@@ -22,11 +22,7 @@ export default class extends Controller {
     this.menu.className = 'selector__menu'
     this.element.appendChild(this.menu)
 
-    this.options = Array.from(this.selectTarget.options).map(option => {
-      return {
-        text: option.text, value: option.value, selected: option.selected
-      }
-    })
+    this.initOptions()
 
     // remove unselect option to keep output order
     Array.from(this.selectTarget.options).forEach((option) => {
@@ -44,6 +40,7 @@ export default class extends Controller {
     this.renderMenu()
 
     this.input.addEventListener('focus', this.openMenu.bind(this))
+    this.input.addEventListener('input', this.onInput.bind(this))
 
     this.closeMenuOutside = (event) => {
       if (!this.element.contains(event.target)) {
@@ -52,14 +49,31 @@ export default class extends Controller {
     }
   }
 
+  initOptions() {
+    this.options = Array.from(this.selectTarget.options).map(option => {
+      return {
+        text: option.text, value: option.value, selected: option.selected
+      }
+    })
+  }
+
   renderMenu() {
     this.menu.innerHTML = ''
-    Array.from(this.options).forEach((option) => {
+    let filteredOptions = this.filterOptions(this.input.value)
+    filteredOptions.forEach((option) => {
       if (!option.selected) {
         let dom = this.htmlToElement(this.renderItem(option))
         this.menu.appendChild(dom)
       }
     })
+  }
+
+  onInput() {
+    this.renderMenu()
+  }
+
+  filterOptions(query) {
+    return this.options.filter(option => option.text.toLowerCase().includes(query.toLowerCase()))
   }
 
   htmlToElement(html) {
