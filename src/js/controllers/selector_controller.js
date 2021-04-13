@@ -6,7 +6,7 @@ export default class extends Controller {
     creatable: Boolean
   }
 
-  static targets = ["select"]
+  static targets = ["select", "chip", "item"]
 
   connect() {
     this.content = document.createElement('div')
@@ -42,6 +42,7 @@ export default class extends Controller {
 
     this.input.addEventListener('focus', this.openMenu.bind(this))
     this.input.addEventListener('input', this.onInput.bind(this))
+    this.input.addEventListener('keydown', this.onKeydown.bind(this))
 
     this.closeMenuOutside = (event) => {
       if (!this.element.contains(event.target)) {
@@ -60,26 +61,36 @@ export default class extends Controller {
 
   renderMenu() {
     this.menu.innerHTML = ''
-    let filteredOptions = this.filterOptions(this.input.value)
+    this.computedOptions = this.filterOptions(this.input.value)
 
+    let createOption
     if (this.creatableValue) {
-      let createOption = this.createOption(this.input.value)
+      createOption = this.createOption(this.input.value)
       if (createOption) {
-        filteredOptions.unshift(createOption)
+        this.computedOptions.unshift(createOption)
       }
     }
 
-    filteredOptions.forEach((option) => {
-      if (!option.selected) {
-        let dom = this.htmlToElement(this.renderItem(option))
-        this.menu.appendChild(dom)
-      }
+    this.computedOptions.forEach((option) => {
+      let dom = this.htmlToElement(this.renderItem(option))
+      this.menu.appendChild(dom)
     })
+
+    console.log(this.computedOptions)
+    if (this.computedOptions.length > 0) {
+      if (createOption && this.computedOptions.length > 1) {
+        console.log('1')
+        this.focusItem(1)
+      } else {
+        console.log('0')
+        this.focusItem(0)
+      }
+    }
   }
 
   createOption(input) {
     if (input && input.length > 0) {
-      return { text: `add ${input}`, value: input }
+      return { text: `${input}`, value: input, create: true }
     } else {
       return false
     }
@@ -89,8 +100,88 @@ export default class extends Controller {
     this.renderMenu()
   }
 
+  onKeydown(event) {
+    if (!event.isComposing) {
+      switch (event.keyCode) {
+        case 13: // Enter
+          this.selectFocus()
+          break;
+        case 8: // Backspace
+          this.removeLast()
+          break;
+        case 38: // ArrowUp
+          this.focusPrev()
+          break;
+        case 40: // ArrowDown
+          this.focusNext()
+          break;
+      }
+    }
+  }
+
+  selectFocus() {
+    if (this.computedOptions.length) {
+      let focusOption = this.computedOptions[this.focusIndex]
+      this.appendChip(focusOption)
+      let option = this.getOption(focusOption.value)
+      // createOption is not in list
+      if (option) {
+        option.selected = true
+      }
+      this.input.value = ''
+      this.renderMenu()
+    }
+  }
+
+  removeLast() {
+    if (this.input.value == '') {
+      let chip = this.chipTargets[this.chipTargets.length - 1]
+      if (chip) {
+        let option = this.getOption(chip.dataset.value)
+        if (option) {
+          // createOption is not in list
+          option.selected = false
+        }
+        chip.remove()
+        this.renderMenu()
+      }
+    }
+  }
+
+  focusItem(index) {
+    this.focusIndex = index
+    let option = this.computedOptions[index]
+
+    let prevFocusItem = this.element.querySelector('.selector__item--focus')
+    if (prevFocusItem) {
+      prevFocusItem.classList.remove('selector__item--focus')
+    }
+
+    this.itemTargets[this.focusIndex].classList.add('selector__item--focus')
+  }
+
+  focusPrev() {
+    if (this.computedOptions.length > 0) {
+      if (this.focusIndex > 0) {
+        this.focusItem(this.focusIndex - 1)
+      } else {
+        this.focusItem(this.computedOptions.length - 1)
+      }
+    }
+  }
+
+  focusNext() {
+    if (this.computedOptions.length > 0) {
+      if (this.focusIndex < this.computedOptions.length - 1) {
+        this.focusItem(this.focusIndex + 1)
+      } else {
+        this.focusItem(0)
+      }
+    }
+  }
+
   filterOptions(input) {
-    return this.options.filter(option => option.text.toLowerCase().includes(input.toLowerCase()))
+    return this.options.filter(option => !option.selected &&  option.text.toLowerCase().includes(input.toLowerCase()))
   }
 
   htmlToElement(html) {
@@ -101,8 +192,8 @@ export default class extends Controller {
 
   renderItem(option) {
     return `
-      <div class="selector__item" data-value="${option.value}" data-action="click->selector#select">
-        ${option.text}
+      <div class="selector__item" data-value="${option.value}" data-selector-target="item" data-action="click->selector#select">
+        ${ option.create ? `Add ${option.text}...` : option.text }
       </div>
     `
   }
@@ -114,7 +205,7 @@ export default class extends Controller {
 
   renderChip(option) {
     return `
-      <div class="chip" data-value="${option.value}">
+      <div class="chip" data-value="${option.value}" data-selector-target="chip">
         ${option.text}
         <div class="chip__action">
           <button type="button" class="button button--icon" data-action="selector#unselect">
@@ -151,9 +242,11 @@ export default class extends Controller {
   select(event) {
     event.stopPropagation()
     let item = event.currentTarget
-    let option = this.getOption(item.dataset.value)
+    let option = this.computedOptions.find(option => option.value == item.dataset.value)
     option.selected = true
     this.appendChip(option)
+    this.input.value = ''
+    this.input.focus()
     this.renderMenu()
   }
 }
