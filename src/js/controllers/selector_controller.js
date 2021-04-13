@@ -217,12 +217,12 @@ export default class extends Controller {
   }
 
   openMenu() {
-    this.menu.classList.add('selector__menu--open')
+    this.element.classList.add('selector--focus')
     document.addEventListener('click', this.closeMenuOutside)
   }
 
   closeMenu() {
-    this.menu.classList.remove('selector__menu--open')
+    this.element.classList.remove('selector--focus')
     document.removeEventListener('click', this.closeMenuOutside)
   }
 

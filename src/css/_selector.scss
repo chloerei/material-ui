@@ -30,17 +30,22 @@
   display: none;
 }
 
-.selector__menu--open {
-  display: flex;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  flex-direction: column;
-  z-index: 1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  background: white;
+.selector--focus {
+  .selector--content {
+  }
+
+  .selector__menu {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    z-index: 1;
+    background: white;
+  }
 }
+
 
 .selector__item {
   border: none;
