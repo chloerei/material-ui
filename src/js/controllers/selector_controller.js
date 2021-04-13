@@ -22,9 +22,24 @@ export default class extends Controller {
     this.menu.className = 'selector__menu'
     this.element.appendChild(this.menu)
 
-    for (let option of this.selectTarget.selectedOptions) {
-      this.appendChip(this.renderChip(option))
-    }
+    this.options = Array.from(this.selectTarget.options).map(option => {
+      return {
+        text: option.text, value: option.value, selected: option.selected
+      }
+    })
+
+    // remove unselect option to keep output order
+    Array.from(this.selectTarget.options).forEach((option) => {
+      if (!option.selected) {
+        option.remove()
+      }
+    })
+
+    this.options.forEach((option) => {
+      if (option.selected) {
+        this.appendChip(option)
+      }
+    })
 
     this.renderMenu()
 
@@ -39,40 +54,44 @@ export default class extends Controller {
 
   renderMenu() {
     this.menu.innerHTML = ''
-    for (let option of this.selectTarget.options) {
+    Array.from(this.options).forEach((option) => {
       if (!option.selected) {
-        this.menu.appendChild(this.renderMenuItem(option))
+        let dom = this.htmlToElement(this.renderItem(option))
+        this.menu.appendChild(dom)
       }
-    }
+    })
   }
 
-  renderMenuItem(option) {
-    let item = document.createElement('button')
-    item.className = 'selector__item'
-    item.dataset.value = option.value
-    item.dataset.action = "selector#select"
-    item.textContent = option.text
-    return item
+  htmlToElement(html) {
+    let template = document.createElement('template')
+    template.innerHTML = html.trim()
+    return template.content.firstChild
   }
 
-  appendChip(chip) {
+  renderItem(option) {
+    return `
+      <div class="selector__item" data-value="${option.value}" data-action="click->selector#select">
+        ${option.text}
+      </div>
+    `
+  }
+
+  appendChip(option) {
+    let chip = this.htmlToElement(this.renderChip(option))
     this.content.insertBefore(chip, this.input)
   }
 
   renderChip(option) {
-    let chip = document.createElement('div')
-    chip.className = 'chip'
-    chip.dataset.controller = "chip"
-    chip.dataset.value = option.value
-    chip.innerHTML = `
-      ${option.text}
-      <div class="chip__action">
-        <button type="button" class="button button--icon" data-action="selector#unselect">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm4.3 14.3c-.39.39-1.02.39-1.41 0L12 13.41 9.11 16.3c-.39.39-1.02.39-1.41 0-.39-.39-.39-1.02 0-1.41L10.59 12 7.7 9.11c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L12 10.59l2.89-2.89c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L13.41 12l2.89 2.89c.38.38.38 1.02 0 1.41z"/></svg>
-        </button>
+    return `
+      <div class="chip" data-value="${option.value}">
+        ${option.text}
+        <div class="chip__action">
+          <button type="button" class="button button--icon" data-action="selector#unselect">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm4.3 14.3c-.39.39-1.02.39-1.41 0L12 13.41 9.11 16.3c-.39.39-1.02.39-1.41 0-.39-.39-.39-1.02 0-1.41L10.59 12 7.7 9.11c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L12 10.59l2.89-2.89c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L13.41 12l2.89 2.89c.38.38.38 1.02 0 1.41z"/></svg>
+          </button>
+        </div>
       </div>
     `
-    return chip
   }
 
   openMenu() {
@@ -87,20 +106,23 @@ export default class extends Controller {
 
   unselect(event) {
     event.stopPropagation()
-    let button = event.currentTarget
-    let chip = button.closest('.chip')
-    let option = this.selectTarget.querySelector(`option[value=${chip.dataset.value}]`)
-    option.removeAttribute('selected')
+    let chip = event.currentTarget.closest('.chip')
+    let option = this.getOption(chip.dataset.value)
+    option.selected = false
     chip.remove()
     this.renderMenu()
+  }
+
+  getOption(value) {
+    return this.options.find(option => option.value == value)
   }
 
   select(event) {
     event.stopPropagation()
     let item = event.currentTarget
-    let option = this.selectTarget.querySelector(`option[value=${item.dataset.value}]`)
-    option.setAttribute('selected', '')
-    this.appendChip(this.renderChip(option))
+    let option = this.getOption(item.dataset.value)
+    option.selected = true
+    this.appendChip(option)
     this.renderMenu()
   }
 }

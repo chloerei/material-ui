@@ -39,6 +39,7 @@
   flex-direction: column;
   z-index: 1;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  background: white;
 }
 
 .selector__item {
@@ -46,9 +47,9 @@
   padding: 8px 12px;
   line-height: 24px;
   font-size: 16px;
-  background: white;
   text-align: left;
   outline: none;
+  background: transparent;
 }
 
 .selector__item:hover,
