@@ -216,13 +216,7 @@ export default class extends Controller {
   unselect(event) {
     event.stopPropagation()
     let chip = event.currentTarget.closest('.chip')
-    let option = this.getOption(chip.dataset.value)
-    if (option) {
-      // createOption is not in list
-      option.selected = false
-    }
-    chip.remove()
-    this.removeSelected({ value: chip.dataset.value })
+    this.removeSelected(chip.dataset.value)
     this.renderMenu()
   }
 
