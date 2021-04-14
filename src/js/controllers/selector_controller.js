@@ -119,12 +119,7 @@ export default class extends Controller {
   selectFocus() {
     if (this.computedOptions.length) {
       let focusOption = this.computedOptions[this.focusIndex]
-      this.appendChip(focusOption)
-      let option = this.getOption(focusOption.value)
-      // createOption is not in list
-      if (option) {
-        option.selected = true
-      }
+      this.addSelected(focusOption)
       this.input.value = ''
       this.renderMenu()
     }
@@ -132,14 +127,9 @@ export default class extends Controller {
 
   removeLast() {
     if (this.input.value == '') {
-      let chip = this.chipTargets[this.chipTargets.length - 1]
-      if (chip) {
-        let option = this.getOption(chip.dataset.value)
-        if (option) {
-          // createOption is not in list
-          option.selected = false
-        }
-        chip.remove()
+      let lastOptionDom = this.selectTarget.options[this.selectTarget.options.length - 1]
+      if (lastOptionDom) {
+        this.removeSelected(lastOptionDom.value)
         this.renderMenu()
       }
     }
@@ -232,6 +222,7 @@ export default class extends Controller {
       option.selected = false
     }
     chip.remove()
+    this.removeSelected({ value: chip.dataset.value })
     this.renderMenu()
   }
 
@@ -243,10 +234,58 @@ export default class extends Controller {
     event.stopPropagation()
     let item = event.currentTarget
     let option = this.computedOptions.find(option => option.value == item.dataset.value)
-    option.selected = true
-    this.appendChip(option)
+    this.addSelected(option)
     this.input.value = ''
     this.input.focus()
     this.renderMenu()
+  }
+
+  hasSelected(option) {
+    return Array.from(this.selectTarget.options).some(item => item.value == option.value)
+  }
+
+  addSelected(option) {
+    if (!this.hasSelected(option)) {
+      this.addSelectedOption(option)
+      this.appendChip(option)
+
+      let storeOption = this.getOption(option.value)
+      // createOption is not in list
+      if (storeOption) {
+        storeOption.selected = true
+      }
+    }
+  }
+
+  addSelectedOption(option) {
+    let dom = document.createElement('option')
+    dom.value = option.value
+    dom.text = option.text
+    dom.selected = true
+    this.selectTarget.appendChild(dom)
+  }
+
+  removeSelected(value) {
+    this.removeSelectedOption(value)
+    this.removeChip(value)
+
+    let option = this.getOption(value)
+    if (option) {
+      option.selected = false
+    }
+  }
+
+  removeSelectedOption(value) {
+    let dom = Array.from(this.selectTarget.options).find(item => item.value == value)
+    if (dom) {
+      dom.remove()
+    }
+  }
+
+  removeChip(value) {
+    let chip = this.chipTargets.find(chip => chip.dataset.value == value)
+    if (chip) {
+      chip.remove()
+    }
   }
 }
