@@ -24,4 +24,15 @@ function init(application) {
   application.register("chip", ChipController)
 }
 
-export { init }
+export {
+  DialogController,
+  DrawerController,
+  DropdownController,
+  FloatingActionController,
+  SnackbarController,
+  ToggleController,
+  SheetController,
+  SelectorController,
+  ChipController,
+  init
+}
