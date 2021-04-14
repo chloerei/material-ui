@@ -255,7 +255,7 @@ export default class extends Controller {
     let dom = document.createElement('option')
     dom.value = option.value
     dom.text = option.text
-    dom.selected = true
+    dom.setAttribute('selected', '')
     this.selectTarget.appendChild(dom)
   }
 
