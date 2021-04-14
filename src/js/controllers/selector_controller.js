@@ -40,13 +40,13 @@ export default class extends Controller {
 
     this.renderMenu()
 
-    this.input.addEventListener('focus', this.openMenu.bind(this))
+    this.input.addEventListener('focus', this.focus.bind(this))
     this.input.addEventListener('input', this.onInput.bind(this))
     this.input.addEventListener('keydown', this.onKeydown.bind(this))
 
-    this.closeMenuOutside = (event) => {
+    this.clickOutside = (event) => {
       if (!this.element.contains(event.target)) {
-        this.closeMenu();
+        this.blur()
       }
     }
   }
@@ -203,14 +203,14 @@ export default class extends Controller {
     `
   }
 
-  openMenu() {
+  focus() {
     this.element.classList.add('selector--focus')
-    document.addEventListener('click', this.closeMenuOutside)
+    document.addEventListener('click', this.clickOutside)
   }
 
-  closeMenu() {
+  blur() {
     this.element.classList.remove('selector--focus')
-    document.removeEventListener('click', this.closeMenuOutside)
+    document.removeEventListener('click', this.clickOutside)
   }
 
   unselect(event) {
