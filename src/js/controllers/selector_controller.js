@@ -248,6 +248,8 @@ export default class extends Controller {
       if (storeOption) {
         storeOption.selected = true
       }
+
+      this.selectTarget.dispatchEvent(new Event('change', { bubbles: true }))
     }
   }
 
@@ -267,6 +269,8 @@ export default class extends Controller {
     if (option) {
       option.selected = false
     }
+
+    this.selectTarget.dispatchEvent(new Event('change', { bubbles: true }))
   }
 
   removeSelectedOption(value) {
