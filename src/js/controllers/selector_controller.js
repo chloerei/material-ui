@@ -3,20 +3,33 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static values = {
     placeholder: String,
-    creatable: Boolean
+    creatable: Boolean,
+    maxItems: Number
   }
 
   static targets = ["select", "chip", "item"]
 
   connect() {
+    this.multiple = this.selectTarget.multiple
+
+    if (!this.multiple) {
+      this.maxItemsValue = 1
+    }
+
     this.content = document.createElement('div')
     this.content.className = 'selector__content'
     this.element.appendChild(this.content)
 
+    if (!this.multiple) {
+      this.text = document.createElement('div')
+      this.text.className = 'selector__text'
+      this.content.appendChild(this.text)
+    }
+
     this.input = document.createElement('input')
     this.input.type = 'text'
     this.input.className = 'selector__input'
-    this.input.setAttribute('placeholder', this.placeholderValue)
+    this.setPlaceholder()
     this.content.appendChild(this.input)
 
     this.menu = document.createElement('div')
@@ -32,11 +45,15 @@ export default class extends Controller {
       }
     })
 
-    this.options.forEach((option) => {
-      if (option.selected) {
-        this.appendChip(option)
-      }
-    })
+    if (this.multiple) {
+      this.options.forEach((option) => {
+        if (option.selected) {
+          this.appendChip(option)
+        }
+      })
+    } else {
+      this.text.textContent = this.selectTarget.value
+    }
 
     this.renderMenu()
 
@@ -51,6 +68,18 @@ export default class extends Controller {
     }
   }
 
+  maxItemsLimit() {
+    return this.maxItemsValue && this.selectTarget.selectedOptions.length >= this.maxItemsValue
+  }
+
+  setPlaceholder() {
+    if (this.maxItemsLimit()) {
+      this.input.removeAttribute('placeholder')
+    } else {
+      this.input.setAttribute('placeholder', this.placeholderValue)
+    }
+  }
+
   initOptions() {
     this.options = Array.from(this.selectTarget.options).map(option => {
       return {
@@ -61,26 +90,30 @@ export default class extends Controller {
 
   renderMenu() {
     this.menu.innerHTML = ''
-    this.computedOptions = this.filterOptions(this.input.value)
+    if (this.multiple && this.maxItemsLimit()) {
+      this.computedOptions = []
+    } else {
+      this.computedOptions = this.filterOptions(this.input.value)
 
-    let createOption
-    if (this.creatableValue) {
-      createOption = this.createOption(this.input.value)
-      if (createOption) {
-        this.computedOptions.unshift(createOption)
+      let createOption
+      if (this.creatableValue) {
+        createOption = this.createOption(this.input.value)
+        if (createOption) {
+          this.computedOptions.unshift(createOption)
+        }
       }
-    }
 
-    this.computedOptions.forEach((option) => {
-      let dom = this.htmlToElement(this.renderItem(option))
-      this.menu.appendChild(dom)
-    })
+      this.computedOptions.forEach((option) => {
+        let dom = this.htmlToElement(this.renderItem(option))
+        this.menu.appendChild(dom)
+      })
 
-    if (this.computedOptions.length > 0) {
-      if (createOption && this.computedOptions.length > 1) {
-        this.focusItem(1)
-      } else {
-        this.focusItem(0)
+      if (this.computedOptions.length > 0) {
+        if (createOption && this.computedOptions.length > 1) {
+          this.focusItem(1)
+        } else {
+          this.focusItem(0)
+        }
       }
     }
   }
@@ -98,6 +131,10 @@ export default class extends Controller {
   }
 
   onKeydown(event) {
+    if (this.maxItemsLimit()) {
+      event.preventDefault()
+    }
+
     if (!event.isComposing) {
       switch (event.keyCode) {
         case 13: // Enter
@@ -240,14 +277,23 @@ export default class extends Controller {
 
   addSelected(option) {
     if (!this.hasSelected(option)) {
-      this.addSelectedOption(option)
-      this.appendChip(option)
-
-      let storeOption = this.getOption(option.value)
-      // createOption is not in list
-      if (storeOption) {
-        storeOption.selected = true
+      if (this.multiple) {
+        this.addSelectedOption(option)
+        this.appendChip(option)
+      } else {
+        this.selectTarget.innerHTML = ''
+        this.addSelectedOption(option)
+        this.text.textContent = option.text
       }
+      this.setPlaceholder()
+
+      this.options.forEach((storeOption) => {
+        if (storeOption.value == option.value) {
+          storeOption.selected = true
+        } else if (!this.multiple) {
+          storeOption.selected = false
+        }
+      })
 
       this.selectTarget.dispatchEvent(new Event('change', { bubbles: true }))
     }
@@ -262,28 +308,30 @@ export default class extends Controller {
   }
 
   removeSelected(value) {
-    this.removeSelectedOption(value)
-    this.removeChip(value)
+    Array.from(this.selectTarget.options).forEach((option) => {
+      if (option.value == value) {
+        option.remove()
+      }
+    })
 
-    let option = this.getOption(value)
-    if (option) {
-      option.selected = false
+    if (this.multiple) {
+      this.chipTargets.forEach((chip) => {
+        if (chip.dataset.value == value) {
+          chip.remove()
+        }
+      })
+    } else {
+      this.text.textContent = ''
     }
+
+    this.setPlaceholder()
+
+    this.options.forEach((storeOption) => {
+      if (storeOption.value == value) {
+        storeOption.selected = false
+      }
+    })
 
     this.selectTarget.dispatchEvent(new Event('change', { bubbles: true }))
-  }
-
-  removeSelectedOption(value) {
-    let dom = Array.from(this.selectTarget.options).find(item => item.value == value)
-    if (dom) {
-      dom.remove()
-    }
-  }
-
-  removeChip(value) {
-    let chip = this.chipTargets.find(chip => chip.dataset.value == value)
-    if (chip) {
-      chip.remove()
-    }
   }
 }
