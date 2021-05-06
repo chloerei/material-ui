@@ -1,7 +1,5 @@
 .dialog {
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  display: none;
 }
 
 .dialog--open {
@@ -17,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .dialog__container {
