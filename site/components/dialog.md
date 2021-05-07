@@ -50,5 +50,6 @@ title: Dialog
       <button type="button" class="button button--text button--primary">Submit</button>
     </div>
   </div>
+  <div class="dialog__scrim" data-action="click->dialog#close"></div>
 </div>
 {% endexample %}

@@ -1,4 +1,8 @@
 export default function animate(element, animationName, callback) {
+  if (!element) {
+    return
+  }
+
   if (element.classList.contains('animate')) {
     // wait another animate end
     element.addEventListener('animationend', () => {

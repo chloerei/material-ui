@@ -103,6 +103,7 @@ title: Sheet
             Modal sheet
           </div>
         </div>
+        <div class="sheet__scrim" data-action="click->sheet#close"></div>
       </nav>
     </div>
   </div>

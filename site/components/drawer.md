@@ -133,6 +133,7 @@ title: Drawer
             </a>
           </div>
         </div>
+        <div class="drawer__scrim" data-action="click->drawer#close"></div>
       </nav>
       <div class="main">
         <div class="main__container">

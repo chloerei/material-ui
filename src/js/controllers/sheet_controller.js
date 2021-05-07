@@ -2,12 +2,6 @@ import { Controller } from "stimulus"
 import animate from "../animate"
 
 export default class extends Controller {
-  connect() {
-    this.element.insertAdjacentHTML('beforeend', `
-      <div class="sheet__scrim" data-action="click->sheet#close"></div>
-    `)
-  }
-
   toggle() {
     if (this.element.classList.contains('sheet--open')) {
       this.close()
