@@ -10,12 +10,23 @@ export default class extends Controller {
     }
   }
 
+  disconnect() {
+    if (this.isOpen()) {
+      this.element.classList.remove('dropdown--open')
+      document.removeEventListener('click', this.closeMenuOutside)
+    }
+  }
+
   toggle() {
-    if (this.element.classList.contains('dropdown--open')) {
+    if (this.isOpen()) {
       this.close()
     } else {
       this.open()
     }
+  }
+
+  isOpen() {
+    return this.element.classList.contains('dropdown--open')
   }
 
   open() {
