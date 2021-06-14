@@ -2,6 +2,10 @@ import { Controller } from "stimulus"
 import animate from "../animate"
 
 export default class extends Controller {
+  disconnect() {
+    this.element.classList.remove('dialog--open')
+  }
+
   toggle() {
     if (this.element.classList.contains('dialog--open')) {
       this.close()
