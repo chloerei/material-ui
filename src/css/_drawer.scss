@@ -4,6 +4,16 @@
   overflow: auto;
 }
 
+.drawer-wrapper__content {
+  flex-grow: 1;
+  display: flex;
+  overflow: auto;
+
+  .app-bar {
+    z-index: 90;
+  }
+}
+
 .drawer {
   display: flex;
   z-index: 100;
@@ -36,6 +46,8 @@
 }
 
 .drawer--modal {
+  z-index: 110 !important;
+
   .drawer__container {
     margin-left: -256px;
     position: fixed;
@@ -124,8 +136,12 @@
   margin: -2px 16px -2px 0;
 }
 
-// use modal in mobile
-@media (max-width: $mobile-break-point) {
+// use modal in tablet
+@media (max-width: $tablet-break-point) {
+  .drawer {
+    z-index: 110 !important;
+  }
+
   .drawer__container {
     margin-left: -256px;
     position: fixed;

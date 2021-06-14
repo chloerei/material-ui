@@ -13,47 +13,51 @@
     </script>
   </head>
   <body class="app">
-    <div class="drawer-wrapper">
-      <nav id="drawer" class="drawer" data-controller="drawer" data-drawer-persistence="true">
-        <div class="drawer__container">
-          <div class="drawer__body">
-            <div class="drawer__menu">
-              <% ['introduction', 'webpack', 'rails'].forEach(function(name) { %>
-                <% itemPath = name + '.html'  %>
-                <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
-                  <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
-                </a>
-              <% }); %>
-            </div>
-            <hr class="divider">
-            <h3 class="subheader">Components</h3>
-            <div class="drawer__menu">
-              <% ['app-bar', 'button', 'card', 'chip', 'dialog', 'drawer', 'dropdown', 'floating-action', 'text-field', 'selection-control', 'form', 'list', 'snackbar', 'sheet', 'table'].forEach(function(name) { %>
-                <% itemPath = 'components/' + name + '.html'  %>
-                <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
-                  <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
-                </a>
-              <% }); %>
-            </div>
+    <div class="app-bar-wrapper">
+      <div class="app-bar app-bar-primary">
+        <div class="toolbar toolbar-fixed toolbar-white">
+          <div class="toolbar__action disabled-on-desktop">
+            <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+          </div>
+          <div class="toolbar__title">
+            <a href="/">Campo UI</a>
           </div>
         </div>
-      </nav>
-      <div class="app-bar-wrapper">
-        <div class="app-bar app-bar-primary">
-          <div class="toolbar toolbar-fixed toolbar-white">
-            <div class="toolbar__action display-on-mobile">
-              <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-              </button>
+      </div>
+      <div class="app-bar-wrapper__content">
+        <div class="drawer-wrapper">
+          <nav id="drawer" class="drawer" data-controller="drawer" data-drawer-persistence="true">
+            <div class="drawer__container">
+              <div class="drawer__body">
+                <div class="drawer__menu">
+                  <% ['introduction', 'webpack', 'rails'].forEach(function(name) { %>
+                    <% itemPath = name + '.html'  %>
+                    <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
+                      <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
+                    </a>
+                  <% }); %>
+                </div>
+                <hr class="divider">
+                <h3 class="subheader">Components</h3>
+                <div class="drawer__menu">
+                  <% ['app-bar', 'button', 'card', 'chip', 'dialog', 'drawer', 'dropdown', 'floating-action', 'text-field', 'selection-control', 'form', 'list', 'snackbar', 'sheet', 'table'].forEach(function(name) { %>
+                    <% itemPath = 'components/' + name + '.html'  %>
+                    <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
+                      <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
+                    </a>
+                  <% }); %>
+                </div>
+              </div>
             </div>
-            <div class="toolbar__title">
-              <a href="/">Campo UI</a>
+            <div class="drawer__scrim" data-action="click->drawer#close">
             </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="main__container">
-            <%- page.content %>
+          </nav>
+          <div class="drawer-wrapper__content">
+            <div class="app-content padding">
+              <%- page.content %>
+            </div>
           </div>
         </div>
       </div>
