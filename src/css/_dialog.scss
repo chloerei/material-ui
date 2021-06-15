@@ -30,30 +30,6 @@
   z-index: 32;
 }
 
-.dialog__header {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  padding: 8px;
-}
-
-.dialog__title {
-  padding: 6px 8px;
-  margin: 0;
-  flex-grow: 1;
-}
-
-.dialog__body {
-  padding: 16px;
-  overflow: auto;
-  flex-grow: 1;
-}
-
-.dialog__footer {
-  display: flex;
-  padding: 8px;
-}
-
 .dialog__scrim {
   display: none;
 }
