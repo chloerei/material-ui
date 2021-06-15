@@ -3,6 +3,8 @@ import animate from "../animate"
 
 export default class extends Controller {
   connect() {
+    this.element[this.identifier] = this;
+
     this.closeMenuOutside = (event) => {
       if (!this.element.contains(event.target)) {
         this.close();

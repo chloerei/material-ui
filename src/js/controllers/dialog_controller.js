@@ -2,6 +2,10 @@ import { Controller } from "stimulus"
 import animate from "../animate"
 
 export default class extends Controller {
+  connect() {
+    this.element[this.identifier] = this;
+  }
+
   disconnect() {
     this.element.classList.remove('dialog--open')
   }

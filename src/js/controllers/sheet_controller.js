@@ -2,6 +2,10 @@ import { Controller } from "stimulus"
 import animate from "../animate"
 
 export default class extends Controller {
+  connect() {
+    this.element[this.identifier] = this;
+  }
+
   toggle() {
     if (this.element.classList.contains('sheet--open')) {
       this.close()

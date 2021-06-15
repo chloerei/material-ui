@@ -10,6 +10,8 @@ export default class extends Controller {
   static targets = ["select", "chip", "item"]
 
   connect() {
+    this.element[this.identifier] = this;
+
     this.multiple = this.selectTarget.multiple
 
     if (!this.multiple) {
