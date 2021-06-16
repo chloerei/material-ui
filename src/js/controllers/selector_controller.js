@@ -140,6 +140,8 @@ export default class extends Controller {
     if (!event.isComposing) {
       switch (event.keyCode) {
         case 13: // Enter
+          // avoid trigger form submit
+          event.preventDefault()
           this.selectFocus()
           break;
         case 8: // Backspace
