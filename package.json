@@ -9,7 +9,9 @@
   },
   "files": [
     "dist/js/*.{js,map}",
-    "dist/css/*.{css,css.map}"
+    "dist/css/*.{css,css.map}",
+    "src/js/**/*.js",
+    "src/css/**/*.scss"
   ],
   "repository": {
     "type": "git",
