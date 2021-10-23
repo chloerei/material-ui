@@ -6,15 +6,13 @@
   "style": "dist/css/campo-ui.css",
   "scripts": {
     "build": "npm run build:js & npm run build:js-bundle & npm run build:css",
-    "build:js": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.bundle.js --format=esm --bundle --sourcemap --external:stimulus",
+    "build:js": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.js --format=esm --bundle --sourcemap --external:stimulus",
     "build:js-bundle": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.bundle.js --format=esm --bundle --sourcemap",
     "build:css": "npx sass src/css/material-ui.scss dist/material-ui.css"
   },
   "files": [
-    "dist/js/*.{js,map}",
-    "dist/css/*.{css,css.map}",
-    "src/js/**/*.js",
-    "src/css/**/*.scss"
+    "dist/*.{js,map}",
+    "dist/*.{css,css.map}"
   ],
   "repository": "github:chloerei/material-ui",
   "author": "Rei",
@@ -24,14 +22,14 @@
   },
   "homepage": "https://github.com/chloerei/material-ui",
   "hexo": {
-    "version": "4.2.0"
+    "version": "5.4.0"
   },
   "peerDependencies": {
     "stimulus": "2.x"
   },
   "devDependencies": {
     "esbuild": "^0.13.8",
-    "hexo": "^4.2.0",
+    "hexo": "^5.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
     "hexo-server": "^1.0.0",
