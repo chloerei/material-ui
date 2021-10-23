@@ -6,7 +6,10 @@
     <title><%= page.title %> - Campo UI</title>
     <link rel="stylesheet" href="/css/campo-ui.css">
     <link rel="stylesheet" href="/theme.css">
-    <script src="/js/campo-ui.bundle.js"></script>
+    <script>
+      import init from 'material-ui.bundle'
+      init()
+    </script>
   </head>
   <body class="app">
     <%- page.content %>

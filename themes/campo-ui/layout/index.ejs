@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title><%= page.title %> - Campo UI</title>
-    <link rel="stylesheet" href="/css/campo-ui.css">
+    <link rel="stylesheet" href="/material-ui.css">
     <link rel="stylesheet" href="/theme.css">
     <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
-    <script src="/js/campo-ui.js"></script>
-    <script>
-      CampoUI.init()
+    <script type="module">
+      import { init } from '/material-ui.bundle.js'
+      init()
     </script>
   </head>
   <body class="app">

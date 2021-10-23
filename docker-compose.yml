@@ -1,15 +1,21 @@
 version: '3.0'
 
 services:
-  rollup:
-    build: .
-    volumes:
-      - .:/app
-    command: npx rollup --config --watch
-  hexo:
+  web:
     build: .
     volumes:
       - .:/app
     command: npx hexo server
     ports:
       - 4000:4000
+  build-js:
+    build: .
+    volumes:
+      - .:/app
+    command: npm run build:js-bundle -- --watch
+    tty: true
+  build-css:
+    build: .
+    volumes:
+      - .:/app
+    command: npm run build:css -- --watch

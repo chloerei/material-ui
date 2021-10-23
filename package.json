@@ -1,11 +1,14 @@
 {
-  "name": "campo-ui",
+  "name": "@chloerei/material-ui",
   "version": "0.0.7",
   "description": "A Material Design front-end component library.",
   "main": "dist/js/campo-ui.js",
   "style": "dist/css/campo-ui.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:js & npm run build:js-bundle & npm run build:css",
+    "build:js": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.bundle.js --format=esm --bundle --sourcemap --external:stimulus",
+    "build:js-bundle": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.bundle.js --format=esm --bundle --sourcemap",
+    "build:css": "npx sass src/css/material-ui.scss dist/material-ui.css"
   },
   "files": [
     "dist/js/*.{js,map}",
@@ -13,16 +16,13 @@
     "src/js/**/*.js",
     "src/css/**/*.scss"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/getcampo/campo-ui.git"
-  },
+  "repository": "github:chloerei/material-ui",
   "author": "Rei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/getcampo/campo-ui/issues"
+    "url": "https://github.com/chloerei/material-ui/issues"
   },
-  "homepage": "https://github.com/getcampo/campo-ui#readme",
+  "homepage": "https://github.com/chloerei/material-ui",
   "hexo": {
     "version": "4.2.0"
   },
@@ -30,21 +30,12 @@
     "stimulus": "2.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.9.0",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "autoprefixer": "^9.7.5",
+    "esbuild": "^0.13.8",
     "hexo": "^4.2.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
     "hexo-server": "^1.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
-    "rollup": "^2.2.0",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-postcss": "^2.5.0",
-    "rollup-plugin-terser": "^5.3.0",
+    "sass": "^1.43.3",
     "stimulus": "^2.0.0"
   }
 }

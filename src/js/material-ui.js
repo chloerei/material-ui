@@ -13,6 +13,7 @@ function init(application) {
   if (!application) {
     application = Application.start()
   }
+
   application.register("dialog", DialogController)
   application.register("drawer", DrawerController)
   application.register("dropdown", DropdownController)
