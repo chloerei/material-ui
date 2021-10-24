@@ -11,8 +11,7 @@
     "build:css": "npx sass src/css/material-ui.scss dist/material-ui.css"
   },
   "files": [
-    "dist/*.{js,map}",
-    "dist/*.{css,css.map}"
+    "dist/*.{js,css,map}"
   ],
   "repository": "github:chloerei/material-ui",
   "author": "Rei",
