@@ -73,7 +73,7 @@
   font-size: 14px;
 }
 
-@media (max-width: $mobile-break-point) {
+@media (max-width: $phone-break-point) {
   .navigation-wrapper {
     flex-direction: column-reverse;
   }

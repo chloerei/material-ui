@@ -1,77 +1,88 @@
 .drawer-wrapper {
   display: flex;
-  flex-grow: 1;
-  overflow: auto;
+  width: 100%;
 }
 
 .drawer-wrapper__content {
   flex-grow: 1;
-  display: flex;
-  overflow: auto;
-
-  .app-bar {
-    z-index: 90;
-  }
 }
 
 .drawer {
-  display: flex;
-  z-index: 100;
+  width: 256px;
+  margin-left: -256px;
+  z-index: 110;
 }
 
-.drawer__container {
-  width: 256px;
+.drawer__content {
   box-sizing: border-box;
   box-shadow: 1px 0 0 var(--border-color);
   background: white;
   overflow: auto;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 0;
-  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  z-index: 32;
 }
 
 .drawer__scrim {
   display: none;
+  z-index: 16;
 }
 
-.drawer--dismissible {
-  .drawer__container {
-    margin-left: -256px;
+.drawer--open {
+  margin-left: 0;
+}
+
+@media (max-width: $phone-break-point - 1px) {
+  .drawer {
+    position: fixed;
   }
 
-  &.drawer--open .drawer__container {
+  .drawer--open {
+    .drawer__scrim {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+@media (min-width: $phone-break-point) {
+  .drawer--clipped {
+    z-index: 90;
+
+    .drawer__content {
+      top: 56px;
+    }
+  }
+
+  .drawer--permanently {
     margin-left: 0;
   }
+
+  .drawer--modal {
+    position: fixed;
+
+    &.drawer--open {
+      .drawer__scrim {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
 }
 
-.drawer--modal {
-  z-index: 110 !important;
-
-  .drawer__container {
-    margin-left: -256px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 32;
-  }
-
-  &.drawer--open .drawer__container {
-    margin-left: 0;
-  }
-
-  &.drawer--open .drawer__scrim {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 16;
-  }
-}
+// ---
 
 .drawer__menu {
   margin: 8px 0;
@@ -134,35 +145,4 @@
   height: 24px;
   width: 24px;
   margin: -2px 16px -2px 0;
-}
-
-// use modal in tablet
-@media (max-width: $tablet-break-point) {
-  .drawer {
-    z-index: 110 !important;
-  }
-
-  .drawer__container {
-    margin-left: -256px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 32;
-  }
-
-  .drawer--open .drawer__container {
-    margin-left: 0;
-  }
-
-  .drawer--open .drawer__scrim {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 16;
-  }
 }

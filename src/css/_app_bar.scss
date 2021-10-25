@@ -1,9 +1,4 @@
 .app-bar-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  position: relative;
-  overflow: hidden;
 }
 
 .app-bar-wrapper__content {
@@ -28,6 +23,11 @@
   .button--icon {
     padding: 6px;
   }
+}
+
+.app-bar--sticky-top {
+  position: sticky;
+  top: 0;
 }
 
 .app-bar--primary {

@@ -16,24 +16,27 @@ title: Standard drawer
   </div>
 </div>
 
-<div class="drawer drawer--modal" id="drawer" data-controller="drawer">
-  <div class="drawer__content">
-    <div class="drawer__menu">
+<div class="drawer-wrapper">
+  <div class="drawer drawer--clipped" id="drawer" data-controller="drawer">
+    <div class="drawer__content">
+      <div class="drawer__menu">
+        <% for(var i = 0; i < 100 ; i++ ) { %>
+          <a href="#" class="drawer__item">
+            Drawer Item
+          </a>
+        <% } %>
+      </div>
+    </div>
+    <div class="drawer__scrim" data-action="click->drawer#close">
+    </div>
+  </div>
+  <div class="drawer-wrapper__content">
+    <div class="padding">
       <% for(var i = 0; i < 100 ; i++ ) { %>
-        <a href="#" class="drawer__item">
-          Drawer Item
-        </a>
+        <p>
+          Main Content
+        </p>
       <% } %>
     </div>
   </div>
-  <div class="drawer__scrim" data-action="click->drawer#close">
-  </div>
-</div>
-
-<div class="padding">
-  <% for(var i = 0; i < 100 ; i++ ) { %>
-    <p>
-      Main Content
-    </p>
-  <% } %>
 </div>

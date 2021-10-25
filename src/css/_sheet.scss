@@ -59,7 +59,7 @@
 }
 
 // use modal style in mobile screen
-@media (max-width: $mobile-break-point) {
+@media (max-width: $phone-break-point) {
   .sheet__container {
     position: fixed;
     right: 0;
