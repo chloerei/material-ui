@@ -16,7 +16,7 @@ title: Standard drawer
   </div>
 </div>
 
-<div class="drawer-wrapper">
+<div class="display-flex">
   <div class="drawer drawer--clipped drawer--permanently" id="drawer" data-controller="drawer">
     <div class="drawer__content">
       <div class="drawer__menu">
@@ -30,7 +30,7 @@ title: Standard drawer
     <div class="drawer__scrim" data-action="click->drawer#close">
     </div>
   </div>
-  <div class="drawer-wrapper__content">
+  <div class="flex-grow-1">
     <div class="padding">
       <% for(var i = 0; i < 100 ; i++ ) { %>
         <p>
