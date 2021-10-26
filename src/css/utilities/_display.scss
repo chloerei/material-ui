@@ -1,0 +1,25 @@
+.display-on-mobile {
+  display: none;
+}
+
+.display-on-tablet {
+  display: none;
+}
+
+@media (max-width: $phone-break-point) {
+  .display-on-mobile {
+    display: inherit;
+  }
+}
+
+@media (max-width: $tablet-break-point) {
+  .display-on-tablet {
+    display: inherit;
+  }
+}
+
+@media (min-width: $tablet-break-point) {
+  .disabled-on-desktop {
+    pointer-events: none;
+  }
+}

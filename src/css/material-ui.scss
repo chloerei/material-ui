@@ -2,33 +2,5 @@
 @import 'base';
 @import 'typography';
 @import 'animate';
-
-// componenet
-
-@import 'chip';
-@import 'list';
-@import 'table';
-@import 'navigation';
-@import 'drawer';
-@import 'toolbar';
-@import 'tab';
-@import 'app_bar';
-@import 'button';
-@import 'floating_action';
-@import 'form';
-@import 'text_field';
-@import 'checkbox';
-@import 'radio';
-@import 'switch';
-@import 'dropdown';
-@import 'card';
-@import 'dialog';
-@import 'snackbar';
-@import 'sheet';
-@import 'selector';
-@import 'pagination';
-
-// Utils
-
-@import 'utils';
-@import 'flex';
+@import 'components';
+@import 'utilities';

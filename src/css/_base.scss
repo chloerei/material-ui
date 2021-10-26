@@ -26,19 +26,6 @@ img {
   max-width: 100%;
 }
 
-.app {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
-.app-content {
-  flex-grow: 1;
-  overflow: auto;
-  position: relative;
-}
-
 .subheader {
   margin: 16px;
   font-size: 14px;
@@ -51,14 +38,4 @@ img {
   margin: 8px 0;
   border: 0;
   border-bottom: 1px solid var(--border-color);
-}
-
-.text-primary {
-  font-size: 16px;
-  color: var(--text-primary-color);
-}
-
-.text-secondary {
-  font-size: 14px;
-  color: var(--text-secondary-color);
 }

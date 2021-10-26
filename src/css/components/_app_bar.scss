@@ -1,16 +1,3 @@
-.app-bar-wrapper {
-}
-
-.app-bar-wrapper__content {
-  flex-grow: 1;
-  display: flex;
-  overflow: auto;
-
-  .drawer {
-    z-index: 90;
-  }
-}
-
 .app-bar {
   box-shadow: 0 1px 0 var(--border-color);
   background: white;
