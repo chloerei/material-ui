@@ -1,7 +1,7 @@
 .sheet {
   width: 320px;
   margin-right: -320px;
-  z-index: 110;
+  z-index: 16;
 }
 
 .sheet__content {
@@ -13,12 +13,11 @@
   top: 0;
   bottom: 0;
   width: 320px;
-  z-index: 32;
+  z-index: 1;
 }
 
 .sheet__scrim {
   display: none;
-  z-index: 16;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,7 +45,7 @@
 
 @media (min-width: $phone-break-point) {
   .sheet--clipped {
-    z-index: 90;
+    z-index: unset;
 
     .sheet__content {
       top: 56px;

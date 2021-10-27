@@ -1,7 +1,8 @@
 .snackbar-container {
-  position: absolute;
+  position: fixed;
   left: 16px;
   bottom: 16px;
+  z-index: 6;
 }
 
 .snackbar {

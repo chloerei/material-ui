@@ -1,7 +1,7 @@
 .drawer {
   width: 256px;
   margin-left: -256px;
-  z-index: 110;
+  z-index: 16;
 }
 
 .drawer__content {
@@ -13,12 +13,11 @@
   top: 0;
   bottom: 0;
   width: 256px;
-  z-index: 32;
+  z-index: 1;
 }
 
 .drawer__scrim {
   display: none;
-  z-index: 16;
   position: fixed;
   top: 0;
   left: 0;
@@ -45,7 +44,7 @@
 
 @media (min-width: $phone-break-point) {
   .drawer--clipped {
-    z-index: 90;
+    z-index: unset;
 
     .drawer__content {
       top: 56px;
