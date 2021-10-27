@@ -2,6 +2,7 @@
   width: 256px;
   margin-left: -256px;
   z-index: 16;
+  flex-shrink: 0;
 }
 
 .drawer__content {

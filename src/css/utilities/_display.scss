@@ -1,25 +1,47 @@
-.display-on-mobile {
+.display-none {
   display: none;
 }
 
-.display-on-tablet {
-  display: none;
+.display-block {
+  display: block;
 }
 
-@media (max-width: $phone-break-point) {
-  .display-on-mobile {
-    display: inherit;
+@media (max-width: $phone-break-point - 1px) {
+  .display-phone-none {
+    display: none;
+  }
+
+  .display-phone-block {
+    display: block;
   }
 }
 
-@media (max-width: $tablet-break-point) {
-  .display-on-tablet {
-    display: inherit;
+@media (min-width: $phone-break-point) and (max-width: $tablet-break-point - 1px) {
+  .display-tablet-none {
+    display: none;
+  }
+
+  .display-tablet-block {
+    display: block;
   }
 }
 
-@media (min-width: $tablet-break-point) {
-  .disabled-on-desktop {
-    pointer-events: none;
+@media (min-width: $tablet-break-point) and (max-width: $laptop-break-point - 1px) {
+  .display-laptop-none {
+    display: none;
+  }
+
+  .display-laptop-block {
+    display: block;
+  }
+}
+
+@media (min-width: $laptop-break-point) {
+  .display-desktop-none {
+    display: none;
+  }
+
+  .display-desktop-block {
+    display: block;
   }
 }
