@@ -8,7 +8,7 @@
   padding: 0;
   height: 400px;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   z-index: 0;
 }
 
