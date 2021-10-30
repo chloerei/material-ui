@@ -17,15 +17,21 @@
   width: 100%;
 }
 
+.example.sandbox .drawer__container,
 .example.sandbox .drawer__scrim,
-.example.sandbox .drawer--modal .drawer__container,
+.example.sandbox .sheet__container,
 .example.sandbox .sheet__scrim,
-.example.sandbox .sheet--modal .sheet__container,
 .example.sandbox .dialog,
 .example.sandbox .dialog__scrim,
 .example.sandbox .floating-action,
 .example.sandbox .floating-action__menu {
   position: absolute;
+}
+
+.example.sandbox .drawer--modal,
+.example.sandbox .sheet--modal {
+  position: absolute;
+  inset: 0;
 }
 
 @media (max-width: 480px) {

@@ -1,13 +1,11 @@
 .drawer {
   width: 256px;
-  margin-left: -256px;
-  z-index: 16;
   flex-shrink: 0;
+  z-index: 16;
 }
 
-.drawer__content {
+.drawer__container {
   box-sizing: border-box;
-  box-shadow: 1px 0 0 var(--border-color);
   background: white;
   overflow: auto;
   position: fixed;
@@ -27,43 +25,31 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.drawer--open {
-  margin-left: 0;
-}
+@mixin drawer-modal {
+  display: none;
 
-@media (max-width: $phone-break-point - 1px) {
-  .drawer {
+  &.drawer--open {
+    display: block;
     position: fixed;
-  }
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-  .drawer--open {
     .drawer__scrim {
       display: block;
     }
   }
 }
 
-@media (min-width: $phone-break-point) {
-  .drawer--clipped {
-    z-index: unset;
+.drawer--modal {
+  @include drawer-modal;
+}
 
-    .drawer__content {
-      top: 56px;
-    }
-  }
-
-  .drawer--permanently {
-    margin-left: 0;
-  }
-
-  .drawer--modal {
-    position: fixed;
-
-    &.drawer--open {
-      .drawer__scrim {
-        display: block;
-      }
-    }
+@media (max-width: $phone-break-point - 1px) {
+  .drawer {
+    @include drawer-modal;
   }
 }
 

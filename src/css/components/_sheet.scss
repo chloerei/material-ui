@@ -1,17 +1,17 @@
 .sheet {
   width: 320px;
-  margin-right: -320px;
-  z-index: 16;
   flex-shrink: 0;
+  z-index: 16;
 }
 
-.sheet__content {
+.sheet__container {
   box-sizing: border-box;
-  border-left: 1px solid var(--border-color);
+  box-shadow: -1px 0 0 var(--border-color);
   background: white;
   overflow: auto;
   position: fixed;
   top: 0;
+  right: 0;
   bottom: 0;
   width: 320px;
   z-index: 1;
@@ -27,44 +27,30 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.sheet--open {
-  margin-right: 0;
-}
+@mixin sheet-modal {
+  display: none;
 
-@media (max-width: $phone-break-point - 1px) {
-  .sheet {
+  &.sheet--open {
+    display: block;
     position: fixed;
+    width: auto;
+    top: 0;
+    left: 0;
     right: 0;
-  }
+    bottom: 0;
 
-  .sheet--open {
     .sheet__scrim {
       display: block;
     }
   }
 }
 
-@media (min-width: $phone-break-point) {
-  .sheet--clipped {
-    z-index: unset;
+.sheet--modal {
+  @include sheet-modal;
+}
 
-    .sheet__content {
-      top: 56px;
-    }
-  }
-
-  .sheet--permanently {
-    margin-right: 0;
-  }
-
-  .sheet--modal {
-    position: fixed;
-    right: 0;
-
-    &.sheet--open {
-      .sheet__scrim {
-        display: block;
-      }
-    }
+@media (max-width: $phone-break-point - 1px) {
+  .sheet {
+    @include sheet-modal;
   }
 }
