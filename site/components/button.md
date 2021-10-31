@@ -4,6 +4,22 @@ title: Button
 
 # Button
 
+## Elevated
+
+{% example %}
+<button type="button" class="button button--elevated">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Elevated
+  </div>
+</button>
+<button type="button" class="button button--elevated button--disabled">
+  Disabled
+</button>
+{% endexample %}
+
 ## Contained Button
 
 {% example %}

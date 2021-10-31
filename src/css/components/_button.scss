@@ -11,8 +11,7 @@
   font-size: 16px;
   position: relative;
   overflow: hidden;
-  color: var(--text-primary-color);
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .button--contained,
@@ -27,7 +26,6 @@
 .button--disabled,
 button[disabled] {
   pointer-events: none;
-  opacity: 0.5;
 }
 
 .button__icon {
@@ -38,6 +36,73 @@ button[disabled] {
     height: 18px;
     width: 18px;
     fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 18px;
+  }
+
+  &:first-child {
+    margin: 0 8px 0 -8px;
+  }
+
+  &:last-child {
+    margin: 0 -8px 0 8px;
+  }
+}
+
+.button--elevated {
+  color: var(--color-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  background: transparent;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-primary);
+    opacity: 0.05;
+    z-index: -1;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    &::after {
+      opacity: 0.15;
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: 0.15;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  &:disabled,
+  &.button--disabled {
+    color: rgba(0, 0, 0, 0.38);
+    box-shadow: none;
+
+    &:after {
+      background-color: var(--color-on-surface);
+      opacity: 0.12;
+    }
   }
 }
 
