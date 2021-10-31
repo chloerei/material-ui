@@ -1,7 +1,6 @@
 .sheet {
   width: 320px;
   flex-shrink: 0;
-  z-index: 16;
 }
 
 .sheet__container {
@@ -27,6 +26,12 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+@media (min-width: $phone-break-point) {
+  .sheet--app-bar-margin .sheet__container {
+    margin-top: 56px;
+  }
+}
+
 @mixin sheet-modal {
   display: none;
 
@@ -38,6 +43,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 16;
 
     .sheet__scrim {
       display: block;

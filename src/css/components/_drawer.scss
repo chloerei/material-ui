@@ -1,7 +1,6 @@
 .drawer {
   width: 256px;
   flex-shrink: 0;
-  z-index: 16;
 }
 
 .drawer__container {
@@ -25,6 +24,12 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+@media (min-width: $phone-break-point) {
+  .drawer--app-bar-margin .drawer__container {
+    margin-top: 56px;
+  }
+}
+
 @mixin drawer-modal {
   display: none;
 
@@ -36,6 +41,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 16;
 
     .drawer__scrim {
       display: block;

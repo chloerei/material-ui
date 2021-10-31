@@ -7,22 +7,22 @@ title: Sheet
 ## Standard
 
 {% example sandbox %}
+<div class="app-bar app-bar--sticky-top">
+  <div class="toolbar">
+    <div class="toolbar__title">
+      Title
+    </div>
+  </div>
+</div>
+
 <div class="display-flex">
   <div class="flex-grow-1">
-    <div class="app-bar app-bar--sticky-top">
-      <div class="toolbar">
-        <div class="toolbar__title">
-          Title
-        </div>
-      </div>
-    </div>
-
     <div class="padding">
       Main Content
     </div>
   </div>
 
-  <div id="sheet-standard" class="sheet" data-controller="sheet">
+  <div id="sheet-standard" class="sheet sheet--app-bar-margin" data-controller="sheet">
     <div class="sheet__container">
       <div class="padding">
         Sheet Content

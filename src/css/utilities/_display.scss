@@ -7,11 +7,11 @@
 }
 
 @media (max-width: $phone-break-point - 1px) {
-  .display-phone-none {
+  .display-none-on-phone {
     display: none;
   }
 
-  .display-phone-block {
+  .display-block-on-phone {
     display: block;
   }
 }

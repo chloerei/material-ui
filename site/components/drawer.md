@@ -7,8 +7,16 @@ title: Drawer
 ## Standard
 
 {% example sandbox %}
+<div class="app-bar">
+  <div class="toolbar">
+    <div class="toolbar__title">
+      Title
+    </div>
+  </div>
+</div>
+
 <div class="display-flex">
-  <div class="drawer" id="drawer-standard" data-controller="drawer">
+  <div class="drawer drawer--app-bar-margin" id="drawer-standard" data-controller="drawer">
     <div class="drawer__container">
       <div class="drawer__menu">
         <a href="#" class="drawer__item">
@@ -26,13 +34,6 @@ title: Drawer
     </div>
   </div>
   <div class="flex-grow-1">
-    <div class="app-bar">
-      <div class="toolbar">
-        <div class="toolbar__title">
-          Title
-        </div>
-      </div>
-    </div>
     <div class="padding">
       Main Content
     </div>
