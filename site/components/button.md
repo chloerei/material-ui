@@ -36,6 +36,22 @@ title: Button
 </button>
 {% endexample %}
 
+## Filled tonal
+
+{% example %}
+<button type="button" class="button button--filled-tonal">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Filled
+  </div>
+</button>
+<button type="button" class="button button--filled-tonal" disabled>
+  Disabled
+</button>
+{% endexample %}
+
 ## Contained Button
 
 {% example %}

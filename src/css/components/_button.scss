@@ -181,6 +181,70 @@ button[disabled] {
   }
 }
 
+.button--filled-tonal {
+  color: var(--color-on-secondary-container);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: var(--shadow-level-0);
+  background: transparent;
+
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-color: var(--color-secondary-container);
+  }
+
+  // State layer
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--color-on-secondary-container);
+    opacity: 0;
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-level-1);
+
+    &::after {
+      opacity: var(--state-hover-opacity);
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: var(--state-focus-opacity);
+    }
+  }
+
+  &:active {
+    box-shadow: var(--shadow-level-0);
+
+    &::after {
+      opacity: var(--state-press-opacity);
+    }
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    box-shadow: var(--shadow-level-0);
+
+    &:before {
+      background-color: var(--color-on-surface);
+      opacity: 0.12;
+    }
+  }
+}
+
 .button--contained {
   padding: 10px 16px;
   border: 0;
