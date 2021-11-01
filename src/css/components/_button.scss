@@ -244,63 +244,165 @@ button[disabled] {
   }
 }
 
-.button--icon {
-  line-height: 1;
-  padding: 8px;
+.button--outlined {
+  color: var(--color-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
   border: 0;
-  border-radius: 50%;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
   background: transparent;
-  height: 40px;
-  width: 40px;
-  justify-content: center;
-  color: var(--text-secondary-color);
 
-  svg {
-    fill: var(--text-secondary-color);
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-color: transparent;
+    border: 1px solid var(--color-outline);
+    border-radius: 20px;
   }
 
+  // State layer
   &::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: opacity 0.2s;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--color-primary);
     opacity: 0;
-    background: var(--text-secondary-color);
-    border-radius: 50%;
   }
 
   &:hover {
     &::after {
-      opacity: 0.1;
+      opacity: var(--state-hover-opacity);
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: var(--state-focus-opacity);
     }
   }
 
   &:active {
     &::after {
-      opacity: 0.3;
+      opacity: var(--state-press-opacity);
     }
   }
 
-  &.button--primary {
-    svg {
-      fill: var(--primary-color);
-    }
+  &:disabled {
+    color: rgba(0, 0, 0, 0.38);
 
+    &::before {
+      opacity: 0.12;
+    }
+  }
+}
+
+.button--text {
+  color: var(--color-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  background: transparent;
+
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+
+  // State layer
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--color-primary);
+    opacity: 0;
+  }
+
+  &:hover {
     &::after {
-      background: var(--primary-color);
+      opacity: var(--state-hover-opacity);
     }
   }
 
-  &.button--secondary {
-    svg {
-      fill: var(--secondary-color);
-    }
-
+  &:focus {
     &::after {
-      background: var(--secondary-color);
+      opacity: var(--state-focus-opacity);
     }
+  }
+
+  &:active {
+    &::after {
+      opacity: var(--state-press-opacity);
+    }
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.38);
+  }
+}
+
+.button--icon {
+  color: var(--color-primary);
+  line-height: 20px;
+  font-size: 24px;
+  padding: 8px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  background: transparent;
+
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+
+  // State layer
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--color-primary);
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: var(--state-hover-opacity);
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: var(--state-focus-opacity);
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: var(--state-press-opacity);
+    }
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.38);
   }
 }
