@@ -20,6 +20,22 @@ title: Button
 </button>
 {% endexample %}
 
+## Filled
+
+{% example %}
+<button type="button" class="button button--filled">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Filled
+  </div>
+</button>
+<button type="button" class="button button--filled" disabled>
+  Disabled
+</button>
+{% endexample %}
+
 ## Contained Button
 
 {% example %}

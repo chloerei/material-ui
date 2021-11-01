@@ -63,12 +63,20 @@ button[disabled] {
   box-shadow: var(--shadow-level-1);
   background: transparent;
 
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-surface);
+    z-index: -2;
+  }
+
   // State layer
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: var(--color-surface);
     z-index: -1;
   }
 
@@ -101,7 +109,72 @@ button[disabled] {
     color: rgba(0, 0, 0, 0.38);
     box-shadow: var(--shadow-level-0);
 
-    &:after {
+    &::before {
+      background-color: var(--color-on-surface);
+      opacity: 0.12;
+    }
+  }
+}
+
+.button--filled {
+  color: var(--color-on-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: var(--shadow-level-0);
+  background: transparent;
+
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-color: var(--color-primary);
+  }
+
+  // State layer
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-level-1);
+
+    &::after {
+      background-color: var(--color-on-primary);
+      opacity: var(--state-hover-opacity);
+    }
+  }
+
+  &:focus {
+    &::after {
+      background-color: var(--color-on-primary);
+      opacity: var(--state-focus-opacity);
+    }
+  }
+
+  &:active {
+    box-shadow: var(--shadow-level-0);
+
+    &::after {
+      background-color: var(--color-on-primary);
+      opacity: var(--state-press-opacity);
+    }
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    box-shadow: var(--shadow-level-0);
+
+    &:before {
       background-color: var(--color-on-surface);
       opacity: 0.12;
     }
