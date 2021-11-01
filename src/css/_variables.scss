@@ -40,6 +40,15 @@ $laptop-break-point: 1440px !default;
   --color-inverse-surface: #313033;
   --color-inverse-on-surface: #F4EFF4;
   --color-inverse-primary:  #D0BCFF;
+
+  --state-hover-opacity: 8%;
+  --state-focus-opacity: 12%;
+  --state-press-opacity: 12%;
+  --state-drag-opacity: 6%;
+
+  --shadow-level-0: none;
+  --shadow-level-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-level-2: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .dark-theme {

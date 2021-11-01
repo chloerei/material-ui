@@ -60,44 +60,46 @@ button[disabled] {
   border-radius: 20px;
   text-align: center;
   font-weight: 500;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-level-1);
   background: transparent;
 
+  // State layer
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: var(--color-primary);
-    opacity: 0.05;
+    background-color: var(--color-surface);
     z-index: -1;
   }
 
   &:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-level-2);
 
     &::after {
-      opacity: 0.15;
+      background-color: var(--color-primary);
+      opacity: var(--state-hover-opacity);
     }
   }
 
   &:focus {
     &::after {
-      opacity: 0.15;
+      background-color: var(--color-primary);
+      opacity: var(--state-focus-opacity);
     }
   }
 
   &:active {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-level-1);
 
     &::after {
-      opacity: 0.1;
+      background-color: var(--color-primary);
+      opacity: var(--state-press-opacity);
     }
   }
 
-  &:disabled,
-  &.button--disabled {
+  &:disabled {
     color: rgba(0, 0, 0, 0.38);
-    box-shadow: none;
+    box-shadow: var(--shadow-level-0);
 
     &:after {
       background-color: var(--color-on-surface);

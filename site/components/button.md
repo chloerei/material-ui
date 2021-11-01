@@ -15,7 +15,7 @@ title: Button
     Elevated
   </div>
 </button>
-<button type="button" class="button button--elevated button--disabled">
+<button type="button" class="button button--elevated" disabled>
   Disabled
 </button>
 {% endexample %}
