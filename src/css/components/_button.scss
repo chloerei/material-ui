@@ -78,20 +78,20 @@ button[disabled] {
     position: absolute;
     inset: 0;
     z-index: -1;
+    background-color: var(--color-primary);
+    opacity: 0;
   }
 
   &:hover {
     box-shadow: var(--shadow-level-2);
 
     &::after {
-      background-color: var(--color-primary);
       opacity: var(--state-hover-opacity);
     }
   }
 
   &:focus {
     &::after {
-      background-color: var(--color-primary);
       opacity: var(--state-focus-opacity);
     }
   }
@@ -143,20 +143,20 @@ button[disabled] {
     position: absolute;
     inset: 0;
     z-index: -1;
+    background-color: var(--color-on-primary);
+    opacity: 0;
   }
 
   &:hover {
     box-shadow: var(--shadow-level-1);
 
     &::after {
-      background-color: var(--color-on-primary);
       opacity: var(--state-hover-opacity);
     }
   }
 
   &:focus {
     &::after {
-      background-color: var(--color-on-primary);
       opacity: var(--state-focus-opacity);
     }
   }
@@ -165,7 +165,6 @@ button[disabled] {
     box-shadow: var(--shadow-level-0);
 
     &::after {
-      background-color: var(--color-on-primary);
       opacity: var(--state-press-opacity);
     }
   }
@@ -174,7 +173,7 @@ button[disabled] {
     color: rgba(0, 0, 0, 0.38);
     box-shadow: var(--shadow-level-0);
 
-    &:before {
+    &::before {
       background-color: var(--color-on-surface);
       opacity: 0.12;
     }
@@ -238,7 +237,7 @@ button[disabled] {
     color: rgba(0, 0, 0, 0.38);
     box-shadow: var(--shadow-level-0);
 
-    &:before {
+    &::before {
       background-color: var(--color-on-surface);
       opacity: 0.12;
     }
