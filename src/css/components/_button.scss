@@ -12,15 +12,42 @@
   position: relative;
   overflow: hidden;
   vertical-align: top;
-}
+  background: transparent;
 
-.button--contained,
-.button--text,
-.button--outlined {
-  min-width: 64px;
-  font-size: 16px;
-  line-height: 16px;
-  justify-content: center;
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+
+  // State layer
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: var(--state-hover-opacity);
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: var(--state-focus-opacity);
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: var(--state-press-opacity);
+    }
+  }
 }
 
 .button--disabled,
@@ -31,6 +58,7 @@ button[disabled] {
 .button__icon {
   width: 18px;
   height: 18px;
+  font-size: 18px;
 
   svg {
     height: 18px;
@@ -61,48 +89,23 @@ button[disabled] {
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-level-1);
-  background: transparent;
 
   // Container layer
   &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
     background-color: var(--color-surface);
-    z-index: -2;
   }
 
   // State layer
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
     background-color: var(--color-primary);
-    opacity: 0;
   }
 
   &:hover {
     box-shadow: var(--shadow-level-2);
-
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
   }
 
   &:active {
     box-shadow: var(--shadow-level-1);
-
-    &::after {
-      background-color: var(--color-primary);
-      opacity: var(--state-press-opacity);
-    }
   }
 
   &:disabled {
@@ -130,43 +133,20 @@ button[disabled] {
 
   // Container layer
   &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
     background-color: var(--color-primary);
   }
 
   // State layer
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
     background-color: var(--color-on-primary);
-    opacity: 0;
   }
 
   &:hover {
     box-shadow: var(--shadow-level-1);
-
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
   }
 
   &:active {
     box-shadow: var(--shadow-level-0);
-
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
   }
 
   &:disabled {
@@ -194,43 +174,20 @@ button[disabled] {
 
   // Container layer
   &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
     background-color: var(--color-secondary-container);
   }
 
   // State layer
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
     background-color: var(--color-on-secondary-container);
-    opacity: 0;
   }
 
   &:hover {
     box-shadow: var(--shadow-level-1);
-
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
   }
 
   &:active {
     box-shadow: var(--shadow-level-0);
-
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
   }
 
   &:disabled {
@@ -257,41 +214,13 @@ button[disabled] {
 
   // Container layer
   &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background-color: transparent;
     border: 1px solid var(--color-outline);
     border-radius: 20px;
   }
 
   // State layer
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
     background-color: var(--color-primary);
-    opacity: 0;
-  }
-
-  &:hover {
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
   }
 
   &:disabled {
@@ -314,40 +243,9 @@ button[disabled] {
   font-weight: 500;
   background: transparent;
 
-  // Container layer
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-  }
-
   // State layer
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
     background-color: var(--color-primary);
-    opacity: 0;
-  }
-
-  &:hover {
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
   }
 
   &:disabled {
@@ -357,7 +255,7 @@ button[disabled] {
 
 .button--icon {
   color: var(--color-primary);
-  line-height: 20px;
+  line-height: 1;
   font-size: 24px;
   padding: 8px;
   border: 0;
@@ -366,40 +264,19 @@ button[disabled] {
   font-weight: 500;
   background: transparent;
 
-  // Container layer
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 24px;
   }
 
   // State layer
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
     background-color: var(--color-primary);
-    opacity: 0;
-  }
-
-  &:hover {
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
   }
 
   &:disabled {
