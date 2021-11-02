@@ -82,6 +82,9 @@ title: Button
     Text
   </div>
 </button>
+<button type="button" class="button button--text">
+  Text button
+</button>
 <button type="button" class="button button--text" disabled>
   Disabled
 </button>

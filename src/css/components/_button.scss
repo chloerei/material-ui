@@ -261,12 +261,13 @@ button[disabled] {
   color: var(--color-primary);
   line-height: 20px;
   font-size: 14px;
-  padding: 10px 24px;
+  padding: 10px 12px;
   border: 0;
   border-radius: 20px;
   text-align: center;
   font-weight: 500;
   background: transparent;
+  min-width: 48px;
 
   // State layer
   &::after {
@@ -275,6 +276,20 @@ button[disabled] {
 
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
+  }
+
+  .button__icon {
+    &:first-child {
+      margin: 0 4px 0 0;
+    }
+
+    &:last-child {
+      margin: 0 0 0 4px;
+    }
+  }
+
+  .button__label {
+    margin: 0 4px;
   }
 }
 
