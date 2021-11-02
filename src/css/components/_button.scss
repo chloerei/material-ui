@@ -11,7 +11,7 @@
   font-size: 16px;
   position: relative;
   overflow: hidden;
-  vertical-align: top;
+  vertical-align: middle;
   background: transparent;
 
   // Container layer
@@ -281,5 +281,120 @@ button[disabled] {
 
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
+  }
+}
+
+.button--floating-action {
+  color: var(--color-on-primary-container);
+  line-height: 1;
+  padding: 16px;
+  border: 0;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 500;
+  background: transparent;
+  box-shadow: var(--shadow-level-3);
+
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+
+  .button__icon {
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    margin: 0 8px 0 0;
+  }
+
+  .button__label {
+    margin: 4px;
+  }
+
+  &.button--small {
+    padding: 8px;
+    border-radius: 12px;
+  }
+
+  &.button--large {
+    font-size: 36px;
+    padding: 30px;
+    border-radius: 28px;
+
+    svg {
+      height: 36px;
+      width: 36px;
+    }
+
+    .material-icons {
+      font-size: 36px;
+    }
+  }
+
+  &::before {
+    background-color: var(--color-primary-container)
+  }
+
+  &::after {
+    background-color: var(--color-on-primary-container);
+  }
+
+  &.button--surface {
+    color: var(--color-primary);
+
+    &::before {
+      background-color: var(--color-surface);
+    }
+
+    &::after {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &.button--secondary {
+    color: var(--color-on-secondary-container);
+
+    &::before {
+      background-color: var(--color-secondary-container);
+    }
+
+    &::after {
+      background-color: var(--color-on-secondary-container);
+    }
+  }
+
+  &.button--tertiary {
+    color: var(--color-on-tertiary-container);
+
+    &::before {
+      background-color: var(--color-tertiary-container);
+    }
+
+    &::after {
+      background-color: var(--color-on-tertiary-container);
+    }
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-level-4);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-level-3);
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    box-shadow: var(--shadow-level-0);
+
+    &::before {
+      background-color: var(--color-on-surface);
+      opacity: 0.12;
+    }
   }
 }

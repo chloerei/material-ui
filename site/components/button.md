@@ -84,7 +84,7 @@ title: Button
 </button>
 {% endexample %}
 
-## Icon Button
+## Icon
 
 {% example %}
 <button type="button" class="button button--icon">
@@ -92,5 +92,60 @@ title: Button
 </button>
 <button type="button" class="button button--icon" disabled>
   <span class="material-icons">bookmark_border</span>
+</button>
+{% endexample %}
+
+
+## Floating action
+
+### Color
+
+{% example %}
+<button type="button" class="button button--floating-action">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--surface">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--secondary">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--tertiary">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action" disabled>
+  <span class="material-icons">edit</span>
+</button>
+{% endexample %}
+
+### Size
+
+{% example %}
+<button type="button" class="button button--floating-action">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--small">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--large">
+  <span class="material-icons">edit</span>
+</button>
+{% endexample %}
+
+### Extended
+
+{% example %}
+<button type="button" class="button button--floating-action">
+  <div class="button__icon">
+    <span class="material-icons">edit</span>
+  </div>
+  <div class="button__label">
+    Compose
+  </div>
+</button>
+<button type="button" class="button button--floating-action">
+  <div class="button__label">
+    Compose
+  </div>
 </button>
 {% endexample %}
