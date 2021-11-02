@@ -391,8 +391,28 @@ button[disabled] {
     box-shadow: var(--shadow-level-4);
   }
 
+  &:focus {
+    box-shadow: var(--shadow-level-3);
+  }
+
   &:active {
     box-shadow: var(--shadow-level-3);
+  }
+
+  &.button--lowered {
+    box-shadow: var(--shadow-level-1);
+
+    &:hover {
+      box-shadow: var(--shadow-level-2);
+    }
+
+    &:focus {
+      box-shadow: var(--shadow-level-1);
+    }
+
+    &:active {
+      box-shadow: var(--shadow-level-1);
+    }
   }
 
   &:disabled {
