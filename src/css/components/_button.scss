@@ -105,6 +105,10 @@ button[disabled] {
     box-shadow: var(--shadow-level-2);
   }
 
+  &:focus {
+    box-shadow: var(--shadow-level-1);
+  }
+
   &:active {
     box-shadow: var(--shadow-level-1);
   }
@@ -144,6 +148,10 @@ button[disabled] {
 
   &:hover {
     box-shadow: var(--shadow-level-1);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-level-0);
   }
 
   &:active {
@@ -187,6 +195,10 @@ button[disabled] {
     box-shadow: var(--shadow-level-1);
   }
 
+  &:focus {
+    box-shadow: var(--shadow-level-0);
+  }
+
   &:active {
     box-shadow: var(--shadow-level-0);
   }
@@ -222,6 +234,12 @@ button[disabled] {
   // State layer
   &::after {
     background-color: var(--color-primary);
+  }
+
+  &:focus {
+    &::before {
+      border: 1px solid var(--color-primary);
+    }
   }
 
   &.button--surface {
