@@ -34,6 +34,12 @@
   inset: 0;
 }
 
+.example .card {
+  width: 320px;
+  min-height: 120px;
+  margin: 8px;
+}
+
 @media (max-width: 480px) {
   .example.sandbox .drawer__container,
   .example.sandbox .sheet__container {

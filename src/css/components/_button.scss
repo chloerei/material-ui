@@ -13,6 +13,7 @@
   overflow: hidden;
   vertical-align: middle;
   background: transparent;
+  z-index: 0;
 
   // Container layer
   &::before {
@@ -221,6 +222,12 @@ button[disabled] {
   // State layer
   &::after {
     background-color: var(--color-primary);
+  }
+
+  &.button--surface {
+    &::before {
+      background: var(--color-surface);
+    }
   }
 
   &:disabled {

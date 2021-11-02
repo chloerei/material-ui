@@ -63,6 +63,9 @@ title: Button
     Outlined
   </div>
 </button>
+<button type="button" class="button button--outlined button--surface">
+  Outlined surface
+</button>
 <button type="button" class="button button--outlined" disabled>
   Disabled
 </button>
@@ -128,6 +131,17 @@ title: Button
   <span class="material-icons">edit</span>
 </button>
 <button type="button" class="button button--floating-action button--large">
+  <span class="material-icons">edit</span>
+</button>
+{% endexample %}
+
+### Elevation
+
+{% example %}
+<button type="button" class="button button--floating-action">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--lowered">
   <span class="material-icons">edit</span>
 </button>
 {% endexample %}
