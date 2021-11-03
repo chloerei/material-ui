@@ -1,45 +1,124 @@
 .chip {
-  padding: 4px 12px;
   display: inline-flex;
   align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 6px 16px;
+  border-radius: 8px;
+  vertical-align: middle;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
 
-  &:hover {
-    background: rgba(0, 0, 0, 0.1);
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
   }
+
+  // State layer
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: var(--state-hover-opacity);
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: var(--state-focus-opacity);
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: var(--state-press-opacity);
+    }
+  }
+}
+
+.chip--disabled {
+  pointer-events: none;
 }
 
 .chip__icon {
-  width: 24px;
-  height: 24px;
-  margin: 0 8px 0 -8px;
-  border-radius: 50%;
-  overflow: hidden;
-
-  img {
-  }
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
 
   svg {
-    fill: var(--text-secondary-color);
+    height: 18px;
+    width: 18px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 18px;
+  }
+
+  &:first-child {
+    margin: 0 8px 0 -8px;
+  }
+
+  &:last-child {
+    margin: 0 -8px 0 8px;
   }
 }
 
-.chip__action {
-  width: 18px;
-  height: 18px;
-  margin: 0 -4px 0 8px;
+.chip--assist {
+  color: var(--color-on-surface);
 
-  .button--icon {
-    padding: 0;
-    height: 18px;
-    width: 18px;
-    vertical-align: top;
+  .chip__icon {
+    color: var(--color-primary);
+  }
 
-    svg {
-      height: 18px;
-      width: 18px;
+  &::before {
+    border: 1px solid var(--color-outline);
+    border-radius: 8px;
+    background-color: var(--color-surface);
+  }
+
+  &::after {
+    background-color: var(--color-on-surface);
+  }
+
+  &.chip--disabled {
+    color: rgba(0, 0, 0, 0.38);
+
+    .chip__icon {
+      color: rgba(0, 0, 0, 0.38);
+    }
+
+    &::before {
+      opacity: 0.12;
+    }
+  }
+
+  &.chip--elevated {
+    box-shadow: var(--shadow-level-1);
+
+    &:before {
+      border: none;
+    }
+
+    &.chip--disabled {
+      box-shadow: var(--shadow-level-0);
+
+      &::before {
+        background-color: var(--color-on-surface);
+        opacity: 0.12;
+      }
     }
   }
 }

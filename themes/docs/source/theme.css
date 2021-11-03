@@ -40,6 +40,10 @@
   margin: 8px;
 }
 
+.example .chip {
+  margin: 8px;
+}
+
 @media (max-width: 480px) {
   .example.sandbox .drawer__container,
   .example.sandbox .sheet__container {
