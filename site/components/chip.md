@@ -121,3 +121,69 @@ title: Button
   </div>
 </div>
 {% endexample %}
+
+## Input chip
+
+{% example %}
+<div class="chip chip--input">
+  <div class="chip__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="chip__label">
+    Input chip
+  </div>
+  <div class="chip__icon">
+    <span class="material-icons">close</span>
+  </div>
+</div>
+<div class="chip chip--input">
+  <div class="chip__avatar">
+    <span class="material-icons">account_circle</span>
+  </div>
+  <div class="chip__label">
+    Input chip
+  </div>
+  <div class="chip__icon">
+    <span class="material-icons">close</span>
+  </div>
+</div>
+<div class="chip chip--input chip--disabled">
+  <div class="chip__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="chip__label">
+    Disabled
+  </div>
+</div>
+
+<br>
+
+<div class="chip chip--input chip--selected">
+  <div class="chip__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="chip__label">
+    Input chip
+  </div>
+</div>
+<div class="chip chip--input chip--selected">
+  <div class="chip__avatar">
+    <span class="material-icons">account_circle</span>
+  </div>
+  <div class="chip__label">
+    Input chip
+  </div>
+  <div class="chip__icon">
+    <span class="material-icons">close</span>
+  </div>
+</div>
+<div class="chip chip--input chip--selected chip--disabled">
+  <div class="chip__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="chip__label">
+    Disabled
+  </div>
+</div>
+
+{% endexample %}
