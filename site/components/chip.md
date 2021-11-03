@@ -187,3 +187,41 @@ title: Button
 </div>
 
 {% endexample %}
+
+## Suggestion chip
+
+{% example %}
+<div class="chip chip--suggestion">
+  Suggestion chip
+</div>
+<div class="chip chip--suggestion chip--disabled">
+  Disabled
+</div>
+
+<br>
+
+<div class="chip chip--suggestion chip--elevated">
+  Suggestion chip
+</div>
+<div class="chip chip--suggestion chip--elevated chip--disabled">
+  Disabled
+</div>
+
+<br>
+
+<div class="chip chip--suggestion chip--selected">
+  Suggestion chip
+</div>
+<div class="chip chip--suggestion chip--selected chip--disabled">
+  Disabled
+</div>
+
+<br>
+
+<div class="chip chip--suggestion chip--elevated chip--selected">
+  Suggestion chip
+</div>
+<div class="chip chip--suggestion chip--elevated chip--selected chip--disabled">
+  Disabled
+</div>
+{% endexample %}
