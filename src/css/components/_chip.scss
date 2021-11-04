@@ -7,45 +7,9 @@
   padding: 6px 16px;
   border-radius: 8px;
   vertical-align: middle;
-  z-index: 0;
-  position: relative;
-  overflow: hidden;
   cursor: pointer;
 
-  // Container layer
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-  }
-
-  // State layer
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: 0;
-  }
-
-  &:hover {
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
-  }
+  @include state-layer;
 }
 
 .chip--disabled {
@@ -146,10 +110,6 @@
     background-color: var(--color-surface);
   }
 
-  &::after {
-    background-color: var(--color-on-surface);
-  }
-
   &.chip--disabled {
     color: rgba(0, 0, 0, 0.38);
 
@@ -197,10 +157,6 @@
     background-color: var(--color-surface);
   }
 
-  &::after {
-    background-color: var(--color-on-surface-variant);
-  }
-
   &.chip--selected {
     color: var(--color-on-secondary-container);
 
@@ -211,10 +167,6 @@
     &::before {
       background-color: var(--color-secondary-container);
       border: none;
-    }
-
-    &::after {
-      background-color: var(--color-on-secondary-container);
     }
 
     &:hover {
@@ -275,10 +227,6 @@
     background-color: var(--color-surface);
   }
 
-  &::after {
-    background-color: var(--color-on-surface-variant);
-  }
-
   &.chip--selected {
     color: var(--color-on-secondary-container);
 
@@ -289,10 +237,6 @@
     &::before {
       background-color: var(--color-secondary-container);
       border: none;
-    }
-
-    &::after {
-      background-color: var(--color-on-secondary-container);
     }
 
     &:hover {
@@ -332,10 +276,6 @@
     background-color: var(--color-surface);
   }
 
-  &::after {
-    background-color: var(--color-on-surface-variant);
-  }
-
   &.chip--selected {
     color: var(--color-on-secondary-container);
 
@@ -346,10 +286,6 @@
     &::before {
       background-color: var(--color-secondary-container);
       border: none;
-    }
-
-    &::after {
-      background-color: var(--color-on-secondary-container);
     }
 
     &:hover {

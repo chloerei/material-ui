@@ -1,0 +1,41 @@
+@mixin state-layer {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  // Container layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+
+  // State layer
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: currentColor;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: var(--state-hover-opacity);
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: var(--state-focus-opacity);
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: var(--state-press-opacity);
+    }
+  }
+}

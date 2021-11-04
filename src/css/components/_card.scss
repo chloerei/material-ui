@@ -1,49 +1,9 @@
 .card {
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-
-  // Container layer
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-  }
-
-  // State layer
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: 0;
-  }
-
-}
-
-a.card {
   display: block;
   text-decoration: none;
+  border-radius: 12px;
 
-  &:hover {
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
-  }
+  @include state-layer;
 }
 
 .card--elevated {
@@ -52,10 +12,6 @@ a.card {
 
   &:before {
     background-color: var(--color-surface);
-  }
-
-  &::after {
-    background-color: var(--color-on-surface);
   }
 }
 
@@ -78,10 +34,6 @@ a.card--elevated {
 
   &:before {
     background-color: var(--color-surface-variant);
-  }
-
-  &::after {
-    background-color: var(--color-on-surface);
   }
 }
 
@@ -107,11 +59,4 @@ a.card--filled {
     border: 1px solid var(--color-outline);
     border-radius: 12px;
   }
-
-  &::after {
-    background-color: var(--color-on-surface);
-  }
-}
-
-a.card--outlined {
 }

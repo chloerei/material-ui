@@ -9,46 +9,10 @@
   box-sizing: border-box;
   white-space: nowrap;
   font-size: 16px;
-  position: relative;
-  overflow: hidden;
   vertical-align: middle;
   background: transparent;
-  z-index: 0;
 
-  // Container layer
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-  }
-
-  // State layer
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: 0;
-  }
-
-  &:hover {
-    &::after {
-      opacity: var(--state-hover-opacity);
-    }
-  }
-
-  &:focus {
-    &::after {
-      opacity: var(--state-focus-opacity);
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: var(--state-press-opacity);
-    }
-  }
+  @include state-layer;
 }
 
 .button--disabled,
@@ -96,11 +60,6 @@ button[disabled] {
     background-color: var(--color-surface);
   }
 
-  // State layer
-  &::after {
-    background-color: var(--color-primary);
-  }
-
   &:hover {
     box-shadow: var(--shadow-level-2);
   }
@@ -139,11 +98,6 @@ button[disabled] {
   // Container layer
   &::before {
     background-color: var(--color-primary);
-  }
-
-  // State layer
-  &::after {
-    background-color: var(--color-on-primary);
   }
 
   &:hover {
@@ -186,11 +140,6 @@ button[disabled] {
     background-color: var(--color-secondary-container);
   }
 
-  // State layer
-  &::after {
-    background-color: var(--color-on-secondary-container);
-  }
-
   &:hover {
     box-shadow: var(--shadow-level-1);
   }
@@ -231,11 +180,6 @@ button[disabled] {
     border-radius: 20px;
   }
 
-  // State layer
-  &::after {
-    background-color: var(--color-primary);
-  }
-
   &:focus {
     &::before {
       border: 1px solid var(--color-primary);
@@ -268,11 +212,6 @@ button[disabled] {
   font-weight: 500;
   background: transparent;
   min-width: 48px;
-
-  // State layer
-  &::after {
-    background-color: var(--color-primary);
-  }
 
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
@@ -312,11 +251,6 @@ button[disabled] {
 
   .material-icons {
     font-size: 24px;
-  }
-
-  // State layer
-  &::after {
-    background-color: var(--color-primary);
   }
 
   &:disabled {
@@ -380,19 +314,11 @@ button[disabled] {
     background-color: var(--color-primary-container)
   }
 
-  &::after {
-    background-color: var(--color-on-primary-container);
-  }
-
   &.button--surface {
     color: var(--color-primary);
 
     &::before {
       background-color: var(--color-surface);
-    }
-
-    &::after {
-      background-color: var(--color-primary);
     }
   }
 
@@ -402,10 +328,6 @@ button[disabled] {
     &::before {
       background-color: var(--color-secondary-container);
     }
-
-    &::after {
-      background-color: var(--color-on-secondary-container);
-    }
   }
 
   &.button--tertiary {
@@ -413,10 +335,6 @@ button[disabled] {
 
     &::before {
       background-color: var(--color-tertiary-container);
-    }
-
-    &::after {
-      background-color: var(--color-on-tertiary-container);
     }
   }
 
