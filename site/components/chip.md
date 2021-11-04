@@ -132,17 +132,6 @@ title: Button
   <div class="chip__label">
     Input chip
   </div>
-  <div class="chip__icon">
-    <span class="material-icons">close</span>
-  </div>
-</div>
-<div class="chip chip--input">
-  <div class="chip__icon">
-    <span class="material-icons">check</span>
-  </div>
-  <div class="chip__label">
-    Input chip
-  </div>
   <div class="chip__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">close</span>
@@ -156,8 +145,10 @@ title: Button
   <div class="chip__label">
     Input chip
   </div>
-  <div class="chip__icon">
-    <span class="material-icons">close</span>
+  <div class="chip__action">
+    <button type="button" class="button button--icon">
+      <span class="material-icons">close</span>
+    </button>
   </div>
 </div>
 <div class="chip chip--input chip--disabled">
@@ -166,6 +157,11 @@ title: Button
   </div>
   <div class="chip__label">
     Disabled
+  </div>
+  <div class="chip__action">
+    <button type="button" class="button button--icon">
+      <span class="material-icons">close</span>
+    </button>
   </div>
 </div>
 
@@ -178,17 +174,6 @@ title: Button
   <div class="chip__label">
     Input chip
   </div>
-  <div class="chip__icon">
-    <span class="material-icons">close</span>
-  </div>
-</div>
-<div class="chip chip--input chip--selected">
-  <div class="chip__icon">
-    <span class="material-icons">check</span>
-  </div>
-  <div class="chip__label">
-    Input chip
-  </div>
   <div class="chip__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">close</span>
@@ -202,8 +187,10 @@ title: Button
   <div class="chip__label">
     Input chip
   </div>
-  <div class="chip__icon">
-    <span class="material-icons">close</span>
+  <div class="chip__action">
+    <button type="button" class="button button--icon">
+      <span class="material-icons">close</span>
+    </button>
   </div>
 </div>
 <div class="chip chip--input chip--selected chip--disabled">
@@ -212,6 +199,11 @@ title: Button
   </div>
   <div class="chip__label">
     Disabled
+  </div>
+  <div class="chip__action">
+    <button type="button" class="button button--icon">
+      <span class="material-icons">close</span>
+    </button>
   </div>
 </div>
 

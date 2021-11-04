@@ -1,8 +1,12 @@
 .card {
-  display: block;
-  text-decoration: none;
   border-radius: 12px;
 
+  @include container-layer;
+}
+
+a.card {
+  display: block;
+  text-decoration: none;
   @include state-layer;
 }
 

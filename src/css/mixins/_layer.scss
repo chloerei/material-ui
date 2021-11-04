@@ -1,15 +1,19 @@
-@mixin state-layer {
+@mixin container-layer {
   position: relative;
   overflow: hidden;
   z-index: 0;
 
-  // Container layer
+  // Container layer for background or outline
   &::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: -2;
   }
+}
+
+@mixin state-layer {
+  cursor: pointer;
 
   // State layer
   &::after {
