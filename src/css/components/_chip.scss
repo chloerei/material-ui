@@ -100,6 +100,39 @@
   }
 }
 
+.chip__action {
+  width: 24px;
+  height: 24px;
+
+  .button--icon {
+    font-size: 18px;
+    padding: 3px;
+    border-radius: 12px;
+    color: currentColor;
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+
+    .material-icons {
+      font-size: 18px;
+    }
+
+    &::after {
+      background-color: currentColor;
+    }
+  }
+
+  &:first-child {
+    margin: -2px 8px -2px -12px;
+  }
+
+  &:last-child {
+    margin: -2px -12px -2px 8px;
+  }
+}
+
 .chip--assist {
   color: var(--color-on-surface);
 
