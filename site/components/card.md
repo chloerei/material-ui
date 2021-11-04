@@ -7,7 +7,7 @@ title: Card
 ## Elevated
 
 {% example %}
-<a class="card card--elevated">
+<a href="#" class="card card--elevated">
   <div class="padding">
     Elevated
   </div>
@@ -33,7 +33,7 @@ title: Card
 ## Filled
 
 {% example %}
-<a class="card card--filled">
+<a href="#" class="card card--filled">
   <div class="padding">
     Filled
   </div>

@@ -10,8 +10,8 @@
   font-size: 16px;
   vertical-align: middle;
   background: transparent;
+  cursor: pointer;
 
-  @include container-layer;
   @include state-layer;
 }
 

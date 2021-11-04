@@ -1,13 +1,15 @@
 .card {
-  border-radius: 12px;
-
-  @include container-layer;
-}
-
-a.card {
   display: block;
   text-decoration: none;
+  border-radius: 12px;
+
   @include state-layer;
+}
+
+.card:not(a) {
+  &::after {
+    display: none;
+  }
 }
 
 .card--elevated {
