@@ -4,30 +4,67 @@ title: Dialog
 
 # Dialog
 
+## Basic dialogs
+
 {% example sandbox %}
 <div class="dialog dialog--open">
   <div class="dialog__container">
-    <div class="toolbar">
-      <div class="toolbar__title">
-        Dialog Title
+    <div class="dialog__body">
+      <div class="color-secondary text-align-center">
+        <span class="material-icons">info</span>
       </div>
-      <div class="toobar__action">
-        <button type="button" class="button button--icon">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+      <div class="headline-small text-align-center">
+        Dialog with hero icon
+      </div>
+      <div class="body-medium">
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </div>
+      <div class="dialog__actions">
+        <button type="button" class="button button--text">
+          Enabled
+        </button>
+        <button type="button" class="button button--text">
+          Enabled
         </button>
       </div>
     </div>
-    <div class="padding overflow-auto">
-      Dialog Content
+  </div>
+  <div class="dialog__scrim"></div>
+</div>
+{% endexample %}
+
+## Basic dialogs with scrollable content
+
+{% example sandbox %}
+<div class="dialog dialog--open">
+  <div class="dialog__container">
+    <div class="dialog__header">
+      <div class="title-large">
+        Dialog Headline
+      </div>
     </div>
-    <div class="toolbar">
-      <div class="toolbar__space">
-      </div>
-      <div class="toolbar__action">
-        <button type="button" class="button button--text">Action 1</button>
-      </div>
-      <div class="toolbar__action">
-        <button type="button" class="button button--text button--primary">Action 2</button>
+    <div class="dialog__body border-y">
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+    </div>
+    <div class="dialog__footer">
+      <div class="dialog__actions">
+        <button type="button" class="button button--text">
+          Cancel
+        </button>
+        <button type="button" class="button button--text">
+          Ok
+        </button>
       </div>
     </div>
   </div>
@@ -38,33 +75,21 @@ title: Dialog
 ## Dialog Toggle
 
 {% example sandbox %}
-<button type="button" class="button button--contained button--primary" data-controller="toggle" data-toggle-target="#demo-dialog" data-toggle-action="dialog#toggle">
+<button type="button" class="button button--elevated" data-controller="toggle" data-toggle-target="#demo-dialog" data-toggle-action="dialog#toggle">
   Toggle
 </button>
 
 <div id="demo-dialog" class="dialog" data-controller="dialog">
   <div class="dialog__container">
-    <div class="toolbar">
-      <div class="toolbar__title">
-        Dialog Title
-      </div>
-      <div class="toobar__action">
-        <button type="button" class="button button--icon" data-action="dialog#close">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+    <div class="dialog__body">
+      <p>Dialog content</p>
+      <div class="dialog__actions">
+        <button type="button" class="button button--text">
+          Cancel
         </button>
-      </div>
-    </div>
-    <div class="padding overflow-auto">
-      Dialog Content
-    </div>
-    <div class="toolbar">
-      <div class="toolbar__space">
-      </div>
-      <div class="toolbar__action">
-        <button type="button" class="button button--text">Action 1</button>
-      </div>
-      <div class="toolbar__action">
-        <button type="button" class="button button--text button--primary">Action 2</button>
+        <button type="button" class="button button--text">
+          Ok
+        </button>
       </div>
     </div>
   </div>
