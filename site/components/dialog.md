@@ -72,6 +72,58 @@ title: Dialog
 </div>
 {% endexample %}
 
+## Full-screen dialog (mobile only)
+
+{% example sandbox %}
+<div class="dialog dialog--full-screen dialog--open">
+  <div class="dialog__container">
+    <div class="app-bar display-none display-flex-on-phone">
+      <div class="app-bar__action">
+        <button type="button" class="button button--icon">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+      <div class="app-bar__title">
+        Dialog title
+      </div>
+      <div class="app-bar__action">
+        <button type="button" class="button button--text">
+          Save
+        </button>
+      </div>
+    </div>
+    <div class="dialog__header display-none-on-phone">
+      Dialog title
+    </div>
+    <div class="dialog__body">
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+    </div>
+    <div class="dialog__footer display-none-on-phone">
+      <div class="dialog__actions">
+        <button type="button" class="button button--text">
+          Cancel
+        </button>
+        <button type="button" class="button button--text">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dialog__scrim"></div>
+</div>
+{% endexample %}
+
 ## Dialog Toggle
 
 {% example sandbox %}

@@ -38,15 +38,7 @@
 .dialog__body {
   overflow: auto;
   flex-grow: 1;
-  padding: 0 24px;
-
-  &:first-child {
-    padding-top: 24px;
-  }
-
-  &:last-child {
-    padding-bottom: 24px;
-  }
+  padding: 24px;
 }
 
 .dialog__footer {
@@ -72,4 +64,24 @@
   display: flex;
   justify-content: flex-end;
   gap: 8px;
+}
+
+.dialog {
+  .app-bar {
+    border-radius: 28px 28px 0 0;
+    padding: 4px;
+  }
+}
+
+@media (max-width: $phone-break-point) {
+  .dialog--full-screen {
+    padding: 0;
+
+    .dialog__container {
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+    }
+  }
 }
