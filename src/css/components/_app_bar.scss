@@ -1,77 +1,80 @@
 .app-bar {
-  background: white;
-
-  .tab__item:first-child {
-    margin-left: 48px;
-  }
-
-  .button--icon {
-    padding: 6px;
-  }
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-level-0);
+  display: flex;
+  align-items: flex-start;
+  padding: 4px;
 }
 
 .app-bar--sticky-top {
   position: sticky;
   top: 0;
   z-index: 4;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.app-bar--sticky-bottom {
-  position: sticky;
-  bottom: 0;
-  z-index: 4;
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.3);
+.app-bar--on-scroll {
+  box-shadow: var(--shadow-level-2);
 }
 
-.app-bar--primary {
-  background: var(--primary-color);
-  color: white;
+.app-bar__title {
+  line-height: 28px;
+  font-size: 22px;
+  font-weight: 400;
+  flex-grow: 1;
+  padding: 10px 12px;
 
-  .button--icon,
-  .button--text {
-    color: white;
-
-    &:hover {
-      color: white;
-    }
-
-    svg {
-      fill: white;
-    }
-  }
-
-  .tab__item {
-    color: white;
-  }
-
-  .tab__item--active {
-    border-color: white;
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
 
-.app-bar--secondary {
-  background: var(--secondary-color);
-  color: white;
+.app-bar__action {
+  padding: 4px;
 
-  .button--icon,
-  .button--text {
-    color: white;
-
-    &:hover {
-      color: white;
-    }
-
-    svg {
-      fill: white;
-    }
+  .button--icon {
+    color: var(--color-on-surface-variant);
   }
 
-  .tab__item {
-    color: white;
+  &:first-child {
+    .button--icon {
+      color: var(--color-on-surface);
+    }
   }
+}
 
-  .tab__item--active {
-    border-color: white;
+.app-bar__avatar {
+  padding: 9px;
+  line-height: 1;
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+  }
+}
+
+.app-bar--medium {
+  padding: 8px 4px;
+
+  .app-bar__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    padding-top: 48px;
+    padding-bottom: 16px;
+  }
+}
+
+.app-bar--large {
+  padding: 8px 4px;
+
+  .app-bar__title {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    padding-top: 88px;
+    padding-bottom: 16px;
   }
 }
