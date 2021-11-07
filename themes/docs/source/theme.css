@@ -17,6 +17,7 @@
   width: 100%;
 }
 
+.example.sandbox .navigation-rail__container,
 .example.sandbox .drawer__container,
 .example.sandbox .drawer__scrim,
 .example.sandbox .sheet__container,
