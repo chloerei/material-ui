@@ -1,16 +1,18 @@
 .drawer {
-  width: 256px;
+  width: 360px;
   flex-shrink: 0;
 }
 
 .drawer__container {
   box-sizing: border-box;
-  background: white;
+  background: var(--color-surface);
+  color: var(--color-on-surface-variant);
   overflow: auto;
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 256px;
+  width: 360px;
+  padding: 12px;
   z-index: 1;
 }
 
@@ -26,7 +28,7 @@
 
 @media (min-width: $phone-break-point) {
   .drawer--app-bar-margin .drawer__container {
-    margin-top: 56px;
+    margin-top: 64px;
   }
 }
 
@@ -47,6 +49,11 @@
       display: block;
     }
   }
+
+  .drawer__container {
+    border-radius: 0 16px 16px 0;
+    max-width: calc(100vw - 64px);
+  }
 }
 
 .drawer--modal {
@@ -59,61 +66,34 @@
   }
 }
 
-// ---
-
-.drawer__menu {
-  margin: 8px 0;
-}
-
 .drawer__item {
-  padding: 10px;
-  margin: 6px;
+  padding: 18px 24px;
   display: flex;
   text-decoration: none;
   line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 28px;
   position: relative;
   overflow: hidden;
-  color: var(--text-primary-color);
+  color: var(--color-on-surface-variant);
 
-  svg {
-    fill: var(--text-secondary-color);
-  }
+  --state-hover-opacity: 16%;
+  --state-focus-opacity: 24%;
+  --state-press-opacity: 20%;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--primary-color);
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
+  @include state-layer;
 
-  &:hover {
-    &::after {
-      opacity: 0.1;
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: 0.3;
-    }
+  &::before {
+    background-color: var(--color-surface);
   }
 
   &.drawer__item--active {
-    color: var(--primary-color);
+    color: var(--color-on-secondary-container);
 
-    svg {
-      fill: var(--primary-color);
-    }
-
-    &::after {
-      opacity: 0.3;
+    &::before {
+      background-color: var(--color-secondary-container);
     }
   }
 }
@@ -121,5 +101,16 @@
 .drawer__item__icon {
   height: 24px;
   width: 24px;
-  margin: -2px 16px -2px 0;
+
+  &:first-child {
+    margin: -2px 12px -2px -8px;
+  }
+
+  &:last-child {
+    margin: -2px -8px -2px 12px;
+  }
+}
+
+.drawer__item__label {
+  flex-grow: 1;
 }

@@ -16,17 +16,30 @@ title: Drawer
 <div class="display-flex">
   <div class="drawer drawer--app-bar-margin" id="drawer-standard" data-controller="drawer">
     <div class="drawer__container">
-      <div class="drawer__menu">
-        <a href="#" class="drawer__item">
-          Drawer Item
-        </a>
-        <a href="#" class="drawer__item">
-          Drawer Item
-        </a>
-        <a href="#" class="drawer__item">
-          Drawer Item
-        </a>
-      </div>
+      <a href="#" class="drawer__item drawer__item--active">
+        <div class="drawer__item__icon">
+          <span class="material-icons">inbox</span>
+        </div>
+        <div class="drawer__item__label">
+          Inbox
+        </div>
+      </a>
+      <a href="#" class="drawer__item">
+        <div class="drawer__item__icon">
+          <span class="material-icons">favorites</span>
+        </div>
+        <div class="drawer__item__label">
+          Favorites
+        </div>
+      </a>
+      <a href="#" class="drawer__item">
+        <div class="drawer__item__icon">
+          <span class="material-icons">delete</span>
+        </div>
+        <div class="drawer__item__label">
+          Trash
+        </div>
+      </a>
     </div>
     <div class="drawer__scrim" data-action="click->drawer#close">
     </div>
@@ -55,17 +68,30 @@ title: Drawer
 
 <div class="drawer drawer--modal" id="drawer-modal" data-controller="drawer">
   <div class="drawer__container">
-    <div class="drawer__menu">
-      <a href="#" class="drawer__item">
-        Drawer Item
-      </a>
-      <a href="#" class="drawer__item">
-        Drawer Item
-      </a>
-      <a href="#" class="drawer__item">
-        Drawer Item
-      </a>
-    </div>
+    <a href="#" class="drawer__item drawer__item--active">
+      <div class="drawer__item__icon">
+        <span class="material-icons">inbox</span>
+      </div>
+      <div class="drawer__item__label">
+        Inbox
+      </div>
+    </a>
+    <a href="#" class="drawer__item">
+      <div class="drawer__item__icon">
+        <span class="material-icons">favorites</span>
+      </div>
+      <div class="drawer__item__label">
+        Favorites
+      </div>
+    </a>
+    <a href="#" class="drawer__item">
+      <div class="drawer__item__icon">
+        <span class="material-icons">delete</span>
+      </div>
+      <div class="drawer__item__label">
+        Trash
+      </div>
+    </a>
   </div>
   <div class="drawer__scrim" data-action="click->drawer#close">
   </div>
