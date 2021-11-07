@@ -1,36 +1,19 @@
-.navigation-rail {
-  width: 80px;
-  flex-shrink: 0;
-}
-
-.navigation-rail__container {
+.navigation-bar {
   position: fixed;
-  top: 0;
   bottom: 0;
-  width: 80px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 12px 0;
   align-items: center;
   background-color: var(--color-surface);
   color: var(--color-on-surface-variant);
-
-  .button--icon {
-    padding: 16px;
-    border-radius: 28px;
-  }
-
-  .button--floating-action {
-    box-shadow: none;
-  }
+  z-index: 4;
 }
 
-.navigation-rail__item {
+.navigation-bar__item {
   position: relative;
-  padding: 2px 0;
   text-decoration: none;
   display: flex;
+  padding: 12px 0 16px;
   gap: 4px;
   flex-direction: column;
   align-items: center;
@@ -40,9 +23,9 @@
   @include state-layer;
 }
 
-.navigation-rail__item__icon {
+.navigation-bar__item__icon {
   line-height: 0;
-  padding: 4px 16px;
+  padding: 4px 20px;
   border-radius: 16px;
   color: var(--color-on-surface-variant);
   position: relative;
@@ -57,16 +40,16 @@
   }
 }
 
-.navigation-rail__item__label {
+.navigation-bar__item__label {
   line-height: 16px;
   font-size: 12px;
   font-weight: 500;
 }
 
-.navigation-rail__item--active {
+.navigation-bar__item--active {
   color: var(--color-on-surface);
 
-  .navigation-rail__item__icon {
+  .navigation-bar__item__icon {
     background-color: var(--color-secondary-container);
     color: var(--color-on-secondary-container);
   }

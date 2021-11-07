@@ -26,22 +26,22 @@ title: Navigation rail
     <a href="#" class="navigation-rail__item">
       <div class="navigation-rail__item__icon">
         <span class="material-icons">square</span>
+        <div class="badge badge--small">
+        </div>
       </div>
       <div class="navigation-rail__item__label">
         Label
-      </div>
-      <div class="badge badge--small">
       </div>
     </a>
     <a href="#" class="navigation-rail__item">
       <div class="navigation-rail__item__icon">
         <span class="material-icons">label</span>
+        <div class="badge badge--large">
+          123+
+        </div>
       </div>
       <div class="navigation-rail__item__label">
         Label
-      </div>
-      <div class="badge badge--large">
-        123+
       </div>
     </a>
     <div class="flex-grow-1">
