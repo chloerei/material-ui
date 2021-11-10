@@ -3,12 +3,12 @@
   display: inline-block;
 }
 
-.dropdown__menu {
+.dropdown__container {
   display: none;
 }
 
 .dropdown--open {
-  .dropdown__menu {
+  .dropdown__container {
     display: block;
     position: absolute;
     top: 100%;
@@ -22,19 +22,19 @@
     transform-origin: top left;
   }
 
-  .dropdown__menu--top-right {
+  .dropdown__container--top-right {
     left: auto;
     right: 0;
     transform-origin: top right;
   }
 
-  .dropdown__menu--bottom-left {
+  .dropdown__container--bottom-left {
     top: auto;
     bottom: 100%;
     transform-origin: bottom left;
   }
 
-  .dropdown__menu--bottom-right {
+  .dropdown__container--bottom-right {
     top: auto;
     bottom: 100%;
     left: auto;
