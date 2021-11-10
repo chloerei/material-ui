@@ -28,7 +28,7 @@
       <div id="drawer" class="drawer drawer--app-bar-margin" data-controller="drawer">
         <div class="drawer__container">
           <div class="drawer__menu">
-            <% ['introduction', 'webpack', 'rails'].forEach(function(name) { %>
+            <% ['introduction', 'webpack', 'rails', 'typography'].forEach(function(name) { %>
               <% itemPath = name + '.html'  %>
               <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
                 <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
