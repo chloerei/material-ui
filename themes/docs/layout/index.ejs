@@ -63,7 +63,7 @@
               </div>
             </summary>
             <div class="padding-left-3">
-              <% ['background', 'border', 'spacing'].forEach(function(name) { %>
+              <% ['background', 'border', 'spacing', 'text'].forEach(function(name) { %>
                 <% itemPath = 'utilities/' + name + '.html'  %>
                 <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
                   <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>

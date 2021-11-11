@@ -1,11 +1,17 @@
 .text-primary {
-  font-size: 16px;
-  color: var(--text-primary-color);
+  color: var(--color-primary);
 }
 
 .text-secondary {
-  font-size: 14px;
-  color: var(--text-secondary-color);
+  color: var(--color-secondary);
+}
+
+.text-tertiary {
+  color: var(--color-tertiary);
+}
+
+.text-error {
+  color: var(--color-error);
 }
 
 .text-align-left {
@@ -18,4 +24,22 @@
 
 .text-align-right {
   text-align: right;
+}
+
+.text-wrap {
+  white-space: normal;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-break-word {
+  word-wrap: break-word;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

@@ -1,4 +1,4 @@
-$colors:
+@each $color in (
   primary,
   primary-container,
   secondary,
@@ -8,9 +8,8 @@ $colors:
   surface,
   surface-variant,
   error,
-  error-container;
-
-@each $color in $colors {
+  error-container
+) {
   .background-#{$color} {
     background-color: var(--color-#{$color});
     color: var(--color-on-#{$color});
