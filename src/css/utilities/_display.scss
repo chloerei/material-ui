@@ -6,6 +6,10 @@
   display: block;
 }
 
+.display-inline-block {
+  display: inline-block;
+}
+
 @media (max-width: $phone-break-point - 1px) {
   .display-none-on-phone {
     display: none;
