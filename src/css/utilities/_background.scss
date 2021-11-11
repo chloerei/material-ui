@@ -1,0 +1,18 @@
+$colors:
+  primary,
+  primary-container,
+  secondary,
+  secondary-container,
+  tertiary,
+  tertiary-container,
+  surface,
+  surface-variant,
+  error,
+  error-container;
+
+@each $color in $colors {
+  .background-#{$color} {
+    background-color: var(--color-#{$color});
+    color: var(--color-on-#{$color});
+  }
+};
