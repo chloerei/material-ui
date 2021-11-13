@@ -2,6 +2,12 @@ $phone-break-point: 600px !default;
 $tablet-break-point: 905px !default;
 $laptop-break-point: 1440px !default;
 
+$breakpoints: (
+  "tablet": 600px,
+  "laptop": 1240px,
+  "desktop": 1440px
+);
+
 :root {
   --primary-color: #2196F3;
   --secondary-color: #F44336;

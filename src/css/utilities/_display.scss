@@ -2,6 +2,10 @@
   display: none;
 }
 
+.display-inline {
+  display: inline;
+}
+
 .display-block {
   display: block;
 }
@@ -10,46 +14,70 @@
   display: inline-block;
 }
 
-@media (max-width: $phone-break-point - 1px) {
-  .display-none-on-phone {
-    display: none;
-  }
-
-  .display-block-on-phone {
-    display: block;
-  }
-
-  .display-flex-on-phone {
-    display: flex;
-  }
+.display-flex {
+  display: flex;
 }
 
-@media (min-width: $phone-break-point) and (max-width: $tablet-break-point - 1px) {
-  .display-tablet-none {
-    display: none;
-  }
-
-  .display-tablet-block {
-    display: block;
-  }
+.display-inline-flex {
+  display: inline-flex;
 }
 
-@media (min-width: $tablet-break-point) and (max-width: $laptop-break-point - 1px) {
-  .display-laptop-none {
-    display: none;
-  }
-
-  .display-laptop-block {
-    display: block;
-  }
+.display-grid {
+  display: grid;
 }
 
-@media (min-width: $laptop-break-point) {
-  .display-desktop-none {
-    display: none;
-  }
+.display-table {
+  display: table;
+}
 
-  .display-desktop-block {
-    display: block;
+.display-table-row {
+  display: table-row;
+}
+
+.display-table-cell {
+  display: table-cell;
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    .display-none\@#{$screen} {
+      display: none;
+    }
+
+    .display-inline\@#{$screen} {
+      display: inline;
+    }
+
+    .display-block\@#{$screen} {
+      display: block;
+    }
+
+    .display-inline-block\@#{$screen} {
+      display: inline-block;
+    }
+
+    .display-flex\@#{$screen} {
+      display: flex;
+    }
+
+    .display-inline-flex\@#{$screen} {
+      display: inline-flex;
+    }
+
+    .display-grid\@#{$screen} {
+      display: grid;
+    }
+
+    .display-table\@#{$screen} {
+      display: table;
+    }
+
+    .display-table-row\@#{$screen} {
+      display: table-row;
+    }
+
+    .display-table-cell\@#{$screen} {
+      display: table-cell;
+    }
   }
 }

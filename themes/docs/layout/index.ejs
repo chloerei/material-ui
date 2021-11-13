@@ -13,28 +13,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <div class="app-bar app-bar--sticky-top">
-      <div class="app-bar__action display-none display-block-on-phone">
-        <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-        </button>
-      </div>
-      <div class="app-bar__title">
-        <a href="/">Material UI</a>
-      </div>
-    </div>
-
     <div class="display-flex">
-      <div id="drawer" class="drawer drawer--app-bar-margin" data-controller="drawer">
+      <div id="drawer" class="drawer" data-controller="drawer">
         <div class="drawer__container">
-          <div class="drawer__menu">
-            <% ['introduction', 'webpack', 'rails', 'typography'].forEach(function(name) { %>
-              <% itemPath = name + '.html'  %>
-              <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
-                <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
-              </a>
-            <% }); %>
+          <div class="headline-medium margin-x-2 padding-x-3 padding-y-2">
+            Material UI
           </div>
+
+          <% ['introduction', 'webpack', 'rails', 'typography'].forEach(function(name) { %>
+            <% itemPath = name + '.html'  %>
+            <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
+              <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
+            </a>
+          <% }); %>
+
           <details <%= page.path.startsWith('components') ? 'open' : '' %> >
             <summary class="drawer__item">
               <div class="drawer__item__label">
@@ -63,7 +55,7 @@
               </div>
             </summary>
             <div class="padding-left-3">
-              <% ['background', 'border', 'spacing', 'text'].forEach(function(name) { %>
+              <% ['display', 'background', 'border', 'spacing', 'text'].forEach(function(name) { %>
                 <% itemPath = 'utilities/' + name + '.html'  %>
                 <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
                   <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
@@ -77,6 +69,17 @@
       </div>
 
       <div class="flex-grow-1 min-width-0">
+        <div class="app-bar app-bar--sticky-top">
+          <div class="app-bar__action display-none@laptop">
+            <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+          </div>
+          <div class="app-bar__title">
+            <%= page.title %>
+          </div>
+        </div>
+
         <div class="padding">
           <%- page.content %>
         </div>

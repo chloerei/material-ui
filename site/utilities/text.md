@@ -10,7 +10,7 @@ title: Text
 <p class="text-primary">.text-primary</p>
 <p class="text-secondary">.text-secondary</p>
 <p class="text-tertiary">.text-tertiary</p>
-<p class="text-error">.text-tertiary</p>
+<p class="text-error">.text-error</p>
 {% endexample %}
 
 ## Align
