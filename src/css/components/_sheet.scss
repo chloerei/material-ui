@@ -1,61 +1,51 @@
+@use "sass:map";
+
 .sheet {
-  width: 320px;
+  display: none;
   flex-shrink: 0;
 }
 
 .sheet__container {
   box-sizing: border-box;
-  background: white;
+  background: var(--color-surface);
+  color: var(--color-on-surface-variant);
   overflow: auto;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   width: 320px;
-  z-index: 1;
+  max-width: calc(100vw - 64px);
+  padding: 12px;
+  border-radius: 16px 0 0 16px;
+  z-index: 16;
 }
 
 .sheet__scrim {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 15;
 }
 
-@media (min-width: $phone-break-point) {
-  .sheet--app-bar-margin .sheet__container {
-    margin-top: 56px;
-  }
+.sheet--open {
+  display: block;
 }
 
-@mixin sheet-modal {
-  display: none;
-
-  &.sheet--open {
+@media (min-width: map.get($breakpoints, "laptop")) {
+  .sheet--permanently {
     display: block;
-    position: fixed;
-    width: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 16;
+    width: 320px;
+
+    .sheet__container {
+      border-radius: 0;
+    }
 
     .sheet__scrim {
-      display: block;
+      display: none;
     }
-  }
-}
-
-.sheet--modal {
-  @include sheet-modal;
-}
-
-@media (max-width: $phone-break-point - 1px) {
-  .sheet {
-    @include sheet-modal;
   }
 }

@@ -4,34 +4,6 @@ title: Sheet
 
 # Sheet
 
-## Standard
-
-{% example sandbox %}
-<div class="app-bar app-bar--sticky-top">
-  <div class="app-bar__title">
-    Title
-  </div>
-</div>
-
-<div class="display-flex">
-  <div class="flex-grow-1">
-    <div class="padding">
-      Main Content
-    </div>
-  </div>
-
-  <div id="sheet-standard" class="sheet sheet--app-bar-margin" data-controller="sheet">
-    <div class="sheet__container">
-      <div class="padding">
-        Sheet Content
-      </div>
-    </div>
-    <div class="sheet__scrim" data-action="click->sheet#close">
-    </div>
-  </div>
-</div>
-{% endexample %}
-
 ## Modal
 
 {% example sandbox %}
@@ -50,13 +22,45 @@ title: Sheet
   Main Content
 </div>
 
-<div id="sheet-modal" class="sheet sheet--modal" data-controller="sheet">
+<div id="sheet-modal" class="sheet" data-controller="sheet">
   <div class="sheet__container">
     <div class="padding">
       Sheet Content
     </div>
   </div>
   <div class="sheet__scrim" data-action="click->sheet#close">
+  </div>
+</div>
+{% endexample %}
+
+## Permanently
+
+{% example sandbox %}
+<div class="display-flex">
+  <div class="flex-grow-1">
+    <div class="app-bar app-bar--sticky-top">
+      <div class="app-bar__title">
+        Title
+      </div>
+      <div class="app-bar__action display-none@laptop">
+        <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#sheet-permanently" data-toggle-action="sheet#toggle">
+          <span class="material-icons">info</span>
+        </button>
+      </div>
+    </div>
+    <div class="padding">
+      Main Content
+    </div>
+  </div>
+
+  <div id="sheet-permanently" class="sheet sheet--permanently" data-controller="sheet">
+    <div class="sheet__container">
+      <div class="padding">
+        Sheet Content
+      </div>
+    </div>
+    <div class="sheet__scrim" data-action="click->sheet#close">
+    </div>
   </div>
 </div>
 {% endexample %}

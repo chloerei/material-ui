@@ -2,7 +2,7 @@
 
 .drawer {
   display: none;
-  z-index: 16;
+  flex-shrink: 0;
 }
 
 .drawer__container {
@@ -17,7 +17,7 @@
   max-width: calc(100vw - 64px);
   padding: 12px;
   border-radius: 0 16px 16px 0;
-  z-index: 1;
+  z-index: 16;
 }
 
 .drawer__scrim {
@@ -27,6 +27,7 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 15;
 }
 
 .drawer--open {
@@ -44,7 +45,6 @@
 
     .drawer__scrim {
       display: none;
-
     }
   }
 }
