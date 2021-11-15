@@ -7,26 +7,26 @@ title: App Bar
 ## Center aligned
 
 {% example %}
-<div class="app-bar">
-  <div class="app-bar__action">
+<div class="top-app-bar">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">menu</span>
     </button>
   </div>
-  <div class="app-bar__title text-align-center">
+  <div class="top-app-bar__title text-align-center">
     Title
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">search</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">notifications</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">account_circle</span>
     </button>
@@ -37,26 +37,26 @@ title: App Bar
 ## Small app bar
 
 {% example %}
-<div class="app-bar">
-  <div class="app-bar__action">
+<div class="top-app-bar">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">arrow_back</span>
     </button>
   </div>
-  <div class="app-bar__title">
+  <div class="top-app-bar__title">
     Title
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">search</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">notifications</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">account_circle</span>
     </button>
@@ -67,26 +67,26 @@ title: App Bar
 ## Medium app bar
 
 {% example %}
-<div class="app-bar app-bar--medium">
-  <div class="app-bar__action">
+<div class="top-app-bar top-app-bar--medium">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">arrow_back</span>
     </button>
   </div>
-  <div class="app-bar__title">
+  <div class="top-app-bar__title">
     Title
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">search</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">notifications</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">account_circle</span>
     </button>
@@ -97,26 +97,26 @@ title: App Bar
 ## Large app bar
 
 {% example %}
-<div class="app-bar app-bar--large">
-  <div class="app-bar__action">
+<div class="top-app-bar top-app-bar--large">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">arrow_back</span>
     </button>
   </div>
-  <div class="app-bar__title">
+  <div class="top-app-bar__title">
     Title
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">search</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">notifications</span>
     </button>
   </div>
-  <div class="app-bar__action">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon">
       <span class="material-icons">account_circle</span>
     </button>

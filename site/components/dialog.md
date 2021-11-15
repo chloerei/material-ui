@@ -77,16 +77,16 @@ title: Dialog
 {% example sandbox %}
 <div class="dialog dialog--full-screen dialog--open">
   <div class="dialog__container">
-    <div class="app-bar display-none@tablet">
-      <div class="app-bar__action">
+    <div class="top-app-bar display-none@tablet">
+      <div class="top-app-bar__action">
         <button type="button" class="button button--icon">
           <span class="material-icons">close</span>
         </button>
       </div>
-      <div class="app-bar__title">
+      <div class="top-app-bar__title">
         Dialog title
       </div>
-      <div class="app-bar__action">
+      <div class="top-app-bar__action">
         <button type="button" class="button button--text">
           Save
         </button>

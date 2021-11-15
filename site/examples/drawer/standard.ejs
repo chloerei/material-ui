@@ -3,7 +3,7 @@ layout: base
 title: Standard drawer
 ---
 
-<div class="app-bar app-bar--sticky-top">
+<div class="top-app-bar top-app-bar--sticky-top">
   <div class="toolbar">
     <div class="toolbar__action display-none diplay-block-on-phone">
       <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
@@ -17,7 +17,7 @@ title: Standard drawer
 </div>
 
 <div class="display-flex">
-  <div class="drawer drawer--app-bar-margin" id="drawer" data-controller="drawer">
+  <div class="drawer drawer--top-app-bar-margin" id="drawer" data-controller="drawer">
     <div class="drawer__container">
       <div class="drawer__menu">
         <% for(var i = 0; i < 100 ; i++ ) { %>

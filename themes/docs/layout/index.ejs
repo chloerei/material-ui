@@ -37,7 +37,7 @@
               </div>
             </summary>
             <div class="padding-left-3">
-              <% ['app-bar', 'button', 'card', 'chip', 'dialog', 'dropdown', 'navigation-drawer', 'navigation-bar', 'navigation-rail', 'text-field', 'selection-control', 'selector', 'form', 'list', 'snackbar', 'sheet', 'table'].forEach(function(name) { %>
+              <% ['top-app-bar', 'button', 'card', 'chip', 'dialog', 'dropdown', 'navigation-drawer', 'navigation-bar', 'navigation-rail', 'text-field', 'selection-control', 'selector', 'form', 'list', 'snackbar', 'sheet', 'table'].forEach(function(name) { %>
                 <% itemPath = 'components/' + name + '.html'  %>
                 <a href="/<%= itemPath %>" class="navigation-drawer__item <%= page.path == itemPath ? 'navigation-drawer__item--active' : '' %>">
                   <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
@@ -69,13 +69,13 @@
       </div>
 
       <div class="flex-grow-1 min-width-0">
-        <div class="app-bar app-bar--sticky-top display-none@laptop">
-          <div class="app-bar__action">
+        <div class="top-app-bar top-app-bar--sticky-top display-none@laptop">
+          <div class="top-app-bar__action">
             <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer" data-toggle-action="navigation-drawer#toggle">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
             </button>
           </div>
-          <div class="app-bar__title">
+          <div class="top-app-bar__title">
             <%= page.title %>
           </div>
         </div>

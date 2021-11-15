@@ -1,4 +1,4 @@
-.app-bar {
+.top-app-bar {
   color: var(--color-on-surface);
   background-color: var(--color-surface);
   box-shadow: var(--shadow-level-0);
@@ -7,17 +7,17 @@
   padding: 8px 4px;
 }
 
-.app-bar--sticky-top {
+.top-app-bar--sticky-top {
   position: sticky;
   top: 0;
   z-index: 4;
 }
 
-.app-bar--on-scroll {
+.top-app-bar--on-scroll {
   box-shadow: var(--shadow-level-2);
 }
 
-.app-bar__title {
+.top-app-bar__title {
   line-height: 28px;
   font-size: 22px;
   font-weight: 400;
@@ -30,7 +30,7 @@
   }
 }
 
-.app-bar__action {
+.top-app-bar__action {
   padding: 4px;
 
   .button--icon {
@@ -44,7 +44,7 @@
   }
 }
 
-.app-bar__avatar {
+.top-app-bar__avatar {
   padding: 9px;
   line-height: 1;
 
@@ -55,8 +55,8 @@
   }
 }
 
-.app-bar--medium {
-  .app-bar__title {
+.top-app-bar--medium {
+  .top-app-bar__title {
     font-size: 24px;
     line-height: 32px;
     font-weight: 400;
@@ -65,8 +65,8 @@
   }
 }
 
-.app-bar--large {
-  .app-bar__title {
+.top-app-bar--large {
+  .top-app-bar__title {
     font-size: 28px;
     line-height: 36px;
     font-weight: 400;

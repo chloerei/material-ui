@@ -7,13 +7,13 @@ title: Navigation Drawer
 ## Modal
 
 {% example sandbox %}
-<div class="app-bar app-bar--sticky-top">
-  <div class="app-bar__action">
+<div class="top-app-bar top-app-bar--sticky-top">
+  <div class="top-app-bar__action">
     <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer-modal" data-toggle-action="navigation-drawer#toggle">
       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
     </button>
   </div>
-  <div class="app-bar__title">
+  <div class="top-app-bar__title">
     Title
   </div>
 </div>
@@ -86,13 +86,13 @@ title: Navigation Drawer
   </div>
 
   <div class="flex-grow-1">
-    <div class="app-bar">
-      <div class="app-bar__action display-none@laptop">
+    <div class="top-app-bar">
+      <div class="top-app-bar__action display-none@laptop">
         <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer-permanently" data-toggle-action="navigation-drawer#toggle">
           <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </button>
       </div>
-      <div class="app-bar__title">
+      <div class="top-app-bar__title">
         Title
       </div>
     </div>
