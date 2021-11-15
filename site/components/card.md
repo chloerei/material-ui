@@ -8,13 +8,13 @@ title: Card
 
 {% example %}
 <a href="#" class="card card--elevated">
-  <div class="padding">
+  <div class="padding-3">
     Elevated
   </div>
 </a>
 
 <div class="card card--elevated">
-  <div class="padding">
+  <div class="padding-3">
     <h3>
       Headline
     </h3>
@@ -34,13 +34,13 @@ title: Card
 
 {% example %}
 <a href="#" class="card card--filled">
-  <div class="padding">
+  <div class="padding-3">
     Filled
   </div>
 </a>
 
 <div class="card card--filled">
-  <div class="padding">
+  <div class="padding-3">
     <h3>
       Headline
     </h3>
@@ -60,13 +60,13 @@ title: Card
 
 {% example %}
 <a class="card card--outlined">
-  <div class="padding">
+  <div class="padding-3">
     Outlined
   </div>
 </a>
 
 <div class="card card--outlined">
-  <div class="padding">
+  <div class="padding-3">
     <h3>
       Headline
     </h3>

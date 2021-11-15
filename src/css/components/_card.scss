@@ -2,23 +2,16 @@
   display: block;
   text-decoration: none;
   border-radius: 12px;
-
-  @include state-layer;
 }
 
-.card:not(a) {
-  &::after {
-    display: none;
-  }
+a.card {
+  @include state-layer;
 }
 
 .card--elevated {
   color: var(--color-on-surface);
+  background-color: var(--color-surface);
   box-shadow: var(--shadow-level-1);
-
-  &:before {
-    background-color: var(--color-surface);
-  }
 }
 
 a.card--elevated {
@@ -37,10 +30,7 @@ a.card--elevated {
 
 .card--filled {
   color: var(--color-on-surface);
-
-  &:before {
-    background-color: var(--color-surface-variant);
-  }
+  background-color: var(--color-surface-variant);
 }
 
 a.card--filled {
@@ -59,10 +49,6 @@ a.card--filled {
 
 .card--outlined {
   color: var(--color-on-surface);
-
-  &:before {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-outline);
-    border-radius: 12px;
-  }
+  background-color: var(--color-surface);
+  outline: 1px solid var(--color-outline);
 }

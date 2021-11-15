@@ -54,11 +54,7 @@ button[disabled] {
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-level-1);
-
-  // Container layer
-  &::before {
-    background-color: var(--color-surface);
-  }
+  background-color: var(--color-surface);
 
   &:hover {
     box-shadow: var(--shadow-level-2);
@@ -75,11 +71,7 @@ button[disabled] {
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
     box-shadow: var(--shadow-level-0);
-
-    &::before {
-      background-color: var(--color-on-surface);
-      opacity: 0.12;
-    }
+    background-color: rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -93,12 +85,7 @@ button[disabled] {
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-level-0);
-  background: transparent;
-
-  // Container layer
-  &::before {
-    background-color: var(--color-primary);
-  }
+  background-color: var(--color-primary);
 
   &:hover {
     box-shadow: var(--shadow-level-1);
@@ -115,11 +102,7 @@ button[disabled] {
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
     box-shadow: var(--shadow-level-0);
-
-    &::before {
-      background-color: var(--color-on-surface);
-      opacity: 0.12;
-    }
+    background-color: rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -133,12 +116,7 @@ button[disabled] {
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-level-0);
-  background: transparent;
-
-  // Container layer
-  &::before {
-    background-color: var(--color-secondary-container);
-  }
+  background-color: var(--color-secondary-container);
 
   &:hover {
     box-shadow: var(--shadow-level-1);
@@ -155,11 +133,7 @@ button[disabled] {
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
     box-shadow: var(--shadow-level-0);
-
-    &::before {
-      background-color: var(--color-on-surface);
-      opacity: 0.12;
-    }
+    background-color: var(0, 0, 0, 0.12);
   }
 }
 
@@ -173,12 +147,7 @@ button[disabled] {
   text-align: center;
   font-weight: 500;
   background: transparent;
-
-  // Container layer
-  &::before {
-    border: 1px solid var(--color-outline);
-    border-radius: 20px;
-  }
+  outline: 1px solid var(--color-outline);
 
   &:focus {
     &::before {
@@ -194,10 +163,7 @@ button[disabled] {
 
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
-
-    &::before {
-      opacity: 0.12;
-    }
+    outline: 1px solid rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -266,7 +232,7 @@ button[disabled] {
   border-radius: 16px;
   text-align: center;
   font-weight: 500;
-  background: transparent;
+  background-color: var(--color-primary-container);
   box-shadow: var(--shadow-level-3);
 
   svg {
@@ -310,32 +276,19 @@ button[disabled] {
     }
   }
 
-  &::before {
-    background-color: var(--color-primary-container)
-  }
-
   &.button--surface {
     color: var(--color-primary);
-
-    &::before {
-      background-color: var(--color-surface);
-    }
+    background-color: var(--color-surface);
   }
 
   &.button--secondary {
     color: var(--color-on-secondary-container);
-
-    &::before {
-      background-color: var(--color-secondary-container);
-    }
+    background-color: var(--color-secondary-container);
   }
 
   &.button--tertiary {
     color: var(--color-on-tertiary-container);
-
-    &::before {
-      background-color: var(--color-tertiary-container);
-    }
+    background-color: var(--color-tertiary-container);
   }
 
   &:hover {
@@ -369,10 +322,6 @@ button[disabled] {
   &:disabled {
     color: rgba(0, 0, 0, 0.38);
     box-shadow: var(--shadow-level-0);
-
-    &::before {
-      background-color: var(--color-on-surface);
-      opacity: 0.12;
-    }
+    background-color: rgba(0, 0, 0, 0.12);
   }
 }

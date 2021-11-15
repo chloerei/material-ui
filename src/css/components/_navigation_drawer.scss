@@ -62,6 +62,7 @@
   overflow: hidden;
   color: var(--color-on-surface-variant);
   outline: 0;
+  background-color: var(--color-surface);
 
   --state-hover-opacity: 16%;
   --state-focus-opacity: 24%;
@@ -69,16 +70,9 @@
 
   @include state-layer;
 
-  &::before {
-    background-color: var(--color-surface);
-  }
-
   &.navigation-drawer__item--active {
     color: var(--color-on-secondary-container);
-
-    &::before {
-      background-color: var(--color-secondary-container);
-    }
+    background-color: var(--color-secondary-container);
   }
 }
 
