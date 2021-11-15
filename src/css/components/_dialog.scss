@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .dialog {
   display: none;
 }
@@ -73,7 +75,7 @@
   }
 }
 
-@media (max-width: $phone-break-point) {
+@media (max-width: map.get($breakpoints, "tablet")) {
   .dialog--full-screen {
     padding: 0;
 

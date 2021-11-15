@@ -1,6 +1,8 @@
+@use "sass:map";
+
 .drawer {
-  width: 360px;
-  flex-shrink: 0;
+  display: none;
+  z-index: 16;
 }
 
 .drawer__container {
@@ -12,12 +14,13 @@
   top: 0;
   bottom: 0;
   width: 360px;
+  max-width: calc(100vw - 64px);
   padding: 12px;
+  border-radius: 0 16px 16px 0;
   z-index: 1;
 }
 
 .drawer__scrim {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,43 +29,23 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: $phone-break-point) {
-  .drawer--app-bar-margin .drawer__container {
-    margin-top: 64px;
-  }
+.drawer--open {
+  display: block;
 }
 
-@mixin drawer-modal {
-  display: none;
-
-  &.drawer--open {
+@media (min-width: map.get($breakpoints, "laptop")) {
+  .drawer--permanently {
     display: block;
-    position: fixed;
-    width: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 16;
+    width: 360px;
+
+    .drawer__container {
+      border-radius: 0;
+    }
 
     .drawer__scrim {
-      display: block;
+      display: none;
+
     }
-  }
-
-  .drawer__container {
-    border-radius: 0 16px 16px 0;
-    max-width: calc(100vw - 64px);
-  }
-}
-
-.drawer--modal {
-  @include drawer-modal;
-}
-
-@media (max-width: $phone-break-point - 1px) {
-  .drawer {
-    @include drawer-modal;
   }
 }
 

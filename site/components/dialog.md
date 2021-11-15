@@ -77,7 +77,7 @@ title: Dialog
 {% example sandbox %}
 <div class="dialog dialog--full-screen dialog--open">
   <div class="dialog__container">
-    <div class="app-bar display-none display-flex-on-phone">
+    <div class="app-bar display-none@tablet">
       <div class="app-bar__action">
         <button type="button" class="button button--icon">
           <span class="material-icons">close</span>
@@ -92,7 +92,7 @@ title: Dialog
         </button>
       </div>
     </div>
-    <div class="dialog__header display-none-on-phone">
+    <div class="dialog__header display-none display-block@tablet">
       Dialog title
     </div>
     <div class="dialog__body">
