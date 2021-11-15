@@ -19,8 +19,8 @@
 
 .example.sandbox .navigation-rail__container,
 .example.sandbox .navigation-bar,
-.example.sandbox .drawer__container,
-.example.sandbox .drawer__scrim,
+.example.sandbox .navigation-drawer__container,
+.example.sandbox .navigation-drawer__scrim,
 .example.sandbox .sheet__container,
 .example.sandbox .sheet__scrim,
 .example.sandbox .dialog,
@@ -30,7 +30,7 @@
   position: absolute;
 }
 
-.example.sandbox .drawer--modal,
+.example.sandbox .navigation-drawer--modal,
 .example.sandbox .sheet--modal {
   position: absolute;
   inset: 0;
@@ -44,13 +44,6 @@
 
 .example .chip {
   margin: 8px;
-}
-
-@media (max-width: 480px) {
-  .example.sandbox .drawer__container,
-  .example.sandbox .sheet__container {
-    position: absolute;
-  }
 }
 
 .example + pre {

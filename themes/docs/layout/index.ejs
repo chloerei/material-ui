@@ -14,64 +14,64 @@
   </head>
   <body>
     <div class="display-flex">
-      <div id="drawer" class="drawer drawer--permanently" data-controller="drawer">
-        <div class="drawer__container">
+      <div id="navigation-drawer" class="navigation-drawer navigation-drawer--permanently" data-controller="navigation-drawer">
+        <div class="navigation-drawer__container">
           <div class="headline-medium margin-x-2 padding-x-3 padding-y-2">
             Material UI
           </div>
 
           <% ['introduction', 'webpack', 'rails', 'typography'].forEach(function(name) { %>
             <% itemPath = name + '.html'  %>
-            <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
+            <a href="/<%= itemPath %>" class="navigation-drawer__item <%= page.path == itemPath ? 'navigation-drawer__item--active' : '' %>">
               <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
             </a>
           <% }); %>
 
           <details <%= page.path.startsWith('components') ? 'open' : '' %> >
-            <summary class="drawer__item">
-              <div class="drawer__item__label">
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
                 Components
               </div>
-              <div class="drawer__item__icon">
+              <div class="navigation-drawer__item__icon">
                 <span class="material-icons">expand_more</span>
               </div>
             </summary>
             <div class="padding-left-3">
               <% ['app-bar', 'button', 'card', 'chip', 'dialog', 'dropdown', 'navigation-drawer', 'navigation-bar', 'navigation-rail', 'text-field', 'selection-control', 'selector', 'form', 'list', 'snackbar', 'sheet', 'table'].forEach(function(name) { %>
                 <% itemPath = 'components/' + name + '.html'  %>
-                <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
+                <a href="/<%= itemPath %>" class="navigation-drawer__item <%= page.path == itemPath ? 'navigation-drawer__item--active' : '' %>">
                   <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
                 </a>
               <% }); %>
             </div>
           </details>
           <details <%= page.path.startsWith('utilities') ? 'open' : '' %> >
-            <summary class="drawer__item">
-              <div class="drawer__item__label">
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
                 Utitlties
               </div>
-              <div class="drawer__item__icon">
+              <div class="navigation-drawer__item__icon">
                 <span class="material-icons">expand_more</span>
               </div>
             </summary>
             <div class="padding-left-3">
               <% ['display', 'background', 'border', 'spacing', 'text'].forEach(function(name) { %>
                 <% itemPath = 'utilities/' + name + '.html'  %>
-                <a href="/<%= itemPath %>" class="drawer__item <%= page.path == itemPath ? 'drawer__item--active' : '' %>">
+                <a href="/<%= itemPath %>" class="navigation-drawer__item <%= page.path == itemPath ? 'navigation-drawer__item--active' : '' %>">
                   <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
                 </a>
               <% }); %>
             </div>
           </details>
         </div>
-        <div class="drawer__scrim" data-action="click->drawer#close">
+        <div class="navigation-drawer__scrim" data-action="click->navigation-drawer#close">
         </div>
       </div>
 
       <div class="flex-grow-1 min-width-0">
         <div class="app-bar app-bar--sticky-top display-none@laptop">
           <div class="app-bar__action">
-            <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer" data-toggle-action="drawer#toggle">
+            <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer" data-toggle-action="navigation-drawer#toggle">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
             </button>
           </div>

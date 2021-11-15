@@ -1,15 +1,15 @@
 ---
-title: Drawer
+title: Navigation Drawer
 ---
 
-# Drawer
+# Navigation Drawer
 
 ## Modal
 
 {% example sandbox %}
 <div class="app-bar app-bar--sticky-top">
   <div class="app-bar__action">
-    <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer-modal" data-toggle-action="drawer#toggle">
+    <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer-modal" data-toggle-action="navigation-drawer#toggle">
       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
     </button>
   </div>
@@ -18,34 +18,34 @@ title: Drawer
   </div>
 </div>
 
-<div class="drawer" id="drawer-modal" data-controller="drawer">
-  <div class="drawer__container">
-    <a href="#" class="drawer__item drawer__item--active">
-      <div class="drawer__item__icon">
+<div class="navigation-drawer" id="navigation-drawer-modal" data-controller="navigation-drawer">
+  <div class="navigation-drawer__container">
+    <a href="#" class="navigation-drawer__item navigation-drawer__item--active">
+      <div class="navigation-drawer__item__icon">
         <span class="material-icons">inbox</span>
       </div>
-      <div class="drawer__item__label">
+      <div class="navigation-drawer__item__label">
         Inbox
       </div>
     </a>
-    <a href="#" class="drawer__item">
-      <div class="drawer__item__icon">
+    <a href="#" class="navigation-drawer__item">
+      <div class="navigation-drawer__item__icon">
         <span class="material-icons">favorites</span>
       </div>
-      <div class="drawer__item__label">
+      <div class="navigation-drawer__item__label">
         Favorites
       </div>
     </a>
-    <a href="#" class="drawer__item">
-      <div class="drawer__item__icon">
+    <a href="#" class="navigation-drawer__item">
+      <div class="navigation-drawer__item__icon">
         <span class="material-icons">delete</span>
       </div>
-      <div class="drawer__item__label">
+      <div class="navigation-drawer__item__label">
         Trash
       </div>
     </a>
   </div>
-  <div class="drawer__scrim" data-action="click->drawer#close">
+  <div class="navigation-drawer__scrim" data-action="click->navigation-drawer#close">
   </div>
 </div>
 {% endexample %}
@@ -54,41 +54,41 @@ title: Drawer
 
 {% example sandbox %}
 <div class="display-flex">
-  <div class="drawer drawer--permanently" id="drawer-permanently" data-controller="drawer">
-    <div class="drawer__container">
-      <a href="#" class="drawer__item drawer__item--active">
-        <div class="drawer__item__icon">
+  <div class="navigation-drawer navigation-drawer--permanently" id="navigation-drawer-permanently" data-controller="navigation-drawer">
+    <div class="navigation-drawer__container">
+      <a href="#" class="navigation-drawer__item navigation-drawer__item--active">
+        <div class="navigation-drawer__item__icon">
           <span class="material-icons">inbox</span>
         </div>
-        <div class="drawer__item__label">
+        <div class="navigation-drawer__item__label">
           Inbox
         </div>
       </a>
-      <a href="#" class="drawer__item">
-        <div class="drawer__item__icon">
+      <a href="#" class="navigation-drawer__item">
+        <div class="navigation-drawer__item__icon">
           <span class="material-icons">favorites</span>
         </div>
-        <div class="drawer__item__label">
+        <div class="navigation-drawer__item__label">
           Favorites
         </div>
       </a>
-      <a href="#" class="drawer__item">
-        <div class="drawer__item__icon">
+      <a href="#" class="navigation-drawer__item">
+        <div class="navigation-drawer__item__icon">
           <span class="material-icons">delete</span>
         </div>
-        <div class="drawer__item__label">
+        <div class="navigation-drawer__item__label">
           Trash
         </div>
       </a>
     </div>
-    <div class="drawer__scrim" data-action="click->drawer#close">
+    <div class="navigation-drawer__scrim" data-action="click->navigation-drawer#close">
     </div>
   </div>
 
   <div class="flex-grow-1">
     <div class="app-bar">
       <div class="app-bar__action display-none@laptop">
-        <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#drawer-permanently" data-toggle-action="drawer#toggle">
+        <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer-permanently" data-toggle-action="navigation-drawer#toggle">
           <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </button>
       </div>

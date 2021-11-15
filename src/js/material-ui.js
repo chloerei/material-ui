@@ -1,6 +1,6 @@
 import { Application } from 'stimulus'
 import DialogController from './controllers/dialog_controller'
-import DrawerController from './controllers/drawer_controller'
+import NavigationDrawerController from './controllers/navigation_drawer_controller'
 import DropdownController from './controllers/dropdown_controller'
 import FloatingActionController from './controllers/floating_action_controller'
 import SnackbarController from './controllers/snackbar_controller'
@@ -15,7 +15,7 @@ function init(application) {
   }
 
   application.register("dialog", DialogController)
-  application.register("drawer", DrawerController)
+  application.register("navigation-drawer", NavigationDrawerController)
   application.register("dropdown", DropdownController)
   application.register("floating-action", FloatingActionController)
   application.register("snackbar", SnackbarController)
@@ -27,7 +27,7 @@ function init(application) {
 
 export {
   DialogController,
-  DrawerController,
+  NavigationDrawerController,
   DropdownController,
   FloatingActionController,
   SnackbarController,

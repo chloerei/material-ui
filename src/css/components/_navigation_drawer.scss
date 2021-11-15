@@ -1,11 +1,11 @@
 @use "sass:map";
 
-.drawer {
+.navigation-drawer {
   display: none;
   flex-shrink: 0;
 }
 
-.drawer__container {
+.navigation-drawer__container {
   box-sizing: border-box;
   background: var(--color-surface);
   color: var(--color-on-surface-variant);
@@ -20,7 +20,7 @@
   z-index: 16;
 }
 
-.drawer__scrim {
+.navigation-drawer__scrim {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,26 +30,26 @@
   z-index: 15;
 }
 
-.drawer--open {
+.navigation-drawer--open {
   display: block;
 }
 
 @media (min-width: map.get($breakpoints, "laptop")) {
-  .drawer--permanently {
+  .navigation-drawer--permanently {
     display: block;
     width: 360px;
 
-    .drawer__container {
+    .navigation-drawer__container {
       border-radius: 0;
     }
 
-    .drawer__scrim {
+    .navigation-drawer__scrim {
       display: none;
     }
   }
 }
 
-.drawer__item {
+.navigation-drawer__item {
   padding: 18px 24px;
   display: flex;
   text-decoration: none;
@@ -73,7 +73,7 @@
     background-color: var(--color-surface);
   }
 
-  &.drawer__item--active {
+  &.navigation-drawer__item--active {
     color: var(--color-on-secondary-container);
 
     &::before {
@@ -82,7 +82,7 @@
   }
 }
 
-.drawer__item__icon {
+.navigation-drawer__item__icon {
   height: 24px;
   width: 24px;
 
@@ -95,6 +95,6 @@
   }
 }
 
-.drawer__item__label {
+.navigation-drawer__item__label {
   flex-grow: 1;
 }
