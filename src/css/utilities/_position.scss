@@ -1,19 +1,5 @@
-.position-relative {
-  position: relative;
-}
-
-.position-absolute {
-  position: absolute;
-}
-
-.position-fixed {
-  position: fixed;
-}
-
-.position-static {
-  position: static;
-}
-
-.position-sticky {
-  position: sticky;
+@each $value in (relative, absolute, fixed, static, sticky) {
+  .position-#{$value} {
+    position: $value;
+  }
 }
