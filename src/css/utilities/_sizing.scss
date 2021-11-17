@@ -1,10 +1,12 @@
+@use "sass:math";
+
 @each $percent in (25, 50, 75, 100) {
   .width-#{$percent} {
-    width: $percent / 100 * 100%;
+    width: math.div($percent, 100) * 100%;
   }
 
   .height-#{$percent} {
-    height: $percent / 100 * 100%;
+    height: math.div($percent, 100) * 100%;
   }
 }
 
