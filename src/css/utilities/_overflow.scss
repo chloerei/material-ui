@@ -1,7 +1,5 @@
-.overflow-auto {
-  overflow: auto;
-}
-
-.overflow-hidden {
-  overflow: hidden;
+@each $value in (auto, hidden, visible, scroll) {
+  .overflow-#{$value} {
+    overflow: $value;
+  }
 }
