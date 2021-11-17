@@ -7,7 +7,7 @@ title: Display
 ## Format
 
 ```
-.diplay-value@{screen}
+.diplay-{value}@{screen}
 ```
 
 Values:

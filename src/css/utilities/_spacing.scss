@@ -1,14 +1,3 @@
-$spacer: 16px;
-$spacers: (
-  0: $spacer * 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer * 1,
-  4: $spacer * 2,
-  5: $spacer * 3,
-);
-
-
 @each $type in (margin, padding) {
   @each $name, $value in $spacers {
     .#{$type}-#{$name} {
