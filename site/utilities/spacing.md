@@ -4,19 +4,13 @@ title: Spacing
 
 # Spacing
 
-## Format
+Format:
 
 ```
 .{margin|padding}-{x|y|top|left|right|bottom}-{0..5}
 ```
 
-## Example
-
-```
-.padding-left-3
-```
-
-## Spacer
+Spacer:
 
 `$spacer` is 16px by default;
 
@@ -29,7 +23,7 @@ title: Spacing
 | 4    | $spacer * 2    |
 | 5    | $spacer * 3    |
 
-
+Example:
 
 {% example %}
 <div class="padding-3">
@@ -43,5 +37,17 @@ title: Spacing
 </div>
 <div class="margin-x-3">
   margin-x-3
+</div>
+{% endexample %}
+
+## Responsive
+
+Add `@{screen}` after class name.
+
+Example:
+
+{% example %}
+<div class="padding-3 padding-4@desktop background-primary">
+  Content
 </div>
 {% endexample %}

@@ -25,28 +25,27 @@ title: Border
 ## Border Radius
 
 {% example %}
-<div class="border-radius-0 padding-3 margin-bottom-3 background-primary">
-  .border-radius-0
+<div class="border-radius-0 margin-bottom-3 background-primary" style="height: 100px; width: 200px;">
 </div>
-<div class="border-radius-1 padding-3 margin-bottom-3 background-primary">
-  .border-radius-1
+<div class="border-radius-1 margin-bottom-3 background-primary" style="height: 100px; width: 200px;">
 </div>
-<div class="border-radius-2 padding-3 margin-bottom-3 background-primary">
-  .border-radius-2
+<div class="border-radius-2 margin-bottom-3 background-primary" style="height: 100px; width: 200px;">
 </div>
-<div class="border-radius-3 padding-3 margin-bottom-3 background-primary">
-  .border-radius-3
+<div class="border-radius-3 margin-bottom-3 background-primary" style="height: 100px; width: 200px;">
 </div>
-<div class="border-radius-4 padding-3 margin-bottom-3 background-primary">
-  .border-radius-4
+<div class="border-radius-4 margin-bottom-3 background-primary" style="height: 100px; width: 200px;">
 </div>
-<div class="border-radius-5 padding-3 margin-bottom-3 background-primary">
-  .border-radius-5
+<div class="border-radius-5 margin-bottom-3 background-primary" style="height: 100px; width: 200px;">
 </div>
-<div class="border-radius-pill padding-3 margin-bottom-3 background-primary">
-  .border-radius-pill
+<div class="border-radius-circle padding-3 margin-bottom-3 background-primary" style="height: 100px; width: 100px;">
 </div>
-<div class="border-radius-circle padding-3 margin-bottom-3 background-primary">
-  .border-radius-circle
+{% endexample %}
+
+## Responsive
+
+Add `@{screen}` after class name.
+
+{% example %}
+<div class="border-radius-2 border-radius-3@desktop background-primary" style="height: 100px; width: 200px;">
 </div>
 {% endexample %}

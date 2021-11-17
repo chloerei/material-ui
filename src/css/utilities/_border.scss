@@ -18,9 +18,9 @@
   border-right: 1px solid var(--color-outline);
 }
 
-@each $size in (0, 1, 2, 3, 4, 5) {
-  .border-radius-#{$size} {
-    border-radius: 4px * $size;
+@each $name, $value in $spacers {
+  .border-radius-#{$name} {
+    border-radius: $value;
   }
 }
 
@@ -28,6 +28,36 @@
   border-radius: 50%;
 }
 
-.border-radius-pill {
-  border-radius: 50rem;
+@each $screen, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    .border\@#{$screen} {
+      border: 1px solid var(--color-outline);
+    }
+
+    .border-top\@#{$screen} {
+      border-top: 1px solid var(--color-outline);
+    }
+
+    .border-bottom\@#{$screen} {
+      border-bottom: 1px solid var(--color-outline);
+    }
+
+    .border-left\@#{$screen} {
+      border-left: 1px solid var(--color-outline);
+    }
+
+    .border-right\@#{$screen} {
+      border-right: 1px solid var(--color-outline);
+    }
+
+    @each $name, $value in $spacers {
+      .border-radius-#{$name}\@#{$screen} {
+        border-radius: $value;
+      }
+    }
+
+    .border-radius-circle\@#{$screen} {
+      border-radius: 50%;
+    }
+  }
 }

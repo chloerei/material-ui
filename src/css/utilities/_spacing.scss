@@ -21,3 +21,31 @@
     }
   }
 }
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    @each $type in (margin, padding) {
+      @each $name, $value in $spacers {
+        .#{$type}-#{$name}\@#{$screen} {
+          #{$type}: $value;
+        }
+
+        .#{$type}-x-#{$name}\@#{$screen} {
+          #{$type}-left: $value;
+          #{$type}-right: $value;
+        }
+
+        .#{$type}-y-#{$name}\@#{$screen} {
+          #{$type}-top: $value;
+          #{$type}-bottom: $value;
+        }
+
+        @each $side in (top, left, right, bottom) {
+          .#{$type}-#{$side}-#{$name}\@#{$screen} {
+            #{$type}-#{$side}: $value;
+          }
+        }
+      }
+    }
+  }
+}
