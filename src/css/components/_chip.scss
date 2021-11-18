@@ -133,23 +133,23 @@
 }
 
 .chip--elevated {
-  box-shadow: var(--shadow-level-1);
+  box-shadow: var(--shadow-1);
   outline: none;
 
   &:hover {
-    box-shadow: var(--shadow-level-2);
+    box-shadow: var(--shadow-2);
   }
 
   &:focus {
-    box-shadow: var(--shadow-level-1);
+    box-shadow: var(--shadow-1);
   }
 
   &:active {
-    box-shadow: var(--shadow-level-1);
+    box-shadow: var(--shadow-1);
   }
 
   &.chip--disabled {
-    box-shadow: var(--shadow-level-0);
+    box-shadow: var(--shadow-0);
     background-color: rgba(0, 0, 0, 0.12);
   }
 }
@@ -164,7 +164,7 @@
   }
 
   &:hover {
-    box-shadow: var(--shadow-level-1);
+    box-shadow: var(--shadow-1);
   }
 
   &.chip--disabled {

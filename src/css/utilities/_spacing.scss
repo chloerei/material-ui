@@ -1,22 +1,22 @@
 @each $type in (margin, padding) {
-  @each $name, $value in $spacers {
-    .#{$type}-#{$name} {
-      #{$type}: $value;
+  @for $size from 0 through 5 {
+    .#{$type}-#{$size} {
+      #{$type}: var(--space-#{$size});
     }
 
-    .#{$type}-x-#{$name} {
-      #{$type}-left: $value;
-      #{$type}-right: $value;
+    .#{$type}-x-#{$size} {
+      #{$type}-left: var(--space-#{$size});
+      #{$type}-right: var(--space-#{$size});
     }
 
-    .#{$type}-y-#{$name} {
-      #{$type}-top: $value;
-      #{$type}-bottom: $value;
+    .#{$type}-y-#{$size} {
+      #{$type}-top: var(--space-#{$size});
+      #{$type}-bottom: var(--space-#{$size});
     }
 
     @each $side in (top, left, right, bottom) {
-      .#{$type}-#{$side}-#{$name} {
-        #{$type}-#{$side}: $value;
+      .#{$type}-#{$side}-#{$size} {
+        #{$type}-#{$side}: var(--space-#{$size});
       }
     }
   }
@@ -25,24 +25,24 @@
 @each $screen, $size in $breakpoints {
   @media (min-width: #{$size}) {
     @each $type in (margin, padding) {
-      @each $name, $value in $spacers {
-        .#{$type}-#{$name}\@#{$screen} {
-          #{$type}: $value;
+      @for $size from 0 through 5 {
+        .#{$type}-#{$size}\@#{$screen} {
+          #{$type}: var(--space-#{$size});
         }
 
-        .#{$type}-x-#{$name}\@#{$screen} {
-          #{$type}-left: $value;
-          #{$type}-right: $value;
+        .#{$type}-x-#{$size}\@#{$screen} {
+          #{$type}-left: var(--space-#{$size});
+          #{$type}-right: var(--space-#{$size});
         }
 
-        .#{$type}-y-#{$name}\@#{$screen} {
-          #{$type}-top: $value;
-          #{$type}-bottom: $value;
+        .#{$type}-y-#{$size}\@#{$screen} {
+          #{$type}-top: var(--space-#{$size});
+          #{$type}-bottom: var(--space-#{$size});
         }
 
         @each $side in (top, left, right, bottom) {
-          .#{$type}-#{$side}-#{$name}\@#{$screen} {
-            #{$type}-#{$side}: $value;
+          .#{$type}-#{$side}-#{$size}\@#{$screen} {
+            #{$type}-#{$side}: var(--space-#{$size});
           }
         }
       }

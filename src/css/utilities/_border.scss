@@ -18,9 +18,9 @@
   border-right: 1px solid var(--color-outline);
 }
 
-@each $name, $value in $spacers {
-  .border-radius-#{$name} {
-    border-radius: $value;
+@for $size from 0 through 5 {
+  .border-radius-#{$size} {
+    border-radius: var(--space-#{$size});
   }
 }
 
@@ -50,9 +50,9 @@
       border-right: 1px solid var(--color-outline);
     }
 
-    @each $name, $value in $spacers {
-      .border-radius-#{$name}\@#{$screen} {
-        border-radius: $value;
+    @for $size from 0 through 5 {
+      .border-radius-#{$size}\@#{$screen} {
+        border-radius: var(--space-#{$size});
       }
     }
 

@@ -28,9 +28,9 @@
   }
 }
 
-@each $name, $value in $spacers {
-  .gap-#{$name} {
-    gap: $value;
+@for $size from 0 through 5 {
+  .gap-#{$size} {
+    gap: var(--space-#{$size});
   }
 }
 
@@ -88,9 +88,9 @@
       }
     }
 
-    @each $name, $value in $spacers {
-      .gap-#{$name}\@#{$screen} {
-        gap: $value;
+    @for $size from 0 through 5 {
+      .gap-#{$size}\@#{$screen} {
+        gap: var(--space-#{$size});
       }
     }
 

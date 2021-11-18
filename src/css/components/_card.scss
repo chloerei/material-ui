@@ -11,20 +11,20 @@ a.card {
 .card--elevated {
   color: var(--color-on-surface);
   background-color: var(--color-surface);
-  box-shadow: var(--shadow-level-1);
+  box-shadow: var(--shadow-1);
 }
 
 a.card--elevated {
   &:hover {
-    box-shadow: var(--shadow-level-2);
+    box-shadow: var(--shadow-2);
   }
 
   &:focus {
-    box-shadow: var(--shadow-level-1);
+    box-shadow: var(--shadow-1);
   }
 
   &:active {
-    box-shadow: var(--shadow-level-1);
+    box-shadow: var(--shadow-1);
   }
 }
 
@@ -35,15 +35,15 @@ a.card--elevated {
 
 a.card--filled {
   &:hover {
-    box-shadow: var(--shadow-level-1);
+    box-shadow: var(--shadow-1);
   }
 
   &:focus {
-    box-shadow: var(--shadow-level-1);
+    box-shadow: var(--shadow-1);
   }
 
   &:active {
-    box-shadow: var(--shadow-level-0);
+    box-shadow: var(--shadow-0);
   }
 }
 
