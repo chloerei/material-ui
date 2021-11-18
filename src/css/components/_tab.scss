@@ -1,36 +1,33 @@
 .tab {
   display: flex;
   overflow: auto;
+  gap: 12px;
 }
 
 .tab__item {
-  font-size: 16px;
-  line-height: 16px;
-  padding: 16px;
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
-  opacity: 0.8;
+  padding: 18px 24px;
+  display: flex;
   text-decoration: none;
-  flex-shrink: 0;
-  color: var(--color-on-background);
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  border-radius: 28px;
   position: relative;
   overflow: hidden;
+  color: var(--color-on-surface-variant);
+  outline: 0;
+  background-color: var(--color-surface);
+  cursor: pointer;
 
-  &:hover {
-    background: rgba(0, 0, 0, 0.05);
-    opacity: 1;
-  }
+  --state-hover-opacity: 16%;
+  --state-focus-opacity: 24%;
+  --state-press-opacity: 20%;
 
-  &:active {
-    background: rgba(0, 0, 0, 0.075);
-    opacity: 1;
-  }
+  @include state-layer;
 }
 
 .tab__item--active {
-  opacity: 1;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-on-secondary-container);
+  background-color: var(--color-secondary-container);
 }
