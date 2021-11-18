@@ -12,30 +12,22 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: var(--text-primary-color);
+  color: var(--color-on-background);
   box-sizing: border-box;
   font-family: sans-serif;
   line-height: 1.5;
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 img {
   max-width: 100%;
 }
 
-.subheader {
-  margin: 16px;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: bold;
-  color: var(--text-secondary-color);
-}
-
 .divider {
   margin: 8px 0;
   border: 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--color-outline);
 }

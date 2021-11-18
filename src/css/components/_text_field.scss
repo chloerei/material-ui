@@ -29,7 +29,7 @@
     // border element
     &::after {
       content: "";
-      border-bottom: 1px solid var(--text-secondary-color);
+      border-bottom: 1px solid var(--color-on-background);
       position: absolute;
       top: 0;
       left: 0;
@@ -46,13 +46,13 @@
       background: rgba(0, 0, 0, 0.1);
 
       &::after {
-        border-bottom: 2px solid var(--primary-color);
+        border-bottom: 2px solid var(--color-primary);
       }
 
       .text-field__label {
         font-size: 12px;
         top: 8px;
-        color: var(--primary-color);
+        color: var(--color-primary);
       }
     }
   }
@@ -64,7 +64,7 @@
     font-size: 16px;
     line-height: 1;
     transition: top 0.15s;
-    color: var(--text-secondary-color);
+    color: var(--color-on-background);
   }
 
   input,
@@ -89,14 +89,14 @@
     font-size: 16px;
     line-height: 20px;
     padding: 20px 0 8px 16px ;
-    color: var(--text-secondary-color);
+    color: var(--color-on-background);
   }
 
   .text-field__suffix-text {
     font-size: 16px;
     line-height: 20px;
     padding: 20px 16px 8px 0;
-    color: var(--text-secondary-color);
+    color: var(--color-on-background);
   }
 
   &.text-field--with-prefix-text {
@@ -134,7 +134,7 @@
       top: 12px;
       left: 12px;
       position: absolute;
-      fill: var(--text-secondary-color);
+      fill: var(--color-on-background);
     }
   }
 
@@ -147,7 +147,7 @@
       top: 12px;
       right: 12px;
       position: absolute;
-      fill: var(--text-secondary-color);
+      fill: var(--color-on-background);
 
       .button--icon {
         margin: -8px -8px 0 0;
@@ -161,7 +161,7 @@
     // border element
     &::after {
       content: "";
-      border: 1px solid var(--text-secondary-color);
+      border: 1px solid var(--color-on-background);
       border-radius: 4px;
       position: absolute;
       top: 0;
@@ -173,14 +173,14 @@
 
     &:focus-within {
       &::after {
-        border: 2px solid var(--primary-color);
+        border: 2px solid var(--color-primary);
       }
 
       .text-field__label {
         font-size: 12px;
         top: -6px;
         left: 12px;
-        color: var(--primary-color);
+        color: var(--color-primary);
       }
     }
   }
@@ -193,7 +193,7 @@
     font-size: 16px;
     line-height: 1;
     transition: top 0.15s, left 0.15s;
-    color: var(--text-secondary-color);
+    color: var(--color-on-background);
     background: white;
     z-index: 1;
   }
@@ -222,14 +222,14 @@
     font-size: 16px;
     line-height: 20px;
     padding: 14px 0 14px 16px ;
-    color: var(--text-secondary-color);
+    color: var(--color-on-background);
   }
 
   .text-field__suffix-text {
     font-size: 16px;
     line-height: 20px;
     padding: 14px 16px 14px 0;
-    color: var(--text-secondary-color);
+    color: var(--color-on-background);
   }
 
   &.text-field--with-prefix-text {
@@ -269,7 +269,7 @@
       position: absolute;
       top: 12px;
       left: 12px;
-      fill: var(--text-secondary-color);
+      fill: var(--color-on-background);
     }
   }
 
@@ -282,7 +282,7 @@
       position: absolute;
       top: 12px;
       right: 12px;
-      fill: var(--text-secondary-color);
+      fill: var(--color-on-background);
     }
   }
 }
@@ -292,7 +292,7 @@
   font-size: 12px;
   line-height: 1;
   padding: 4px 16px 0;
-  color: var(--text-secondary-color);
+  color: var(--color-on-background);
 }
 
 .text-field__error-text {
@@ -305,7 +305,7 @@
   input:not(:placeholder-shown) ~ .text-field__label,
   .text-field__helper-text,
   .text-field__error-text {
-    color: var(--error-color);
+    color: var(--color-error);
   }
 
   .text-field__helper-text {
@@ -325,7 +325,7 @@
   .text-field__container,
   .text-field__container:focus-within {
     &::after {
-      border-color: var(--error-color);
+      border-color: var(--color-error);
     }
   }
 }

@@ -13,7 +13,7 @@
   opacity: 0.8;
   text-decoration: none;
   flex-shrink: 0;
-  color: var(--text-primary-color);
+  color: var(--color-on-background);
   position: relative;
   overflow: hidden;
 
@@ -31,6 +31,6 @@
 .tab__item--active {
   opacity: 1;
   padding-bottom: 14px;
-  border-bottom: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }

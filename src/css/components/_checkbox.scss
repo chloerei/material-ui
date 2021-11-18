@@ -9,8 +9,8 @@
     display: none;
 
     &:checked ~ .checkbox__icon {
-      border-color: var(--primary-color);
-      background: var(--primary-color);
+      border-color: var(--color-primary);
+      background: var(--color-primary);
 
       svg {
         opacity: 1;
@@ -31,7 +31,7 @@
     bottom: 0;
     transition: opacity 0.2s;
     opacity: 0;
-    background: var(--primary-color);
+    background: var(--color-primary);
     border-radius: 50%;
   }
 
@@ -54,7 +54,7 @@
   height: 18px;
   top: 11px;
   left: 11px;
-  border: 2px solid var(--text-secondary-color);
+  border: 2px solid var(--color-on-background);
   border-radius: 2px;
   transition: background-color 0.15s, border-color 0.15s;
 
