@@ -143,3 +143,117 @@
 .hljs-strong {
   font-weight: bold;
 }
+
+.color-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.color-on-primary {
+  background-color: var(--color-on-primary);
+  color: var(--color-primary);
+}
+
+.color-primary-container {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.color-on-primary-container {
+  background-color: var(--color-on-primary-container);
+  color: var(--color-primary-container);
+}
+
+.color-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.color-on-secondary {
+  background-color: var(--color-on-secondary);
+  color: var(--color-secondary);
+}
+
+.color-secondary-container {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.color-on-secondary-container {
+  background-color: var(--color-on-secondary-container);
+  color: var(--color-secondary-container);
+}
+
+.color-tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-on-tertiary);
+}
+
+.color-on-tertiary {
+  background-color: var(--color-on-tertiary);
+  color: var(--color-tertiary);
+}
+
+.color-tertiary-container {
+  background-color: var(--color-tertiary-container);
+  color: var(--color-on-tertiary-container);
+}
+
+.color-on-tertiary-container {
+  background-color: var(--color-on-tertiary-container);
+  color: var(--color-tertiary-container);
+}
+
+.color-error {
+  background-color: var(--color-error);
+  color: var(--color-on-error);
+}
+
+.color-on-error {
+  background-color: var(--color-on-error);
+  color: var(--color-error);
+}
+
+.color-error-container {
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.color-on-error-container {
+  background-color: var(--color-on-error-container);
+  color: var(--color-error-container);
+}
+
+.color-background {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.color-on-background {
+  background-color: var(--color-on-background);
+  color: var(--color-background);
+}
+
+.color-surface {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.color-on-surface {
+  background-color: var(--color-on-surface);
+  color: var(--color-surface);
+}
+
+.color-surface-variant {
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+}
+
+.color-on-surface-variant {
+  background-color: var(--color-on-surface-variant);
+  color: var(--color-surface-variant);
+}
+
+.color-outline {
+  background-color: var(--color-outline);
+}
