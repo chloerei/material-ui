@@ -1,4 +1,4 @@
-@for $size from 0 through 4 {
+@for $size from 0 through 5 {
   .shadow-#{$size} {
     box-shadow: var(--shadow-#{$size})
   }
