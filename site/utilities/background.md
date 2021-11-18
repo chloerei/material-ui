@@ -5,6 +5,9 @@ title: Background
 # Background
 
 {% example %}
+<div class="padding-3 margin-bottom-2 background">
+  .background
+</div>
 <div class="padding-3 margin-bottom-2 background-primary">
   .background-primary
 </div>

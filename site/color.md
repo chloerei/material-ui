@@ -6,8 +6,7 @@ title: Color
 
 ## Default
 
-{% example %}
-<div class="background padding-3">
+<div class="example background padding-3">
   <div class="display-flex margin-bottom-3">
     <div class="color-primary padding-3 width-25">
       Primary
@@ -95,12 +94,10 @@ title: Color
     </div>
   </div>
 </div>
-{% endexample %}
 
 ## Dark scheme
 
-{% example %}
-<div class="dark-scheme background padding-3">
+<div class="example dark-scheme background padding-3">
   <div class="display-flex margin-bottom-3">
     <div class="color-primary padding-3 width-25">
       Primary
@@ -188,4 +185,3 @@ title: Color
     </div>
   </div>
 </div>
-{% endexample %}
