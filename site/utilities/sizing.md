@@ -9,10 +9,16 @@ title: Sizing
 ```
 .width-{25,50,75,100}
 .width-100vw
+.max-width-100
+.max-width-100vw
+.min-width-0
 .min-width-100
 .min-width-100vw
 .height-{25,50,75,100}
 .height-100vh
+.max-height-100
+.max-height-100vh
+.min-height-0
 .min-height-100
 .min-height-100vh
 ```
