@@ -15,13 +15,13 @@ title: Card
 
 <div class="card card--elevated">
   <div class="padding-3">
-    <h3>
+    <h3 class="headline-small margin-top-0 margin-bottom-3">
       Headline
     </h3>
-    <div class="text-secondary">
+    <div class="body-medum margin-bottom-3">
       Text
     </div>
-    <div class="display-flex flex-justify-content-flex-end">
+    <div class="display-flex justify-content-flex-end">
       <button type="button" class="button button--filled">
         Action
       </button>
@@ -41,14 +41,14 @@ title: Card
 
 <div class="card card--filled">
   <div class="padding-3">
-    <h3>
+    <h3 class="headline-small margin-top-0 margin-bottom-3">
       Headline
     </h3>
-    <div class="text-secondary">
+    <div class="body-medum margin-bottom-3">
       Text
     </div>
-    <div class="display-flex flex-justify-content-flex-end">
-      <button type="button" class="button button--outlined button--surface">
+    <div class="display-flex justify-content-flex-end">
+      <button type="button" class="button button--filled">
         Action
       </button>
     </div>
@@ -67,13 +67,13 @@ title: Card
 
 <div class="card card--outlined">
   <div class="padding-3">
-    <h3>
+    <h3 class="headline-small margin-top-0 margin-bottom-3">
       Headline
     </h3>
-    <div class="text-secondary">
+    <div class="body-medum margin-bottom-3">
       Text
     </div>
-    <div class="display-flex flex-justify-content-flex-end">
+    <div class="display-flex justify-content-flex-end">
       <button type="button" class="button button--filled">
         Action
       </button>

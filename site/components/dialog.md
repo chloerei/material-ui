@@ -10,13 +10,13 @@ title: Dialog
 <div class="dialog dialog--open">
   <div class="dialog__container">
     <div class="dialog__body">
-      <div class="color-secondary text-align-center">
+      <div class="text-secondary text-align-center margin-bottom-3">
         <span class="material-icons">info</span>
       </div>
-      <div class="headline-small text-align-center">
+      <div class="headline-small text-align-center margin-bottom-3">
         Dialog with hero icon
       </div>
-      <div class="body-medium">
+      <div class="body-medium margin-bottom-3">
         A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
       </div>
       <div class="dialog__actions">
@@ -39,11 +39,11 @@ title: Dialog
 <div class="dialog dialog--open">
   <div class="dialog__container">
     <div class="dialog__header">
-      <div class="title-large">
+      <div class="headline-small">
         Dialog Headline
       </div>
     </div>
-    <div class="dialog__body border-y">
+    <div class="dialog__body body-medium">
       <p>
         A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
       </p>
@@ -92,7 +92,7 @@ title: Dialog
         </button>
       </div>
     </div>
-    <div class="dialog__header display-none display-block@tablet">
+    <div class="dialog__header headline-small display-none display-block@tablet">
       Dialog title
     </div>
     <div class="dialog__body">
