@@ -4,6 +4,8 @@ title: Text Field
 
 # Text Field
 
+In order to work with floating label, `placeholder=" "` attribute must be set in input element, and the content of `placeholder` attribute will not visible.
+
 ## Filled
 
 {% example %}
