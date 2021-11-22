@@ -23,6 +23,14 @@
   }
 }
 
+.checkbox--disabled {
+  pointer-events: none;
+
+  .checkbox__icon {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
 .checkbox__icon {
   position: absolute;
   width: 18px;

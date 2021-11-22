@@ -21,6 +21,15 @@
       }
     }
   }
+
+}
+
+.radio--disabled {
+  pointer-events: none;
+
+  .radio__icon {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
 }
 
 .radio__icon {
