@@ -4,7 +4,10 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
-  vertical-align: middle;
+  border-radius: 50%;
+
+  color: var(--color-primary);
+  @include state-layer;
 
   input[type="radio"] {
     display: none;
@@ -16,31 +19,6 @@
         opacity: 1;
         transform: scale(0.5);
       }
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: opacity 0.2s;
-    opacity: 0;
-    background: var(--color-primary);
-    border-radius: 50%;
-  }
-
-  &:hover {
-    &::after {
-      opacity: 0.1;
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: 0.3;
     }
   }
 }
