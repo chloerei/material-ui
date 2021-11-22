@@ -3,7 +3,11 @@
   position: relative;
   height: 40px;
   width: 40px;
+  border-radius: 50%;
+  color: var(--color-primary);
   cursor: pointer;
+
+  @include state-layer;
 
   input[type="checkbox"] {
     display: none;
@@ -12,38 +16,9 @@
       border-color: var(--color-primary);
       background: var(--color-primary);
 
-      svg {
-        opacity: 1;
+      &::after {
+        display: block;
       }
-
-      path {
-        stroke-dashoffset: 0;
-      }
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: opacity 0.2s;
-    opacity: 0;
-    background: var(--color-primary);
-    border-radius: 50%;
-  }
-
-  &:hover {
-    &::after {
-      opacity: 0.1;
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: 0.3;
     }
   }
 }
@@ -58,20 +33,16 @@
   border-radius: 2px;
   transition: background-color 0.15s, border-color 0.15s;
 
-  svg {
+  &::after {
+    display: none;
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-  }
-
-  path {
-    stroke: white;
-    stroke-width: 3px;
-    stroke-dasharray: 30px;
-    stroke-dashoffset: 30px;
-    transition: stroke-dashoffset 0.15s cubic-bezier(0.4, 0, 0.6, 1);
+    top: 0px;
+    left: 4px;
+    width: 6px;
+    height: 12px;
+    border-right: 2px solid var(--color-on-primary);
+    border-bottom: 2px solid var(--color-on-primary);
+    transform: rotate(45deg);
   }
 }

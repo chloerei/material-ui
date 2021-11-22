@@ -9,11 +9,8 @@ title: Form
 {% example %}
 <div class="form__control">
   <label class="checkbox">
-    <input type="checkbox" id="checkbox_1" name="" value="">
+    <input type="checkbox" id="checkbox_1" name="" value="" checked>
     <div class="checkbox__icon">
-      <svg viewBox="0 0 24 24">
-        <path fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-      </svg>
     </div>
   </label>
   <label for="checkbox_1" class="form__control__label">item 1</label>
@@ -22,9 +19,6 @@ title: Form
   <label class="checkbox">
     <input type="checkbox" id="checkbox_2" name="" value="">
     <div class="checkbox__icon">
-      <svg viewBox="0 0 24 24">
-        <path fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-      </svg>
     </div>
   </label>
   <label for="checkbox_2" class="form__control__label">item 2</label>
