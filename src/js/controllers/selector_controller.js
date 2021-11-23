@@ -18,21 +18,21 @@ export default class extends Controller {
       this.maxItemsValue = 1
     }
 
-    this.content = document.createElement('div')
-    this.content.className = 'selector__content'
-    this.element.appendChild(this.content)
+    this.container = document.createElement('div')
+    this.container.className = 'selector__container'
+    this.element.appendChild(this.container)
 
     if (!this.multiple) {
       this.text = document.createElement('div')
       this.text.className = 'selector__text'
-      this.content.appendChild(this.text)
+      this.container.appendChild(this.text)
     }
 
     this.input = document.createElement('input')
     this.input.type = 'text'
     this.input.className = 'selector__input'
     this.setPlaceholder()
-    this.content.appendChild(this.input)
+    this.container.appendChild(this.input)
 
     this.menu = document.createElement('div')
     this.menu.className = 'selector__menu'
@@ -228,12 +228,12 @@ export default class extends Controller {
 
   appendChip(option) {
     let chip = this.htmlToElement(this.renderChip(option))
-    this.content.insertBefore(chip, this.input)
+    this.container.insertBefore(chip, this.input)
   }
 
   renderChip(option) {
     return `
-      <div class="chip" data-value="${option.value}" data-selector-target="chip">
+      <div class="chip chip--input" data-value="${option.value}" data-selector-target="chip">
         ${option.text}
         <div class="chip__action">
           <button type="button" class="button button--icon" data-action="selector#unselect">

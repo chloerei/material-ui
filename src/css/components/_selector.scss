@@ -1,15 +1,13 @@
 .selector {
-  padding: 4px;
   position: relative;
-
-  .chip {
-    margin: 4px;
-  }
+  padding: 8px 12px;
 }
 
-.selector__content {
+.selector__container {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .selector__select {
@@ -18,22 +16,33 @@
 
 .selector__text {
   font-size: 16px;
-  line-height: 1.5;
-  padding: 4px 0;
+  line-height: 20px;
+  padding: 6px 0;
+  margin-right: -8px;
 }
 
 .selector__input {
   border: none;
   outline: none;
   font-size: 16px;
-  padding: 4px;
-  margin: 4px;
-  line-height: 1.5;
+  line-height: 20px;
+  padding: 6px 0;
   flex-grow: 1;
+  background: transparent;
 }
 
 .selector__menu {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  z-index: 1;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  box-shadow: var(--shadow-1);
+  border-radius: 4px;
 }
 
 .selector--focus {
@@ -42,13 +51,6 @@
 
   .selector__menu {
     display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    z-index: 1;
-    background: white;
   }
 }
 
@@ -61,9 +63,77 @@
   text-align: left;
   outline: none;
   background: transparent;
+  cursor: pointer;
+
+  @include state-layer;
 }
 
 .selector__item:hover,
 .selector__item--focus {
   background: rgba(0, 0, 0, 0.05);
+}
+
+.selector--filled {
+  border-radius: 4px 4px 0 0;
+
+  // border
+  &::before {
+    content: "";
+    border-bottom: 1px solid var(--color-outline);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  // background
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-color: var(--color-primary);
+    opacity: var(--opacity-elevation-1);
+    z-index: -1;
+    border-radius: inherit;
+  }
+
+  &:hover::after {
+    opacity: var(--opacity-elevation-2);
+  }
+
+  &.selector--focus {
+    &::before {
+      border-bottom: 2px solid var(--color-primary);
+    }
+
+    &::after {
+      opacity: var(--opacity-elevation-3);
+    }
+
+    .text-field__label {
+      font-size: 12px;
+      top: 8px;
+      color: var(--color-primary);
+    }
+  }
+}
+
+.selector--outlined {
+  &::before {
+    content: "";
+    border: 1px solid var(--color-outline);
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  &.selector--focus {
+    &::before {
+      border: 2px solid var(--color-primary);
+    }
+  }
 }
