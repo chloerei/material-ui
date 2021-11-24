@@ -7,11 +7,12 @@ export default class extends Controller {
     maxItems: Number
   }
 
-  static targets = ["select", "chip", "item"]
+  static targets = ["chip", "item"]
 
   connect() {
     this.element[this.identifier] = this;
 
+    this.selectTarget = this.element.querySelector('select')
     this.multiple = this.selectTarget.multiple
 
     if (!this.multiple) {
@@ -208,8 +209,14 @@ export default class extends Controller {
     }
   }
 
+  // for single select, all option is visible
+  // for multiple select, ignore selected option
   filterOptions(input) {
-    return this.options.filter(option => !option.selected &&  option.text.toLowerCase().includes(input.toLowerCase()))
+    if (this.multiple) {
+      return this.options.filter(option => !option.selected &&  option.text.toLowerCase().includes(input.toLowerCase()))
+    } else {
+      return this.options.filter(option => option.text.toLowerCase().includes(input.toLowerCase()))
+    }
   }
 
   htmlToElement(html) {
@@ -271,8 +278,13 @@ export default class extends Controller {
     let option = this.computedOptions.find(option => option.value == item.dataset.value)
     this.addSelected(option)
     this.input.value = ''
-    this.input.focus()
-    this.renderMenu()
+    if (this.multiple) {
+      this.input.focus()
+      this.renderMenu()
+    } else {
+      this.input.blur()
+      this.blur()
+    }
   }
 
   hasSelected(option) {

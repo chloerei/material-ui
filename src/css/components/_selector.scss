@@ -1,6 +1,10 @@
 .selector {
   position: relative;
   padding: 8px 12px;
+
+  select {
+    display: none;
+  }
 }
 
 .selector__container {
@@ -8,10 +12,6 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 8px;
-}
-
-.selector__select {
-  display: none;
 }
 
 .selector__text {
