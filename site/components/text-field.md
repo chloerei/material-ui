@@ -11,7 +11,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 {% example %}
 <div class="text-field text-field--filled">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
   <div class="text-field__helper-text">
@@ -23,7 +23,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--filled text-field--error">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
   <div class="text-field__helper-text">
@@ -38,7 +38,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
     <div class="text-field__leading-icon">
       <span class="material-icons">edit</span>
     </div>
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
 </div>
@@ -47,7 +47,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--filled text-field--with-trailing-icon">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <div class="text-field__trailing-icon">
       <span class="material-icons">edit</span>
     </div>
@@ -62,7 +62,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
     <label class="text-field__prefix-text">
       $
     </label>
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
 </div>
@@ -71,7 +71,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--filled text-field--with-suffix-text">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" " class="text-align-right">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" " class="text-align-right">
     <label class="text-field__suffix-text">
       @example.com
     </label>
@@ -83,7 +83,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--filled">
   <div class="text-field__container">
-    <textarea placeholder=" " rows="4"></textarea>
+    <textarea class="text-field__input" placeholder=" " rows="4"></textarea>
     <label class="text-field__label">Textarea</label>
   </div>
 </div>
@@ -94,7 +94,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 {% example %}
 <div class="text-field text-field--outlined">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
   <div class="text-field__helper-text">
@@ -106,7 +106,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--outlined text-field--error">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
   <div class="text-field__helper-text">
@@ -121,7 +121,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
     <div class="text-field__leading-icon">
       <span class="material-icons">edit</span>
     </div>
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
 </div>
@@ -130,7 +130,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--outlined text-field--with-trailing-icon">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <div class="text-field__trailing-icon">
       <span class="material-icons">edit</span>
     </div>
@@ -145,7 +145,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
     <label class="text-field__prefix-text">
       $
     </label>
-    <input type="text" name="" value="" placeholder=" ">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
     <label class="text-field__label">Label</label>
   </div>
   <div class="text-field__helper-text">
@@ -157,7 +157,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--outlined text-field--with-suffix-text">
   <div class="text-field__container">
-    <input type="text" name="" value="" placeholder=" " class="text-align-right">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" " class="text-align-right">
     <label class="text-field__suffix-text">
       @example.com
     </label>
@@ -172,7 +172,7 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
 
 <div class="text-field text-field--outlined">
   <div class="text-field__container">
-    <textarea placeholder=" " rows="4"></textarea>
+    <textarea class="text-field__input" placeholder=" " rows="4"></textarea>
     <label class="text-field__label">Textarea</label>
   </div>
 </div>

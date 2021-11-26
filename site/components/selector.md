@@ -7,7 +7,7 @@ title: Selector
 ## Signle
 
 {% example %}
-<div class="selector selector--filled" data-controller="selector" data-selector-placeholder-value="Select Tag">
+<div class="selector" data-controller="selector">
   <select>
     <option value="Ruby">Ruby</option>
     <option value="Python">Python</option>
@@ -21,7 +21,7 @@ title: Selector
 ## Single with creatable
 
 {% example %}
-<div class="selector selector--filled" data-controller="selector" data-selector-placeholder-value="Tag..." data-selector-creatable-value="true">
+<div class="selector" data-controller="selector" data-selector-creatable-value="true">
   <select>
     <option value="Ruby" selected>Ruby</option>
     <option value="Python">Python</option>
@@ -35,7 +35,7 @@ title: Selector
 ## Multiple with creatable
 
 {% example %}
-<div class="selector selector--filled" data-controller="selector" data-selector-placeholder-value="Tag..." data-selector-creatable-value="true" data-selector-max-items-value="5">
+<div class="selector selector--filled" data-controller="selector" data-selector-creatable-value="true" data-selector-max-items-value="5">
   <select multiple>
     <option value="Ruby" selected>Ruby</option>
     <option value="Python" selected>Python</option>
@@ -51,27 +51,43 @@ title: Selector
 ### Filled
 
 {% example %}
-<div class="selector selector--filled" data-controller="selector" data-selector-placeholder-value="Tag..." data-selector-creatable-value="true" data-selector-max-items-value="5">
-  <select multiple>
-    <option value="Ruby" selected>Ruby</option>
-    <option value="Python" selected>Python</option>
-    <option value="JavaScript">JavaScript</option>
-    <option value="CSS">CSS</option>
-    <option value="HTML">HTML</option>
-  </select>
+<div class="text-field text-field--filled">
+  <div class="text-field__container">
+    <div class="selector text-field__input" data-controller="selector" data-selector-placeholder-value="Tag..." data-selector-creatable-value="true" data-selector-max-items-value="5">
+      <select multiple>
+        <option value="Ruby" selected>Ruby</option>
+        <option value="Python" selected>Python</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="CSS">CSS</option>
+        <option value="HTML">HTML</option>
+      </select>
+    </div>
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    Helper text.
+  </div>
 </div>
 {% endexample %}
 
 ### Outlined
 
 {% example %}
-<div class="selector selector--outlined" data-controller="selector" data-selector-placeholder-value="Tag..." data-selector-creatable-value="true" data-selector-max-items-value="5">
-  <select multiple>
-    <option value="Ruby" selected>Ruby</option>
-    <option value="Python" selected>Python</option>
-    <option value="JavaScript">JavaScript</option>
-    <option value="CSS">CSS</option>
-    <option value="HTML">HTML</option>
-  </select>
+<div class="text-field text-field--outlined">
+  <div class="text-field__container">
+    <div class="selector text-field__input" data-controller="selector" data-selector-placeholder-value="Tag..." data-selector-creatable-value="true" data-selector-max-items-value="5">
+      <select multiple>
+        <option value="Ruby" selected>Ruby</option>
+        <option value="Python" selected>Python</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="CSS">CSS</option>
+        <option value="HTML">HTML</option>
+      </select>
+    </div>
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    Helper text.
+  </div>
 </div>
 {% endexample %}

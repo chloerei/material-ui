@@ -1,6 +1,6 @@
 .selector {
   position: relative;
-  padding: 8px 12px;
+  padding: 8px 16px;
 
   select {
     display: none;
@@ -57,7 +57,7 @@
 
 .selector__item {
   border: none;
-  padding: 8px 12px;
+  padding: 8px 16px;
   line-height: 24px;
   font-size: 16px;
   text-align: left;
@@ -73,67 +73,8 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
-.selector--filled {
-  border-radius: 4px 4px 0 0;
-
-  // border
-  &::before {
-    content: "";
-    border-bottom: 1px solid var(--color-outline);
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  // background
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background-color: var(--color-primary);
-    opacity: var(--opacity-elevation-1);
-    z-index: -1;
-    border-radius: inherit;
-  }
-
-  &:hover::after {
-    opacity: var(--opacity-elevation-2);
-  }
-
-  &.selector--focus {
-    &::before {
-      border-bottom: 2px solid var(--color-primary);
-    }
-
-    &::after {
-      opacity: var(--opacity-elevation-3);
-    }
-
-    .text-field__label {
-      font-size: 12px;
-      top: 8px;
-      color: var(--color-primary);
-    }
-  }
-}
-
-.selector--outlined {
-  &::before {
-    content: "";
-    border: 1px solid var(--color-outline);
-    border-radius: 4px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-  }
-
-  &.selector--focus {
-    &::before {
-      border: 2px solid var(--color-primary);
-    }
+.text-field--filled {
+  .selector__container {
+    padding-top: 4px;
   }
 }
