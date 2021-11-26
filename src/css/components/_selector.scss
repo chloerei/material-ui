@@ -1,6 +1,7 @@
 .selector {
   position: relative;
   padding: 8px 16px;
+  flex-grow: 1;
 
   select {
     display: none;

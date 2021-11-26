@@ -48,7 +48,8 @@ title: Selector
 
 ## Style
 
-### Filled
+
+### Filled Text Field
 
 {% example %}
 <div class="text-field text-field--filled">
@@ -70,7 +71,7 @@ title: Selector
 </div>
 {% endexample %}
 
-### Outlined
+### Outlined Text Field
 
 {% example %}
 <div class="text-field text-field--outlined">
@@ -88,6 +89,23 @@ title: Selector
   </div>
   <div class="text-field__helper-text">
     Helper text.
+  </div>
+</div>
+{% endexample %}
+
+### Custom
+
+{% example %}
+<div class="display-flex align-items-center border-top border-bottom">
+  <label>Label</label>
+  <div class="selector" data-controller="selector" data-selector-creatable-value="true" data-selector-max-items-value="5">
+    <select multiple>
+      <option value="Ruby" selected>Ruby</option>
+      <option value="Python" selected>Python</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="CSS">CSS</option>
+      <option value="HTML">HTML</option>
+    </select>
   </div>
 </div>
 {% endexample %}
