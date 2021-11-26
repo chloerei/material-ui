@@ -74,6 +74,26 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
+.text-field {
+  .selector__container {
+    position: relative;
+    padding-right: 24px;
+
+    &::after {
+      content: '';
+      width: 12px;
+      height: 6px;
+      background-color: var(--color-on-surface-variant);
+      clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -3px;
+      pointer-events: none;
+    }
+  }
+}
+
 .text-field--filled {
   .selector__container {
     padding-top: 4px;
