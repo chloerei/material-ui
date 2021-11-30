@@ -245,7 +245,7 @@ export default class extends Controller {
 
   renderItem(option) {
     return `
-      <div class="selector__item" data-value="${option.value}" data-selector-target="item" data-action="click->selector#select">
+      <div class="selector__item ${option.selected ? 'selector__item--active' : ''}" data-value="${option.value}" data-selector-target="item" data-action="click->selector#select">
         ${ option.create ? `Add ${option.text}...` : option.text }
       </div>
     `

@@ -67,11 +67,22 @@
   cursor: pointer;
 
   @include state-layer;
+
+  &::after {
+    background-color: var(--color-primary);
+  }
 }
 
-.selector__item:hover,
 .selector__item--focus {
-  background: rgba(0, 0, 0, 0.05);
+  &::after {
+    opacity: var(--state-hover-opacity);
+  }
+}
+
+.selector__item--active {
+  &::after {
+    opacity: var(--state-press-opacity);
+  }
 }
 
 .text-field {
