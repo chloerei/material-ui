@@ -79,6 +79,14 @@ export default class extends Controller {
     this.blur()
     this.container.remove()
     this.menu.remove()
+
+    // restore unselect option for next time connect
+    this.options.forEach((option) => {
+      let dom = document.createElement('option')
+      dom.value = option.value
+      dom.text = option.text
+      this.selectTarget.appendChild(dom)
+    })
   }
 
   maxItemsLimit() {
