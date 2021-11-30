@@ -75,13 +75,7 @@
 
 .selector__item--focus {
   &::after {
-    opacity: var(--state-hover-opacity);
-  }
-}
-
-.selector__item--active {
-  &::after {
-    opacity: var(--state-press-opacity);
+    opacity: var(--state-focus-opacity);
   }
 }
 

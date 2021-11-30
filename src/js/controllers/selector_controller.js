@@ -82,10 +82,7 @@ export default class extends Controller {
 
     // restore unselect option for next time connect
     this.options.forEach((option) => {
-      let dom = document.createElement('option')
-      dom.value = option.value
-      dom.text = option.text
-      this.selectTarget.appendChild(dom)
+      this.addOptionDom(option)
     })
   }
 
@@ -129,11 +126,21 @@ export default class extends Controller {
         this.menu.appendChild(dom)
       })
 
+      // reset focus
       if (this.computedOptions.length > 0) {
-        if (createOption && this.computedOptions.length > 1) {
-          this.focusItem(1)
+        if (this.multiple) {
+          if (createOption && this.computedOptions.length > 1) {
+            this.focusItem(1)
+          } else {
+            this.focusItem(0)
+          }
         } else {
-          this.focusItem(0)
+          let selectedIndex = this.computedOptions.findIndex(option => option.selected)
+          if (selectedIndex != -1) {
+            this.focusItem(selectedIndex)
+          } else {
+            this.focusItem(0)
+          }
         }
       }
     }
@@ -180,8 +187,6 @@ export default class extends Controller {
     if (this.computedOptions.length) {
       let focusOption = this.computedOptions[this.focusIndex]
       this.addSelected(focusOption)
-      this.input.value = ''
-      this.renderMenu()
     }
   }
 
@@ -245,7 +250,7 @@ export default class extends Controller {
 
   renderItem(option) {
     return `
-      <div class="selector__item ${option.selected ? 'selector__item--active' : ''}" data-value="${option.value}" data-selector-target="item" data-action="click->selector#select">
+      <div class="selector__item" data-value="${option.value}" data-selector-target="item" data-action="click->selector#select">
         ${ option.create ? `Add ${option.text}...` : option.text }
       </div>
     `
@@ -295,14 +300,6 @@ export default class extends Controller {
     let item = event.currentTarget
     let option = this.computedOptions.find(option => option.value == item.dataset.value)
     this.addSelected(option)
-    this.input.value = ''
-    if (this.multiple) {
-      this.input.focus()
-      this.renderMenu()
-    } else {
-      this.input.blur()
-      this.blur()
-    }
   }
 
   hasSelected(option) {
@@ -310,34 +307,44 @@ export default class extends Controller {
   }
 
   addSelected(option) {
-    if (!this.hasSelected(option)) {
+    if (!option.selected) {
+      option.selected = true
+
       if (this.multiple) {
-        this.addSelectedOption(option)
+        this.addOptionDom(option)
         this.appendChip(option)
       } else {
         this.selectTarget.innerHTML = ''
-        this.addSelectedOption(option)
+        this.addOptionDom(option)
         this.text.textContent = option.text
-      }
-      this.setPlaceholder()
 
-      this.options.forEach((storeOption) => {
-        if (storeOption.value == option.value) {
-          storeOption.selected = true
-        } else if (!this.multiple) {
-          storeOption.selected = false
-        }
-      })
+        this.options.forEach((otherOption) => {
+          if (otherOption != option) {
+            otherOption.selected = false
+          }
+        })
+      }
+
+      this.setPlaceholder()
 
       this.selectTarget.dispatchEvent(new Event('change', { bubbles: true }))
     }
+
+    this.input.value = ''
+    this.renderMenu()
+    if (this.multiple) {
+      this.input.focus()
+    } else {
+      this.input.blur()
+      this.blur()
+    }
   }
 
-  addSelectedOption(option) {
+  addOptionDom(option) {
     let dom = document.createElement('option')
     dom.value = option.value
     dom.text = option.text
-    dom.setAttribute('selected', '')
+    dom.setAttribute('selected', option.selected)
     this.selectTarget.appendChild(dom)
   }
 
