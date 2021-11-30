@@ -87,6 +87,19 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
     <label class="text-field__label">Textarea</label>
   </div>
 </div>
+
+<br>
+
+<div class="text-field text-field--filled">
+  <div class="text-field__container">
+    <select class="text-field__input">
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+    <label class="text-field__label">Select</label>
+  </div>
+</div>
 {% endexample %}
 
 ## Outlined
@@ -174,6 +187,19 @@ In order to work with floating label, `placeholder=" "` attribute must be set in
   <div class="text-field__container">
     <textarea class="text-field__input" placeholder=" " rows="4"></textarea>
     <label class="text-field__label">Textarea</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined">
+  <div class="text-field__container">
+    <select class="text-field__input">
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+    <label class="text-field__label">Select</label>
   </div>
 </div>
 {% endexample %}
