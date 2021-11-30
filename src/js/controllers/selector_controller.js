@@ -302,10 +302,6 @@ export default class extends Controller {
     this.addSelected(option)
   }
 
-  hasSelected(option) {
-    return Array.from(this.selectTarget.options).some(item => item.value == option.value)
-  }
-
   addSelected(option) {
     if (!option.selected) {
       option.selected = true

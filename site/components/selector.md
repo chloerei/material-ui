@@ -4,6 +4,8 @@ title: Selector
 
 # Selector
 
+Selector is a JavaScript component, support options filter and chip style value display.
+
 ## Signle
 
 {% example %}
@@ -18,7 +20,7 @@ title: Selector
 </div>
 {% endexample %}
 
-## Single with creatable
+## Creatable
 
 {% example %}
 <div class="selector" data-controller="selector" data-selector-creatable-value="true">
@@ -32,10 +34,10 @@ title: Selector
 </div>
 {% endexample %}
 
-## Multiple with creatable
+## Multiple
 
 {% example %}
-<div class="selector selector--filled" data-controller="selector" data-selector-creatable-value="true" data-selector-max-items-value="5">
+<div class="selector selector--filled" data-controller="selector" data-selector-max-items-value="3">
   <select multiple>
     <option value="Ruby" selected>Ruby</option>
     <option value="Python" selected>Python</option>
@@ -46,8 +48,23 @@ title: Selector
 </div>
 {% endexample %}
 
+## Placeholder
+
+{% example %}
+<div class="selector selector--filled" data-controller="selector" data-selector-placeholder-value="Add tag...">
+  <select multiple>
+    <option value="Ruby">Ruby</option>
+    <option value="Python">Python</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="CSS">CSS</option>
+    <option value="HTML">HTML</option>
+  </select>
+</div>
+{% endexample %}
+
 ## Style
 
+Selector can be used as text-field input.
 
 ### Filled Text Field
 
@@ -96,7 +113,7 @@ title: Selector
 ### Custom
 
 {% example %}
-<div class="display-flex align-items-center border-top border-bottom">
+<div class="display-flex padding-x-3 align-items-center border-top border-bottom">
   <label>Label</label>
   <div class="selector" data-controller="selector" data-selector-creatable-value="true" data-selector-max-items-value="5">
     <select multiple>
