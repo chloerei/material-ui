@@ -55,7 +55,11 @@ export default class extends Controller {
         }
       })
     } else {
-      this.text.textContent = this.selectTarget.value
+      this.options.forEach((option) => {
+        if (option.selected) {
+          this.text.textContent = option.text
+        }
+      })
     }
 
     this.renderMenu()
@@ -69,6 +73,12 @@ export default class extends Controller {
         this.blur()
       }
     }
+  }
+
+  disconnect() {
+    this.blur()
+    this.container.remove()
+    this.menu.remove()
   }
 
   maxItemsLimit() {
