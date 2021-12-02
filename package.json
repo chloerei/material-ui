@@ -1,6 +1,6 @@
 {
   "name": "@chloerei/material-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A Material Design front-end component library.",
   "main": "dist/js/material-ui.js",
   "style": "dist/css/material-ui.css",
