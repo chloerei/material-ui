@@ -5,6 +5,8 @@ title: Typography
 
 # Typography
 
+## Type
+
 {% example %}
 <div class="display-large">
   Display Large

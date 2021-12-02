@@ -41,6 +41,13 @@
   margin: 8px;
 }
 
+*:not(pre) code {
+  padding: 0 4px;
+  color: #333;
+  background: #f8f8f8;
+  border-radius: 2px;
+}
+
 .example + pre {
   margin-top: 0;
 }
