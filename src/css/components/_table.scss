@@ -3,10 +3,6 @@
   border-spacing: 0;
   overflow: auto;
 
-  tbody tr:hover {
-    background: rgba(0, 0, 0, 0.05);
-  }
-
   th,
   td {
     padding: 12px 16px;
@@ -15,14 +11,6 @@
     text-align: left;
     border-bottom: 1px solid var(--color-outline);
     white-space: nowrap;
-
-    &.text-align-right {
-      text-align: right;
-    }
-
-    &.table__cell--action {
-      padding: 6px 10px;
-    }
   }
 
   tbody tr:last-child {
@@ -32,33 +20,6 @@
   }
 
   th {
-    color: var(--color-on-background);
     font-weight: bold;
   }
-}
-
-.table--sticky-header {
-  position: relative;
-
-  thead th {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: white;
-  }
-}
-
-.table--flex {
-  tr {
-    display: flex;
-    position: relative;
-  }
-}
-
-.table__row-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
