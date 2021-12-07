@@ -1,190 +1,41 @@
 ---
-layout: base
-title: Dashboard
+layout: dashboard
+title: Posts
 ---
 
-<div class="navigation-wrapper">
-  <div class="navigation">
-    <a href="#" class="navigation__action navigation__action--active">
-      <div class="navigation__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 6h-1v8c0 .55-.45 1-1 1H6v1c0 1.1.9 2 2 2h10l4 4V8c0-1.1-.9-2-2-2zm-3 5V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v13l4-4h9c1.1 0 2-.9 2-2z"/></svg>
-      </div>
-      <div class="navigation__label">
-        Forum
-      </div>
-    </a>
-    <a href="#" class="navigation__action">
-      <div class="navigation__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 9h10c.55 0 1 .45 1 1s-.45 1-1 1H7c-.55 0-1-.45-1-1s.45-1 1-1zm6 5H7c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1zm4-6H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
-      </div>
-      <div class="navigation__label">
-        Chat
-      </div>
-    </a>
-    <a href="#" class="navigation__action">
-      <div class="navigation__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
-      </div>
-      <div class="navigation__label">
-        Email
-      </div>
+<div class="top-app-bar top-app-bar--sticky-top">
+  <div class="top-app-bar__action display-none@laptop">
+    <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer" data-toggle-action="navigation-drawer#toggle">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <div class="top-app-bar__title">
+    Posts
+  </div>
+  <div class="top-app-bar__action">
+    <a href="./dashboard/new.html" class="button button--filled">
+      New Post
     </a>
   </div>
+</div>
 
-  <div class="drawer-wrapper">
-    <div class="drawer">
-      <div class="drawer__container">
-        <div class="drawer__menu">
-          <a href="#" class="drawer__item drawer__item--active">
-            <div class="drawer__item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M13,17H8c-0.55,0-1-0.45-1-1 c0-0.55,0.45-1,1-1h5c0.55,0,1,0.45,1,1C14,16.55,13.55,17,13,17z M16,13H8c-0.55,0-1-0.45-1-1c0-0.55,0.45-1,1-1h8 c0.55,0,1,0.45,1,1C17,12.55,16.55,13,16,13z M16,9H8C7.45,9,7,8.55,7,8c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1 C17,8.55,16.55,9,16,9z"/></g></svg>
-            </div>
-            <div class="drawer__item__label">
-              Topics
-            </div>
-          </a>
-          <a href="#" class="drawer__item">
-            <div class="drawer__item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM17 14H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-3H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-3H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
-            </div>
-            Comments
-          </a>
-          <a href="#" class="drawer__item">
-            <div class="drawer__item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V18c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-1.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05.02.01.03.03.04.04 1.14.83 1.93 1.94 1.93 3.41V18c0 .35-.07.69-.18 1H22c.55 0 1-.45 1-1v-1.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-            </div>
-            <div class="drawer__item__label">
-              Users
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="top-app-bar-wrapper">
-      <div class="top-app-bar">
-        <div class="toolbar">
-          <div class="toolbar__title">
-            Topics
-          </div>
-          <div class="toolbar__action">
-            <button type="button" class="button button--icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
-            </button>
-          </div>
-          <div class="toolbar__action">
-            <button type="button" class="button button--icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11 18h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1zm4 6h10c.55 0 1-.45 1-1s-.45-1-1-1H7c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-            </button>
-          </div>
-          <div class="toolbar__action">
-            <div class="dropdown" data-controller="dropdown">
-              <button type="button" class="button button--icon" data-action="dropdown#toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
-              </button>
-              <div class="dropdown__menu dropdown__menu--top-right">
-                <a href="#" class="dropdown__item">
-                  Archives
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="flex-grow-1 overflow-auto">
-        <table class="table table--sticky-header">
-          <thead>
-            <tr class="flex position-relative">
-              <th class="table__cell--action">
-                <label class="button button--icon">
-                  <input type="checkbox">
-                </label>
-              </th>
-              <th>ID</th>
-              <th class="flex-grow-1">Title</th>
-              <th class="text-align-right">Comments</th>
-              <th class="text-align-right">Created At</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for(var i = 0; i < 20; i++) { %>
-              <tr class="flex position-relative">
-                <td class="table__cell--action">
-                  <a href="./dashboard/detail.html" class="table__row-link"></a>
-                  <label class="button button--icon">
-                    <input type="checkbox">
-                  </label>
-                </td>
-                <td><%= i %></td>
-                <td class="flex-grow-1">
-                  <%= lorem_words(10) %>
-                </td>
-                <td class="text-align-right"><%= lorem_number() %></td>
-                <td class="text-align-right">2020-01-01</td>
-              </tr>
-            <% } %>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="border-top">
-        <div class="toolbar">
-          <div class="toolbar__space">
-          </div>
-          <div class="toolbar__action">
-            <div class="pagination">
-              <div class="pagination__info">
-                1-20 of 100
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M24 0v24H0V0h24z" fill="none" opacity=".87"/><path d="M17.7 15.89L13.82 12l3.89-3.89c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0l-4.59 4.59c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .38-.38.38-1.02-.01-1.4zM7 6c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1s-1-.45-1-1V7c0-.55.45-1 1-1z"/></svg>
-                </button>
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"/></svg>
-                </button>
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon button--active">
-                  1
-                </button>
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon">
-                  2
-                </button>
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon">
-                  3
-                </button>
-              </div>
-              <div class="pagination__ellipsis">
-                ...
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon">
-                  10
-                </button>
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
-                </button>
-              </div>
-              <div class="pagination__item">
-                <button type="button" class="button button--icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M6.29 8.11L10.18 12l-3.89 3.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L7.7 6.7c-.39-.39-1.02-.39-1.41 0-.38.39-.38 1.03 0 1.41zM17 6c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1s-1-.45-1-1V7c0-.55.45-1 1-1z"/></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="padding-3">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i = 0; i < 20; i++) { %>
+        <tr>
+          <td><%= lorem_words(6) %></td>
+          <td><%= lorem_words(1) %></td>
+          <td>12-01 12:00</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
 </div>

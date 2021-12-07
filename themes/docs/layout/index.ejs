@@ -24,7 +24,7 @@
             Home
           </a>
 
-          <% ['introduction', 'installation', 'typography', 'color'].forEach(function(name) { %>
+          <% ['introduction', 'installation', 'typography', 'color', 'examples'].forEach(function(name) { %>
             <% itemPath = name + '.html'  %>
             <a href="/<%= itemPath %>" class="navigation-drawer__item <%= page.path == itemPath ? 'navigation-drawer__item--active' : '' %>">
               <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
@@ -76,7 +76,7 @@
         <div class="top-app-bar top-app-bar--sticky-top display-none@laptop">
           <div class="top-app-bar__action">
             <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer" data-toggle-action="navigation-drawer#toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+              <span class="material-icons">menu</span>
             </button>
           </div>
           <div class="top-app-bar__title">
