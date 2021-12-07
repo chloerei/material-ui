@@ -7,9 +7,11 @@ title: Introduction
 
 ## Material Design
 
-Material UI is based on Material Design, which is a well-designed design specification applicable to a variety of devices.
+Material UI is based on Material Design, which is a well-designed design specification applicable for multiple devices.
 
 You can read the Material Design specifications here: https://material.io/ .
+
+Current Material UI follows Material Design V3.
 
 ## CSS
 
@@ -29,7 +31,7 @@ You can learn more about BEM rules from here: http://getbem.com/ .
 
 Material UI requires JavaScript to implement some interactive operations, such as dropdown, dialog.
 
-It depends on the [Stimulus](https://stimulusjs.org/) framework, which is a front-end framework that is friendly to server rendering. This framework provides a good API for the component, taking over its life cycle, without worrying about how the component is initialized.
+It depends on the [Stimulus](https://stimulusjs.org/) framework, which is a front-end framework friendly with server rendering.
 
 A typical stimulus component is as follows:
 

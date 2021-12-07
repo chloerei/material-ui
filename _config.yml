@@ -6,6 +6,7 @@ keywords:
 author: Rei
 language: en
 timezone: ''
+version: 0.0.9
 
 highlight:
   line_number: false

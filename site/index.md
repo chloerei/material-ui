@@ -13,3 +13,28 @@ Material UI is a Material Design front-end component library. It provides UI com
 <a class="button button--outlined" href="https://github.com/chloerei/material-ui">
   GitHub
 </a>
+
+## Starter Template
+
+Save this content to HTML file and start play with Material UI.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material UI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.9/dist/material-ui.css">
+    <script type="module">
+      import { init } from 'https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.9/dist/material-ui.bundle.js'
+      init()
+    </script>
+  </head>
+  <body>
+    <h1 class="headline-large">Hello World</h1>
+  </body>
+</html>
+```
+
+See [Installation](/installation.html) for more install options.
