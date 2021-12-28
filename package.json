@@ -6,7 +6,7 @@
   "style": "dist/css/material-ui.css",
   "scripts": {
     "build": "npm run build:js & npm run build:js-bundle & npm run build:css",
-    "build:js": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.js --format=esm --bundle --external:stimulus",
+    "build:js": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.js --format=esm --bundle --external:@hotwired/stimulus",
     "build:js-bundle": "npx esbuild src/js/material-ui.js --outfile=dist/material-ui.bundle.js --format=esm --bundle",
     "build:css": "npx sass src/css/material-ui.scss dist/material-ui.css --no-source-map"
   },
