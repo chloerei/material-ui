@@ -37,7 +37,7 @@ import { init } from "@chloerei/material-ui/dist/material-ui.bundle.js"
 init()
 
 // or if you are using Stimulus in your application
-import { Application } from "stimulus"
+import { Application } from "@hotwired/stimulus"
 const application = Application.start()
 import { init } from "@chloerei/material-ui/dist/material-ui.js"
 init(application)

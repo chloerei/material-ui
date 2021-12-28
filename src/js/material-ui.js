@@ -1,4 +1,4 @@
-import { Application } from 'stimulus'
+import { Application } from '@hotwired/stimulus'
 import DialogController from './controllers/dialog_controller'
 import NavigationDrawerController from './controllers/navigation_drawer_controller'
 import DropdownController from './controllers/dropdown_controller'
