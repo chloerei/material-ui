@@ -1,10 +1,11 @@
 @use "sass:color";
 
-@mixin color-scheme(
+@mixin light-scheme (
   $primary: 0,
   $secondary: 0,
   $tertiary: 0,
   $neutral: 0,
+  $neutral-variant: 0,
   $error: 0
 ) {
   @if $primary != 0 {
@@ -43,55 +44,117 @@
     --color-surface-variant: #{color.change($neutral, $lightness: 90%)};
     --color-on-surface-variant: #{color.change($neutral, $lightness: 30%)};
     --color-outline: #{color.change($neutral, $lightness: 50%)};
+
+    --color-disabled: #{color.change($neutral, $alpha: 0.12)};
+    --color-on-disabled: #{color.change($neutral, $alpha: 0.38)};
   }
 
-  &.dark-theme {
-    @if $primary != 0 {
-      --color-primary: #{color.change($primary, $lightness: 80%)};
-      --color-on-primary: #{color.change($primary, $lightness: 20%)};
-      --color-primary-container: #{color.change($primary, $lightness: 30%)};
-      --color-on-primary-container: #{color.change($primary, $lightness: 90%)};
-    }
-
-    @if $secondary != 0 {
-      --color-secondary: #{color.change($secondary, $lightness: 80%)};
-      --color-on-secondary: #{color.change($secondary, $lightness: 20%)};
-      --color-secondary-container: #{color.change($secondary, $lightness: 30%)};
-      --color-on-secondary-container: #{color.change($secondary, $lightness: 90%)};
-    }
-
-    @if $tertiary != 0 {
-      --color-tertiary: #{color.change($tertiary, $lightness: 80%)};
-      --color-on-tertiary: #{color.change($tertiary, $lightness: 20%)};
-      --color-tertiary-container: #{color.change($tertiary, $lightness: 30%)};
-      --color-on-tertiary-container: #{color.change($tertiary, $lightness: 90%)};
-    }
-
-    @if $error != 0 {
-      --color-error: #{color.change($error, $lightness: 80%)};
-      --color-on-error: #{color.change($error, $lightness: 20%)};
-      --color-error-container: #{color.change($error, $lightness: 30%)};
-      --color-on-error-container: #{color.change($error, $lightness: 90%)};
-    }
-
-    @if $neutral != 0 {
-      --color-background: #{color.change($neutral, $lightness: 10%)};
-      --color-on-background: #{color.change($neutral, $lightness: 90%)};
-      --color-surface: #{color.change($neutral, $lightness: 10%)};
-      --color-on-surface: #{color.change($neutral, $lightness: 90%)};
-      --color-surface-variant: #{color.change($neutral, $lightness: 30%)};
-      --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
-      --color-outline: #{color.change($neutral, $lightness: 60%)};
-    }
+  @if $neutral-variant != 0 {
+    --color-surface-variant: #{color.change($neutral-variant, $lightness: 90%)};
+    --color-on-surface-variant: #{color.change($neutral-variant, $lightness: 30%)};
+    --color-outline: #{color.change($neutral-variant, $lightness: 50%)};
   }
 }
 
-.custom-theme {
-  @include color-scheme(
-    $primary: #3A691E,
-    $secondary: #56624D,
-    $tertiary: #1E686A,
-    $neutral: #596B86,
-    $error: #B12825
-  );
+@mixin dark-scheme (
+  $primary: 0,
+  $secondary: 0,
+  $tertiary: 0,
+  $neutral: 0,
+  $neutral-variant: 0,
+  $error: 0
+) {
+  @if $primary != 0 {
+    --color-primary: #{color.change($primary, $lightness: 80%)};
+    --color-on-primary: #{color.change($primary, $lightness: 20%)};
+    --color-primary-container: #{color.change($primary, $lightness: 30%)};
+    --color-on-primary-container: #{color.change($primary, $lightness: 90%)};
+  }
+
+  @if $secondary != 0 {
+    --color-secondary: #{color.change($secondary, $lightness: 80%)};
+    --color-on-secondary: #{color.change($secondary, $lightness: 20%)};
+    --color-secondary-container: #{color.change($secondary, $lightness: 30%)};
+    --color-on-secondary-container: #{color.change($secondary, $lightness: 90%)};
+  }
+
+  @if $tertiary != 0 {
+    --color-tertiary: #{color.change($tertiary, $lightness: 80%)};
+    --color-on-tertiary: #{color.change($tertiary, $lightness: 20%)};
+    --color-tertiary-container: #{color.change($tertiary, $lightness: 30%)};
+    --color-on-tertiary-container: #{color.change($tertiary, $lightness: 90%)};
+  }
+
+  @if $error != 0 {
+    --color-error: #{color.change($error, $lightness: 80%)};
+    --color-on-error: #{color.change($error, $lightness: 20%)};
+    --color-error-container: #{color.change($error, $lightness: 30%)};
+    --color-on-error-container: #{color.change($error, $lightness: 90%)};
+  }
+
+  @if $neutral != 0 {
+    --color-background: #{color.change($neutral, $lightness: 10%)};
+    --color-on-background: #{color.change($neutral, $lightness: 90%)};
+    --color-surface: #{color.change($neutral, $lightness: 10%)};
+    --color-on-surface: #{color.change($neutral, $lightness: 90%)};
+  }
+
+  @if $neutral-variant != 0 {
+    --color-surface-variant: #{color.change($neutral, $lightness: 30%)};
+    --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
+    --color-outline: #{color.change($neutral, $lightness: 60%)};
+  }
+}
+
+@mixin color-scheme (
+  $primary: 0,
+  $secondary: 0,
+  $tertiary: 0,
+  $neutral: 0,
+  $neutral-variant: 0,
+  $error: 0
+) {
+  @media (prefers-color-scheme: light) {
+    @include light-scheme(
+      $primary,
+      $secondary,
+      $tertiary,
+      $neutral,
+      $neutral-variant,
+      $error
+    )
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-scheme(
+      $primary,
+      $secondary,
+      $tertiary,
+      $neutral,
+      $neutral-variant,
+      $error
+    )
+  }
+
+  .light-scheme {
+    @include light-scheme(
+      $primary,
+      $secondary,
+      $tertiary,
+      $neutral,
+      $neutral-variant,
+      $error
+    )
+  }
+
+  .dark-scheme {
+    @include dark-scheme(
+      $primary,
+      $secondary,
+      $tertiary,
+      $neutral,
+      $neutral-variant,
+      $error
+    )
+  }
 }
