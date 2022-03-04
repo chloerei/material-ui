@@ -226,8 +226,8 @@
     font-size: 16px;
     line-height: 1;
     transition: top 0.15s, left 0.15s;
-    color: var(--color-on-background);
-    background: white;
+    color: var(--color-on-surface);
+    background: var(--color-surface);
     z-index: 1;
   }
 
