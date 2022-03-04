@@ -50,5 +50,5 @@ a.card--filled {
 .card--outlined {
   color: var(--color-on-surface);
   background-color: var(--color-surface);
-  outline: 1px solid var(--color-outline);
+  box-shadow: 0 0 0 1px var(--color-outline);
 }
