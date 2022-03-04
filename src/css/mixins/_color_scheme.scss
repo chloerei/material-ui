@@ -41,9 +41,10 @@
     --color-on-background: #{color.change($neutral, $lightness: 10%)};
     --color-surface: #{color.change($neutral, $lightness: 99%)};
     --color-on-surface: #{color.change($neutral, $lightness: 10%)};
-    --color-surface-variant: #{color.change($neutral, $lightness: 90%)};
-    --color-on-surface-variant: #{color.change($neutral, $lightness: 30%)};
-    --color-outline: #{color.change($neutral, $lightness: 50%)};
+
+    --color-inverse-surface: #{color.change($neutral, $lightness: 20%)};
+    --color-on-inverse-surface: #{color.change($neutral, $lightness: 95%)};
+    --color-inverse-primary: #{color.change($primary, $lightness: 80%)};
 
     --color-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.12)};
     --color-on-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.38)};
@@ -97,6 +98,13 @@
     --color-on-background: #{color.change($neutral, $lightness: 90%)};
     --color-surface: #{color.change($neutral, $lightness: 10%)};
     --color-on-surface: #{color.change($neutral, $lightness: 90%)};
+
+    --color-inverse-surface: #{color.change($neutral, $lightness: 90%)};
+    --color-on-inverse-surface: #{color.change($neutral, $lightness: 20%)};
+    --color-inverse-primary: #{color.change($primary, $lightness: 40%)};
+
+    --color-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.12)};
+    --color-on-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.38)};
   }
 
   @if $neutral-variant != 0 {

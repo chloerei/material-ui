@@ -25,7 +25,7 @@ title: Snackbar
 ## Disappear Automatically
 
 {% example sandbox %}
-<button type="button" id="toggle-snackbar" class="button button--contained button--primary">
+<button type="button" id="toggle-snackbar" class="button button--filled">
   Toggle
 </button>
 <div id="snackbar-container" class="snackbar-container">
