@@ -45,8 +45,8 @@
     --color-on-surface-variant: #{color.change($neutral, $lightness: 30%)};
     --color-outline: #{color.change($neutral, $lightness: 50%)};
 
-    --color-disabled: #{color.change($neutral, $alpha: 0.12)};
-    --color-on-disabled: #{color.change($neutral, $alpha: 0.38)};
+    --color-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.12)};
+    --color-on-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.38)};
   }
 
   @if $neutral-variant != 0 {
