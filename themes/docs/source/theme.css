@@ -42,7 +42,7 @@
   margin: 8px;
 }
 
-.example .chip {
+.example > .chip {
   margin: 8px;
 }
 
