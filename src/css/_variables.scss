@@ -6,12 +6,12 @@ $breakpoints: (
 
 :root {
   @include color-scheme(
-    $primary: #6750A4,
-    $secondary: #625B71,
-    $tertiary: #7D5260,
-    $neutral: #FFFFFF,
-    $neutral-variant: #FFFFFF,
-    $error: #B3261E
+    $primary: #543A93,
+    $secondary: #4F485E,
+    $tertiary: #69404D,
+    $neutral: #4E4A54,
+    $neutral-variant: #4D4A4F,
+    $error: #DB3229
   );
 
   --opacity-state-hover: 8%;
