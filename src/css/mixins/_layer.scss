@@ -14,19 +14,19 @@
 
   &:hover {
     &::after {
-      opacity: var(--state-hover-opacity);
+      opacity: var(--opacity-state-hover);
     }
   }
 
   &:focus {
     &::after {
-      opacity: var(--state-focus-opacity);
+      opacity: var(--opacity-state-focus);
     }
   }
 
   &:active {
     &::after {
-      opacity: var(--state-press-opacity);
+      opacity: var(--opacity-state-press);
     }
   }
 }

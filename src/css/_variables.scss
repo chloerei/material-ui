@@ -14,10 +14,10 @@ $breakpoints: (
     $error: #B3261E
   );
 
-  --state-hover-opacity: 8%;
-  --state-focus-opacity: 12%;
-  --state-press-opacity: 12%;
-  --state-drag-opacity: 16%;
+  --opacity-state-hover: 8%;
+  --opacity-state-focus: 12%;
+  --opacity-state-press: 12%;
+  --opacity-state-drag: 16%;
 
   --opacity-elevation-0: 0%;
   --opacity-elevation-1: 5%;

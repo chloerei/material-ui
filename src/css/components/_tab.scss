@@ -20,10 +20,6 @@
   background-color: var(--color-surface);
   cursor: pointer;
 
-  --state-hover-opacity: 16%;
-  --state-focus-opacity: 24%;
-  --state-press-opacity: 20%;
-
   @include state-layer;
 }
 
