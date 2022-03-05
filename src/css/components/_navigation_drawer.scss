@@ -68,8 +68,8 @@
   @include state-layer;
 
   &.navigation-drawer__item--active {
-    color: var(--color-on-secondary-container);
-    background-color: var(--color-secondary-container);
+    color: var(--color-on-primary-container);
+    background-color: var(--color-primary-container);
   }
 }
 

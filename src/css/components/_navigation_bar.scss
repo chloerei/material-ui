@@ -50,7 +50,7 @@
   color: var(--color-on-surface);
 
   .navigation-bar__item__icon {
-    background-color: var(--color-secondary-container);
-    color: var(--color-on-secondary-container);
+    color: var(--color-on-primary-container);
+    background-color: var(--color-primary-container);
   }
 }

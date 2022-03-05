@@ -10,7 +10,7 @@
   width: 80px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   padding: 12px 0;
   align-items: center;
   background-color: var(--color-surface);
@@ -28,7 +28,7 @@
 
 .navigation-rail__item {
   position: relative;
-  padding: 2px 0;
+  padding: 8px;
   text-decoration: none;
   display: flex;
   gap: 4px;
@@ -67,7 +67,7 @@
   color: var(--color-on-surface);
 
   .navigation-rail__item__icon {
-    background-color: var(--color-secondary-container);
-    color: var(--color-on-secondary-container);
+    color: var(--color-on-primary-container);
+    background-color: var(--color-primary-container);
   }
 }
