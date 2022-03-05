@@ -1,7 +1,10 @@
+@use "sass:color";
+
 .card {
   display: block;
   text-decoration: none;
   border-radius: 12px;
+  // @include surface-layer;
 }
 
 a.card {
@@ -10,7 +13,7 @@ a.card {
 
 .card--elevated {
   color: var(--color-on-surface);
-  background-color: var(--color-surface);
+  background-color: var(--color-surface-1);
   box-shadow: var(--shadow-1);
 }
 

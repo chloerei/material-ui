@@ -75,7 +75,7 @@
 
 .selector__item--focus {
   &::after {
-    opacity: var(--state-focus-opacity);
+    opacity: var(--opacity-state-focus);
   }
 }
 

@@ -35,6 +35,7 @@
 
   .text-field__container {
     border-radius: 4px 4px 0 0;
+    background-color: var(--color-surface-1);
 
     // border
     &::before {
@@ -45,29 +46,15 @@
       pointer-events: none;
     }
 
-    // background
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background-color: var(--color-primary);
-      opacity: var(--opacity-elevation-1);
-      z-index: -1;
-      border-radius: inherit;
-    }
-
-    &:hover::after {
-      opacity: var(--opacity-elevation-2);
+    &:hover {
+      background-color: var(--color-surface-2);
     }
 
     &:focus-within {
+      background-color: var(--color-surface-3);
+
       &::before {
         border-bottom: 2px solid var(--color-primary);
-      }
-
-      &::after {
-        opacity: var(--opacity-elevation-3);
       }
 
       .text-field__label {

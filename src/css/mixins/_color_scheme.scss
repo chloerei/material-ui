@@ -33,6 +33,13 @@
   --color-surface: #{color.change($neutral, $lightness: 99%)};
   --color-on-surface: #{color.change($neutral, $lightness: 10%)};
 
+  $surface-color: color.change($neutral, $lightness: 99%);
+  --color-surface-1: #{color.mix($primary, $surface-color, 5%)};
+  --color-surface-2: #{color.mix($primary, $surface-color, 8%)};
+  --color-surface-3: #{color.mix($primary, $surface-color, 11%)};
+  --color-surface-4: #{color.mix($primary, $surface-color, 12%)};
+  --color-surface-5: #{color.mix($primary, $surface-color, 14%)};
+
   --color-inverse-surface: #{color.change($neutral, $lightness: 20%)};
   --color-on-inverse-surface: #{color.change($neutral, $lightness: 95%)};
   --color-inverse-primary: #{color.change($primary, $lightness: 80%)};
@@ -53,41 +60,48 @@
   $neutral-variant,
   $error
 ) {
-    --color-primary: #{color.change($primary, $lightness: 80%)};
-    --color-on-primary: #{color.change($primary, $lightness: 20%)};
-    --color-primary-container: #{color.change($primary, $lightness: 30%)};
-    --color-on-primary-container: #{color.change($primary, $lightness: 90%)};
+  --color-primary: #{color.change($primary, $lightness: 80%)};
+  --color-on-primary: #{color.change($primary, $lightness: 20%)};
+  --color-primary-container: #{color.change($primary, $lightness: 30%)};
+  --color-on-primary-container: #{color.change($primary, $lightness: 90%)};
 
-    --color-secondary: #{color.change($secondary, $lightness: 80%)};
-    --color-on-secondary: #{color.change($secondary, $lightness: 20%)};
-    --color-secondary-container: #{color.change($secondary, $lightness: 30%)};
-    --color-on-secondary-container: #{color.change($secondary, $lightness: 90%)};
+  --color-secondary: #{color.change($secondary, $lightness: 80%)};
+  --color-on-secondary: #{color.change($secondary, $lightness: 20%)};
+  --color-secondary-container: #{color.change($secondary, $lightness: 30%)};
+  --color-on-secondary-container: #{color.change($secondary, $lightness: 90%)};
 
-    --color-tertiary: #{color.change($tertiary, $lightness: 80%)};
-    --color-on-tertiary: #{color.change($tertiary, $lightness: 20%)};
-    --color-tertiary-container: #{color.change($tertiary, $lightness: 30%)};
-    --color-on-tertiary-container: #{color.change($tertiary, $lightness: 90%)};
+  --color-tertiary: #{color.change($tertiary, $lightness: 80%)};
+  --color-on-tertiary: #{color.change($tertiary, $lightness: 20%)};
+  --color-tertiary-container: #{color.change($tertiary, $lightness: 30%)};
+  --color-on-tertiary-container: #{color.change($tertiary, $lightness: 90%)};
 
-    --color-error: #{color.change($error, $lightness: 80%)};
-    --color-on-error: #{color.change($error, $lightness: 20%)};
-    --color-error-container: #{color.change($error, $lightness: 30%)};
-    --color-on-error-container: #{color.change($error, $lightness: 90%)};
+  --color-error: #{color.change($error, $lightness: 80%)};
+  --color-on-error: #{color.change($error, $lightness: 20%)};
+  --color-error-container: #{color.change($error, $lightness: 30%)};
+  --color-on-error-container: #{color.change($error, $lightness: 90%)};
 
-    --color-background: #{color.change($neutral, $lightness: 10%)};
-    --color-on-background: #{color.change($neutral, $lightness: 90%)};
-    --color-surface: #{color.change($neutral, $lightness: 10%)};
-    --color-on-surface: #{color.change($neutral, $lightness: 90%)};
+  --color-background: #{color.change($neutral, $lightness: 10%)};
+  --color-on-background: #{color.change($neutral, $lightness: 90%)};
+  --color-surface: #{color.change($neutral, $lightness: 10%)};
+  --color-on-surface: #{color.change($neutral, $lightness: 90%)};
 
-    --color-inverse-surface: #{color.change($neutral, $lightness: 90%)};
-    --color-on-inverse-surface: #{color.change($neutral, $lightness: 20%)};
-    --color-inverse-primary: #{color.change($primary, $lightness: 40%)};
+  $surface-color: color.change($neutral, $lightness: 10%);
+  --color-surface-1: #{color.mix($primary, $surface-color, 5%)};
+  --color-surface-2: #{color.mix($primary, $surface-color, 8%)};
+  --color-surface-3: #{color.mix($primary, $surface-color, 11%)};
+  --color-surface-4: #{color.mix($primary, $surface-color, 12%)};
+  --color-surface-5: #{color.mix($primary, $surface-color, 14%)};
 
-    --color-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.12)};
-    --color-on-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.38)};
+  --color-inverse-surface: #{color.change($neutral, $lightness: 90%)};
+  --color-on-inverse-surface: #{color.change($neutral, $lightness: 20%)};
+  --color-inverse-primary: #{color.change($primary, $lightness: 40%)};
 
-    --color-surface-variant: #{color.change($neutral, $lightness: 30%)};
-    --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
-    --color-outline: #{color.change($neutral, $lightness: 60%)};
+  --color-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.12)};
+  --color-on-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.38)};
+
+  --color-surface-variant: #{color.change($neutral, $lightness: 30%)};
+  --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
+  --color-outline: #{color.change($neutral, $lightness: 60%)};
 }
 
 @mixin color-scheme (

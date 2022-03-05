@@ -25,7 +25,7 @@
   min-width: 280px;
   max-width: 560px;
   max-height: 100%;
-  background: var(--color-surface);
+  background: var(--color-surface-3);
   color: var(--color-on-surface);
   z-index: 1;
   display: flex;
@@ -77,6 +77,7 @@
 
 @media (max-width: map.get($breakpoints, "tablet")) {
   .dialog--full-screen {
+    background: var(--color-surface);
     padding: 0;
 
     .dialog__container {
