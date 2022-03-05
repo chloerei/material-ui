@@ -14,7 +14,7 @@
     display: block;
     border: none;
     margin: 0;
-    outline: 0;
+    outline: none;
     font-family: sans-serif;
     flex-grow: 1;
   }
@@ -230,7 +230,7 @@
     padding: 14px 16px;
     font-size: 16px;
     line-height: 20px;
-    outline: 0;
+    outline: none;
     background: transparent;
 
     &::placeholder {

@@ -42,6 +42,10 @@
   margin: 8px;
 }
 
+.example .chip {
+  margin: 8px;
+}
+
 *:not(pre) code {
   padding: 0 4px;
   color: #333;

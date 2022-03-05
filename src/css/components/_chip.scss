@@ -9,7 +9,8 @@
   border-radius: 8px;
   vertical-align: middle;
   cursor: pointer;
-  outline: 1px solid var(--color-outline);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-outline);
   background-color: var(--color-surface);
 
   @include state-layer;
@@ -135,7 +136,6 @@
 .chip--elevated {
   background-color: var(--color-surface-1);
   box-shadow: var(--shadow-1);
-  outline: none;
 
   &:hover {
     box-shadow: var(--shadow-2);
@@ -151,14 +151,14 @@
 
   &.chip--disabled {
     box-shadow: var(--shadow-0);
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: var(--color-disabled);
   }
 }
 
 .chip--selected {
   color: var(--color-on-secondary-container);
   background-color: var(--color-secondary-container);
-  outline: none;
+  box-shadow: none;
 
   .chip__icon {
     color: var(--color-on-secondary-container);
@@ -169,15 +169,14 @@
   }
 
   &.chip--disabled {
-    background: rgba(0, 0, 0, 0.12);
+    background-color: var(--color-disabled);
   }
 }
 
 .chip--disabled {
-  color: rgba(0, 0, 0, 0.38);
-  outline: 1px solid rgba(0, 0, 0, 0.12);
+  color: var(--color-on-disabled);
 
   .chip__icon {
-    color: rgba(0, 0, 0, 0.38);
+    color: var(--color-on-disabled);
   }
 }
