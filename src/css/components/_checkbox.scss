@@ -27,7 +27,7 @@
   pointer-events: none;
 
   .checkbox__icon {
-    border-color: rgba(0, 0, 0, 0.12);
+    border-color: var(--color-disabled);
   }
 }
 

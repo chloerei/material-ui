@@ -50,6 +50,15 @@
   --color-surface-variant: #{color.change($neutral-variant, $lightness: 90%)};
   --color-on-surface-variant: #{color.change($neutral-variant, $lightness: 30%)};
   --color-outline: #{color.change($neutral-variant, $lightness: 50%)};
+
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px #{color.change($neutral, $lightness: 10%, $alpha: 0.3)};
+  --shadow-2: 0 2px 3px #{color.change($neutral, $lightness: 10%, $alpha: 0.3)};
+  --shadow-3: 0 3px 4px #{color.change($neutral, $lightness: 10%, $alpha: 0.3)};
+  --shadow-4: 0 4px 5px #{color.change($neutral, $lightness: 10%, $alpha: 0.3)};
+  --shadow-5: 0 5px 6px #{color.change($neutral, $lightness: 10%, $alpha: 0.3)};
+
+  --color-scrim: #{color.change($neutral, $lightness: 10%, $alpha: 0.5)};
 }
 
 @mixin dark-scheme (
@@ -96,12 +105,21 @@
   --color-on-inverse-surface: #{color.change($neutral, $lightness: 20%)};
   --color-inverse-primary: #{color.change($primary, $lightness: 40%)};
 
-  --color-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.12)};
-  --color-on-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.38)};
+  --color-disabled: #{color.change($neutral, $lightness: 90%, $alpha: 0.12)};
+  --color-on-disabled: #{color.change($neutral, $lightness: 90%, $alpha: 0.38)};
 
   --color-surface-variant: #{color.change($neutral, $lightness: 30%)};
   --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
   --color-outline: #{color.change($neutral, $lightness: 60%)};
+
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px #{color.change($neutral, $lightness: 90%, $alpha: 0.3)};
+  --shadow-2: 0 2px 3px #{color.change($neutral, $lightness: 90%, $alpha: 0.3)};
+  --shadow-3: 0 3px 4px #{color.change($neutral, $lightness: 90%, $alpha: 0.3)};
+  --shadow-4: 0 4px 5px #{color.change($neutral, $lightness: 90%, $alpha: 0.3)};
+  --shadow-5: 0 5px 6px #{color.change($neutral, $lightness: 90%, $alpha: 0.3)};
+
+  --color-scrim: #{color.change($neutral, $lightness: 90%, $alpha: 0.1)};
 }
 
 @mixin color-scheme (
@@ -135,6 +153,8 @@
   }
 
   .light-scheme {
+    color-scheme: light;
+
     @include light-scheme(
       $primary,
       $secondary,
@@ -146,6 +166,8 @@
   }
 
   .dark-scheme {
+    color-scheme: dark;
+
     @include dark-scheme(
       $primary,
       $secondary,

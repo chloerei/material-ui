@@ -8,25 +8,29 @@
     display: none;
 
     &:checked ~ .switch__track {
-      background: var(--color-primary);
+      background-color: var(--color-primary);
     }
 
     &:checked ~ .switch__thumb {
       left: 20px;
 
       &::before {
-        background: var(--color-primary);
+        background-color: var(--color-primary);
       }
     }
 
     &:disabled {
       & ~ .switch__track {
         pointer-events: none;
-        background-color: rgba(0, 0, 0, 0.12);
+        background-color: var(--color-disabled);
       }
 
       & ~ .switch__thumb {
         pointer-events: none;
+
+        &::before {
+          background-color: var(--color-on-disabled);
+        }
       }
     }
   }
