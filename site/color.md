@@ -222,7 +222,7 @@ It will generate light and dark scheme.
 
 In addition, light or dark themes can be generated separately.
 
-```
+```scss
 .my-light-scheme {
   @include light-scheme(
     $primary: #3A691E,
