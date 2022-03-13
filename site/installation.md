@@ -48,9 +48,9 @@ init(application)
 Add this code to your page head:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.9/dist/material-ui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.13/dist/material-ui.css">
 <script type="module">
-  import { init } from 'https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.9/dist/material-ui.bundle.js'
+  import { init } from 'https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.13/dist/material-ui.bundle.js'
   init()
 </script>
 ```
