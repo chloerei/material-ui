@@ -7,7 +7,7 @@ title: Shadow
 Format:
 
 ```
-.position-{0..4}
+.shadow-{0..5}
 ```
 
 Example:
