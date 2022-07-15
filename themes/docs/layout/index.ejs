@@ -14,7 +14,8 @@
   </head>
   <body>
     <div class="display-flex">
-      <div id="navigation-drawer" class="navigation-drawer navigation-drawer--permanently" data-controller="navigation-drawer">
+      <input type="checkbox" id="drawer-toggle" class="navigation-drawer-toggle">
+      <div id="navigation-drawer" class="navigation-drawer flex-shrink-0">
         <div class="navigation-drawer__container">
           <div class="headline-medium margin-x-2 padding-x-3 padding-y-2">
             Material UI
@@ -68,16 +69,15 @@
             </div>
           </details>
         </div>
-        <div class="navigation-drawer__scrim" data-action="click->navigation-drawer#close">
-        </div>
+        <label for="drawer-toggle" class="navigation-drawer__scrim"></label>
       </div>
 
       <div class="flex-grow-1 min-width-0">
-        <div class="top-app-bar top-app-bar--sticky-top display-none@laptop">
+        <div class="top-app-bar top-app-bar--sticky-top display-none@tablet">
           <div class="top-app-bar__action">
-            <button type="button" class="button button--icon" data-controller="toggle" data-toggle-target="#navigation-drawer" data-toggle-action="navigation-drawer#toggle">
+            <label for="drawer-toggle" class="button button--icon">
               <span class="material-icons">menu</span>
-            </button>
+            </label>
           </div>
           <div class="top-app-bar__title">
             <%= page.title %>

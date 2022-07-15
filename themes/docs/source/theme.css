@@ -18,8 +18,8 @@
 
 .example.sandbox .navigation-rail__container,
 .example.sandbox .navigation-bar,
+.example.sandbox .navigation-drawer,
 .example.sandbox .navigation-drawer__container,
-.example.sandbox .navigation-drawer__scrim,
 .example.sandbox .sheet__container,
 .example.sandbox .sheet__scrim,
 .example.sandbox .dialog,
@@ -27,12 +27,6 @@
 .example.sandbox .floating-action__menu,
 .example.sandbox .snackbar-container {
   position: absolute;
-}
-
-.example.sandbox .navigation-drawer--modal,
-.example.sandbox .sheet--modal {
-  position: absolute;
-  inset: 0;
 }
 
 .example .card {

@@ -1,46 +1,68 @@
 @use "sass:map";
 
 .navigation-drawer {
-  display: none;
-  flex-shrink: 0;
+  position: fixed;
+  width: auto;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-duration);
+  z-index: 32;
 }
 
 .navigation-drawer__container {
   box-sizing: border-box;
   background-color: var(--color-surface);
-  color: var(--color-on-surface-variant);
+  color: var(--color-on-surface);
   overflow: auto;
-  position: fixed;
+  width: 360px;
+  position: absolute;
   top: 0;
   bottom: 0;
-  width: 360px;
-  max-width: calc(100vw - 64px);
+  z-index: 1;
   padding: 12px;
   border-radius: 0 16px 16px 0;
-  z-index: 16;
+  transform: translateX(-100%);
+  transition: transform var(--transition-duration);
 }
 
 .navigation-drawer__scrim {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  inset: 0;
   background-color: var(--color-scrim);
-  z-index: 15;
+  z-index: 0;
 }
 
+.navigation-drawer-toggle {
+  display: none;
+}
+
+.navigation-drawer-toggle:checked + .navigation-drawer,
 .navigation-drawer--open {
-  display: block;
+  pointer-events: auto;
+  opacity: 1;
+
+  .navigation-drawer__container {
+    transform: translateX(0);
+  }
+
+  .navigation-drawer__scrim {
+  }
 }
 
 @media (min-width: map.get($breakpoints, "laptop")) {
-  .navigation-drawer--permanently {
-    display: block;
+  .navigation-drawer:not(.navigation-drawer--modal) {
+    position: static;
+    pointer-events: auto;
     width: 360px;
+    opacity: 1;
 
     .navigation-drawer__container {
       border-radius: 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      transform: translateX(0);
     }
 
     .navigation-drawer__scrim {
