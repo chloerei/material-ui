@@ -7,9 +7,9 @@ title: Dropdown
 ## Example
 
 {% example %}
-<div class="dropdown" data-controller="dropdown">
-  <button type="button" class="button button--filled" data-action="dropdown#toggle">Dropdown button</button>
-  <div class="dropdown__container">
+<div class="dropdown">
+  <label tabindex="0" class="button button--filled">Dropdown button</label>
+  <div tabindex="0" class="dropdown__container">
     <a class="dropdown__item" href="#">
       <div class="dropdown__item__icon">
         <span class="material-icons">add</span>
@@ -35,33 +35,33 @@ title: Dropdown
 ## Placement
 
 {% example %}
-<div class="dropdown" data-controller="dropdown">
-  <button type="button" class="button button--filled" data-action="dropdown#toggle">Default</button>
-  <div class="dropdown__container">
+<div class="dropdown">
+  <label tabindex="0" class="button button--filled">Default</label>
+  <div tabindex="0" class="dropdown__container">
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
   </div>
 </div>
-<div class="dropdown" data-controller="dropdown">
-  <button type="button" class="button button--filled" data-action="dropdown#toggle">Top Right</button>
-  <div class="dropdown__container dropdown__container--top-right">
+<div class="dropdown dropdown--right">
+  <label tabindex="0" class="button button--filled">Align Right</label>
+  <div tabindex="0" class="dropdown__container">
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
   </div>
 </div>
-<div class="dropdown" data-controller="dropdown">
-  <button type="button" class="button button--filled" data-action="dropdown#toggle">Button Left</button>
-  <div class="dropdown__container dropdown__container--bottom-left">
+<div class="dropdown dropdown--bottom">
+  <label tabindex="0" class="button button--filled">Align Bottom</label>
+  <div tabindex="0" class="dropdown__container">
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
   </div>
 </div>
-<div class="dropdown" data-controller="dropdown">
-  <button type="button" class="button button--filled" data-action="dropdown#toggle">Bottom Right</button>
-  <div class="dropdown__container dropdown__container--bottom-right">
+<div class="dropdown dropdown--right dropdown--bottom">
+  <label tabindex="0" class="button button--filled">Align Right Bottom</label>
+  <div tabindex="0" class="dropdown__container">
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
     <a class="dropdown__item" href="#">Dropdown item</a>
