@@ -27,35 +27,6 @@ A typical BEM naming example is as follows:
 
 You can learn more about BEM rules from here: http://getbem.com/ .
 
-## JavaScript
-
-Material UI requires JavaScript to implement some interactive operations, such as dropdown, dialog.
-
-It depends on the [Stimulus](https://stimulusjs.org/) framework, which is a front-end framework friendly with server rendering.
-
-A typical stimulus component is as follows:
-
-{% example %}
-<div class="dropdown" data-controller="dropdown">
-  <button type="button" class="button button--filled" data-action="dropdown#toggle">Toggle Menu</button>
-  <div class="dropdown__container">
-    <div class="dropdown__item">Item</div>
-    <div class="dropdown__item">Item</div>
-    <div class="dropdown__item">Item</div>
-  </div>
-</div>
-{% endexample %}
-
-Look at two attributes `data-controller` and `data-action`, which specify the module to which the action belongs and what actions are implemented when triggered.
-
-Material UI provides two js files, one bundles stimulus and one does not.
-
-If you don’t want to worry about stimulus, use `dist/js/campo-ui.bundle.js`.
-
-If you also use stimulus, use `dist/js/campo-ui.js` to avoid duplicate require Stimlus.
-
-For more about the config of the front-end packaging tool, please read [Installation](/installation.html).
-
 ## Icon
 
 Material UI works well with [Material Icons](https://fonts.google.com/icons?selected=Material+Icons):

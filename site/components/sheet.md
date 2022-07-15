@@ -25,7 +25,7 @@ title: Sheet
   </div>
 
   <input type="checkbox" id="standard-sheet-toggle" class="sheet-toggle">
-  <div id="sheet-permanently" class="sheet" data-controller="sheet">
+  <div id="sheet-permanently" class="sheet">
     <div class="sheet__container">
       <div class="padding">
         Sheet Content

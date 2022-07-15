@@ -42,7 +42,7 @@
               </div>
             </summary>
             <div class="padding-left-3">
-              <% ['top-app-bar', 'button', 'card', 'checkbox', 'chip', 'dialog', 'dropdown', 'navigation-drawer', 'navigation-bar', 'navigation-rail', 'tab', 'table', 'text-field', 'radio', 'selector', 'switch', 'snackbar', 'sheet'].forEach(function(name) { %>
+              <% ['top-app-bar', 'button', 'card', 'checkbox', 'chip', 'dialog', 'dropdown', 'navigation-drawer', 'navigation-bar', 'navigation-rail', 'tab', 'table', 'text-field', 'radio', 'switch', 'snackbar', 'sheet'].forEach(function(name) { %>
                 <% itemPath = 'components/' + name + '.html'  %>
                 <a href="/<%= itemPath %>" class="navigation-drawer__item <%= page.path == itemPath ? 'navigation-drawer__item--active' : '' %>">
                   <%= name.split('-').map(term => term[0].toUpperCase() + term.slice(1)).join(' ') %>
