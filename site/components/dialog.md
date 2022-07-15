@@ -7,7 +7,8 @@ title: Dialog
 ## Basic dialogs
 
 {% example sandbox %}
-<div class="dialog dialog--open">
+<input type="checkbox" class="dialog-toggle" checked>
+<div class="dialog">
   <div class="dialog__container">
     <div class="dialog__body">
       <div class="text-secondary text-align-center margin-bottom-3">
@@ -36,7 +37,8 @@ title: Dialog
 ## Basic dialogs with scrollable content
 
 {% example sandbox %}
-<div class="dialog dialog--open">
+<input type="checkbox" class="dialog-toggle" checked>
+<div class="dialog">
   <div class="dialog__container">
     <div class="dialog__header">
       <div class="headline-small">
@@ -75,7 +77,8 @@ title: Dialog
 ## Full-screen dialog (mobile only)
 
 {% example sandbox %}
-<div class="dialog dialog--full-screen dialog--open">
+<input type="checkbox" class="dialog-toggle" checked>
+<div class="dialog dialog--full-screen">
   <div class="dialog__container">
     <div class="top-app-bar display-none@tablet">
       <div class="top-app-bar__action">
@@ -127,24 +130,25 @@ title: Dialog
 ## Dialog Toggle
 
 {% example sandbox %}
-<button type="button" class="button button--elevated" data-controller="toggle" data-toggle-target="#demo-dialog" data-toggle-action="dialog#toggle">
-  Toggle
-</button>
+<label for="dialog-toggle" class="button button--filled">
+  Dialog Toggle
+</label>
 
-<div id="demo-dialog" class="dialog" data-controller="dialog">
+<input type="checkbox" id="dialog-toggle" class="dialog-toggle">
+<div id="demo-dialog" class="dialog">
   <div class="dialog__container">
     <div class="dialog__body">
       <p>Dialog content</p>
       <div class="dialog__actions">
-        <button type="button" class="button button--text">
+        <label for="dialog-toggle" class="button button--text">
           Cancel
-        </button>
+        </label>
         <button type="button" class="button button--text">
           Ok
         </button>
       </div>
     </div>
   </div>
-  <div class="dialog__scrim" data-action="click->dialog#close"></div>
+  <label for="dialog-toggle" class="dialog__scrim">dialog#close"></label>
 </div>
 {% endexample %}

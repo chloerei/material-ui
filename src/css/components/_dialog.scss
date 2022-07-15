@@ -1,23 +1,21 @@
 @use "sass:map";
 
 .dialog {
-  display: none;
-}
-
-.dialog--open {
-  width: auto;
-  height: auto;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 24;
   padding: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.dialog-toggle {
+  display: none;
 }
 
 .dialog__container {
@@ -30,6 +28,19 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
+}
+
+.dialog__scrim {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-scrim);
+}
+
+.dialog-toggle:checked + .dialog,
+.dialog--open {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 .dialog__header {
@@ -46,20 +57,6 @@
 .dialog__footer {
   flex-shrink: 0;
   padding: 24px;
-}
-
-.dialog__scrim {
-  display: none;
-}
-
-.dialog--open .dialog__scrim {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--color-scrim);
 }
 
 .dialog__actions {
