@@ -1,47 +1,70 @@
 @use "sass:map";
 
 .sheet {
-  display: none;
-  flex-shrink: 0;
+  position: fixed;
+  width: auto;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-duration);
+  z-index: 32;
 }
 
 .sheet__container {
   box-sizing: border-box;
-  background: var(--color-surface);
-  color: var(--color-on-surface-variant);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
   overflow: auto;
-  position: fixed;
+  width: 320px;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 320px;
-  max-width: calc(100vw - 64px);
+  z-index: 1;
   padding: 12px;
   border-radius: 16px 0 0 16px;
-  z-index: 16;
+  transform: translateX(100%);
+  transition: transform var(--transition-duration);
 }
 
 .sheet__scrim {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  inset: 0;
   background-color: var(--color-scrim);
-  z-index: 15;
+  z-index: 0;
 }
 
+.sheet-toggle {
+  display: none;
+}
+
+.sheet-toggle:checked + .sheet,
 .sheet--open {
-  display: block;
+  pointer-events: auto;
+  opacity: 1;
+
+  .sheet__container {
+    transform: translateX(0);
+  }
+
+  .sheet__scrim {
+  }
 }
 
 @media (min-width: map.get($breakpoints, "laptop")) {
-  .sheet--permanently {
-    display: block;
+  .sheet:not(.sheet--modal) {
+    position: static;
+    pointer-events: auto;
     width: 320px;
+    opacity: 1;
 
     .sheet__container {
       border-radius: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(0);
     }
 
     .sheet__scrim {
