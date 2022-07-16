@@ -4,7 +4,6 @@
   display: block;
   text-decoration: none;
   border-radius: 12px;
-  // @include surface-layer;
 }
 
 a.card {
@@ -32,7 +31,7 @@ a.card--elevated {
 }
 
 .card--filled {
-  color: var(--color-on-surface);
+  color: var(--color-on-surface-variant);
   background-color: var(--color-surface-variant);
 }
 
