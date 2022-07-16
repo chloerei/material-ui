@@ -8,14 +8,8 @@ services:
     command: npx hexo server
     ports:
       - 4000:4000
-  build-js:
-    build: .
-    volumes:
-      - .:/app
-    command: npm run build:js-bundle -- --watch
-    tty: true
   build-css:
     build: .
     volumes:
       - .:/app
-    command: npm run build:css -- --watch
+    command: npm run build -- --watch
