@@ -29,6 +29,8 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
+  transform: scale(0);
+  transition: transform var(--transition-duration);
 }
 
 .dialog__scrim {
@@ -42,6 +44,10 @@
 .dialog--open {
   opacity: 1;
   visibility: visible;
+
+  .dialog__container {
+    transform: scale(1);
+  }
 }
 
 .dialog__header {
