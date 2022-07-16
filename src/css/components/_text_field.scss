@@ -84,7 +84,7 @@
     left: 16px;
     font-size: 16px;
     line-height: 1;
-    transition: top 0.15s;
+    transition: top var(--transition-duration);
     color: var(--color-on-surface);
   }
 
@@ -213,7 +213,7 @@
     padding: 0 4px;
     font-size: 16px;
     line-height: 1;
-    transition: top 0.15s, left 0.15s;
+    transition: top var(--transition-duration), left var(--transition-duration);
     color: var(--color-on-surface);
     background: var(--color-surface);
     z-index: 1;

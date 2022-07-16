@@ -54,7 +54,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: left 0.15s;
+  transition: left var(--transition-duration);
   color: var(--color-primary);
   border-radius: 50%;
   cursor: pointer;
@@ -73,6 +73,6 @@
     background: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     z-index: 1;
-    transition: background-color 0.15s;
+    transition: background-color var(--transition-duration);
   }
 }

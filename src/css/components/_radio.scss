@@ -40,7 +40,7 @@
   left: 11px;
   border: 2px solid var(--color-on-background);
   border-radius: 50%;
-  transition: border-color 0.15s;
+  transition: border-color var(--transition-duration);
 
   &::after {
     content: '';
@@ -54,6 +54,6 @@
     left: 0;
     opacity: 0;
     transform: scale(0);
-    transition: transform 0.15s;
+    transition: transform var(--transition-duration);
   }
 }

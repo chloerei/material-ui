@@ -39,7 +39,7 @@
   left: 11px;
   border: 2px solid var(--color-on-background);
   border-radius: 2px;
-  transition: background-color 0.15s, border-color 0.15s;
+  transition: background-color var(--transition-duration), border-color var(--transition-duration);
 
   &::after {
     display: none;
