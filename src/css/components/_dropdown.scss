@@ -15,7 +15,7 @@
   z-index: 1;
   transform-origin: top left;
   transform: scale(0);
-  transition: transform 0.15s;
+  transition: transform var(--transition-duration);
 }
 
 .dropdown:focus-within,
