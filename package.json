@@ -7,8 +7,8 @@
     "build": "npx sass src/css/material-ui.scss dist/material-ui.css --no-source-map"
   },
   "files": [
-    "dist/*.{css}",
-    "src/**/*.{scss}"
+    "dist/*.css",
+    "src/**/*.scss"
   ],
   "repository": "github:chloerei/material-ui",
   "author": "Rei",
