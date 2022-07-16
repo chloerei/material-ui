@@ -37,6 +37,7 @@
   .text-field__container {
     border-radius: 4px 4px 0 0;
     background-color: var(--color-surface-1);
+    transition: background-color var(--transition-duration);
 
     // border
     &::before {
@@ -45,6 +46,7 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
+      transition: border-color var(--transition-duration);
     }
 
     &:hover {
@@ -84,7 +86,8 @@
     left: 16px;
     font-size: 16px;
     line-height: 1;
-    transition: top var(--transition-duration);
+    transition-property: top, color;
+    transition-duration: var(--transition-duration);
     color: var(--color-on-surface);
   }
 
@@ -190,6 +193,7 @@
       right: 0;
       bottom: 0;
       pointer-events: none;
+      transition: border-color var(--transition-duration);
     }
 
     &:focus-within {
@@ -213,10 +217,11 @@
     padding: 0 4px;
     font-size: 16px;
     line-height: 1;
-    transition: top var(--transition-duration), left var(--transition-duration);
     color: var(--color-on-surface);
     background: var(--color-surface);
     z-index: 1;
+    transition-property: top, left, color;
+    transition-duration: var(--transition-duration);
   }
 
   &.text-field--error {
