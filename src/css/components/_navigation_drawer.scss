@@ -4,9 +4,10 @@
   position: fixed;
   width: auto;
   inset: 0;
-  pointer-events: none;
   opacity: 0;
-  transition: opacity var(--transition-duration);
+  visibility: hidden;
+  transition-property: visibility, opacity;
+  transition-duration: var(--transition-duration);
   z-index: 32;
 }
 
@@ -39,8 +40,8 @@
 
 .navigation-drawer-toggle:checked + .navigation-drawer,
 .navigation-drawer--open {
-  pointer-events: auto;
   opacity: 1;
+  visibility: visible;
 
   .navigation-drawer__container {
     transform: translateX(0);
@@ -53,9 +54,9 @@
 @media (min-width: map.get($breakpoints, "laptop")) {
   .navigation-drawer:not(.navigation-drawer--modal) {
     position: static;
-    pointer-events: auto;
     width: 360px;
     opacity: 1;
+    visibility: visible;
 
     .navigation-drawer__container {
       border-radius: 0;

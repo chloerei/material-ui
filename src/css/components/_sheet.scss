@@ -4,9 +4,10 @@
   position: fixed;
   width: auto;
   inset: 0;
-  pointer-events: none;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity var(--transition-duration);
+  transition-property: visibility, opacity;
+  transition-duration: var(--transition-duration);
   z-index: 32;
 }
 
@@ -40,8 +41,8 @@
 
 .sheet-toggle:checked + .sheet,
 .sheet--open {
-  pointer-events: auto;
   opacity: 1;
+  visibility: visible;
 
   .sheet__container {
     transform: translateX(0);
@@ -54,9 +55,9 @@
 @media (min-width: map.get($breakpoints, "laptop")) {
   .sheet:not(.sheet--modal) {
     position: static;
-    pointer-events: auto;
     width: 320px;
     opacity: 1;
+    visibility: visible;
 
     .sheet__container {
       border-radius: 0;

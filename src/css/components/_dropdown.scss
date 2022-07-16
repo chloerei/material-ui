@@ -15,13 +15,16 @@
   z-index: 1;
   transform-origin: top left;
   transform: scale(0);
-  transition: transform var(--transition-duration);
+  visibility: hidden;
+  transition-property: transform, visibility;
+  transition-duration: var(--transition-duration);
 }
 
 .dropdown:focus-within,
 .dropdown--open {
   .dropdown__container {
     transform: scale(1);
+    visibility: visible;
   }
 }
 

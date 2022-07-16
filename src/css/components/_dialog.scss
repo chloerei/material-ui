@@ -9,9 +9,10 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  pointer-events: none;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity var(--transition-duration);
+  transition-property: visibility, opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .dialog-toggle {
@@ -39,8 +40,8 @@
 
 .dialog-toggle:checked + .dialog,
 .dialog--open {
-  pointer-events: auto;
   opacity: 1;
+  visibility: visible;
 }
 
 .dialog__header {
