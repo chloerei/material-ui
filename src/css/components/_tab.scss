@@ -1,21 +1,21 @@
 .tab {
   display: flex;
   overflow: auto;
-  gap: 12px;
+  gap: 8px;
 }
 
 .tab__item {
-  padding: 18px 24px;
+  padding: 10px 24px;
   display: flex;
   text-decoration: none;
   line-height: 20px;
   font-size: 14px;
   font-weight: 500;
   align-items: center;
-  border-radius: 28px;
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
-  color: var(--color-on-surface-variant);
+  color: var(--color-on-surface);
   outline: none;
   background-color: var(--color-surface);
   cursor: pointer;
