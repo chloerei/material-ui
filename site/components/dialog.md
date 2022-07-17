@@ -149,6 +149,6 @@ title: Dialog
       </div>
     </div>
   </div>
-  <label for="dialog-toggle" class="dialog__scrim">dialog#close"></label>
+  <label for="dialog-toggle" class="dialog__scrim"></label>
 </div>
 {% endexample %}
