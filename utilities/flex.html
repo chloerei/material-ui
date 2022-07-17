@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Flex - Campo UI</title>
+    <link rel="stylesheet" href="/material-ui.css">
+    <link rel="stylesheet" href="/theme.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <div class="display-flex">
+      <input type="checkbox" id="drawer-toggle" class="navigation-drawer-toggle">
+      <div id="navigation-drawer" class="navigation-drawer flex-shrink-0">
+        <div class="navigation-drawer__container">
+          <div class="headline-medium margin-x-2 padding-x-3 padding-y-2">
+            Material UI
+          </div>
+
+          <a href="/" class="navigation-drawer__item ">
+            Home
+          </a>
+
+          
+            
+            <a href="/introduction.html" class="navigation-drawer__item ">
+              Introduction
+            </a>
+          
+            
+            <a href="/installation.html" class="navigation-drawer__item ">
+              Installation
+            </a>
+          
+            
+            <a href="/typography.html" class="navigation-drawer__item ">
+              Typography
+            </a>
+          
+            
+            <a href="/color.html" class="navigation-drawer__item ">
+              Color
+            </a>
+          
+            
+            <a href="/examples.html" class="navigation-drawer__item ">
+              Examples
+            </a>
+          
+
+          <details  >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Components
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/components/top-app-bar.html" class="navigation-drawer__item ">
+                  Top App Bar
+                </a>
+              
+                
+                <a href="/components/button.html" class="navigation-drawer__item ">
+                  Button
+                </a>
+              
+                
+                <a href="/components/card.html" class="navigation-drawer__item ">
+                  Card
+                </a>
+              
+                
+                <a href="/components/checkbox.html" class="navigation-drawer__item ">
+                  Checkbox
+                </a>
+              
+                
+                <a href="/components/chip.html" class="navigation-drawer__item ">
+                  Chip
+                </a>
+              
+                
+                <a href="/components/dialog.html" class="navigation-drawer__item ">
+                  Dialog
+                </a>
+              
+                
+                <a href="/components/dropdown.html" class="navigation-drawer__item ">
+                  Dropdown
+                </a>
+              
+                
+                <a href="/components/navigation-drawer.html" class="navigation-drawer__item ">
+                  Navigation Drawer
+                </a>
+              
+                
+                <a href="/components/navigation-bar.html" class="navigation-drawer__item ">
+                  Navigation Bar
+                </a>
+              
+                
+                <a href="/components/navigation-rail.html" class="navigation-drawer__item ">
+                  Navigation Rail
+                </a>
+              
+                
+                <a href="/components/tab.html" class="navigation-drawer__item ">
+                  Tab
+                </a>
+              
+                
+                <a href="/components/table.html" class="navigation-drawer__item ">
+                  Table
+                </a>
+              
+                
+                <a href="/components/text-field.html" class="navigation-drawer__item ">
+                  Text Field
+                </a>
+              
+                
+                <a href="/components/radio.html" class="navigation-drawer__item ">
+                  Radio
+                </a>
+              
+                
+                <a href="/components/switch.html" class="navigation-drawer__item ">
+                  Switch
+                </a>
+              
+                
+                <a href="/components/snackbar.html" class="navigation-drawer__item ">
+                  Snackbar
+                </a>
+              
+                
+                <a href="/components/sheet.html" class="navigation-drawer__item ">
+                  Sheet
+                </a>
+              
+            </div>
+          </details>
+          <details open >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Utitlties
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/utilities/display.html" class="navigation-drawer__item ">
+                  Display
+                </a>
+              
+                
+                <a href="/utilities/background.html" class="navigation-drawer__item ">
+                  Background
+                </a>
+              
+                
+                <a href="/utilities/border.html" class="navigation-drawer__item ">
+                  Border
+                </a>
+              
+                
+                <a href="/utilities/flex.html" class="navigation-drawer__item navigation-drawer__item--active">
+                  Flex
+                </a>
+              
+                
+                <a href="/utilities/overflow.html" class="navigation-drawer__item ">
+                  Overflow
+                </a>
+              
+                
+                <a href="/utilities/position.html" class="navigation-drawer__item ">
+                  Position
+                </a>
+              
+                
+                <a href="/utilities/shadow.html" class="navigation-drawer__item ">
+                  Shadow
+                </a>
+              
+                
+                <a href="/utilities/spacing.html" class="navigation-drawer__item ">
+                  Spacing
+                </a>
+              
+                
+                <a href="/utilities/sizing.html" class="navigation-drawer__item ">
+                  Sizing
+                </a>
+              
+                
+                <a href="/utilities/text.html" class="navigation-drawer__item ">
+                  Text
+                </a>
+              
+                
+                <a href="/utilities/vertical-align.html" class="navigation-drawer__item ">
+                  Vertical Align
+                </a>
+              
+            </div>
+          </details>
+        </div>
+        <label for="drawer-toggle" class="navigation-drawer__scrim"></label>
+      </div>
+
+      <div class="flex-grow-1 min-width-0">
+        <div class="top-app-bar top-app-bar--sticky-top display-none@tablet">
+          <div class="top-app-bar__action">
+            <label for="drawer-toggle" class="button button--icon">
+              <span class="material-icons">menu</span>
+            </label>
+          </div>
+          <div class="top-app-bar__title">
+            Flex
+          </div>
+        </div>
+
+        <div class="padding-3">
+          <h1 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h1><h2 id="Direction"><a href="#Direction" class="headerlink" title="Direction"></a>Direction</h2><p>Format:</p>
+<pre><code class="hljs plaintext">.flex-direction-&#123;value&#125;</code></pre>
+
+<p>Values:</p>
+<ul>
+<li>row</li>
+<li>row-reverse</li>
+<li>column</li>
+<li>column-reverse</li>
+</ul>
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex flex-direction-row-reverse">
+  <div class="padding-3 margin-3 background-primary">
+    column 1
+  </div>
+  <div class="padding-3 margin-3 background-primary">
+    column 2
+  </div>
+  <div class="padding-3 margin-3 background-primary">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex flex-direction-row-reverse&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Wrap"><a href="#Wrap" class="headerlink" title="Wrap"></a>Wrap</h2><p>Format:</p>
+<pre><code class="hljs plaintext">.flex-&#123;value&#125;</code></pre>
+
+<p>Values:</p>
+<ul>
+<li>nowrap</li>
+<li>wrap</li>
+<li>wrap-reverse</li>
+</ul>
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex flex-wrap">
+  <div class="padding-3 background-primary" style="width: 50%;">
+    column 1
+  </div>
+  <div class="padding-3 background-primary" style="width: 50%;">
+    column 2
+  </div>
+  <div class="padding-3 background-primary" style="width: 50%;">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex flex-wrap&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 50%;&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 50%;&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 50%;&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Justify-Content"><a href="#Justify-Content" class="headerlink" title="Justify Content"></a>Justify Content</h2><p>Format:</p>
+<pre><code class="hljs plaintext">.justify-content-&#123;value&#125;</code></pre>
+
+<p>Values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>space-between</li>
+<li>space-around</li>
+<li>space-evenly</li>
+</ul>
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex justify-content-center">
+  <div class="padding-3 margin-3 background-primary">
+    column 1
+  </div>
+  <div class="padding-3 margin-3 background-primary">
+    column 2
+  </div>
+  <div class="padding-3 margin-3 background-primary">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex justify-content-center&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Align-Items"><a href="#Align-Items" class="headerlink" title="Align Items"></a>Align Items</h2><p>Format:</p>
+<pre><code class="hljs plaintext">.align-items-&#123;value&#125;</code></pre>
+
+<p>Values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>stretch</li>
+<li>baseline</li>
+</ul>
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex align-items-center" style="height: 200px;">
+  <div class="padding-3 margin-3 background-primary">
+    column 1
+  </div>
+  <div class="padding-3 margin-3 background-primary">
+    column 2
+  </div>
+  <div class="padding-3 margin-3 background-primary">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex align-items-center&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 margin-3 background-primary&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Align-Content"><a href="#Align-Content" class="headerlink" title="Align Content"></a>Align Content</h2><p>Format:</p>
+<pre><code class="hljs plaintext">.align-content-&#123;value&#125;</code></pre>
+
+<p>Values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>stretch</li>
+<li>space-between</li>
+<li>space-around</li>
+</ul>
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex flex-wrap align-content-center" style="height: 200px;">
+  <div class="padding-3 background-primary" style="width: 50%;">
+    column 1
+  </div>
+  <div class="padding-3 background-primary" style="width: 50%;">
+    column 2
+  </div>
+  <div class="padding-3 background-primary" style="width: 50%;">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex flex-wrap align-content-center&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 50%;&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 50%;&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 50%;&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Gap"><a href="#Gap" class="headerlink" title="Gap"></a>Gap</h2><p>Format:</p>
+<pre><code class="hljs plaintext">.gap-&#123;0..5&#125;</code></pre>
+
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex gap-3">
+  <div class="padding-3 background-primary">
+    column 1
+  </div>
+  <div class="padding-3 background-primary">
+    column 2
+  </div>
+  <div class="padding-3 background-primary">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex gap-3&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Align-Self"><a href="#Align-Self" class="headerlink" title="Align Self"></a>Align Self</h2><p>Format:</p>
+<pre><code class="hljs plaintext">.align-self-$&#123;value&#125;</code></pre>
+
+<p>Values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>baseline</li>
+<li>stretch</li>
+</ul>
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex" style="height: 200px;">
+  <div class="padding-3 background-primary align-self-flex-start">
+    column 1
+  </div>
+  <div class="padding-3 background-primary align-self-center">
+    column 2
+  </div>
+  <div class="padding-3 background-primary align-self-flex-end">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary align-self-flex-start&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary align-self-center&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary align-self-flex-end&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Responsive"><a href="#Responsive" class="headerlink" title="Responsive"></a>Responsive</h2><p>Add <code>@&#123;screen&#125;</code> after class name.</p>
+<p>Example:</p>
+
+    <div class="example ">
+      <div class="display-flex flex-direction-column flex-direction-row@laptop">
+  <div class="padding-3 background-primary">
+    column 1
+  </div>
+  <div class="padding-3 background-primary">
+    column 2
+  </div>
+  <div class="padding-3 background-primary">
+    column 3
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-flex flex-direction-column flex-direction-row@laptop&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span>&gt;</span>
+    column 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span>&gt;</span>
+    column 2
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;padding-3 background-primary&quot;</span>&gt;</span>
+    column 3
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

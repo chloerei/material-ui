@@ -1,0 +1,371 @@
+.example {
+  padding: 16px 12px;
+  border: 4px solid #f8f8f8;
+}
+
+.example.sandbox {
+  padding: 0;
+  height: 400px;
+  position: relative;
+  overflow: auto;
+  z-index: 0;
+
+  /* set position fixed element contenxt */
+  transform: scale(1);
+}
+
+.example.sandbox .app {
+  height: 100%;
+  width: 100%;
+}
+
+.example .card {
+  width: 320px;
+  min-height: 120px;
+  margin: 8px;
+}
+
+.example > .chip {
+  margin: 8px;
+}
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.example + pre {
+  margin-top: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .example {
+    border: 4px solid #f8f8f8;
+  }
+
+  pre {
+    background: #f8f8f8;
+  }
+
+  code {
+    padding: 0 4px;
+    border-radius: 4px;
+    color: #333;
+    background: #f8f8f8;
+  }
+
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 16px;
+    color: #333;
+    background: #f8f8f8;
+  }
+
+  .hljs-comment,
+  .hljs-quote {
+    color: #998;
+    font-style: italic;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #333;
+    font-weight: bold;
+  }
+
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #008080;
+  }
+
+  .hljs-string,
+  .hljs-doctag {
+    color: #d14;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #900;
+    font-weight: bold;
+  }
+
+  .hljs-subst {
+    font-weight: normal;
+  }
+
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #458;
+    font-weight: bold;
+  }
+
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: #000080;
+    font-weight: normal;
+  }
+
+  .hljs-regexp,
+  .hljs-link {
+    color: #009926;
+  }
+
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #990073;
+  }
+
+  .hljs-built_in,
+  .hljs-builtin-name {
+    color: #0086b3;
+  }
+
+  .hljs-meta {
+    color: #999;
+    font-weight: bold;
+  }
+
+  .hljs-deletion {
+    background: #fdd;
+  }
+
+  .hljs-addition {
+    background: #dfd;
+  }
+
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    font-weight: bold;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .example {
+    border: 4px solid #0d1117;
+  }
+
+  .hljs {
+    color: #c9d1d9;
+    background: #0d1117;
+  }
+
+  .hljs-doctag,
+  .hljs-keyword,
+  .hljs-meta .hljs-keyword,
+  .hljs-template-tag,
+  .hljs-template-variable,
+  .hljs-type,
+  .hljs-variable.language_ {
+    color: #ff7b72;
+  }
+
+  .hljs-title,
+  .hljs-title.class_,
+  .hljs-title.class_.inherited__,
+  .hljs-title.function_ {
+    color: #d2a8ff;
+  }
+
+  .hljs-attr,
+  .hljs-attribute,
+  .hljs-literal,
+  .hljs-meta,
+  .hljs-number,
+  .hljs-operator,
+  .hljs-variable,
+  .hljs-selector-attr,
+  .hljs-selector-class,
+  .hljs-selector-id {
+    color: #79c0ff;
+  }
+
+  .hljs-regexp,
+  .hljs-string,
+  .hljs-meta .hljs-string {
+    color: #a5d6ff;
+  }
+
+  .hljs-built_in,
+  .hljs-symbol {
+    color: #ffa657;
+  }
+
+  .hljs-comment,
+  .hljs-code,
+  .hljs-formula {
+    color: #8b949e;
+  }
+
+  .hljs-name,
+  .hljs-quote,
+  .hljs-selector-tag,
+  .hljs-selector-pseudo {
+    color: #7ee787;
+  }
+
+  .hljs-subst {
+    color: #c9d1d9;
+  }
+
+  .hljs-section {
+    color: #1f6feb;
+    font-weight: bold;
+  }
+
+  .hljs-bullet {
+    color: #f2cc60;
+  }
+
+  .hljs-emphasis {
+    color: #c9d1d9;
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    color: #c9d1d9;
+    font-weight: bold;
+  }
+
+  .hljs-addition {
+    color: #aff5b4;
+    background-color: #033a16;
+  }
+
+  .hljs-deletion {
+    color: #ffdcd7;
+    background-color: #67060c;
+  }
+
+  .hljs-char.escape_,
+  .hljs-link,
+  .hljs-params,
+  .hljs-property,
+  .hljs-punctuation,
+  .hljs-tag {
+  }
+}
+
+.color-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.color-on-primary {
+  background-color: var(--color-on-primary);
+  color: var(--color-primary);
+}
+
+.color-primary-container {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.color-on-primary-container {
+  background-color: var(--color-on-primary-container);
+  color: var(--color-primary-container);
+}
+
+.color-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.color-on-secondary {
+  background-color: var(--color-on-secondary);
+  color: var(--color-secondary);
+}
+
+.color-secondary-container {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.color-on-secondary-container {
+  background-color: var(--color-on-secondary-container);
+  color: var(--color-secondary-container);
+}
+
+.color-tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-on-tertiary);
+}
+
+.color-on-tertiary {
+  background-color: var(--color-on-tertiary);
+  color: var(--color-tertiary);
+}
+
+.color-tertiary-container {
+  background-color: var(--color-tertiary-container);
+  color: var(--color-on-tertiary-container);
+}
+
+.color-on-tertiary-container {
+  background-color: var(--color-on-tertiary-container);
+  color: var(--color-tertiary-container);
+}
+
+.color-error {
+  background-color: var(--color-error);
+  color: var(--color-on-error);
+}
+
+.color-on-error {
+  background-color: var(--color-on-error);
+  color: var(--color-error);
+}
+
+.color-error-container {
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.color-on-error-container {
+  background-color: var(--color-on-error-container);
+  color: var(--color-error-container);
+}
+
+.color-background {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.color-on-background {
+  background-color: var(--color-on-background);
+  color: var(--color-background);
+}
+
+.color-surface {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.color-on-surface {
+  background-color: var(--color-on-surface);
+  color: var(--color-surface);
+}
+
+.color-surface-variant {
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+}
+
+.color-on-surface-variant {
+  background-color: var(--color-on-surface-variant);
+  color: var(--color-surface-variant);
+}
+
+.color-outline {
+  background-color: var(--color-outline);
+}

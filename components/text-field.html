@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Text Field - Campo UI</title>
+    <link rel="stylesheet" href="/material-ui.css">
+    <link rel="stylesheet" href="/theme.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <div class="display-flex">
+      <input type="checkbox" id="drawer-toggle" class="navigation-drawer-toggle">
+      <div id="navigation-drawer" class="navigation-drawer flex-shrink-0">
+        <div class="navigation-drawer__container">
+          <div class="headline-medium margin-x-2 padding-x-3 padding-y-2">
+            Material UI
+          </div>
+
+          <a href="/" class="navigation-drawer__item ">
+            Home
+          </a>
+
+          
+            
+            <a href="/introduction.html" class="navigation-drawer__item ">
+              Introduction
+            </a>
+          
+            
+            <a href="/installation.html" class="navigation-drawer__item ">
+              Installation
+            </a>
+          
+            
+            <a href="/typography.html" class="navigation-drawer__item ">
+              Typography
+            </a>
+          
+            
+            <a href="/color.html" class="navigation-drawer__item ">
+              Color
+            </a>
+          
+            
+            <a href="/examples.html" class="navigation-drawer__item ">
+              Examples
+            </a>
+          
+
+          <details open >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Components
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/components/top-app-bar.html" class="navigation-drawer__item ">
+                  Top App Bar
+                </a>
+              
+                
+                <a href="/components/button.html" class="navigation-drawer__item ">
+                  Button
+                </a>
+              
+                
+                <a href="/components/card.html" class="navigation-drawer__item ">
+                  Card
+                </a>
+              
+                
+                <a href="/components/checkbox.html" class="navigation-drawer__item ">
+                  Checkbox
+                </a>
+              
+                
+                <a href="/components/chip.html" class="navigation-drawer__item ">
+                  Chip
+                </a>
+              
+                
+                <a href="/components/dialog.html" class="navigation-drawer__item ">
+                  Dialog
+                </a>
+              
+                
+                <a href="/components/dropdown.html" class="navigation-drawer__item ">
+                  Dropdown
+                </a>
+              
+                
+                <a href="/components/navigation-drawer.html" class="navigation-drawer__item ">
+                  Navigation Drawer
+                </a>
+              
+                
+                <a href="/components/navigation-bar.html" class="navigation-drawer__item ">
+                  Navigation Bar
+                </a>
+              
+                
+                <a href="/components/navigation-rail.html" class="navigation-drawer__item ">
+                  Navigation Rail
+                </a>
+              
+                
+                <a href="/components/tab.html" class="navigation-drawer__item ">
+                  Tab
+                </a>
+              
+                
+                <a href="/components/table.html" class="navigation-drawer__item ">
+                  Table
+                </a>
+              
+                
+                <a href="/components/text-field.html" class="navigation-drawer__item navigation-drawer__item--active">
+                  Text Field
+                </a>
+              
+                
+                <a href="/components/radio.html" class="navigation-drawer__item ">
+                  Radio
+                </a>
+              
+                
+                <a href="/components/switch.html" class="navigation-drawer__item ">
+                  Switch
+                </a>
+              
+                
+                <a href="/components/snackbar.html" class="navigation-drawer__item ">
+                  Snackbar
+                </a>
+              
+                
+                <a href="/components/sheet.html" class="navigation-drawer__item ">
+                  Sheet
+                </a>
+              
+            </div>
+          </details>
+          <details  >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Utitlties
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/utilities/display.html" class="navigation-drawer__item ">
+                  Display
+                </a>
+              
+                
+                <a href="/utilities/background.html" class="navigation-drawer__item ">
+                  Background
+                </a>
+              
+                
+                <a href="/utilities/border.html" class="navigation-drawer__item ">
+                  Border
+                </a>
+              
+                
+                <a href="/utilities/flex.html" class="navigation-drawer__item ">
+                  Flex
+                </a>
+              
+                
+                <a href="/utilities/overflow.html" class="navigation-drawer__item ">
+                  Overflow
+                </a>
+              
+                
+                <a href="/utilities/position.html" class="navigation-drawer__item ">
+                  Position
+                </a>
+              
+                
+                <a href="/utilities/shadow.html" class="navigation-drawer__item ">
+                  Shadow
+                </a>
+              
+                
+                <a href="/utilities/spacing.html" class="navigation-drawer__item ">
+                  Spacing
+                </a>
+              
+                
+                <a href="/utilities/sizing.html" class="navigation-drawer__item ">
+                  Sizing
+                </a>
+              
+                
+                <a href="/utilities/text.html" class="navigation-drawer__item ">
+                  Text
+                </a>
+              
+                
+                <a href="/utilities/vertical-align.html" class="navigation-drawer__item ">
+                  Vertical Align
+                </a>
+              
+            </div>
+          </details>
+        </div>
+        <label for="drawer-toggle" class="navigation-drawer__scrim"></label>
+      </div>
+
+      <div class="flex-grow-1 min-width-0">
+        <div class="top-app-bar top-app-bar--sticky-top display-none@tablet">
+          <div class="top-app-bar__action">
+            <label for="drawer-toggle" class="button button--icon">
+              <span class="material-icons">menu</span>
+            </label>
+          </div>
+          <div class="top-app-bar__title">
+            Text Field
+          </div>
+        </div>
+
+        <div class="padding-3">
+          <h1 id="Text-Field"><a href="#Text-Field" class="headerlink" title="Text Field"></a>Text Field</h1><p>In order to work with floating label, <code>placeholder=&quot; &quot;</code> attribute must be set in input element, and the content of <code>placeholder</code> attribute will not visible.</p>
+<h2 id="Filled"><a href="#Filled" class="headerlink" title="Filled"></a>Filled</h2>
+    <div class="example ">
+      <div class="text-field text-field--filled">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    helper text
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--filled text-field--error">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    error text
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--filled text-field--with-leading-icon">
+  <div class="text-field__container">
+    <div class="text-field__leading-icon">
+      <span class="material-icons">edit</span>
+    </div>
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--filled text-field--with-trailing-icon">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <div class="text-field__trailing-icon">
+      <span class="material-icons">edit</span>
+    </div>
+    <label class="text-field__label">Label</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--filled text-field--with-prefix-text">
+  <div class="text-field__container">
+    <label class="text-field__prefix-text">
+      $
+    </label>
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--filled text-field--with-suffix-text">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" " class="text-align-right">
+    <label class="text-field__suffix-text">
+      @example.com
+    </label>
+    <label class="text-field__label">Label</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--filled">
+  <div class="text-field__container">
+    <textarea class="text-field__input" placeholder=" " rows="4"></textarea>
+    <label class="text-field__label">Textarea</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--filled">
+  <div class="text-field__container">
+    <select class="text-field__input">
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+    <label class="text-field__label">Select</label>
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__helper-text&quot;</span>&gt;</span>
+    helper text
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled text-field--error&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__helper-text&quot;</span>&gt;</span>
+    error text
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled text-field--with-leading-icon&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__leading-icon&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled text-field--with-trailing-icon&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__trailing-icon&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled text-field--with-prefix-text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__prefix-text&quot;</span>&gt;</span>
+      $
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled text-field--with-suffix-text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-align-right&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__suffix-text&quot;</span>&gt;</span>
+      @example.com
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;4&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Textarea<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--filled&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Outlined"><a href="#Outlined" class="headerlink" title="Outlined"></a>Outlined</h2>
+    <div class="example ">
+      <div class="text-field text-field--outlined">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    helper text
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined text-field--error">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    error text
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined text-field--with-leading-icon">
+  <div class="text-field__container">
+    <div class="text-field__leading-icon">
+      <span class="material-icons">edit</span>
+    </div>
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined text-field--with-trailing-icon">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <div class="text-field__trailing-icon">
+      <span class="material-icons">edit</span>
+    </div>
+    <label class="text-field__label">Label</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined text-field--with-prefix-text">
+  <div class="text-field__container">
+    <label class="text-field__prefix-text">
+      $
+    </label>
+    <input class="text-field__input" type="text" name="" value="" placeholder=" ">
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    helper text
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined text-field--with-suffix-text">
+  <div class="text-field__container">
+    <input class="text-field__input" type="text" name="" value="" placeholder=" " class="text-align-right">
+    <label class="text-field__suffix-text">
+      @example.com
+    </label>
+    <label class="text-field__label">Label</label>
+  </div>
+  <div class="text-field__helper-text">
+    helper text
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined">
+  <div class="text-field__container">
+    <textarea class="text-field__input" placeholder=" " rows="4"></textarea>
+    <label class="text-field__label">Textarea</label>
+  </div>
+</div>
+
+<br>
+
+<div class="text-field text-field--outlined">
+  <div class="text-field__container">
+    <select class="text-field__input">
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+    <label class="text-field__label">Select</label>
+  </div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__helper-text&quot;</span>&gt;</span>
+    helper text
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined text-field--error&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__helper-text&quot;</span>&gt;</span>
+    error text
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined text-field--with-leading-icon&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__leading-icon&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined text-field--with-trailing-icon&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__trailing-icon&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined text-field--with-prefix-text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__prefix-text&quot;</span>&gt;</span>
+      $
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__helper-text&quot;</span>&gt;</span>
+    helper text
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined text-field--with-suffix-text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-align-right&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__suffix-text&quot;</span>&gt;</span>
+      @example.com
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__helper-text&quot;</span>&gt;</span>
+    helper text
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot; &quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;4&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Textarea<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field text-field--outlined&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__input&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-field__label&quot;</span>&gt;</span>Select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

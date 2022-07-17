@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>New Post - Campo UI</title>
+    <link rel="stylesheet" href="/material-ui.css">
+    <link rel="stylesheet" href="/theme.css">
+    <script type="module">
+      import { init } from '/material-ui.bundle.js'
+      init()
+    </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <div class="display-flex">
+      <div id="navigation-drawer" class="navigation-drawer">
+        <div class="navigation-drawer__container">
+          <div class="headline-medium padding-x-3 padding-y-2">
+            Dashboard
+          </div>
+
+          <a href="#" class="navigation-drawer__item navigation-drawer__item--active">
+            <div class="navigation-drawer__item__icon">
+              <span class="material-icons">article</span>
+            </div>
+            <div class="navigation-drawer__item__label">
+              Posts
+            </div>
+          </a>
+          <a href="#" class="navigation-drawer__item">
+            <div class="navigation-drawer__item__icon">
+              <span class="material-icons">category</span>
+            </div>
+            <div class="navigation-drawer__item__label">
+              Categories
+            </div>
+          </a>
+          <a href="#" class="navigation-drawer__item">
+            <div class="navigation-drawer__item__icon">
+              <span class="material-icons">tag</span>
+            </div>
+            <div class="navigation-drawer__item__label">
+              Tags
+            </div>
+          </a>
+          <a href="#" class="navigation-drawer__item">
+            <div class="navigation-drawer__item__icon">
+              <span class="material-icons">people</span>
+            </div>
+            <div class="navigation-drawer__item__label">
+              Users
+            </div>
+          </a>
+          <a href="#" class="navigation-drawer__item">
+            <div class="navigation-drawer__item__icon">
+              <span class="material-icons">settings</span>
+            </div>
+            <div class="navigation-drawer__item__label">
+              Settings
+            </div>
+          </a>
+        </div>
+        <div class="navigation-drawer__scrim" data-action="click->navigation-drawer#close">
+        </div>
+      </div>
+
+      <div class="flex-grow-1 min-width-0">
+        
+<div class="top-app-bar top-app-bar--sticky-top">
+  <div class="top-app-bar__action">
+    <a href="../dashboard.html" class="button button--icon">
+      <span class="material-icons">arrow_back</span>
+    </a>
+  </div>
+  <div class="top-app-bar__title">
+    New Post
+  </div>
+</div>
+
+<div class="padding-3">
+  <form action="#" method="post">
+    <div class="margin-bottom-3">
+      <div class="text-field text-field--filled">
+        <div class="text-field__container">
+          <input class="text-field__input" type="text" name="title" value="" placeholder=" ">
+          <label class="text-field__label">Title</label>
+        </div>
+      </div>
+    </div>
+    <div class="margin-bottom-3">
+      <div class="text-field text-field--filled">
+        <div class="text-field__container">
+          <textarea class="text-field__input" name="name" rows="8" placeholder=" "></textarea>
+          <label class="text-field__label">Content</label>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="button button--filled">
+      Create Post
+    </button>
+  </form>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>

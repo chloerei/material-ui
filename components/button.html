@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Button - Campo UI</title>
+    <link rel="stylesheet" href="/material-ui.css">
+    <link rel="stylesheet" href="/theme.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <div class="display-flex">
+      <input type="checkbox" id="drawer-toggle" class="navigation-drawer-toggle">
+      <div id="navigation-drawer" class="navigation-drawer flex-shrink-0">
+        <div class="navigation-drawer__container">
+          <div class="headline-medium margin-x-2 padding-x-3 padding-y-2">
+            Material UI
+          </div>
+
+          <a href="/" class="navigation-drawer__item ">
+            Home
+          </a>
+
+          
+            
+            <a href="/introduction.html" class="navigation-drawer__item ">
+              Introduction
+            </a>
+          
+            
+            <a href="/installation.html" class="navigation-drawer__item ">
+              Installation
+            </a>
+          
+            
+            <a href="/typography.html" class="navigation-drawer__item ">
+              Typography
+            </a>
+          
+            
+            <a href="/color.html" class="navigation-drawer__item ">
+              Color
+            </a>
+          
+            
+            <a href="/examples.html" class="navigation-drawer__item ">
+              Examples
+            </a>
+          
+
+          <details open >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Components
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/components/top-app-bar.html" class="navigation-drawer__item ">
+                  Top App Bar
+                </a>
+              
+                
+                <a href="/components/button.html" class="navigation-drawer__item navigation-drawer__item--active">
+                  Button
+                </a>
+              
+                
+                <a href="/components/card.html" class="navigation-drawer__item ">
+                  Card
+                </a>
+              
+                
+                <a href="/components/checkbox.html" class="navigation-drawer__item ">
+                  Checkbox
+                </a>
+              
+                
+                <a href="/components/chip.html" class="navigation-drawer__item ">
+                  Chip
+                </a>
+              
+                
+                <a href="/components/dialog.html" class="navigation-drawer__item ">
+                  Dialog
+                </a>
+              
+                
+                <a href="/components/dropdown.html" class="navigation-drawer__item ">
+                  Dropdown
+                </a>
+              
+                
+                <a href="/components/navigation-drawer.html" class="navigation-drawer__item ">
+                  Navigation Drawer
+                </a>
+              
+                
+                <a href="/components/navigation-bar.html" class="navigation-drawer__item ">
+                  Navigation Bar
+                </a>
+              
+                
+                <a href="/components/navigation-rail.html" class="navigation-drawer__item ">
+                  Navigation Rail
+                </a>
+              
+                
+                <a href="/components/tab.html" class="navigation-drawer__item ">
+                  Tab
+                </a>
+              
+                
+                <a href="/components/table.html" class="navigation-drawer__item ">
+                  Table
+                </a>
+              
+                
+                <a href="/components/text-field.html" class="navigation-drawer__item ">
+                  Text Field
+                </a>
+              
+                
+                <a href="/components/radio.html" class="navigation-drawer__item ">
+                  Radio
+                </a>
+              
+                
+                <a href="/components/switch.html" class="navigation-drawer__item ">
+                  Switch
+                </a>
+              
+                
+                <a href="/components/snackbar.html" class="navigation-drawer__item ">
+                  Snackbar
+                </a>
+              
+                
+                <a href="/components/sheet.html" class="navigation-drawer__item ">
+                  Sheet
+                </a>
+              
+            </div>
+          </details>
+          <details  >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Utitlties
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/utilities/display.html" class="navigation-drawer__item ">
+                  Display
+                </a>
+              
+                
+                <a href="/utilities/background.html" class="navigation-drawer__item ">
+                  Background
+                </a>
+              
+                
+                <a href="/utilities/border.html" class="navigation-drawer__item ">
+                  Border
+                </a>
+              
+                
+                <a href="/utilities/flex.html" class="navigation-drawer__item ">
+                  Flex
+                </a>
+              
+                
+                <a href="/utilities/overflow.html" class="navigation-drawer__item ">
+                  Overflow
+                </a>
+              
+                
+                <a href="/utilities/position.html" class="navigation-drawer__item ">
+                  Position
+                </a>
+              
+                
+                <a href="/utilities/shadow.html" class="navigation-drawer__item ">
+                  Shadow
+                </a>
+              
+                
+                <a href="/utilities/spacing.html" class="navigation-drawer__item ">
+                  Spacing
+                </a>
+              
+                
+                <a href="/utilities/sizing.html" class="navigation-drawer__item ">
+                  Sizing
+                </a>
+              
+                
+                <a href="/utilities/text.html" class="navigation-drawer__item ">
+                  Text
+                </a>
+              
+                
+                <a href="/utilities/vertical-align.html" class="navigation-drawer__item ">
+                  Vertical Align
+                </a>
+              
+            </div>
+          </details>
+        </div>
+        <label for="drawer-toggle" class="navigation-drawer__scrim"></label>
+      </div>
+
+      <div class="flex-grow-1 min-width-0">
+        <div class="top-app-bar top-app-bar--sticky-top display-none@tablet">
+          <div class="top-app-bar__action">
+            <label for="drawer-toggle" class="button button--icon">
+              <span class="material-icons">menu</span>
+            </label>
+          </div>
+          <div class="top-app-bar__title">
+            Button
+          </div>
+        </div>
+
+        <div class="padding-3">
+          <h1 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h1><h2 id="Elevated"><a href="#Elevated" class="headerlink" title="Elevated"></a>Elevated</h2>
+    <div class="example ">
+      <button type="button" class="button button--elevated">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Elevated
+  </div>
+</button>
+<button type="button" class="button button--elevated" disabled>
+  Disabled
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--elevated&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__icon&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>check<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__label&quot;</span>&gt;</span>
+    Elevated
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--elevated&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  Disabled
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h2 id="Filled"><a href="#Filled" class="headerlink" title="Filled"></a>Filled</h2>
+    <div class="example ">
+      <button type="button" class="button button--filled">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Filled
+  </div>
+</button>
+<button type="button" class="button button--filled" disabled>
+  Disabled
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--filled&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__icon&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>check<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__label&quot;</span>&gt;</span>
+    Filled
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--filled&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  Disabled
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h2 id="Filled-tonal"><a href="#Filled-tonal" class="headerlink" title="Filled tonal"></a>Filled tonal</h2>
+    <div class="example ">
+      <button type="button" class="button button--filled-tonal">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Filled
+  </div>
+</button>
+<button type="button" class="button button--filled-tonal" disabled>
+  Disabled
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--filled-tonal&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__icon&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>check<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__label&quot;</span>&gt;</span>
+    Filled
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--filled-tonal&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  Disabled
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h2 id="Outlined"><a href="#Outlined" class="headerlink" title="Outlined"></a>Outlined</h2>
+    <div class="example ">
+      <button type="button" class="button button--outlined">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Outlined
+  </div>
+</button>
+<button type="button" class="button button--outlined button--surface">
+  Outlined surface
+</button>
+<button type="button" class="button button--outlined" disabled>
+  Disabled
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--outlined&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__icon&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>check<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__label&quot;</span>&gt;</span>
+    Outlined
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--outlined button--surface&quot;</span>&gt;</span>
+  Outlined surface
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--outlined&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  Disabled
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h2 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h2>
+    <div class="example ">
+      <button type="button" class="button button--text">
+  <div class="button__icon">
+    <span class="material-icons">check</span>
+  </div>
+  <div class="button__label">
+    Text
+  </div>
+</button>
+<button type="button" class="button button--text">
+  Text button
+</button>
+<button type="button" class="button button--text" disabled>
+  Disabled
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__icon&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>check<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__label&quot;</span>&gt;</span>
+    Text
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+  Text button
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  Disabled
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h2 id="Icon"><a href="#Icon" class="headerlink" title="Icon"></a>Icon</h2>
+    <div class="example ">
+      <button type="button" class="button button--icon">
+  <span class="material-icons">bookmark_border</span>
+</button>
+<button type="button" class="button button--icon" disabled>
+  <span class="material-icons">bookmark_border</span>
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--icon&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>bookmark_border<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--icon&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>bookmark_border<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+
+<h2 id="Floating-action"><a href="#Floating-action" class="headerlink" title="Floating action"></a>Floating action</h2><h3 id="Color"><a href="#Color" class="headerlink" title="Color"></a>Color</h3>
+    <div class="example ">
+      <button type="button" class="button button--floating-action">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--surface">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--secondary">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--tertiary">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action" disabled>
+  <span class="material-icons">edit</span>
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action button--surface&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action button--secondary&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action button--tertiary&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h3 id="Size"><a href="#Size" class="headerlink" title="Size"></a>Size</h3>
+    <div class="example ">
+      <button type="button" class="button button--floating-action">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--small">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--large">
+  <span class="material-icons">edit</span>
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action button--small&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action button--large&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h3 id="Elevation"><a href="#Elevation" class="headerlink" title="Elevation"></a>Elevation</h3>
+    <div class="example ">
+      <button type="button" class="button button--floating-action">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="button button--floating-action button--lowered">
+  <span class="material-icons">edit</span>
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action button--lowered&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+<h3 id="Extended"><a href="#Extended" class="headerlink" title="Extended"></a>Extended</h3>
+    <div class="example ">
+      <button type="button" class="button button--floating-action">
+  <div class="button__icon">
+    <span class="material-icons">edit</span>
+  </div>
+  <div class="button__label">
+    Compose
+  </div>
+</button>
+<button type="button" class="button button--floating-action">
+  <div class="button__label">
+    Compose
+  </div>
+</button>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__icon&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__label&quot;</span>&gt;</span>
+    Compose
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--floating-action&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button__label&quot;</span>&gt;</span>
+    Compose
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+  
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

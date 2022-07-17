@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Dialog - Campo UI</title>
+    <link rel="stylesheet" href="/material-ui.css">
+    <link rel="stylesheet" href="/theme.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <div class="display-flex">
+      <input type="checkbox" id="drawer-toggle" class="navigation-drawer-toggle">
+      <div id="navigation-drawer" class="navigation-drawer flex-shrink-0">
+        <div class="navigation-drawer__container">
+          <div class="headline-medium margin-x-2 padding-x-3 padding-y-2">
+            Material UI
+          </div>
+
+          <a href="/" class="navigation-drawer__item ">
+            Home
+          </a>
+
+          
+            
+            <a href="/introduction.html" class="navigation-drawer__item ">
+              Introduction
+            </a>
+          
+            
+            <a href="/installation.html" class="navigation-drawer__item ">
+              Installation
+            </a>
+          
+            
+            <a href="/typography.html" class="navigation-drawer__item ">
+              Typography
+            </a>
+          
+            
+            <a href="/color.html" class="navigation-drawer__item ">
+              Color
+            </a>
+          
+            
+            <a href="/examples.html" class="navigation-drawer__item ">
+              Examples
+            </a>
+          
+
+          <details open >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Components
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/components/top-app-bar.html" class="navigation-drawer__item ">
+                  Top App Bar
+                </a>
+              
+                
+                <a href="/components/button.html" class="navigation-drawer__item ">
+                  Button
+                </a>
+              
+                
+                <a href="/components/card.html" class="navigation-drawer__item ">
+                  Card
+                </a>
+              
+                
+                <a href="/components/checkbox.html" class="navigation-drawer__item ">
+                  Checkbox
+                </a>
+              
+                
+                <a href="/components/chip.html" class="navigation-drawer__item ">
+                  Chip
+                </a>
+              
+                
+                <a href="/components/dialog.html" class="navigation-drawer__item navigation-drawer__item--active">
+                  Dialog
+                </a>
+              
+                
+                <a href="/components/dropdown.html" class="navigation-drawer__item ">
+                  Dropdown
+                </a>
+              
+                
+                <a href="/components/navigation-drawer.html" class="navigation-drawer__item ">
+                  Navigation Drawer
+                </a>
+              
+                
+                <a href="/components/navigation-bar.html" class="navigation-drawer__item ">
+                  Navigation Bar
+                </a>
+              
+                
+                <a href="/components/navigation-rail.html" class="navigation-drawer__item ">
+                  Navigation Rail
+                </a>
+              
+                
+                <a href="/components/tab.html" class="navigation-drawer__item ">
+                  Tab
+                </a>
+              
+                
+                <a href="/components/table.html" class="navigation-drawer__item ">
+                  Table
+                </a>
+              
+                
+                <a href="/components/text-field.html" class="navigation-drawer__item ">
+                  Text Field
+                </a>
+              
+                
+                <a href="/components/radio.html" class="navigation-drawer__item ">
+                  Radio
+                </a>
+              
+                
+                <a href="/components/switch.html" class="navigation-drawer__item ">
+                  Switch
+                </a>
+              
+                
+                <a href="/components/snackbar.html" class="navigation-drawer__item ">
+                  Snackbar
+                </a>
+              
+                
+                <a href="/components/sheet.html" class="navigation-drawer__item ">
+                  Sheet
+                </a>
+              
+            </div>
+          </details>
+          <details  >
+            <summary class="navigation-drawer__item">
+              <div class="navigation-drawer__item__label">
+                Utitlties
+              </div>
+              <div class="navigation-drawer__item__icon">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </summary>
+            <div class="padding-left-3">
+              
+                
+                <a href="/utilities/display.html" class="navigation-drawer__item ">
+                  Display
+                </a>
+              
+                
+                <a href="/utilities/background.html" class="navigation-drawer__item ">
+                  Background
+                </a>
+              
+                
+                <a href="/utilities/border.html" class="navigation-drawer__item ">
+                  Border
+                </a>
+              
+                
+                <a href="/utilities/flex.html" class="navigation-drawer__item ">
+                  Flex
+                </a>
+              
+                
+                <a href="/utilities/overflow.html" class="navigation-drawer__item ">
+                  Overflow
+                </a>
+              
+                
+                <a href="/utilities/position.html" class="navigation-drawer__item ">
+                  Position
+                </a>
+              
+                
+                <a href="/utilities/shadow.html" class="navigation-drawer__item ">
+                  Shadow
+                </a>
+              
+                
+                <a href="/utilities/spacing.html" class="navigation-drawer__item ">
+                  Spacing
+                </a>
+              
+                
+                <a href="/utilities/sizing.html" class="navigation-drawer__item ">
+                  Sizing
+                </a>
+              
+                
+                <a href="/utilities/text.html" class="navigation-drawer__item ">
+                  Text
+                </a>
+              
+                
+                <a href="/utilities/vertical-align.html" class="navigation-drawer__item ">
+                  Vertical Align
+                </a>
+              
+            </div>
+          </details>
+        </div>
+        <label for="drawer-toggle" class="navigation-drawer__scrim"></label>
+      </div>
+
+      <div class="flex-grow-1 min-width-0">
+        <div class="top-app-bar top-app-bar--sticky-top display-none@tablet">
+          <div class="top-app-bar__action">
+            <label for="drawer-toggle" class="button button--icon">
+              <span class="material-icons">menu</span>
+            </label>
+          </div>
+          <div class="top-app-bar__title">
+            Dialog
+          </div>
+        </div>
+
+        <div class="padding-3">
+          <h1 id="Dialog"><a href="#Dialog" class="headerlink" title="Dialog"></a>Dialog</h1><h2 id="Basic-dialogs"><a href="#Basic-dialogs" class="headerlink" title="Basic dialogs"></a>Basic dialogs</h2>
+    <div class="example sandbox">
+      <input type="checkbox" class="dialog-toggle" checked>
+<div class="dialog">
+  <div class="dialog__container">
+    <div class="dialog__body">
+      <div class="text-secondary text-align-center margin-bottom-3">
+        <span class="material-icons">info</span>
+      </div>
+      <div class="headline-small text-align-center margin-bottom-3">
+        Dialog with hero icon
+      </div>
+      <div class="body-medium margin-bottom-3">
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </div>
+      <div class="dialog__actions">
+        <button type="button" class="button button--text">
+          Enabled
+        </button>
+        <button type="button" class="button button--text">
+          Enabled
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dialog__scrim"></div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span> <span class="hljs-attr">checked</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__body&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-secondary text-align-center margin-bottom-3&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>info<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;headline-small text-align-center margin-bottom-3&quot;</span>&gt;</span>
+        Dialog with hero icon
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-medium margin-bottom-3&quot;</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__actions&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Enabled
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Enabled
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__scrim&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Basic-dialogs-with-scrollable-content"><a href="#Basic-dialogs-with-scrollable-content" class="headerlink" title="Basic dialogs with scrollable content"></a>Basic dialogs with scrollable content</h2>
+    <div class="example sandbox">
+      <input type="checkbox" class="dialog-toggle" checked>
+<div class="dialog">
+  <div class="dialog__container">
+    <div class="dialog__header">
+      <div class="headline-small">
+        Dialog Headline
+      </div>
+    </div>
+    <div class="dialog__body body-medium">
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+    </div>
+    <div class="dialog__footer">
+      <div class="dialog__actions">
+        <button type="button" class="button button--text">
+          Cancel
+        </button>
+        <button type="button" class="button button--text">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dialog__scrim"></div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span> <span class="hljs-attr">checked</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;headline-small&quot;</span>&gt;</span>
+        Dialog Headline
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__body body-medium&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__footer&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__actions&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Cancel
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Ok
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__scrim&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Full-screen-dialog-mobile-only"><a href="#Full-screen-dialog-mobile-only" class="headerlink" title="Full-screen dialog (mobile only)"></a>Full-screen dialog (mobile only)</h2>
+    <div class="example sandbox">
+      <input type="checkbox" class="dialog-toggle" checked>
+<div class="dialog dialog--full-screen">
+  <div class="dialog__container">
+    <div class="top-app-bar display-none@tablet">
+      <div class="top-app-bar__action">
+        <button type="button" class="button button--icon">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+      <div class="top-app-bar__title">
+        Dialog title
+      </div>
+      <div class="top-app-bar__action">
+        <button type="button" class="button button--text">
+          Save
+        </button>
+      </div>
+    </div>
+    <div class="dialog__header headline-small display-none display-block@tablet">
+      Dialog title
+    </div>
+    <div class="dialog__body">
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+      <p>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      </p>
+    </div>
+    <div class="dialog__footer display-none-on-phone">
+      <div class="dialog__actions">
+        <button type="button" class="button button--text">
+          Cancel
+        </button>
+        <button type="button" class="button button--text">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dialog__scrim"></div>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span> <span class="hljs-attr">checked</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog dialog--full-screen&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-app-bar display-none@tablet&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-app-bar__action&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--icon&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-icons&quot;</span>&gt;</span>close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-app-bar__title&quot;</span>&gt;</span>
+        Dialog title
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-app-bar__action&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Save
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__header headline-small display-none display-block@tablet&quot;</span>&gt;</span>
+      Dialog title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__body&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__footer display-none-on-phone&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__actions&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Cancel
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Ok
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__scrim&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+<h2 id="Dialog-Toggle"><a href="#Dialog-Toggle" class="headerlink" title="Dialog Toggle"></a>Dialog Toggle</h2>
+    <div class="example sandbox">
+      <label for="dialog-toggle" class="button button--filled">
+  Dialog Toggle
+</label>
+
+<input type="checkbox" id="dialog-toggle" class="dialog-toggle">
+<div id="demo-dialog" class="dialog">
+  <div class="dialog__container">
+    <div class="dialog__body">
+      <p>Dialog content</p>
+      <div class="dialog__actions">
+        <label for="dialog-toggle" class="button button--text">
+          Cancel
+        </label>
+        <button type="button" class="button button--text">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+  <label for="dialog-toggle" class="dialog__scrim"></label>
+</div>
+    </div>
+    <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--filled&quot;</span>&gt;</span>
+  Dialog Toggle
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo-dialog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__body&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Dialog content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__actions&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Cancel
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--text&quot;</span>&gt;</span>
+          Ok
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;dialog-toggle&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog__scrim&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
