@@ -6,11 +6,11 @@ $breakpoints: (
 
 :root {
   @include color-scheme(
-    $primary: #543A93,
+    $primary: #533993,
     $secondary: #4F485E,
-    $tertiary: #69404D,
-    $neutral: #4E4A54,
-    $neutral-variant: #4D4A4F,
+    $tertiary: #693F4D,
+    $neutral: #4E4B54,
+    $neutral-variant: #4D4B4F,
     $error: #DB3229
   );
 
