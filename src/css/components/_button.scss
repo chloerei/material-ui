@@ -54,20 +54,20 @@ button[disabled] {
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-1);
-  background-color: var(--color-surface-1);
+  background-color: var(--color-surface-container-low);
 
   &:hover {
-    background-color: var(--color-surface-2);
+    background-color: var(--color-surface-container);
     box-shadow: var(--shadow-2);
   }
 
   &:focus {
-    background-color: var(--color-surface-1);
+    background-color: var(--color-surface-container-low);
     box-shadow: var(--shadow-1);
   }
 
   &:active {
-    background-color: var(--color-surface-1);
+    background-color: var(--color-surface-container-low);
     box-shadow: var(--shadow-1);
   }
 

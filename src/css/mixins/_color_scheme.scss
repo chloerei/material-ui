@@ -28,28 +28,23 @@
   --color-error-container: #{color.change($error, $lightness: 90%)};
   --color-on-error-container: #{color.change($error, $lightness: 10%)};
 
-  --color-background: #{color.change($neutral, $lightness: 99%)};
-  --color-on-background: #{color.change($neutral, $lightness: 10%)};
-  --color-surface: #{color.change($neutral, $lightness: 99%)};
+  --color-surface-dim: #{color.change($neutral, $lightness: 87%)};
+  --color-surface: #{color.change($neutral, $lightness: 98%)};
+  --color-surface-bright: #{color.change($neutral, $lightness: 98%)};
+  --color-surface-container-lowest: #{color.change($neutral, $lightness: 100%)};
+  --color-surface-container-low: #{color.change($neutral, $lightness: 96%)};
+  --color-surface-container: #{color.change($neutral, $lightness: 94%)};
+  --color-surface-container-high: #{color.change($neutral, $lightness: 92%)};
+  --color-surface-container-highest: #{color.change($neutral, $lightness: 90%)};
+
   --color-on-surface: #{color.change($neutral, $lightness: 10%)};
+  --color-on-surface-variant: #{color.change($neutral, $lightness: 30%)};
 
-  $surface-color: color.change($neutral, $lightness: 99%);
-  --color-surface-1: #{color.mix($primary, $surface-color, 5%)};
-  --color-surface-2: #{color.mix($primary, $surface-color, 8%)};
-  --color-surface-3: #{color.mix($primary, $surface-color, 11%)};
-  --color-surface-4: #{color.mix($primary, $surface-color, 12%)};
-  --color-surface-5: #{color.mix($primary, $surface-color, 14%)};
-
-  --color-inverse-surface: #{color.change($neutral, $lightness: 20%)};
-  --color-on-inverse-surface: #{color.change($neutral, $lightness: 95%)};
-  --color-inverse-primary: #{color.change($primary, $lightness: 80%)};
+  --color-outline: #{color.change($neutral-variant, $lightness: 50%)};
+  --color-outline-variant: #{color.change($neutral-variant, $lightness: 80%)};
 
   --color-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.12)};
   --color-on-disabled: #{color.change($neutral, $lightness: 10%, $alpha: 0.38)};
-
-  --color-surface-variant: #{color.change($neutral-variant, $lightness: 90%)};
-  --color-on-surface-variant: #{color.change($neutral-variant, $lightness: 30%)};
-  --color-outline: #{color.change($neutral-variant, $lightness: 50%)};
 
   --shadow-0: none;
   --shadow-1: 0 1px 2px #{color.change($neutral, $lightness: 10%, $alpha: 0.3)};
@@ -89,28 +84,23 @@
   --color-error-container: #{color.change($error, $lightness: 30%)};
   --color-on-error-container: #{color.change($error, $lightness: 90%)};
 
-  --color-background: #{color.change($neutral, $lightness: 10%)};
-  --color-on-background: #{color.change($neutral, $lightness: 90%)};
-  --color-surface: #{color.change($neutral, $lightness: 10%)};
+  --color-surface-dim: #{color.change($neutral, $lightness: 6%)};
+  --color-surface: #{color.change($neutral, $lightness: 6%)};
+  --color-surface-bright: #{color.change($neutral, $lightness: 24%)};
+  --color-surface-container-lowest: #{color.change($neutral, $lightness: 4%)};
+  --color-surface-container-low: #{color.change($neutral, $lightness: 10%)};
+  --color-surface-container: #{color.change($neutral, $lightness: 12%)};
+  --color-surface-container-high: #{color.change($neutral, $lightness: 17%)};
+  --color-surface-container-highest: #{color.change($neutral, $lightness: 22%)};
+
   --color-on-surface: #{color.change($neutral, $lightness: 90%)};
+  --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
 
-  $surface-color: color.change($neutral, $lightness: 10%);
-  --color-surface-1: #{color.mix($primary, $surface-color, 5%)};
-  --color-surface-2: #{color.mix($primary, $surface-color, 8%)};
-  --color-surface-3: #{color.mix($primary, $surface-color, 11%)};
-  --color-surface-4: #{color.mix($primary, $surface-color, 12%)};
-  --color-surface-5: #{color.mix($primary, $surface-color, 14%)};
-
-  --color-inverse-surface: #{color.change($neutral, $lightness: 90%)};
-  --color-on-inverse-surface: #{color.change($neutral, $lightness: 20%)};
-  --color-inverse-primary: #{color.change($primary, $lightness: 40%)};
+  --color-outline: #{color.change($neutral-variant, $lightness: 60%)};
+  --color-outline-variant: #{color.change($neutral-variant, $lightness: 30%)};
 
   --color-disabled: #{color.change($neutral, $lightness: 90%, $alpha: 0.12)};
   --color-on-disabled: #{color.change($neutral, $lightness: 90%, $alpha: 0.38)};
-
-  --color-surface-variant: #{color.change($neutral, $lightness: 30%)};
-  --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
-  --color-outline: #{color.change($neutral, $lightness: 60%)};
 
   --shadow-0: none;
   --shadow-1: 0 1px 2px #{color.change($neutral, $lightness: 90%, $alpha: 0.3)};
