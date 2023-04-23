@@ -22,7 +22,7 @@ Or use with bundle tool:
 
 ```scss
 // application.scss
-@import '@chloerei/material-ui/dist/material-ui.css';
+@import '@chloerei/material-ui/dist/material-ui';
 ```
 
 ## CDN
@@ -30,5 +30,5 @@ Or use with bundle tool:
 Add this code to your page head:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.13/dist/material-ui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.16/dist/material-ui.css">
 ```
