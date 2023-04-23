@@ -40,6 +40,10 @@
   --color-on-surface: #{color.change($neutral, $lightness: 10%)};
   --color-on-surface-variant: #{color.change($neutral, $lightness: 30%)};
 
+  --color-inverse-surface: #{color.change($neutral, $lightness: 20%)};
+  --color-inverse-on-surface: #{color.change($neutral, $lightness: 95%)};
+  --color-inverse-primary: #{color.change($primary, $lightness: 80%)};
+
   --color-outline: #{color.change($neutral-variant, $lightness: 50%)};
   --color-outline-variant: #{color.change($neutral-variant, $lightness: 80%)};
 
@@ -95,6 +99,10 @@
 
   --color-on-surface: #{color.change($neutral, $lightness: 90%)};
   --color-on-surface-variant: #{color.change($neutral, $lightness: 80%)};
+
+  --color-inverse-surface: #{color.change($neutral, $lightness: 90%)};
+  --color-inverse-on-surface: #{color.change($neutral, $lightness: 20%)};
+  --color-inverse-primary: #{color.change($primary, $lightness: 40%)};
 
   --color-outline: #{color.change($neutral-variant, $lightness: 60%)};
   --color-outline-variant: #{color.change($neutral-variant, $lightness: 30%)};

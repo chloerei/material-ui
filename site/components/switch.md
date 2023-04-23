@@ -16,9 +16,9 @@ title: Switch
   </label>
 </div>
 <div class="display-flex align-items-center">
-  <label for="switch_1" class="flex-grow-1">Switch off</label>
+  <label for="switch_2" class="flex-grow-1">Switch off</label>
   <label class="switch">
-    <input type="checkbox" id="switch_1" name="" value="">
+    <input type="checkbox" id="switch_2" name="" value="">
     <div class="switch__track">
     </div>
     <div class="switch__thumb">
@@ -26,9 +26,9 @@ title: Switch
   </label>
 </div>
 <div class="display-flex align-items-center">
-  <label for="switch_1" class="flex-grow-1">Disabled</label>
+  <label for="switch_3" class="flex-grow-1">Disabled</label>
   <label class="switch">
-    <input type="checkbox" id="switch_1" name="" value="" disabled>
+    <input type="checkbox" id="switch_3" name="" value="" disabled>
     <div class="switch__track">
     </div>
     <div class="switch__thumb">
