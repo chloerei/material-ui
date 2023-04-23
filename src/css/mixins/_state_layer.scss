@@ -10,6 +10,8 @@
     opacity: 0;
     border-radius: inherit;
     pointer-events: none;
+    transition-property: opacity;
+    transition-duration: var(--transition-duration);
   }
 
   &:hover {
