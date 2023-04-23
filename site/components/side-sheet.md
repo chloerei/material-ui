@@ -19,19 +19,19 @@ title: Sheet
         </label>
       </div>
     </div>
-    <div class="padding">
+    <div class="padding-3">
       Main Content
     </div>
   </div>
 
-  <input type="checkbox" id="standard-sheet-toggle" class="sheet-toggle">
-  <div id="sheet-permanently" class="sheet">
-    <div class="sheet__container">
-      <div class="padding">
+  <input type="checkbox" id="standard-sheet-toggle" class="side-sheet-toggle">
+  <div id="side-sheet-permanently" class="side-sheet">
+    <div class="side-sheet__container">
+      <div class="padding-3">
         Sheet Content
       </div>
     </div>
-    <label for="standard-sheet-toggle" class="sheet__scrim">
+    <label for="standard-sheet-toggle" class="side-sheet__scrim">
     </label>
   </div>
 </div>
@@ -51,18 +51,18 @@ title: Sheet
   </div>
 </div>
 
-<div class="padding">
+<div class="padding-3">
   Main Content
 </div>
 
-<input type="checkbox" id="modal-sheet-toggle" class="sheet-toggle">
-<div id="sheet-modal" class="sheet sheet--modal">
-  <div class="sheet__container">
-    <div class="padding">
+<input type="checkbox" id="modal-sheet-toggle" class="side-sheet-toggle">
+<div id="side-sheet-modal" class="side-sheet side-sheet--modal">
+  <div class="side-sheet__container">
+    <div class="padding-3">
       Sheet Content
     </div>
   </div>
-  <label for="modal-sheet-toggle" class="sheet__scrim">
+  <label for="modal-sheet-toggle" class="side-sheet__scrim">
   </label>
 </div>
 {% endexample %}
