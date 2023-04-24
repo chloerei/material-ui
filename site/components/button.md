@@ -90,17 +90,6 @@ title: Button
 </button>
 {% endexample %}
 
-## Icon
-
-{% example %}
-<button type="button" class="button button--icon">
-  <span class="material-icons">bookmark_border</span>
-</button>
-<button type="button" class="button button--icon" disabled>
-  <span class="material-icons">bookmark_border</span>
-</button>
-{% endexample %}
-
 
 ## Floating action
 

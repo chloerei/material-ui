@@ -1,0 +1,63 @@
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  outline: 0;
+  color: var(--color-on-surface-variant);
+  line-height: 1;
+  font-size: 24px;
+  padding: 8px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+  @include state-layer;
+
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+
+  &.icon-button--active {
+    color: var(--color-primary);
+  }
+
+  &:disabled {
+    opacity: 38%;
+  }
+}
+
+.icon-button--filled {
+  color: var(--color-primary);
+  background-color: var(--color-surface-container-highest);
+
+  &.icon-button--active {
+    color: var(--color-on-primary);
+    background-color: var(--color-primary);
+  }
+}
+
+.icon-button--filled-tonal {
+  color: var(--color-on-surface-variant);
+  background-color: var(--color-surface-container-highest);
+
+  &.icon-button--active {
+    color: var(--color-on-secondary-container);
+    background-color: var(--color-secondary-container);
+  }
+}
+
+.icon-button--outlined {
+  box-shadow: 0 0 0 1px var(--color-outline);
+  color: var(--color-on-surface-variant);
+
+  &.icon-button--active {
+    color: var(--color-on-inverse-surface);
+    background-color: var(--color-inverse-surface);
+  }
+}

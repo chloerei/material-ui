@@ -201,32 +201,6 @@ button[disabled] {
   }
 }
 
-.button--icon {
-  color: var(--color-primary);
-  line-height: 1;
-  font-size: 24px;
-  padding: 8px;
-  border: 0;
-  border-radius: 20px;
-  text-align: center;
-  font-weight: 500;
-  background: transparent;
-
-  svg {
-    height: 24px;
-    width: 24px;
-    fill: currentColor;
-  }
-
-  .material-icons {
-    font-size: 24px;
-  }
-
-  &:disabled {
-    color: var(--color-on-disabled);
-  }
-}
-
 .button--floating-action {
   color: var(--color-on-primary-container);
   line-height: 1;
