@@ -55,7 +55,7 @@ title: Floating action button
   <div class="floating-action-button__icon">
     <span class="material-icons">edit</span>
   </div>
-  <div class="button__label">
+  <div class="floating-action-button__label">
     Compose
   </div>
 </button>

@@ -6,12 +6,11 @@
   color: var(--color-on-primary-container);
   line-height: 1;
   height: 56px;
-  padding: 16px;
+  padding: 0 16px;
   border: 0;
   border-radius: 16px;
   text-align: center;
   vertical-align: middle;
-  font-weight: 500;
   background-color: var(--color-primary-container);
   box-shadow: var(--shadow-3);
   cursor: pointer;
@@ -72,14 +71,14 @@
 
 .floating-action-button--small {
   height: 40px;
-  padding: 8px;
+  padding: 0 8px;
   border-radius: 12px;
 }
 
 .floating-action-button--large {
   font-size: 36px;
   height: 96px;
-  padding: 30px;
+  padding: 0 30px;
   border-radius: 28px;
 
   svg {
@@ -90,4 +89,10 @@
   .material-icons {
     font-size: 36px;
   }
+}
+
+.floating-action-button__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
 }
