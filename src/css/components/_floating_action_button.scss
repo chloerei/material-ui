@@ -41,7 +41,11 @@
 
 .floating-action-button--surface {
   color: var(--color-primary);
-  background-color: var(--color-surface-container-low);
+  background-color: var(--color-surface-container-high);
+
+  &.floating-action-button--lowered {
+    background-color: var(--color-surface-container-low);
+  }
 }
 
 .floating-action-button--secondary {
