@@ -2,6 +2,7 @@
   margin: 0;
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   outline: none;
   text-align: center;
   text-decoration: none;
@@ -13,11 +14,11 @@
   cursor: pointer;
 
   @include state-layer;
-}
 
-.button--disabled,
-button[disabled] {
-  pointer-events: none;
+  &:disabled {
+    opacity: 38%;
+    pointer-events: none;
+  }
 }
 
 .button__icon {
@@ -36,11 +37,11 @@ button[disabled] {
   }
 
   &:first-child {
-    margin: 0 8px 0 -8px;
+    margin-left: -8px;
   }
 
   &:last-child {
-    margin: 0 -8px 0 8px;
+    margin-right: -8px;
   }
 }
 
@@ -72,8 +73,6 @@ button[disabled] {
   }
 
   &:disabled {
-    color: var(--color-on-disabled);
-    background-color: var(--color-disabled);
     box-shadow: var(--shadow-0);
   }
 }
@@ -103,8 +102,6 @@ button[disabled] {
   }
 
   &:disabled {
-    color: var(--color-on-disabled);
-    background-color: var(--color-disabled);
     box-shadow: var(--shadow-0);
   }
 }
@@ -134,8 +131,6 @@ button[disabled] {
   }
 
   &:disabled {
-    color: var(--color-on-disabled);
-    background-color: var(--color-disabled);
     box-shadow: var(--shadow-0);
   }
 }
@@ -163,11 +158,6 @@ button[disabled] {
       background: var(--color-surface);
     }
   }
-
-  &:disabled {
-    color: var(--color-on-disabled);
-    box-shadow: 0 0 0 1px var(--color-disabled);
-  }
 }
 
 .button--text {
@@ -188,15 +178,11 @@ button[disabled] {
 
   .button__icon {
     &:first-child {
-      margin: 0 4px 0 0;
+      margin-left: 0;
     }
 
     &:last-child {
-      margin: 0 0 0 4px;
+      margin-right: 0;
     }
-  }
-
-  .button__label {
-    margin: 0 4px;
   }
 }
