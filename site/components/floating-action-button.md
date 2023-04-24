@@ -43,7 +43,7 @@ title: Floating action button
 <button type="button" class="floating-action-button">
   <span class="material-icons">edit</span>
 </button>
-<button type="button" class="floating-action-button button--lowered">
+<button type="button" class="floating-action-button floating-action-button--lowered">
   <span class="material-icons">edit</span>
 </button>
 {% endexample %}

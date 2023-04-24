@@ -37,21 +37,6 @@
     box-shadow: var(--shadow-3);
   }
 
-  &.button--lowered {
-    box-shadow: var(--shadow-1);
-
-    &:hover {
-      box-shadow: var(--shadow-2);
-    }
-
-    &:focus {
-      box-shadow: var(--shadow-1);
-    }
-
-    &:active {
-      box-shadow: var(--shadow-1);
-    }
-  }
 }
 
 .floating-action-button--surface {
@@ -88,6 +73,22 @@
 
   .material-icons {
     font-size: 36px;
+  }
+}
+
+.floating-action-button--lowered {
+  box-shadow: var(--shadow-1);
+
+  &:hover {
+    box-shadow: var(--shadow-2);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-1);
   }
 }
 
