@@ -25,7 +25,7 @@ Save this content to HTML file and start play with Material UI.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Material UI</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.16/dist/material-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chloerei/material-ui@0.0.17/dist/material-ui.css">
   </head>
   <body>
     <h1 class="headline-large">Hello World</h1>
