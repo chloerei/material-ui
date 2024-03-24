@@ -7,7 +7,7 @@ title: Navigation rail
 {% example sandbox %}
 <div class="navigation-rail">
   <div class="navigation-rail__container">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">menu</span>
     </button>
     <button type="button" class="button button--floating-action">

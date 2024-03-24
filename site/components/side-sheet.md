@@ -14,7 +14,7 @@ title: Sheet
         Title
       </div>
       <div class="top-app-bar__action display-none@laptop">
-        <label for="standard-sheet-toggle" class="button button--icon">
+        <label for="standard-sheet-toggle" class="icon-button">
           <span class="material-icons">info</span>
         </label>
       </div>
@@ -45,7 +45,7 @@ title: Sheet
     Title
   </div>
   <div class="top-app-bar__action">
-    <label for="modal-sheet-toggle" class="button button--icon">
+    <label for="modal-sheet-toggle" class="icon-button">
       <span class="material-icons">info</span>
     </label>
   </div>

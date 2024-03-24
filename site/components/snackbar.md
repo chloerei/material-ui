@@ -14,7 +14,7 @@ title: Snackbar
       <button type="button" class="button button--text">Retry</button>
     </div>
     <div class="padding-1">
-      <button type="button" class="button button--icon">
+      <button type="button" class="icon-button">
         <span class="material-icons">close</span>
       </button>
     </div>

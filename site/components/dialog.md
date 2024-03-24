@@ -82,7 +82,7 @@ title: Dialog
   <div class="dialog__container">
     <div class="top-app-bar display-none@tablet">
       <div class="top-app-bar__action">
-        <button type="button" class="button button--icon">
+        <button type="button" class="icon-button">
           <span class="material-icons">close</span>
         </button>
       </div>

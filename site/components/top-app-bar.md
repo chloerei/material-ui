@@ -9,7 +9,7 @@ title: App Bar
 {% example %}
 <div class="top-app-bar">
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">menu</span>
     </button>
   </div>
@@ -17,17 +17,17 @@ title: App Bar
     Title
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">search</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">notifications</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">account_circle</span>
     </button>
   </div>
@@ -39,7 +39,7 @@ title: App Bar
 {% example %}
 <div class="top-app-bar">
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">arrow_back</span>
     </button>
   </div>
@@ -47,17 +47,17 @@ title: App Bar
     Title
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">search</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">notifications</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">account_circle</span>
     </button>
   </div>
@@ -69,7 +69,7 @@ title: App Bar
 {% example %}
 <div class="top-app-bar top-app-bar--medium">
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">arrow_back</span>
     </button>
   </div>
@@ -77,17 +77,17 @@ title: App Bar
     Title
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">search</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">notifications</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">account_circle</span>
     </button>
   </div>
@@ -99,7 +99,7 @@ title: App Bar
 {% example %}
 <div class="top-app-bar top-app-bar--large">
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">arrow_back</span>
     </button>
   </div>
@@ -107,17 +107,17 @@ title: App Bar
     Title
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">search</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">notifications</span>
     </button>
   </div>
   <div class="top-app-bar__action">
-    <button type="button" class="button button--icon">
+    <button type="button" class="icon-button">
       <span class="material-icons">account_circle</span>
     </button>
   </div>

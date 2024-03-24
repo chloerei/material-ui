@@ -43,7 +43,7 @@ title: Navigation Drawer
   <div class="flex-grow-1">
     <div class="top-app-bar">
       <div class="top-app-bar__action display-none@laptop">
-        <label for="standard-drawer-toggle" class="button button--icon">
+        <label for="standard-drawer-toggle" class="icon-button">
           <span class="material-icons">menu</span>
         </label>
       </div>
@@ -60,7 +60,7 @@ title: Navigation Drawer
 {% example sandbox %}
 <div class="top-app-bar top-app-bar--sticky-top">
   <div class="top-app-bar__action">
-    <label for="modal-drawer-toggle" class="button button--icon">
+    <label for="modal-drawer-toggle" class="icon-button">
       <span class="material-icons">menu</span>
     </label>
   </div>
