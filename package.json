@@ -4,9 +4,10 @@
   "description": "A Material Design front-end component library.",
   "style": "dist/css/material-ui.css",
   "scripts": {
-    "dev": "npm-run-all --parallel server build",
-    "server": "hexo server",
-    "build": "npx sass src/css/material-ui.scss dist/material-ui.css --no-source-map"
+    "dev": "npm-run-all --parallel dev:server dev:build",
+    "dev:server": "hexo server",
+    "dev:build": "sass src/css/material-ui.scss dist/material-ui.css --watch",
+    "build": "sass src/css/material-ui.scss dist/material-ui.css --no-source-map"
   },
   "files": [
     "dist/*.css",
