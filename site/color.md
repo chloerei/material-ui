@@ -149,7 +149,7 @@ By default the color scheme is selected according to `prefers-color-scheme`.
 
 ## Dark
 
-<div class="example dark-scheme background-surface padding-3">
+<div class="example dark background-surface padding-3">
   <div class="display-flex flex-direction-column gap-1">
     <div class="display-flex gap-1">
       <div class="flex-grow-1">
@@ -290,58 +290,13 @@ By default the color scheme is selected according to `prefers-color-scheme`.
 
 ## ClassName
 
-Use `.light-scheme` or `.dark-scheme` to specify mode:
+Use `.dark` to specify dark mode:
 
 {% example %}
-<div class="light-scheme padding-3 background">
+<div class="padding-3 background">
   <button type="button" class="button button--filled">Button</button>
 </div>
-<div class="dark-scheme padding-3 background">
+<div class="dark padding-3 background">
   <button type="button" class="button button--filled">Button</button>
 </div>
 {% endexample %}
-
-## Mixin (SCSS)
-
-Generate custom color scheme:
-
-```scss
-:root {
-  @include color-scheme(
-    $primary: #3A691E,
-    $secondary: #56624D,
-    $tertiary: #1E686A,
-    $neutral: #596B86,
-    $neutral-variant: #596B86,
-    $error: #B12825
-  );
-}
-```
-
-It will generate light and dark scheme.
-
-In addition, light or dark themes can be generated separately.
-
-```scss
-.my-light-scheme {
-  @include light-scheme(
-    $primary: #3A691E,
-    $secondary: #56624D,
-    $tertiary: #1E686A,
-    $neutral: #596B86,
-    $neutral-variant: #596B86,
-    $error: #B12825
-  );
-}
-
-.my-dark-scheme {
-  @include dark-scheme(
-    $primary: #3A691E,
-    $secondary: #56624D,
-    $tertiary: #1E686A,
-    $neutral: #596B86,
-    $neutral-variant: #596B86,
-    $error: #B12825
-  );
-}
-```

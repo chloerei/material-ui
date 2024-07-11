@@ -5,15 +5,6 @@ $breakpoints: (
 );
 
 :root {
-  @include color-scheme(
-    $primary: #533A93,
-    $secondary: #4F485D,
-    $tertiary: #693F4E,
-    $neutral: #4E4B54,
-    $neutral-variant: #4D4B4F,
-    $error: #DB3229
-  );
-
   --opacity-state-hover: 8%;
   --opacity-state-focus: 12%;
   --opacity-state-press: 12%;
