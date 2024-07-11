@@ -7,7 +7,7 @@ on:
 
 jobs:
   build_and_publish:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
@@ -15,8 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: '22'
       - run: npm ci
       - run: npx hexo generate
       - run: npm run build
