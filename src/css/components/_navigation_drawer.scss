@@ -13,8 +13,8 @@
 
 .navigation-drawer__container {
   box-sizing: border-box;
-  background-color: var(--color-surface);
-  color: var(--color-on-surface);
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
   overflow: auto;
   width: 360px;
   position: absolute;
@@ -30,7 +30,7 @@
 .navigation-drawer__scrim {
   position: absolute;
   inset: 0;
-  background-color: var(--color-scrim);
+  background-color: rgb(var(--color-scrim) / 0.5);
   z-index: 0;
 }
 
@@ -83,16 +83,16 @@
   border-radius: 28px;
   position: relative;
   overflow: hidden;
-  color: var(--color-on-surface-variant);
+  color: rgb(var(--color-on-surface-variant));
   outline: none;
-  background-color: var(--color-surface);
+  background-color: rgb(var(--color-surface));
   cursor: pointer;
 
   @include state-layer;
 
   &.navigation-drawer__item--active {
-    color: var(--color-on-primary-container);
-    background-color: var(--color-primary-container);
+    color: rgb(var(--color-on-primary-container));
+    background-color: rgb(var(--color-primary-container));
   }
 }
 

@@ -24,8 +24,8 @@
   min-width: 280px;
   max-width: 560px;
   max-height: 100%;
-  background: var(--color-surface-container-high);
-  color: var(--color-on-surface);
+  background: rgb(var(--color-surface-container-high));
+  color: rgb(var(--color-on-surface));
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
   display: block;
   position: absolute;
   inset: 0;
-  background-color: var(--color-scrim);
+  background-color: rgb(var(--color-scrim) / 0.5);
 }
 
 .dialog-toggle:checked + .dialog,
@@ -81,7 +81,7 @@
 
 @media (max-width: map.get($breakpoints, "tablet")) {
   .dialog--full-screen {
-    background: var(--color-surface);
+    background: rgb(var(--color-surface));
     padding: 0;
 
     .dialog__container {

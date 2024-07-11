@@ -11,8 +11,8 @@ a.card {
 }
 
 .card--elevated {
-  color: var(--color-on-surface);
-  background-color: var(--color-surface-container-low);
+  color: rgb(var(--color-on-surface));
+  background-color: rgb(var(--color-surface-container-low));
   box-shadow: var(--shadow-1);
 }
 
@@ -31,8 +31,8 @@ a.card--elevated {
 }
 
 .card--filled {
-  color: var(--color-on-surface-variant);
-  background-color: var(--color-surface-container-highest);
+  color: rgb(var(--color-on-surface-variant));
+  background-color: rgb(var(--color-surface-container-highest));
 }
 
 a.card--filled {
@@ -50,7 +50,7 @@ a.card--filled {
 }
 
 .card--outlined {
-  color: var(--color-on-surface);
-  background-color: var(--color-surface);
-  box-shadow: 0 0 0 1px var(--color-outline);
+  color: rgb(var(--color-on-surface));
+  background-color: rgb(var(--color-surface));
+  box-shadow: 0 0 0 1px rgb(var(--color-outline));
 }

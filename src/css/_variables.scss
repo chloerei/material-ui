@@ -17,5 +17,12 @@ $breakpoints: (
   --space-4: 24px;
   --space-5: 48px;
 
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgb(var(--color-shadow) / 0.3);
+  --shadow-2: 0 2px 3px rgb(var(--color-shadow) / 0.3);
+  --shadow-3: 0 3px 4px rgb(var(--color-shadow) / 0.3);
+  --shadow-4: 0 4px 5px rgb(var(--color-shadow) / 0.3);
+  --shadow-5: 0 5px 6px rgb(var(--color-shadow) / 0.3);
+
   --transition-duration: 0.15s;
 }

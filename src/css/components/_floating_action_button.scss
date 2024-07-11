@@ -3,7 +3,7 @@
   align-items: center;
   gap: 12px;
   outline: none;
-  color: var(--color-on-primary-container);
+  color: rgb(var(--color-on-primary-container));
   line-height: 1;
   height: 56px;
   padding: 0 16px;
@@ -11,7 +11,7 @@
   border-radius: 16px;
   text-align: center;
   vertical-align: middle;
-  background-color: var(--color-primary-container);
+  background-color: rgb(var(--color-primary-container));
   box-shadow: var(--shadow-3);
   cursor: pointer;
 
@@ -40,22 +40,22 @@
 }
 
 .floating-action-button--surface {
-  color: var(--color-primary);
-  background-color: var(--color-surface-container-high);
+  color: rgb(var(--color-primary));
+  background-color: rgb(var(--color-surface-container-high));
 
   &.floating-action-button--lowered {
-    background-color: var(--color-surface-container-low);
+    background-color: rgb(var(--color-surface-container-low));
   }
 }
 
 .floating-action-button--secondary {
-  color: var(--color-on-secondary-container);
-  background-color: var(--color-secondary-container);
+  color: rgb(var(--color-on-secondary-container));
+  background-color: rgb(var(--color-secondary-container));
 }
 
 .floating-action-button--tertiary {
-  color: var(--color-on-tertiary-container);
-  background-color: var(--color-tertiary-container);
+  color: rgb(var(--color-on-tertiary-container));
+  background-color: rgb(var(--color-tertiary-container));
 }
 
 .floating-action-button--small {

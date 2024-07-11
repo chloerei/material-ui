@@ -1,6 +1,6 @@
 .top-app-bar {
-  color: var(--color-on-surface);
-  background-color: var(--color-surface);
+  color: rgb(var(--color-on-surface));
+  background-color: rgb(var(--color-surface));
   box-shadow: var(--shadow-0);
   display: flex;
   align-items: flex-start;
@@ -34,12 +34,12 @@
   padding: 4px;
 
   .button--icon {
-    color: var(--color-on-surface-variant);
+    color: rgb(var(--color-on-surface-variant));
   }
 
   &:first-child {
     .button--icon {
-      color: var(--color-on-surface);
+      color: rgb(var(--color-on-surface));
     }
   }
 }

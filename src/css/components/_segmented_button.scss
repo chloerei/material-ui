@@ -1,6 +1,6 @@
 .segmented-button {
   display: inline-flex;
-  box-shadow: 0 0 0 1px var(--color-outline);
+  box-shadow: 0 0 0 1px rgb(var(--color-outline));
   border-radius: 20px;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@
   gap: 8px;
   cursor: pointer;
   user-select: none;
-  color: var(--color-on-surface);
+  color: rgb(var(--color-on-surface));
   text-decoration: none;
   font-size: 14px;
   line-height: 20px;
@@ -24,11 +24,11 @@
   @include state-layer;
 
   &:not(:last-child) {
-    border-right: 1px solid var(--color-outline);
+    border-right: 1px solid rgb(var(--color-outline));
   }
 
   &:hover {
-    color: var(--color-on-secondary-container);
+    color: rgb(var(--color-on-secondary-container));
   }
 
   &:disabled {
@@ -40,7 +40,7 @@
 }
 
 .segmented-button__item--active {
-  background-color: var(--color-secondary-container);
+  background-color: rgb(var(--color-secondary-container));
 }
 
 .segmented-button__item__icon {

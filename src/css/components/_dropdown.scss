@@ -7,8 +7,8 @@
   position: absolute;
   top: 100%;
   padding: 8px 0;
-  color: var(--color-on-surface);
-  background-color: var(--color-surface);
+  color: rgb(var(--color-on-surface));
+  background-color: rgb(var(--color-surface));
   box-shadow: var(--shadow-1);
   border-radius: 4px;
   min-width: 240px;
@@ -62,7 +62,7 @@
   padding: 8px 16px;
   line-height: 24px;
   text-decoration: none;
-  color: var(--color-on-background);
+  color: rgb(var(--color-on-background));
   cursor: pointer;
 
   @include state-layer;
@@ -71,7 +71,7 @@
 .dropdown__item__icon {
   height: 24px;
   width: 24px;
-  color: var(--color-on-background);
+  color: rgb(var(--color-on-background));
 
   svg {
     height: 24px;

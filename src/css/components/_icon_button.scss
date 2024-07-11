@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   outline: 0;
-  color: var(--color-on-surface-variant);
+  color: rgb(var(--color-on-surface-variant));
   line-height: 1;
   font-size: 24px;
   height: 40px;
@@ -27,7 +27,7 @@
   }
 
   &.icon-button--active {
-    color: var(--color-primary);
+    color: rgb(var(--color-primary));
   }
 
   &:disabled {
@@ -36,31 +36,31 @@
 }
 
 .icon-button--filled {
-  color: var(--color-primary);
-  background-color: var(--color-surface-container-highest);
+  color: rgb(var(--color-primary));
+  background-color: rgb(var(--color-surface-container-highest));
 
   &.icon-button--active {
-    color: var(--color-on-primary);
-    background-color: var(--color-primary);
+    color: rgb(var(--color-on-primary));
+    background-color: rgb(var(--color-primary));
   }
 }
 
 .icon-button--filled-tonal {
-  color: var(--color-on-surface-variant);
-  background-color: var(--color-surface-container-highest);
+  color: rgb(var(--color-on-surface-variant));
+  background-color: rgb(var(--color-surface-container-highest));
 
   &.icon-button--active {
-    color: var(--color-on-secondary-container);
-    background-color: var(--color-secondary-container);
+    color: rgb(var(--color-on-secondary-container));
+    background-color: rgb(var(--color-secondary-container));
   }
 }
 
 .icon-button--outlined {
-  box-shadow: 0 0 0 1px var(--color-outline);
-  color: var(--color-on-surface-variant);
+  box-shadow: 0 0 0 1px rgb(var(--color-outline));
+  color: rgb(var(--color-on-surface-variant));
 
   &.icon-button--active {
-    color: var(--color-on-inverse-surface);
-    background-color: var(--color-inverse-surface);
+    color: rgb(var(--color-on-inverse-surface));
+    background-color: rgb(var(--color-inverse-surface));
   }
 }

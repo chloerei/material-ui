@@ -45,7 +45,7 @@
 }
 
 .button--elevated {
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
   line-height: 20px;
   font-size: 14px;
   height: 40px;
@@ -55,20 +55,20 @@
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-1);
-  background-color: var(--color-surface-container-low);
+  background-color: rgb(var(--color-surface-container-low));
 
   &:hover {
-    background-color: var(--color-surface-container);
+    background-color: rgb(var(--color-surface-container));
     box-shadow: var(--shadow-2);
   }
 
   &:focus {
-    background-color: var(--color-surface-container-low);
+    background-color: rgb(var(--color-surface-container-low));
     box-shadow: var(--shadow-1);
   }
 
   &:active {
-    background-color: var(--color-surface-container-low);
+    background-color: rgb(var(--color-surface-container-low));
     box-shadow: var(--shadow-1);
   }
 
@@ -78,7 +78,7 @@
 }
 
 .button--filled {
-  color: var(--color-on-primary);
+  color: rgb(var(--color-on-primary));
   line-height: 20px;
   font-size: 14px;
   height: 40px;
@@ -88,7 +88,7 @@
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-0);
-  background-color: var(--color-primary);
+  background-color: rgb(var(--color-primary));
 
   &:hover {
     box-shadow: var(--shadow-1);
@@ -108,7 +108,7 @@
 }
 
 .button--filled-tonal {
-  color: var(--color-on-secondary-container);
+  color: rgb(var(--color-on-secondary-container));
   line-height: 20px;
   font-size: 14px;
   height: 40px;
@@ -118,7 +118,7 @@
   text-align: center;
   font-weight: 500;
   box-shadow: var(--shadow-0);
-  background-color: var(--color-secondary-container);
+  background-color: rgb(var(--color-secondary-container));
 
   &:hover {
     box-shadow: var(--shadow-1);
@@ -138,7 +138,7 @@
 }
 
 .button--outlined {
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
   line-height: 20px;
   font-size: 14px;
   padding: 10px 24px;
@@ -147,23 +147,23 @@
   text-align: center;
   font-weight: 500;
   background: transparent;
-  box-shadow: 0 0 0 1px var(--color-outline);
+  box-shadow: 0 0 0 1px rgb(var(--color-outline));
 
   &:focus {
     &::before {
-      border: 1px solid var(--color-primary);
+      border: 1px solid rgb(var(--color-primary));
     }
   }
 
   &.button--surface {
     &::before {
-      background: var(--color-surface);
+      background: rgb(var(--color-surface));
     }
   }
 }
 
 .button--text {
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
   line-height: 20px;
   font-size: 14px;
   height: 40px;
@@ -176,7 +176,7 @@
   min-width: 48px;
 
   &:disabled {
-    color: var(--color-on-disabled);
+    color: rgb(var(--color-on-disabled));
   }
 
   .button__icon {

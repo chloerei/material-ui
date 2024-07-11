@@ -1,6 +1,6 @@
 .background {
-  background-color: var(--color-background);
-  color: var(--color-on-background);
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-on-background));
 }
 
 @each $color in (

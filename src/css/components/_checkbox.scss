@@ -4,7 +4,7 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
   cursor: pointer;
 
   @include state-layer;
@@ -13,8 +13,8 @@
     display: none;
 
     &:checked ~ .checkbox__icon {
-      border-color: var(--color-primary);
-      background: var(--color-primary);
+      border-color: rgb(var(--color-primary));
+      background: rgb(var(--color-primary));
 
       &::after {
         display: block;
@@ -27,7 +27,7 @@
   pointer-events: none;
 
   .checkbox__icon {
-    border-color: var(--color-disabled);
+    border-color: rgb(var(--color-disabled));
   }
 }
 
@@ -37,7 +37,7 @@
   height: 18px;
   top: 11px;
   left: 11px;
-  border: 2px solid var(--color-on-surface);
+  border: 2px solid rgb(var(--color-on-surface));
   border-radius: 2px;
   transition: background-color var(--transition-duration), border-color var(--transition-duration);
 
@@ -49,8 +49,8 @@
     left: 4px;
     width: 6px;
     height: 12px;
-    border-right: 2px solid var(--color-on-primary);
-    border-bottom: 2px solid var(--color-on-primary);
+    border-right: 2px solid rgb(var(--color-on-primary));
+    border-bottom: 2px solid rgb(var(--color-on-primary));
     transform: rotate(45deg);
   }
 }
