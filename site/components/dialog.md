@@ -10,7 +10,7 @@ title: Dialog
 <input type="checkbox" class="dialog-toggle" checked>
 <div class="dialog">
   <div class="dialog__container">
-    <div class="dialog__body">
+    <div class="padding-4">
       <div class="text-secondary text-align-center margin-bottom-3">
         <span class="material-icons">info</span>
       </div>
@@ -39,13 +39,13 @@ title: Dialog
 {% example sandbox %}
 <input type="checkbox" class="dialog-toggle" checked>
 <div class="dialog">
-  <div class="dialog__container">
-    <div class="dialog__header">
+  <div class="dialog__container display-flex flex-direction-column">
+    <div class="padding-4 padding-bottom-2">
       <div class="headline-small">
         Dialog Headline
       </div>
     </div>
-    <div class="dialog__body body-medium">
+    <div class="flex-grow-1 min-height-0 overflow-auto padding-x-4 padding-y-2">
       <p>
         A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
       </p>
@@ -59,15 +59,13 @@ title: Dialog
         A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
       </p>
     </div>
-    <div class="dialog__footer">
-      <div class="dialog__actions">
-        <button type="button" class="button button--text">
-          Cancel
-        </button>
-        <button type="button" class="button button--text">
-          Ok
-        </button>
-      </div>
+    <div class="display-flex justify-content-flex-end padding-4 padding-top-2">
+      <button type="button" class="button button--text">
+        Cancel
+      </button>
+      <button type="button" class="button button--text">
+        Ok
+      </button>
     </div>
   </div>
   <div class="dialog__scrim"></div>
@@ -79,8 +77,8 @@ title: Dialog
 {% example sandbox %}
 <input type="checkbox" class="dialog-toggle" checked>
 <div class="dialog dialog--full-screen">
-  <div class="dialog__container">
-    <div class="top-app-bar display-none@tablet">
+  <div class="dialog__container display-flex flex-direction-column">
+    <div class="top-app-bar flex-shrink-0 display-none@tablet">
       <div class="top-app-bar__action">
         <button type="button" class="icon-button">
           <span class="material-icons">close</span>
@@ -89,16 +87,11 @@ title: Dialog
       <div class="top-app-bar__title">
         Dialog title
       </div>
-      <div class="top-app-bar__action">
-        <button type="button" class="button button--text">
-          Save
-        </button>
-      </div>
     </div>
-    <div class="dialog__header headline-small display-none display-block@tablet">
+    <div class="flex-shirnk-0 padding-4 headline-small display-none display-block@tablet">
       Dialog title
     </div>
-    <div class="dialog__body">
+    <div class="flex-grow-1 overflow-auto min-height-0 padding-4">
       <p>
         A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
       </p>
@@ -112,15 +105,13 @@ title: Dialog
         A dialog is a type of modal window that appears in front of app content to provide critical information, or ask for a decision.
       </p>
     </div>
-    <div class="dialog__footer display-none-on-phone">
-      <div class="dialog__actions">
-        <button type="button" class="button button--text">
-          Cancel
-        </button>
-        <button type="button" class="button button--text">
-          Ok
-        </button>
-      </div>
+    <div class="flex-shirnk-0 display-flex justify-content-flex-end padding-4">
+      <button type="button" class="button button--text">
+        Cancel
+      </button>
+      <button type="button" class="button button--text">
+        Ok
+      </button>
     </div>
   </div>
   <div class="dialog__scrim"></div>
@@ -137,9 +128,9 @@ title: Dialog
 <input type="checkbox" id="dialog-toggle" class="dialog-toggle">
 <div id="demo-dialog" class="dialog">
   <div class="dialog__container">
-    <div class="dialog__body">
+    <div class="padding-4">
       <p>Dialog content</p>
-      <div class="dialog__actions">
+      <div class="display-flex justify-content-flex-end">
         <label for="dialog-toggle" class="button button--text">
           Cancel
         </label>
