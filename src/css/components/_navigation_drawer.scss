@@ -10,10 +10,10 @@
   top: 0;
   bottom: 0;
   z-index: 20;
-  padding: 12px;
   border-radius: 0 16px 16px 0;
   transform: translateX(-100%);
   transition: transform var(--transition-duration);
+  color: rgb(var(--color-on-surface));
   background-color: rgb(var(--color-surface-container-low));
 }
 
@@ -31,8 +31,7 @@
   display: none;
 }
 
-.navigation-drawer-toggle:checked + .navigation-drawer,
-.navigation-drawer--open {
+.navigation-drawer-toggle:checked + .navigation-drawer {
   .navigation-drawer__container {
     transform: translateX(0);
   }
@@ -49,7 +48,6 @@
 
 @media (min-width: map.get($breakpoints, "laptop")) {
   .navigation-drawer:not(.navigation-drawer--modal) {
-    flex-shrink: 0;
     position: relative;
     width: 360px;
 
@@ -58,11 +56,7 @@
       transform: translateX(0);
     }
 
-    .navigation-drawer-toggle:checked + .navigation-drawer,
-    .navigation-drawer--open {
-      .navigation-drawer__container {
-      }
-
+    .navigation-drawer-toggle:checked + .navigation-drawer {
       .navigation-drawer__scrim {
         display: none;
       }

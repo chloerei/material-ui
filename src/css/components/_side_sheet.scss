@@ -1,37 +1,31 @@
 @use "sass:map";
 
 .side-sheet {
-  position: fixed;
-  width: auto;
-  inset: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition-property: visibility, opacity;
-  transition-duration: var(--transition-duration);
-  z-index: 32;
 }
 
 .side-sheet__container {
-  box-sizing: border-box;
-  background-color: rgb(var(--color-surface));
-  color: rgb(var(--color-on-surface));
   overflow: auto;
   width: 320px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 20;
   border-radius: 16px 0 0 16px;
   transform: translateX(100%);
   transition: transform var(--transition-duration);
+  color: rgb(var(--color-on-surface));
+  background-color: rgb(var(--color-surface));
 }
 
 .side-sheet__scrim {
-  position: absolute;
+  display: none;
+  position: fixed;
   inset: 0;
   background-color: rgb(var(--color-scrim) / 0.32);
-  z-index: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity var(--transition-duration), display var(--transition-duration) allow-discrete;
 }
 
 .side-sheet-toggle {
@@ -39,32 +33,35 @@
 }
 
 .side-sheet-toggle:checked + .side-sheet {
-  opacity: 1;
-  visibility: visible;
-
   .side-sheet__container {
     transform: translateX(0);
+  }
+
+  .side-sheet__scrim {
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
   }
 }
 
 @media (min-width: map.get($breakpoints, "laptop")) {
   .side-sheet:not(.side-sheet--modal) {
-    position: static;
+    position: relative;
     width: 320px;
-    opacity: 1;
-    visibility: visible;
 
     .side-sheet__container {
       border-radius: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      right: auto;
       transform: translateX(0);
     }
 
-    .side-sheet__scrim {
-      display: none;
+    .side-sheet-toggle:checked + .side-sheet {
+      .side-sheet__scrim {
+        display: none;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@ title: Navigation Drawer
 <div class="display-flex">
   <input type="checkbox" id="standard-rawer-toggle" class="navigation-drawer-toggle">
   <div class="navigation-drawer">
-    <div class="navigation-drawer__container">
+    <div class="navigation-drawer__container padding-3">
       <a href="#" class="navigation-drawer__item navigation-drawer__item--active">
         <div class="navigation-drawer__item__icon">
           <span class="material-icons">inbox</span>
@@ -71,7 +71,7 @@ title: Navigation Drawer
 
 <input type="checkbox" id="modal-drawer-toggle" class="navigation-drawer-toggle">
 <div class="navigation-drawer navigation-drawer--modal">
-  <div class="navigation-drawer__container">
+  <div class="navigation-drawer__container padding-3">
     <a href="#" class="navigation-drawer__item navigation-drawer__item--active">
       <div class="navigation-drawer__item__icon">
         <span class="material-icons">inbox</span>
