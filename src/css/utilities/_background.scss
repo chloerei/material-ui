@@ -16,7 +16,22 @@
   error-container
 ) {
   .background-#{$color} {
-    background-color: var(--color-#{$color});
-    color: var(--color-on-#{$color});
+    background-color: rgb(var(--color-#{$color}));
+    color: rgb(var(--color-on-#{$color}));
+  }
+};
+
+@each $color in (
+  surface-dim,
+  surface-bright,
+  surface-container-lowest,
+  surface-container-low,
+  surface-container,
+  surface-container-high,
+  surface-container-highest
+) {
+  .background-#{$color} {
+    background-color: rgb(var(--color-#{$color}));
+    color: rgb(var(--color-on-surface));
   }
 };

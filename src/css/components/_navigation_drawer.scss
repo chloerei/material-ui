@@ -1,37 +1,30 @@
 @use "sass:map";
 
 .navigation-drawer {
-  position: fixed;
-  width: auto;
-  inset: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition-property: visibility, opacity;
-  transition-duration: var(--transition-duration);
-  z-index: 32;
 }
 
 .navigation-drawer__container {
-  box-sizing: border-box;
-  background-color: rgb(var(--color-surface));
-  color: rgb(var(--color-on-surface));
   overflow: auto;
   width: 360px;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 20;
   padding: 12px;
   border-radius: 0 16px 16px 0;
   transform: translateX(-100%);
   transition: transform var(--transition-duration);
+  background-color: rgb(var(--color-surface-container-low));
 }
 
 .navigation-drawer__scrim {
-  position: absolute;
+  display: none;
+  position: fixed;
   inset: 0;
   background-color: rgb(var(--color-scrim) / 0.32);
-  z-index: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity var(--transition-duration), display var(--transition-duration) allow-discrete;
 }
 
 .navigation-drawer-toggle {
@@ -40,75 +33,73 @@
 
 .navigation-drawer-toggle:checked + .navigation-drawer,
 .navigation-drawer--open {
-  opacity: 1;
-  visibility: visible;
-
   .navigation-drawer__container {
     transform: translateX(0);
   }
 
   .navigation-drawer__scrim {
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
   }
 }
 
 @media (min-width: map.get($breakpoints, "laptop")) {
   .navigation-drawer:not(.navigation-drawer--modal) {
-    position: static;
+    flex-shrink: 0;
+    position: relative;
     width: 360px;
-    opacity: 1;
-    visibility: visible;
 
     .navigation-drawer__container {
       border-radius: 0;
-      position: fixed;
-      top: 0;
-      bottom: 0;
       transform: translateX(0);
     }
 
-    .navigation-drawer__scrim {
-      display: none;
+    .navigation-drawer-toggle:checked + .navigation-drawer,
+    .navigation-drawer--open {
+      .navigation-drawer__container {
+      }
+
+      .navigation-drawer__scrim {
+        display: none;
+      }
     }
   }
 }
 
 .navigation-drawer__item {
-  padding: 18px 24px;
   display: flex;
-  text-decoration: none;
-  line-height: 20px;
-  font-size: 14px;
-  font-weight: 500;
   align-items: center;
+  gap: 12px;
+  height: 56px;
+  padding: 0 16px;
+  text-decoration: none;
   border-radius: 28px;
   position: relative;
   overflow: hidden;
   color: rgb(var(--color-on-surface-variant));
   outline: none;
-  background-color: rgb(var(--color-surface));
   cursor: pointer;
 
   @include state-layer;
 
   &.navigation-drawer__item--active {
-    color: rgb(var(--color-on-primary-container));
-    background-color: rgb(var(--color-primary-container));
+    color: rgb(var(--color-on-secondary-container));
+    background-color: rgb(var(--color-secondary-container));
   }
 }
 
 .navigation-drawer__item__icon {
   height: 24px;
   width: 24px;
-
-  &:first-child {
-    margin: -2px 12px -2px -8px;
-  }
-
-  &:last-child {
-    margin: -2px -8px -2px 12px;
-  }
 }
 
 .navigation-drawer__item__label {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
   flex-grow: 1;
 }
