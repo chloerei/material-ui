@@ -3,17 +3,23 @@
     .#{$type}-#{$size} {
       #{$type}: var(--space-#{$size});
     }
+  }
 
+  @for $size from 0 through 5 {
     .#{$type}-x-#{$size} {
       #{$type}-left: var(--space-#{$size});
       #{$type}-right: var(--space-#{$size});
     }
+  }
 
+  @for $size from 0 through 5 {
     .#{$type}-y-#{$size} {
       #{$type}-top: var(--space-#{$size});
       #{$type}-bottom: var(--space-#{$size});
     }
+  }
 
+  @for $size from 0 through 5 {
     @each $side in (top, left, right, bottom) {
       .#{$type}-#{$side}-#{$size} {
         #{$type}-#{$side}: var(--space-#{$size});
@@ -29,20 +35,28 @@
         .#{$type}-#{$size}\@#{$screen} {
           #{$type}: var(--space-#{$size});
         }
+      }
 
+      @for $size from 0 through 5 {
         .#{$type}-x-#{$size}\@#{$screen} {
           #{$type}-left: var(--space-#{$size});
           #{$type}-right: var(--space-#{$size});
         }
+      }
 
+      @for $size from 0 through 5 {
         .#{$type}-y-#{$size}\@#{$screen} {
           #{$type}-top: var(--space-#{$size});
           #{$type}-bottom: var(--space-#{$size});
         }
+      }
 
-        @each $side in (top, left, right, bottom) {
-          .#{$type}-#{$side}-#{$size}\@#{$screen} {
-            #{$type}-#{$side}: var(--space-#{$size});
+      @for $size from 0 through 5 {
+        .#{$type}-y-#{$size}\@#{$screen} {
+          @each $side in (top, left, right, bottom) {
+            .#{$type}-#{$side}-#{$size}\@#{$screen} {
+              #{$type}-#{$side}: var(--space-#{$size});
+            }
           }
         }
       }
