@@ -5,7 +5,7 @@ title: Navigation rail
 # Navigation Rail
 
 {% example sandbox %}
-<div class="navigation-rail background-surface-container">
+<div class="navigation-rail">
   <button type="button" class="icon-button margin-top-4">
     <span class="material-icons">menu</span>
   </button>
