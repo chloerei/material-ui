@@ -26,9 +26,14 @@
 
 .radio--disabled {
   pointer-events: none;
+  opacity: 0.38;
 
   .radio__icon {
-    border-color: var(--color-disabled);
+    border-color: var(--color-on-surface);
+  }
+
+  .radio__icon::after {
+    background-color: var(--color-on-surface);
   }
 }
 
@@ -46,7 +51,7 @@
     content: '';
     display: block;
     border-radius: 50%;
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     width: 100%;
     height: 100%;
     position: absolute;
