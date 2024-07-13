@@ -1,9 +1,4 @@
 .navigation-rail {
-  width: 80px;
-  flex-shrink: 0;
-}
-
-.navigation-rail__container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -11,7 +6,6 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 12px 0;
   align-items: center;
   background-color: rgb(var(--color-surface));
   color: rgb(var(--color-on-surface-variant));
@@ -36,8 +30,6 @@
   align-items: center;
   color: rgb(var(--color-on-surface-variant));
   width: 100%;
-
-  @include state-layer;
 }
 
 .navigation-rail__item__icon {
@@ -45,7 +37,7 @@
   padding: 4px 16px;
   border-radius: 16px;
   color: rgb(var(--color-on-surface-variant));
-  position: relative;
+  @include state-layer;
 
   svg {
     height: 24px;
@@ -54,6 +46,24 @@
 
   .material-icons {
     font-size: 24px;
+  }
+}
+
+.navigation-rail__item:hover {
+  .navigation-rail__item__icon::after {
+    opacity: var(--opacity-state-hover);
+  }
+}
+
+.navigation-rail__item:focus {
+  .navigation-rail__item__icon::after {
+    opacity: var(--opacity-state-focus);
+  }
+}
+
+.navigation-rail__item:active {
+  .navigation-rail__item__icon::after {
+    opacity: var(--opacity-state-press);
   }
 }
 
@@ -67,7 +77,11 @@
   color: rgb(var(--color-on-surface));
 
   .navigation-rail__item__icon {
-    color: rgb(var(--color-on-primary-container));
-    background-color: rgb(var(--color-primary-container));
+    color: rgb(var(--color-on-secondary-container));
+    background-color: rgb(var(--color-secondary-container));
+  }
+
+  .navigation-rail__item__label {
+    font-weight: 700;
   }
 }

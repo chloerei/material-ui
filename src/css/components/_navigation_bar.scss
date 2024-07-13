@@ -72,4 +72,8 @@
     color: rgb(var(--color-on-secondary-container));
     background-color: rgb(var(--color-secondary-container));
   }
+
+  .navigation-bar__item__label {
+    font-weight: 700;
+  }
 }
