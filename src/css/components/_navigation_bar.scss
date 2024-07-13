@@ -6,8 +6,8 @@
   align-items: center;
   height: 80px;
   gap: 8px;
-  background-color: rgb(var(--color-surface-container));
-  color: rgb(var(--color-on-surface));
+  background-color: var(--color-surface-container);
+  color: var(--color-on-surface);
   z-index: 10;
 }
 
@@ -19,7 +19,7 @@
   gap: 4px;
   flex-direction: column;
   align-items: center;
-  color: rgb(var(--color-on-surface-variant));
+  color: var(--color-on-surface-variant);
   width: 100%;
 }
 
@@ -27,7 +27,7 @@
   line-height: 0;
   padding: 4px 20px;
   border-radius: 16px;
-  color: rgb(var(--color-on-surface-variant));
+  color: var(--color-on-surface-variant);
 
   @include state-layer;
 
@@ -66,11 +66,11 @@
 }
 
 .navigation-bar__item--active {
-  color: rgb(var(--color-on-surface));
+  color: var(--color-on-surface);
 
   .navigation-bar__item__icon {
-    color: rgb(var(--color-on-secondary-container));
-    background-color: rgb(var(--color-secondary-container));
+    color: var(--color-on-secondary-container);
+    background-color: var(--color-secondary-container);
   }
 
   .navigation-bar__item__label {

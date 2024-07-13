@@ -10,8 +10,8 @@
   vertical-align: middle;
   cursor: pointer;
   outline: none;
-  box-shadow: 0 0 0 1px rgb(var(--color-outline));
-  background-color: rgb(var(--color-surface));
+  box-shadow: 0 0 0 1px var(--color-outline);
+  background-color: var(--color-surface);
 
   @include state-layer;
 }
@@ -102,39 +102,39 @@
 }
 
 .chip--assist {
-  color: rgb(var(--color-on-surface));
+  color: var(--color-on-surface);
 
   .chip__icon {
-    color: rgb(var(--color-primary));
+    color: var(--color-primary);
   }
 }
 
 .chip--filter {
-  color: rgb(var(--color-on-surface-variant));
+  color: var(--color-on-surface-variant);
 
   .chip__icon {
-    color: rgb(var(--color-on-surface-variant));
+    color: var(--color-on-surface-variant);
   }
 }
 
 .chip--input {
-  color: rgb(var(--color-on-surface-variant));
+  color: var(--color-on-surface-variant);
 
   .chip__icon {
-    color: rgb(var(--color-on-surface-variant));
+    color: var(--color-on-surface-variant);
   }
 }
 
 .chip--suggestion {
-  color: rgb(var(--color-on-surface-variant));
+  color: var(--color-on-surface-variant);
 
   .chip__icon {
-    color: rgb(var(--color-on-surface-variant));
+    color: var(--color-on-surface-variant);
   }
 }
 
 .chip--elevated {
-  background-color: rgb(var(--color-surface-container-low));
+  background-color: var(--color-surface-container-low);
   box-shadow: var(--shadow-1);
 
   &:hover {
@@ -151,17 +151,17 @@
 
   &.chip--disabled {
     box-shadow: var(--shadow-0);
-    background-color: rgb(var(--color-disabled));
+    background-color: var(--color-disabled);
   }
 }
 
 .chip--selected {
-  color: rgb(var(--color-on-secondary-container));
-  background-color: rgb(var(--color-secondary-container));
+  color: var(--color-on-secondary-container);
+  background-color: var(--color-secondary-container);
   box-shadow: none;
 
   .chip__icon {
-    color: rgb(var(--color-on-secondary-container));
+    color: var(--color-on-secondary-container);
   }
 
   &:hover {
@@ -169,14 +169,14 @@
   }
 
   &.chip--disabled {
-    background-color: rgb(var(--color-disabled));
+    background-color: var(--color-disabled);
   }
 }
 
 .chip--disabled {
-  color: rgb(var(--color-on-disabled));
+  color: var(--color-on-disabled);
 
   .chip__icon {
-    color: rgb(var(--color-on-disabled));
+    color: var(--color-on-disabled);
   }
 }

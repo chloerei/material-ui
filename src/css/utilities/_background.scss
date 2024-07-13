@@ -1,6 +1,6 @@
 .background {
-  background-color: rgb(var(--color-background));
-  color: rgb(var(--color-on-background));
+  background-color: var(--color-background);
+  color: var(--color-on-background);
 }
 
 @each $color in (
@@ -16,8 +16,8 @@
   error-container
 ) {
   .background-#{$color} {
-    background-color: rgb(var(--color-#{$color}));
-    color: rgb(var(--color-on-#{$color}));
+    background-color: var(--color-#{$color});
+    color: var(--color-on-#{$color});
   }
 };
 
@@ -31,7 +31,7 @@
   surface-container-highest
 ) {
   .background-#{$color} {
-    background-color: rgb(var(--color-#{$color}));
-    color: rgb(var(--color-on-surface));
+    background-color: var(--color-#{$color});
+    color: var(--color-on-surface);
   }
 };

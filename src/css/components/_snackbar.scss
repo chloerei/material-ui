@@ -6,19 +6,19 @@
 }
 
 .snackbar {
-  background: rgb(var(--color-inverse-surface));
-  color: rgb(var(--color-on-inverse-surface));
+  background: var(--color-inverse-surface);
+  color: var(--color-on-inverse-surface);
   font-size: 14px;
   border-radius: 4px;
   min-width: 288px;
   max-width: 568px;
 
   .button--text {
-    color: rgb(var(--color-inverse-primary));
+    color: var(--color-inverse-primary);
   }
 
   .button--icon {
-    color: rgb(var(--color-inverse-primary));
+    color: var(--color-inverse-primary);
   }
 }
 

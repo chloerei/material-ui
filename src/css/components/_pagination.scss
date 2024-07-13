@@ -2,7 +2,7 @@
   display: flex;
 
   .button--active {
-    color: rgb(var(--color-primary));
+    color: var(--color-primary);
 
     &::after {
       opacity: 0.1;
@@ -19,6 +19,6 @@
 }
 
 .pagination__ellipsis {
-  color: rgb(var(--color-on-background));
+  color: var(--color-on-background);
   padding: 6px;
 }

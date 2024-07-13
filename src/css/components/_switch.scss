@@ -8,8 +8,8 @@
     display: none;
 
     &:checked ~ .switch__track {
-      background-color: rgb(var(--color-primary));
-      border-color: rgb(var(--color-primary));
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
     }
 
     &:checked ~ .switch__thumb {
@@ -18,8 +18,8 @@
       width: 24px;
       height: 24px;
       border-radius: 12px;
-      background-color: rgb(var(--color-on-primary));
-      color: rgb(var(--color-on-primary-container));
+      background-color: var(--color-on-primary);
+      color: var(--color-on-primary-container);
 
       .switch__icon--on {
         display: block;
@@ -34,14 +34,14 @@
       & ~ .switch__track {
         pointer-events: none;
         opacity: 12%;
-        background-color: rgb(var(--color-surface-container-highest));
-        border-color: rgb(var(--color-on-surface));
+        background-color: var(--color-surface-container-highest);
+        border-color: var(--color-on-surface);
       }
 
       & ~ .switch__thumb {
         pointer-events: none;
         opacity: 38%;
-        background-color: rgb(var(--color-on-surface));
+        background-color: var(--color-on-surface);
 
         .switch__icon {
           opacity: 38%;
@@ -51,12 +51,12 @@
 
     &:disabled:checked {
       & ~ .switch__track {
-        background-color: rgb(var(--color-on-surface));
+        background-color: var(--color-on-surface);
       }
 
       & ~ .switch__thumb {
         opacity: 100%;
-        background-color: rgb(var(--color-surface));
+        background-color: var(--color-surface);
       }
     }
   }
@@ -65,8 +65,8 @@
 .switch__track {
   position: absolute;
   inset: 0;
-  background: rgb(var(--color-suface-container-highest));
-  border: 2px solid rgb(var(--color-outline));
+  background: var(--color-suface-container-highest);
+  border: 2px solid var(--color-outline);
   border-radius: 16px;
   cursor: pointer;
   transition-property: background-color, border-color;
@@ -84,8 +84,8 @@
   justify-content: center;
   transition-property: left, top, width, height, background-color, color;
   transition-duration: var(--transition-duration);
-  background-color: rgb(var(--color-outline));
-  color: rgb(var(--color-surface-container-highest));
+  background-color: var(--color-outline);
+  color: var(--color-surface-container-highest);
   border-radius: 8px;
   cursor: pointer;
   user-select: none;

@@ -2,8 +2,8 @@
   position: absolute;
   top: 0;
   left: 50%;
-  background-color: rgb(var(--color-error));
-  color: rgb(var(--color-on-error));
+  background-color: var(--color-error);
+  color: var(--color-on-error);
   z-index: 1;
 }
 

@@ -1,17 +1,17 @@
 .text-primary {
-  color: rgb(var(--color-primary));
+  color: var(--color-primary);
 }
 
 .text-secondary {
-  color: rgb(var(--color-secondary));
+  color: var(--color-secondary);
 }
 
 .text-tertiary {
-  color: rgb(var(--color-tertiary));
+  color: var(--color-tertiary);
 }
 
 .text-error {
-  color: rgb(var(--color-error));
+  color: var(--color-error);
 }
 
 .text-align-left {

@@ -18,7 +18,7 @@
 .form__label {
   display: block;
   padding: 8px;
-  color: rgb(var(--color-on-background));
+  color: var(--color-on-background);
 }
 
 .form__control {
