@@ -23,10 +23,18 @@ title: Checkbox
 </div>
 <div class="display-flex align-items-center">
   <label class="checkbox checkbox--disabled">
-    <input type="checkbox" id="checkbox_3" name="" value="" disabled>
+    <input type="checkbox" id="checkbox_3" name="" value="" disabled checked>
     <div class="checkbox__icon">
     </div>
   </label>
-  <label for="checkbox_3" class="label-large margin-left-2">disabled</label>
+  <label for="checkbox_3" class="label-large margin-left-2">checked disabled</label>
+</div>
+<div class="display-flex align-items-center">
+  <label class="checkbox checkbox--disabled">
+    <input type="checkbox" id="checkbox_4" name="" value="" disabled>
+    <div class="checkbox__icon">
+    </div>
+  </label>
+  <label for="checkbox_4" class="label-large margin-left-2">disabled</label>
 </div>
 {% endexample %}

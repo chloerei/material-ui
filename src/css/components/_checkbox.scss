@@ -14,7 +14,7 @@
 
     &:checked ~ .checkbox__icon {
       border-color: var(--color-primary);
-      background: var(--color-primary);
+      background-color: var(--color-primary);
 
       &::after {
         display: block;
@@ -25,9 +25,16 @@
 
 .checkbox--disabled {
   pointer-events: none;
+  opacity: 0.38;
 
   .checkbox__icon {
-    border-color: var(--color-disabled);
+    border-color: var(--color-on-surface);
+  }
+
+  input[type="checkbox"]:checked {
+    .checkbox__icon {
+      background-color: var(--color-on-surface);
+    }
   }
 }
 
