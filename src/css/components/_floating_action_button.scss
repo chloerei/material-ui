@@ -96,6 +96,22 @@
   }
 }
 
+.floating-action-button--flat {
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
 .floating-action-button__label {
   font-size: 14px;
   font-weight: 500;
