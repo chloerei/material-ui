@@ -4,9 +4,11 @@
   width: 100%;
   display: flex;
   align-items: center;
+  height: 80px;
+  gap: 8px;
   background-color: rgb(var(--color-surface-container));
-  color: rgb(var(--color-on-surface-variant));
-  z-index: 16;
+  color: rgb(var(--color-on-surface));
+  z-index: 10;
 }
 
 .navigation-bar__item {
@@ -19,8 +21,6 @@
   align-items: center;
   color: rgb(var(--color-on-surface-variant));
   width: 100%;
-
-  @include state-layer;
 }
 
 .navigation-bar__item__icon {
@@ -28,7 +28,8 @@
   padding: 4px 20px;
   border-radius: 16px;
   color: rgb(var(--color-on-surface-variant));
-  position: relative;
+
+  @include state-layer;
 
   svg {
     height: 24px;
@@ -37,6 +38,24 @@
 
   .material-icons {
     font-size: 24px;
+  }
+}
+
+.navigation-bar__item:hover {
+  .navigation-bar__item__icon::after {
+    opacity: var(--opacity-state-hover);
+  }
+}
+
+.navigation-bar__item:focus {
+  .navigation-bar__item__icon::after {
+    opacity: var(--opacity-state-focus);
+  }
+}
+
+.navigation-bar__item:active {
+  .navigation-bar__item__icon::after {
+    opacity: var(--opacity-state-press);
   }
 }
 
@@ -50,7 +69,7 @@
   color: rgb(var(--color-on-surface));
 
   .navigation-bar__item__icon {
-    color: rgb(var(--color-on-primary-container));
-    background-color: rgb(var(--color-primary-container));
+    color: rgb(var(--color-on-secondary-container));
+    background-color: rgb(var(--color-secondary-container));
   }
 }
