@@ -32,6 +32,8 @@
   }
 
   &:disabled {
+    pointer-events: none;
+
     .segmented-button__item__icon,
     .segmented-button__item__label {
       opacity: 38%;
