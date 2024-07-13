@@ -7,11 +7,11 @@ title: Card
 ## Elevated
 
 {% example %}
-<a href="#" class="card card--elevated">
+<div class="card card--elevated card--state">
   <div class="padding-3">
     Elevated
   </div>
-</a>
+</div>
 
 <div class="card card--elevated">
   <div class="padding-3">
@@ -33,11 +33,11 @@ title: Card
 ## Filled
 
 {% example %}
-<a href="#" class="card card--filled">
+<div class="card card--filled card--state">
   <div class="padding-3">
     Filled
   </div>
-</a>
+</div>
 
 <div class="card card--filled">
   <div class="padding-3">
@@ -59,11 +59,11 @@ title: Card
 ## Outlined
 
 {% example %}
-<a class="card card--outlined">
+<div class="card card--outlined card--state">
   <div class="padding-3">
     Outlined
   </div>
-</a>
+</div>
 
 <div class="card card--outlined">
   <div class="padding-3">
@@ -78,6 +78,16 @@ title: Card
         Action
       </button>
     </div>
+  </div>
+</div>
+{% endexample %}
+
+## Custom
+
+{% example %}
+<div class="card background-surface-container">
+  <div class="padding-3">
+    Custom
   </div>
 </div>
 {% endexample %}

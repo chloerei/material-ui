@@ -6,8 +6,21 @@
   border-radius: 12px;
 }
 
-a.card {
+.card--state {
+  cursor: pointer;
   @include state-layer;
+
+  &:hover {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-0);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-0);
+  }
 }
 
 .card--elevated {
@@ -16,7 +29,7 @@ a.card {
   box-shadow: var(--shadow-1);
 }
 
-a.card--elevated {
+.card--elevated.card--state {
   &:hover {
     box-shadow: var(--shadow-2);
   }
@@ -35,22 +48,8 @@ a.card--elevated {
   background-color: var(--color-surface-container-highest);
 }
 
-a.card--filled {
-  &:hover {
-    box-shadow: var(--shadow-1);
-  }
-
-  &:focus {
-    box-shadow: var(--shadow-1);
-  }
-
-  &:active {
-    box-shadow: var(--shadow-0);
-  }
-}
-
 .card--outlined {
   color: var(--color-on-surface);
   background-color: var(--color-surface);
-  box-shadow: 0 0 0 1px var(--color-outline);
+  outline: 1px solid var(--color-outline-variant);
 }
