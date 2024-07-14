@@ -9,7 +9,7 @@ title: Navigation rail
   <button type="button" class="icon-button margin-top-4">
     <span class="material-icons">menu</span>
   </button>
-  <button type="button" class="floating-action-button floating-action-button--flat margin-y-4">
+  <button type="button" class="floating-action-button floating-action-button--lowest margin-y-4">
     <span class="material-icons">create</span>
   </button>
   <a href="#" class="navigation-rail__item navigation-rail__item--active">

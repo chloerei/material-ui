@@ -12,13 +12,13 @@ title: Floating action button
 <button type="button" class="floating-action-button">
   <span class="material-icons">edit</span>
 </button>
-<button type="button" class="floating-action-button floating-action-button--surface">
+<button type="button" class="floating-action-button background-surface-container">
   <span class="material-icons">edit</span>
 </button>
-<button type="button" class="floating-action-button floating-action-button--secondary">
+<button type="button" class="floating-action-button background-secondary-container">
   <span class="material-icons">edit</span>
 </button>
-<button type="button" class="floating-action-button floating-action-button--tertiary">
+<button type="button" class="floating-action-button background-tertiary-container">
   <span class="material-icons">edit</span>
 </button>
 {% endexample %}
@@ -43,7 +43,10 @@ title: Floating action button
 <button type="button" class="floating-action-button">
   <span class="material-icons">edit</span>
 </button>
-<button type="button" class="floating-action-button floating-action-button--lowered">
+<button type="button" class="floating-action-button floating-action-button--low">
+  <span class="material-icons">edit</span>
+</button>
+<button type="button" class="floating-action-button floating-action-button--lowest">
   <span class="material-icons">edit</span>
 </button>
 {% endexample %}
