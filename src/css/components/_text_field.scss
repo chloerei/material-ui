@@ -182,24 +182,11 @@
 
 .text-field--outlined {
   .text-field__container {
-    // outline
-    &::before {
-      content: "";
-      border: 1px solid var(--color-outline);
-      border-radius: 4px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      transition: border-color var(--transition-duration);
-    }
+    outline: 1px solid var(--color-outline);
+    border-radius: 4px;
 
     &:focus-within {
-      &::before {
-        border: 2px solid var(--color-primary);
-      }
+      outline: 2px solid var(--color-primary);
 
       .text-field__label {
         font-size: 12px;
@@ -226,9 +213,7 @@
 
   &.text-field--error {
     .text-field__container {
-      &::before {
-        border-color: var(--color-error);
-      }
+      outline-color: var(--color-error);
     }
   }
 
@@ -340,7 +325,7 @@
 
   .text-field__label,
   .text-field__container:focus-within .text-field__label,
-  .text-field__input:not(:placeholder-shown) ~ .text-field__label, {
+  .text-field__input:not(:placeholder-shown) ~ .text-field__label {
     color: var(--color-error);
   }
 
@@ -348,12 +333,5 @@
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-name: headShake;
-  }
-
-  .text-field__container,
-  .text-field__container:focus-within {
-    &::after {
-      border-color: var(--color-error);
-    }
   }
 }
