@@ -25,7 +25,7 @@ Add `@{screen}` after class name.
 Example:
 
 {% example %}
-<div class="padding-3 padding-4@desktop background-primary">
+<div class="padding-3 padding-4@large background-primary">
   Content
 </div>
 {% endexample %}

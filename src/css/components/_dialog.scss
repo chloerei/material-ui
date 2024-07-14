@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: map.get($breakpoints, "tablet")) {
+@media (max-width: map.get($breakpoints, "medium")) {
   .dialog--full-screen {
     padding: 0;
 

@@ -32,10 +32,10 @@ Values:
 <div class="display-none padding-3">
   .display-none
 </div>
-<div class="display-none display-block@tablet padding-3">
-  .display-none@phone
+<div class="display-none display-block@medium padding-3">
+  .display-none@medium
 </div>
-<div class="display-none@desktop padding-3">
-  .display-none@desktop
+<div class="display-none@large padding-3">
+  .display-none@large
 </div>
 {% endexample %}

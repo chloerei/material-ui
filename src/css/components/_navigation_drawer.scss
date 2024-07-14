@@ -46,7 +46,7 @@
   }
 }
 
-@media (min-width: map.get($breakpoints, "laptop")) {
+@media (min-width: map.get($breakpoints, "expanded")) {
   .navigation-drawer:not(.navigation-drawer--modal) {
     position: relative;
     width: 360px;

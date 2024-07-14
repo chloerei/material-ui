@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: map.get($breakpoints, "laptop")) {
+@media (min-width: map.get($breakpoints, "expanded")) {
   .side-sheet:not(.side-sheet--modal) {
     position: relative;
     width: 320px;

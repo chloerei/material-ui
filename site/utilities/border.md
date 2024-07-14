@@ -46,6 +46,6 @@ title: Border
 Add `@{screen}` after class name.
 
 {% example %}
-<div class="border-radius-2 border-radius-3@desktop background-primary" style="height: 100px; width: 200px;">
+<div class="border-radius-2 border-radius-3@large background-primary" style="height: 100px; width: 200px;">
 </div>
 {% endexample %}

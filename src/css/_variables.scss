@@ -1,7 +1,8 @@
 $breakpoints: (
-  "tablet": 600px,
-  "laptop": 1240px,
-  "desktop": 1440px
+  "medium": 600px,
+  "expanded": 840px,
+  "large": 1200px,
+  "extra-large": 1600px
 );
 
 :root {
