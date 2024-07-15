@@ -1,5 +1,7 @@
 @mixin state-layer {
-  position: relative;
+  & {
+    position: relative;
+  }
 
   // State layer for interaction states
   &::after {
