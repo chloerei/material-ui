@@ -1,17 +1,23 @@
-.text-primary {
-  color: var(--color-primary);
-}
-
-.text-secondary {
-  color: var(--color-secondary);
-}
-
-.text-tertiary {
-  color: var(--color-tertiary);
-}
-
-.text-error {
-  color: var(--color-error);
+@each $color in (
+  primary,
+  secondary,
+  tertiary,
+  error,
+  on-primary,
+  on-primary-container,
+  on-secondary,
+  on-secondary-container,
+  on-tertiary,
+  on-tertiary-container,
+  on-error,
+  on-error-container,
+  on-background,
+  on-surface,
+  on-surface-variant,
+) {
+  .text-#{$color} {
+    color: var(--color-#{$color});
+  }
 }
 
 .text-align-left {

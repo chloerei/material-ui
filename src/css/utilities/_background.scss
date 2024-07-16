@@ -13,7 +13,13 @@
   surface,
   surface-variant,
   error,
-  error-container
+  error-container,
+  primary-fixed,
+  primary-fixed-dim,
+  secondary-fixed,
+  secondary-fixed-dim,
+  tertiary-fixed,
+  tertiary-fixed-dim,
 ) {
   .background-#{$color} {
     background-color: var(--color-#{$color});
