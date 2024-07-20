@@ -48,20 +48,17 @@
 }
 
 @media (min-width: map.get($breakpoints, "expanded")) {
-  .side-sheet:not(.side-sheet--modal) {
-    position: relative;
-    width: 320px;
-
+  .side-sheet--standard {
     .side-sheet__container {
-      border-radius: 0;
-      right: auto;
+      position: static;
       transform: translateX(0);
+      border-radius: 0;
     }
+  }
 
-    .side-sheet-toggle:checked + .side-sheet {
-      .side-sheet__scrim {
-        display: none;
-      }
+  .side-sheet-toggle:checked + .side-sheet--standard {
+    .side-sheet__scrim {
+      display: none;
     }
   }
 }

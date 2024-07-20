@@ -25,7 +25,7 @@ title: Sheet
   </div>
 
   <input type="checkbox" id="standard-sheet-toggle" class="side-sheet-toggle">
-  <div id="side-sheet-permanently" class="side-sheet">
+  <div class="side-sheet side-sheet--standard">
     <div class="side-sheet__container">
       <div class="padding-3">
         Sheet Content
@@ -56,7 +56,7 @@ title: Sheet
 </div>
 
 <input type="checkbox" id="modal-sheet-toggle" class="side-sheet-toggle">
-<div id="side-sheet-modal" class="side-sheet side-sheet--modal">
+<div class="side-sheet side-sheet--modal">
   <div class="side-sheet__container">
     <div class="padding-3">
       Sheet Content
